@@ -7,7 +7,7 @@ I cannot perform my job of assessing your work if you do not complete this assig
 - If you don't complete it, drop the course because you will fail
 - If you complete it late, you will lose 1 letter grade off of your final grade.
 - If you complete it wrong, you will lose 1/2 of one letter grade off of your final grade.
-- Having said that, feel free to get help anytime.
+- Having said that, feel free to get help from me at anytime.
 
 #### What is Git?
 
