@@ -21,7 +21,7 @@ As with most other distributed revision control systems, and unlike most clientâ
 #### Why github for this course?
 
 We will be using github this semester as a means of communicating, storing documents (assignments and programs), as well as 
-a means to push keep your files to a central repository if your using a lab or personal machine. 
+a means to push your files to a central repository. So if your using a lab or personal machine, there's a centralized location that we both have access to. 
 
 #### Create a Github account. 
 - When you create a Github account, you must choose a `username`. 
