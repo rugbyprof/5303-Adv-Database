@@ -1,7 +1,7 @@
 ## First Assignment
 
 #### Part 1 Due: Monday August 31st by Midnight
-
+#### Part 2 Due: Wednesday September 2nd by Midnight
 
 ### Description
 
