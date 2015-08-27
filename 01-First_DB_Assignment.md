@@ -47,10 +47,10 @@ password: (enter password)
 ```
 If your using putty, just fill out the fields like you saw in class.
 
-This is my command prompt: `griffin@cs2:~$`. When you see this, I'm typing commands at the terminal.
+This is my command prompt: `user@cs2:~$`. When you see this, I'm typing commands at the terminal.
 
 ```bash
-griffin@cs2:~$ passwd
+user@cs2:~$ passwd
 Changing password for griffin.
 (current) UNIX password: (enter current password)
 Enter new UNIX password: (enter new password)
@@ -63,7 +63,7 @@ passwd: password updated successfully
 #### 2.
 
 ```bash
-griffin@cs2:~$ mkdir public_html
+user@cs2:~$ mkdir public_html
 ```
 
 ---
@@ -71,8 +71,8 @@ griffin@cs2:~$ mkdir public_html
 #### 3.
 
 ```bash
-griffin@cs2:~$ cd public_html
-griffin@cs2:~$ mkdir assignment1
+user@cs2:~$ cd public_html
+user@cs2:~$ mkdir assignment1
 ```
 
 ---
@@ -80,8 +80,8 @@ griffin@cs2:~$ mkdir assignment1
 #### 4.
 
 ```bash
-griffin@cs2:~$ cd assignment1
-griffin@cs2:~$ touch load_db.php
+user@cs2:~$ cd assignment1
+user@cs2:~$ touch load_db.php
 ```
 
 ---
