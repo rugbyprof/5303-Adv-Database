@@ -8,69 +8,47 @@ Now that your table is created and sitting there in your database, it's time to 
 possible errors in class when we don't choose the correct data types for columns. Make sure you adjust your tables accordingly
 so that the data received from `api.randomusers.me` will fit correctly. 
 
-Look at the php_mysqli_intro.md
+Look at the following file for help with your php database connection commands:[php_mysqli_intro.md](https://github.com/rugbyprof/5303-Adv-Database/blob/master/php_mysqli_intro.md).
 
-```json
-{
-  results: [{
-    user: {
-      gender: "female",
-      name: {
-        title: "ms",
-        first: "manuela",
-        last: "velasco"
-      },
-      location: {
-        street: "1969 calle de alberto aguilera",
-        city: "la coruña",
-        state: "asturias",
-        zip: "56298"
-      },
-      email: "manuela.velasco50@example.com",
-      username: "heavybutterfly920",
-      password: "enterprise",
-      salt: ">egEn6YsO",
-      md5: "2dd1894ea9d19bf5479992da95713a3a",
-      sha1: "ba230bc400723f470b68e9609ab7d0e6cf123b59",
-      sha256: "f4f52bf8c5ad7fc759d1d4156b25a4c7b3d1e2eec6c92d80e508aa0b7946d4ba",
-      registered: "1303647245",
-      dob: "415458547",
-      phone: "994-131-106",
-      cell: "626-695-164",
-      DNI: "52434048-I",
-      picture: {
-        large: "http://api.randomuser.me/portraits/women/39.jpg",
-        medium: "http://api.randomuser.me/portraits/med/women/39.jpg",
-        thumbnail: "http://api.randomuser.me/portraits/thumb/women/39.jpg",
-      },
-      version: "0.6"
-      nationality: "ES"
-    },
-    seed: "graywolf"
-  }]
-}
+Remember the JSON object returned from `api.randomusers.me`. An example can be seen in the previous assignment.
+
+### Obtaining Data
+```php
+// Gets 1000 users from the randomuser api, and loads it into a variable called $json
+$json = file_get_contents("http://api.randomuser.me/?results=1000");
+
+// This turns the variable into a PHP object
+$json_array = json_decode($json);
 ```
 
-I want your table to have the following columns:
+### Accessing the Object
 
-```
-  gender
-  title
-  first
-  last
-  street
-  city
-  state
-  zip
-  email
-  username
-  password
-  dob
-  phone
-  picture 
+You can access individual values by using the following syntax:
+```php
+// This gets the gender of the 1st user in the result set
+$gender = $json_array->results[0]->user->gender;
+
+// This gets the first name of the 2nd user in the result set
+$street = $json_array->results[1]->user->location->street;
 ```
 
-### Part 2
+Or, you can loop through the entire result set using something similar to the follwing:
+```php
+  for($i=0;$i<sizeof($json_array->results);$i++){
+  	$gender = $json_array->results[$i]->user->gender;
+  	$street = $json_array->results[$i]->user->location->street;
+  	...
+  	...
+	}
+```
 
-Coming Next
+### Inserting Data
 
+Again, look at [php_mysqli_intro.md](https://github.com/rugbyprof/5303-Adv-Database/blob/master/php_mysqli_intro.md) for examples on running querys.
+
+### Results / Deliverables
+
+- A script called `load_users.php` in your ho
+- A table called `Users` in your database.
+- 1000 __unique__ users in your table.
+- 
