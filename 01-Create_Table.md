@@ -165,6 +165,28 @@ I want your table to have the following columns:
   picture 
 ```
 
+Out of 1000 requests to the api, I found the max column lengths to be:
+
+```
+Array
+(
+    [gender] => 6
+    [title] => 4
+    [first] => 12
+    [last] => 16
+    [street] => 38
+    [city] => 30
+    [state] => 13
+    [zip] => 5
+    [email] => 38
+    [username] => 21
+    [password] => 10
+    [dob] => 10
+    [phone] => 14
+    [medium] => 52
+)
+```
+
 ### Part 2
 
 Coming Next
