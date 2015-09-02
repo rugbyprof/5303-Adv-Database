@@ -1,5 +1,11 @@
 <?php
 
+/**
+* myMysqli - wrapper class that offers little improved usage of the mysqli PDO
+* class.  It does group commonly used functions together providing
+* a self documented "quick reference" to quickly execute queries and obtain
+* their results.
+*/
 class myMysqli{
     var $Username;          //username for mysql connection
     var $Pasword;           //password for mysql connection
@@ -16,33 +22,36 @@ class myMysqli{
         $this->DbName = $db_name;
         $this->Conn = new mysqli($this->Host, $this->Username, $this->$Password ,$this->DbName);
         if($this->Conn->connect_errno > 0){
-            die('Unable to connect to database [' . $this->Conn->connect_error . ']');
+            $this->Error = $this->Conn->connect_error;
+            return false;
         }
         $this->Error = null;
+        return true;
     }
 
     /**
     * AffectedRows - Returns number of rows that were affected in db
     *
-    * @params - none
-    * @returns - int - affected rows
+    * @params - void
+    * @returns - int
     */
     function AffectedRows(){
         return $this->Result->affected_rows;
     }
 
     /**
+    * NumRows - Returns number of rows in result
     *
-    *
-    * @params -
-    * @returns -
+    * @params - void
+    * @returns - int
     */
     function NumRows(){
         return $this->Result->num_rows;
     }
 
     /**
-    *
+    * GetError - If RunSql or the constructor return false, the error
+    *            will be in $this->Error
     *
     * @params -
     * @returns -
@@ -52,20 +61,24 @@ class myMysqli{
     }
 
     /**
+    * GetResult - Returns a SINGLE row from the result set. Can be used
+    * to traverse the query set, but it's inteded for single row results.
     *
-    *
-    * @params -
-    * @returns -
+    * @params - void
+    * @returns - mixed - bool = false on failure, or associated array on success
     */
     function GetResult(){
-        return $this->Result->fetch_assoc();
+        if( $result = $this->Result->fetch_assoc()){
+            return $result;
+        }
+        return false;
     }
 
     /**
+    * GetResults - Returns ALL rows from the result set in an array.
     *
-    *
-    * @params -
-    * @returns -
+    * @params - void
+    * @returns - mixed - bool = false on failure, or associated array on success
     */
     function GetResults(){
         $rows = array();
@@ -76,7 +89,7 @@ class myMysqli{
     }
 
     /**
-    *
+    * RunSql - Actually executes a sql statement.
     *
     * @params -
     * @returns -
