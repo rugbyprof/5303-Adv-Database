@@ -20,6 +20,12 @@ $sql = <<<SQL
     WHERE `live` = 1 
 SQL;
 
+// or
+
+$sql = "SELECT *
+    FROM `users`
+    WHERE `live` = 1 ";
+
 if(!$result = $db->query($sql)){
     die('There was an error running the query [' . $db->error . ']');
 }

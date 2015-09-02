@@ -49,7 +49,7 @@ Again, look at [php_mysqli_intro.md](https://github.com/rugbyprof/5303-Adv-Datab
 ### Results / Deliverables
 
 - A script called `load_db.php` in your `assignment1` folder.
-- A file called `create_table.sql` in the `assignment1` folder that contains the "exported sql" for your `Users` table (done from phpmyadmin).
+- A file called `create_table.sql` in the `assignment1` folder that contains the "exported sql" for your `Users` table (done from phpmyadmin). ONLY for the table (NO DATA);
 - A table called `Users` in your phpMyAdmin database.
 - 1000 __unique__ users in your table.
 - Copy the `assignment1` folder into your github repository and push it to github.
