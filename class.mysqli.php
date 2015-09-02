@@ -91,8 +91,8 @@ class myMysqli{
     /**
     * RunSql - Actually executes a sql statement.
     *
-    * @params -
-    * @returns -
+    * @params - string - query string
+    * @returns - bool
     */
     function RunSql($sql){
         if(!$this->Result = $this->Conn->query($sql)){
