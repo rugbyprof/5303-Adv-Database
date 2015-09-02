@@ -1,5 +1,11 @@
 <?php
 
+if (!debug_backtrace()) {
+    $dbinfo = json_decode(file_get_contents("config.mysqli.json"));
+    print_r($dbinfo);
+    $myDB = new myMysqli($dbinfo->user,$dbinfo->password,$dbinfo->host,$dbinfo->dbname);
+}
+
 /**
 * myMysqli - wrapper class that offers little improved usage of the mysqli PDO
 * class.  It does group commonly used functions together providing
@@ -17,10 +23,10 @@ class myMysqli{
 
     function __construct($user_name,$password,$host,$db_name){
         $this->Username = $user_name;
-        $this->$Password = $password;
-        $this->$Host = $host;
+        $this->Password = $password;
+        $this->Host = $host;
         $this->DbName = $db_name;
-        $this->Conn = new mysqli($this->Host, $this->Username, $this->$Password ,$this->DbName);
+        $this->Conn = new mysqli($this->Host, $this->Username, $this->Password ,$this->DbName);
         if($this->Conn->connect_errno > 0){
             $this->Error = $this->Conn->connect_error;
             return false;
