@@ -1,10 +1,10 @@
 | #   | Item                                  | Completed      |
 |:----|:--------------------------------------|:---------------|
 | 1   | Folder Exists and contains both files | ![Alt text][1] |
-| 2   | Folder and files named correctly      | ![Alt text][1] |
+| 2   | Folder and files named correctly      | ![Alt text][2] |
 | -   | ---create_tables.sql---               | ![Alt text][1] |
 | 3   | Sql file creates table                | ![Alt text][1] |
-| 4   | Table contains primary key            | ![Alt text][1] |
+| 4   | Table contains primary key            | ![Alt text][3] |
 | -   | ---load_db.php---                     | ![Alt text][1] |
 | 4   | Table contains primary key            | ![Alt text][1] |
 |   # | Comment   |
