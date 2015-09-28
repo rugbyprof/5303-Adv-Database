@@ -24,14 +24,21 @@ Goto: http://cs2.mwsu.edu/rockmongo/ and login. The default username and passwor
 
 As you can see, the home page lists basic information about MongoDB Server location and connection, PHP Web Server and MongoDB settings. The left panel shows the list of databases and collections.
 
-Creating Databases and Collections
-The Databases tab lists all of the database available on the MongoDB server. To create a new database, click Create New Database on the Databases tab.
+### Creating Databases and Collections
+
+The Databases tab lists all of the database available on the MongoDB server. To create a new database, do the following:
+
+One:
 
 ![](https://s3.amazonaws.com/f.cl.ly/items/3e2S0X3b0y4541061t11/createdb1.png)
-![](https://s3.amazonaws.com/f.cl.ly/items/1o1n2R3V090z160z413U/createdb2.png)
-Then enter the name of the database and click Create (I’ll name mine “rockdb”). The newly created database will appear in the left panel.
 
-To create a new collection, click on Create under the new database in the left pane and provide the desired name for the collection (I’ll use “blog_collection”).
+Two:
+
+![](https://s3.amazonaws.com/f.cl.ly/items/1o1n2R3V090z160z413U/createdb2.png)
+
+Then enter the name of your database and click Create (use your cs2 username). The newly created database will appear in the left panel. Everyone will have access to everyone else's collection, so be respectful.
+
+To create a new collection, click on Create under the new database in the left pane and provide the desired name for the collection (use `randomPeople`).
 
 
 
