@@ -2,6 +2,8 @@
 
 Source: http://www.sitepoint.com/rockmongo-for-php-powered-mongodb-administration/
 
+__This is part 1 of your MongoDB assignment.__
+
 By default, MongoDB provides the interactive JavaScript-based mongo shell which can be used for performing database operations. Although this shell may be the best approach to start with MongoDB queries, a GUI tool to administer the service is always useful.
 
 There are many such GUI tools available, like Rockmongo, PHPMoAdmin, Fang of Mango, UMongo, MongoExplorer, and MongoVUE, to name just a few. When it comes to using MongoDB with PHP-based projects, Rockmongo and PHPMoAdmin are good options. In this article, we’ll take a look at Rockmongo.
@@ -17,7 +19,7 @@ The requirements for running Rockmongo are:
 2. PHP 5.1.6 or higher with session support
 3. the php_mongo extension for MongoDB
 
-__Up to 'Inserting Documents' is tailored for [04-MongoDB-Intro.md](https://github.com/rugbyprof/5303-Adv-Database/blob/master/04-MongoDB-Intro.md)__
+ [04-MongoDB-Intro.md](https://github.com/rugbyprof/5303-Adv-Database/blob/master/04-MongoDB-Intro.md)__
 
 Goto: http://cs2.mwsu.edu/rockmongo/ and login. The default username and password is “admin” and “admin”. 
 
