@@ -38,12 +38,15 @@ Two:
 
 Then enter the name of your database and click Create (use your cs2 username). The newly created database will appear in the left panel. Everyone will have access to everyone else's collection, so be respectful.
 
-To create a new collection, click on Create under the new database in the left pane and provide the desired name for the collection (use `randomPeople`).
+To create a new collection:
 
-
+1. Click on your database
+2. Click on Create
+3. Name your Database `random_people`
+4. 
+![](https://s3.amazonaws.com/f.cl.ly/items/1V3F281d0v391a0e1m2L/create_collection.png)
 
 When you provide the collection information, don’t worry about the Is Capped field. It’s safe to leave it unchecked.
-
 
 
 The new collection will appear in the left panel under the database. You can click on the collection to list all of the documents in it. (Note that Mongo DB creates a default system.indexes collection when you create first collection in a database.)
