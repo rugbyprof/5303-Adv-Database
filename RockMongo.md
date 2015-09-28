@@ -120,6 +120,120 @@ Querying the database is one of the important functions of any database administ
 
 ![](https://s3.amazonaws.com/f.cl.ly/items/3h183r170U3y072Q3L0S/findquery.png)
 
+The query:
+
+```json
+{
+    "user.gender": "male"
+}
+```
+
+On the following data
+
+```json
+[{
+  "user": {
+    "gender": "male",
+    "name": {
+      "title": "mr",
+      "first": "corey",
+      "last": "andrews"
+    },
+    "location": {
+      "street": "7453 church street",
+      "city": "preston",
+      "state": "tayside",
+      "zip": "I30 7AE"
+    }
+  }
+},
+{
+  "user": {
+    "gender": "female",
+    "name": {
+      "title": "miss",
+      "first": "ethel",
+      "last": "obrien"
+    },
+    "location": {
+      "street": "8846 blossom hill rd",
+      "city": "ballarat",
+      "state": "queensland",
+      "zip": 38342
+    }
+  }
+},
+{
+  "user": {
+    "gender": "male",
+    "name": {
+      "title": "mr",
+      "first": "elouan",
+      "last": "faure"
+    },
+    "location": {
+      "street": "4557 esplanade du 9 novembre 1989",
+      "city": "courbevoie",
+      "state": "morbihan",
+      "zip": 19843
+    }
+  }
+},
+{
+  "user": {
+    "gender": "female",
+    "name": {
+      "title": "ms",
+      "first": "manuela",
+      "last": "velasco"
+    },
+    "location": {
+      "street": "1969 calle de alberto aguilera",
+      "city": "la coruña",
+      "state": "asturias",
+      "zip": "56298"
+    }
+  }
+}]
+```
+
+returns:
+
+```json 
+[{
+  "user": {
+    "gender": "male",
+    "name": {
+      "title": "mr",
+      "first": "elouan",
+      "last": "faure"
+    },
+    "location": {
+      "street": "4557 esplanade du 9 novembre 1989",
+      "city": "courbevoie",
+      "state": "morbihan",
+      "zip": 19843
+    }
+  }
+},
+{
+  "user": {
+    "gender": "male",
+    "name": {
+      "title": "mr",
+      "first": "corey",
+      "last": "andrews"
+    },
+    "location": {
+      "street": "7453 church street",
+      "city": "preston",
+      "state": "tayside",
+      "zip": "I30 7AE"
+    }
+  }
+}]
+```
+
 Like the documents, query expressions can also be specified either as JSON or a PHP array. There are three action options available in the drop down: findAll, remove, and modify.
 
 - findAll: This is the default option. Specify the find condition and click on Submit Query. The matching documents will appear in the search results.
