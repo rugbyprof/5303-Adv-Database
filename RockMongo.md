@@ -57,9 +57,50 @@ The new collection will appear in the left panel under the database. You can cli
 ### Inserting Documents
 To insert documents, click on the Insert tab and then the name of the collection.
 
-
-
 We can specify the new document structure either as JSON or a PHP array. Choosing either format doesn’t make any difference to the document formed, it’s just a matter of comfort for developers.
+
+JSON:
+
+```json
+{
+   "user": {
+     "gender": "female",
+     "name": {
+       "title": "ms",
+       "first": "manuela",
+       "last": "velasco" 
+    },
+     "location": {
+       "street": "1969 calle de alberto aguilera",
+       "city": "la coruña",
+       "state": "asturias",
+       "zip": "56298" 
+    } 
+  } 
+}
+```
+
+PHP Array:
+
+```php
+array(
+   "user" => array(
+     "gender" => "female",
+     "name" => array(
+       "title" => "ms",
+       "first" => "manuela",
+       "last" => "velasco" 
+    ),
+     "location" => array(
+       "street" => "1969 calle de alberto aguilera",
+       "city" => "la coruña",
+       "state" => "asturias",
+       "zip" => "56298" 
+    )
+  )
+)
+```
+
 
 After specifying the document, click on Save. Similarly, go ahead and insert other documents.
 
