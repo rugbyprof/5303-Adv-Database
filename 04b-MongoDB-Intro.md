@@ -62,7 +62,18 @@ foreach ($cursor as $document) {
 ?>
 ```
 
-From the above snippet, make the following changes, then run it in a php file:
+From the above snippet, make the following changes:
+
+From
+
+```php
+
+// select a database
+$db = $m->comedy;
+
+```
+
+To:
 
 ```php
 
