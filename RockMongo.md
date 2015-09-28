@@ -1,4 +1,4 @@
-## RockMongo
+## Create A MongoDB Database using RockMongo
 
 Source: http://www.sitepoint.com/rockmongo-for-php-powered-mongodb-administration/
 
