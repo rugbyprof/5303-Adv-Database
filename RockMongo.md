@@ -101,8 +101,11 @@ array(
 )
 ```
 
+After specifying the document, click on Save. 
 
-After specifying the document, click on Save. Similarly, go ahead and insert other documents.
+![](https://s3.amazonaws.com/f.cl.ly/items/1z2J1V3P1S1J120W2M35/mongoIDexample.png)
+
+Notice that MongoDB automatically added an ID to your document for you.
 
 
 
