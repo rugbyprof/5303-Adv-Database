@@ -19,7 +19,7 @@ Not Done!!!
 
 ### CRUD
 
-CRUD is an acronym that stands for:  `C`reate, `R`ead, `U`pdate and `D`elete. Below are links to MongoDB's version of CRUD operations. I pulled the images for `document` and `collections` because it's the chosen storage organization that drives Mongo. To view additional information visit the mongo tutorials below:
+CRUD is an acronym that stands for:  `C`reate, `R`ead, `U`pdate and `D`elete. Below are links to MongoDB's version of CRUD operations. I pulled the images for `document` and `collections` because it's the chosen storage organization that drives Mongo. A `document` is just a `json` object, and a `collection` is just a bunch of `json` objects stored together (use 'folder' as an analogy).  To view additional information about simple operations on documents and collections visit the mongo tutorials below:
 
 - http://docs.mongodb.org/manual/core/crud-introduction/
 - http://docs.mongodb.org/manual/core/read-operations-introduction/
