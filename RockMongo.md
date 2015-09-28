@@ -240,7 +240,8 @@ returns:
 }]
 ```
 
-The original tutorial at http://www.sitepoint.com/rockmongo-for-php-powered-mongodb-administration/ has a little more to offer. This version was tailored to get you up and going for your assignment.
+The original tutorial at http://www.sitepoint.com/rockmongo-for-php-powered-mongodb-administration/ has a little more to offer. 
+This version was tailored to get you up and going for your assignment.
 
 
 
