@@ -62,7 +62,20 @@ foreach ($cursor as $document) {
 ?>
 ```
 
-Make the following changes, then run it in a php file:
+From the above snippet, make the following changes, then run it in a php file:
+
+```php
+
+// select a database (Use YOUR username (e.g. griffin, vgundeti, apatel, etc.)
+$db = $m->YourUserName;
+
+```
+
+I changed `$db = $m->YourUserName;` to `$db = $m->griffin;` and I now have a collection called `cartoons` in my database.
+
+![](https://s3.amazonaws.com/f.cl.ly/items/3e1o24141R471x0c0N1l/cartoonresult.png)
+
+Ok, here's another example:
 
 ```php
 <?php
@@ -70,32 +83,24 @@ Make the following changes, then run it in a php file:
 // connect
 $m = new MongoClient();
 
-// select a database (Use YOUR username (e.g. griffin, vgundeti, apatel, etc.)
-$db = $m->YourUserName;
+// select a database
+$db = $m->griffin;
 
 // select a collection (analogous to a relational database's table)
 $collection = $db->cartoons;
 
-// add a record
-$document = array( "title" => "Calvin and Hobbes", "author" => "Bill Watterson" );
-$collection->insert($document);
-
-// add another record, with a different "shape"
-$document = array( "title" => "XKCD", "online" => true );
-$collection->insert($document);
-
-// find everything in the collection
-$cursor = $collection->find();
-
-// iterate through the results
-foreach ($cursor as $document) {
-    echo $document["title"] . "\n";
+$json = '
+{
+    "title":"The Far Side",
+    "author":"Gary Larson"
 }
+';
+
+$document = json_decode($json);
+
+// add a record
+$collection->insert($document);
 
 ?>
 ```
-
-I changed `$db = $m->YourUserName;` to `$db = $m->griffin;` and I now have a collection called `cartoons` in my database.
-
-![](https://s3.amazonaws.com/f.cl.ly/items/3e1o24141R471x0c0N1l/cartoonresult.png)
 
