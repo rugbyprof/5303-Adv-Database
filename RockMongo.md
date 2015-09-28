@@ -120,6 +120,12 @@ Querying the database is one of the important functions of any database administ
 
 ![](https://s3.amazonaws.com/f.cl.ly/items/3h183r170U3y072Q3L0S/findquery.png)
 
+Like the documents, query expressions can also be specified either as JSON or a PHP array. There are three action options available in the drop down: findAll, remove, and modify.
+
+- findAll: This is the default option. Specify the find condition and click on Submit Query. The matching documents will appear in the search results.
+- remove: This is similar to modify in that you just have to specify the condition for selecting documents, but the action removes the matching documents from the collection.
+- modify: When you click on modify, you will see two text sections. The first section is to specify the condition for matching documents and the other is to specify the update script. This feature can be used to do bulk-updates.
+
 The query:
 
 ```json
@@ -234,27 +240,7 @@ returns:
 }]
 ```
 
-Like the documents, query expressions can also be specified either as JSON or a PHP array. There are three action options available in the drop down: findAll, remove, and modify.
-
-- findAll: This is the default option. Specify the find condition and click on Submit Query. The matching documents will appear in the search results.
-- remove: This is similar to modify in that you just have to specify the condition for selecting documents, but the action removes the matching documents from the collection.
-- modify: When you click on modify, you will see two text sections. The first section is to specify the condition for matching documents and the other is to specify the update script. This feature can be used to do bulk-updates.
-
-### Using Explain
-
-This is one of the most useful features and probably the one I like the most in Rockmongo. The explain query is frequently used to analyze queries and their index usages. As shown below, you can specify your find query and then click on the Explain button. This will give all the cursor details for the query.
-
-
-
-### Importing and Exporting Databases
-
-Import and export features are useful for when you want to backup the database. The import/export functionality in Rockmongo does the same task as the mongoimport and mongoexport functions.
-
-To export a database or collection, click the Export tab. Check all the checkboxes for the collections you want to export. Check the Download option as well, and then click on Export. It will give you a downloadable JavaScript file containing the entire exported database.
-
-IMAGE
-
-To import the data in another database, go to that database and click on the Import tab. Choose the JS file you just downloaded, and the entire dataset will be imported to the database.
+The original tutorial at http://www.sitepoint.com/rockmongo-for-php-powered-mongodb-administration/ has a little more to offer. This version was tailored to get you up and going for your assignment.
 
 
 
