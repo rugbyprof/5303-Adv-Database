@@ -82,11 +82,11 @@ $db = $m->YourUserName;
 
 ```
 
-I changed `$db = $m->YourUserName;` to `$db = $m->griffin;` and I now have a collection called `cartoons` in my database.
+I changed `$db = $m->YourUserName;` to `$db = $m->griffin;` and I now have a collection called `cartoons` in my database. This means that the `cartoon` collection didn't exist, BUT by simply using `$collection = $db->cartoons;` in my code, it created it for me.
 
 ![](https://s3.amazonaws.com/f.cl.ly/items/3e1o24141R471x0c0N1l/cartoonresult.png)
 
-Ok, here's another example:
+Here's another example:
 
 ```php
 <?php
@@ -114,4 +114,27 @@ $collection->insert($document);
 
 ?>
 ```
+
+The important part of this code is the ease in which I inserted:
+
+```php
+$json = '
+{
+    "title":"The Far Side",
+    "author":"Gary Larson"
+    "funny":"True"
+}
+';
+```
+
+Now our database looks like:
+
+![](https://s3.amazonaws.com/f.cl.ly/items/2c0A2i41061C143K2m25/phpCartoonResults.png)
+
+Notice how:
+
+1. It was very easy to insert a `json object` (document) into the collection.
+2. None of the `documents` are have exactly the same structure.
+
+
 
