@@ -17,6 +17,7 @@ The requirements for running Rockmongo are:
 2. PHP 5.1.6 or higher with session support
 3. the php_mongo extension for MongoDB
 
+__Up to 'Inserting Documents' is tailored for [04-MongoDB-Intro.md](https://github.com/rugbyprof/5303-Adv-Database/blob/master/04-MongoDB-Intro.md)__
 
 Goto: http://cs2.mwsu.edu/rockmongo/ and login. The default username and password is “admin” and “admin”. 
 
@@ -43,7 +44,7 @@ To create a new collection:
 1. Click on your database
 2. Click on Create
 3. Name your Database `random_people`
-4. 
+
 ![](https://s3.amazonaws.com/f.cl.ly/items/1V3F281d0v391a0e1m2L/create_collection.png)
 
 When you provide the collection information, don’t worry about the Is Capped field. It’s safe to leave it unchecked.
@@ -51,7 +52,9 @@ When you provide the collection information, don’t worry about the Is Capped f
 
 The new collection will appear in the left panel under the database. You can click on the collection to list all of the documents in it. (Note that Mongo DB creates a default system.indexes collection when you create first collection in a database.)
 
-Inserting Documents
+
+
+### Inserting Documents
 To insert documents, click on the Insert tab and then the name of the collection.
 
 
