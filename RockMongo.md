@@ -107,39 +107,40 @@ After specifying the document, click on Save.
 
 Notice that MongoDB automatically added an ID to your document for you.
 
-
-
 To view the documents inside a collection, click on the collection in the left panel and you will see a list of all of the documents in the content area. The records most recently inserted will appear first.
 
-Updating, Deleting, and Duplicating Documents
+### Updating, Deleting, and Duplicating Documents
+
 You can update, delete or duplicate any document by clicking on the corresponding options provided on each document. Clicking on any of the links will take the document to edit mode where you can make changes in either JSON or PHP as you did earlier.
 
+![](https://s3.amazonaws.com/f.cl.ly/items/460g2Q01202x1n3Q1P1w/mongoupdatedeleteexample.png)
 
-
-Querying Documents
+### Querying Documents
 Querying the database is one of the important functions of any database administration tool. Whenever you click on a collection, you will find a text area on the top of the page for running queries against it.
 
-
+![](https://s3.amazonaws.com/f.cl.ly/items/3h183r170U3y072Q3L0S/findquery.png)
 
 Like the documents, query expressions can also be specified either as JSON or a PHP array. There are three action options available in the drop down: findAll, remove, and modify.
 
-findAll: This is the default option. Specify the find condition and click on Submit Query. The matching documents will appear in the search results.
-remove: This is similar to modify in that you just have to specify the condition for selecting documents, but the action removes the matching documents from the collection.
-modify: When you click on modify, you will see two text sections. The first section is to specify the condition for matching documents and the other is to specify the update script. This feature can be used to do bulk-updates.
-Using Explain
+- findAll: This is the default option. Specify the find condition and click on Submit Query. The matching documents will appear in the search results.
+- remove: This is similar to modify in that you just have to specify the condition for selecting documents, but the action removes the matching documents from the collection.
+- modify: When you click on modify, you will see two text sections. The first section is to specify the condition for matching documents and the other is to specify the update script. This feature can be used to do bulk-updates.
+
+### Using Explain
+
 This is one of the most useful features and probably the one I like the most in Rockmongo. The explain query is frequently used to analyze queries and their index usages. As shown below, you can specify your find query and then click on the Explain button. This will give all the cursor details for the query.
 
 
 
-Importing and Exporting Databases
+### Importing and Exporting Databases
+
 Import and export features are useful for when you want to backup the database. The import/export functionality in Rockmongo does the same task as the mongoimport and mongoexport functions.
 
 To export a database or collection, click the Export tab. Check all the checkboxes for the collections you want to export. Check the Download option as well, and then click on Export. It will give you a downloadable JavaScript file containing the entire exported database.
 
-
+IMAGE
 
 To import the data in another database, go to that database and click on the Import tab. Choose the JS file you just downloaded, and the entire dataset will be imported to the database.
 
-Conclusion
-There are a lot of other features in Rockmongo that I’m sure you’ll want to explore once you start working with it. In this article I’ve covered only the most frequently used features to help you get a head start with it. If you have any questions related to the article, feel free to post your comments!
+
 
