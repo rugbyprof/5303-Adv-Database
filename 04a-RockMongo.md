@@ -19,7 +19,7 @@ The requirements for running Rockmongo are:
 2. PHP 5.1.6 or higher with session support
 3. the php_mongo extension for MongoDB
 
- [04-MongoDB-Intro.md](https://github.com/rugbyprof/5303-Adv-Database/blob/master/04-MongoDB-Intro.md)__
+ [04b-MongoDB-Intro.md](https://github.com/rugbyprof/5303-Adv-Database/blob/master/04b-MongoDB-Intro.md)
 
 Goto: http://cs2.mwsu.edu/rockmongo/ and login. The default username and password is “admin” and “admin”. 
 
