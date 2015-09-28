@@ -1,4 +1,5 @@
-Not Done!!!
+## Assignment 4
+Due: Wednesday Sep 30 (by class time 4:00 pm) 
 
 ### What is MongoDB?
 
@@ -142,5 +143,14 @@ Finally....
 
 ### Your Assignment
 
-- Using your code from 
+- Create a database in MongoDB that is the same as your cs2 username.
+- Create a collection in your database called `random_people` in your database.
+- Using parts of your code from assignment 2 (that accesses the random people api) along with the above examples and write a php script to load 1000 individuals into your `random_people` collection.
 
+### Results / Deliverables
+
+- A script called load_mongo_db.php in your assignment4 folder.
+- A database with the same name as your cs2 username.
+- A collection called `random_people` in your database.
+- Approx 1000+ random users in your table (unique not enforced right now)
+- Copy the assignment4 folder into your github repository and push it to github.
