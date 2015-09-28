@@ -11,11 +11,11 @@ Not Done!!!
 
 ### Document
 
-![](http://docs.mongodb.org/manual/_images/crud-annotated-document.png)
+![](https://s3.amazonaws.com/f.cl.ly/items/1a2I0U040Y2V413m3a3I/document.png)
 
 ### Collections
 
-![](http://docs.mongodb.org/manual/_images/crud-annotated-collection.png)
+![](https://s3.amazonaws.com/f.cl.ly/items/2p2x1g00252P2q0o2N3M/collection.png)
 
 ### CRUD
 
