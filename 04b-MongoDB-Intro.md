@@ -136,5 +136,11 @@ Notice how:
 1. It was very easy to insert a `json object` (document) into the collection.
 2. None of the `documents` are have exactly the same structure.
 
+MongoDB isn't worried about having perfect table structures with normalized data split out into many tables with relationships. It's worried about getting "documents" of data without all the "joining" that happens in an RDBMS. That doesn't means you can't do joins in MongoDB, but it does mean I'm not going to cover it right now :)
 
+Finally....
+
+### Your Assignment
+
+- Using your code from 
 
