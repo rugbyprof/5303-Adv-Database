@@ -122,7 +122,6 @@ I will use “THEM” and “THEY” meaning “No Sql” and “Rdbms” togeth
     - R-Trees is an obvious choice for indexing, but what is actually implemented in some of the common DB's (oracle, postgres, mysql) 
 - What kind of performance can we expect with spatial queries?
 - Emphasize the DB's that we discuss the most, you can mention others if they have features that are interesting. 
-
 - http://www.cubrid.org/blog/dev-platform/20-minutes-to-understanding-spatial-database/
 - http://postgis.net/docs/manual-1.3/ch06.html#id439526
 - https://dev.mysql.com/doc/refman/5.0/en/opengis-geometry-model.html
