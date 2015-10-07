@@ -147,9 +147,9 @@ I will use “THEM” and “THEY” meaning “No Sql” and “Rdbms” togeth
         - Shard Query
 - Finish with an overview of each point and how cost effective, or ease in implementation they would be. 
     
-http://code.google.com/p/shard-query/.
-https://www.percona.com/blog/2014/05/01/parallel-query-mysql-shard-query/
-http://passingbythewoods.blogspot.com/2008/09/database-harding-vs-mysql-clusters.html    
+- http://code.google.com/p/shard-query/
+- https://www.percona.com/blog/2014/05/01/parallel-query-mysql-shard-query/
+- http://passingbythewoods.blogspot.com/2008/09/database-harding-vs-mysql-clusters.html    
 
 
 
