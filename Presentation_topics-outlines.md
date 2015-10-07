@@ -1,36 +1,38 @@
 ## PostGres vs Mysql 
 
 - We know that PostGreSQL and MySQL are both RDBMS’s so thats nothing new.
-- Mysql has some spin offs (MariaDB, Percona), why is that, where PostgreSQL doesn’t. Why is that?
+- Mysql has some spin offs (MariaDB, Percona), why is that? Why doesn't PostgreSQL have any? (This point may not be quantifiable and it's ok to give us opionion based answer).
 - Your going to have to really pick apart both DB’s and tell us from a low level where each DB excels or struggles:
     - Acid Complience
     - Table Locking
     - Json Support
     - Joins
     - Data Integrity
-    - Data Type
+    - Data Types
     - Transactions and Rollbacks
     - Performance Tuning
     - Non-SQL compliant Functions (Mysql added a bunch)
     - Etc.
         
-- I would discuss the similarities first, then discuss where they really start to differ.
+- I would discuss the similarities first, the major differences, then get into the minor differences.
 - Approach this like your presenting to your boss at work, and he needs to choose Mysql or PostgreSQL based on the upcoming project the company is starting. The problem is that be didn’t tell you what the project was so you have to discuss all differences so he can make a choice. 
-- In the end there is no winner, but I should be able to choose base on what project I have to implement.
+- In the end there is no winner, but I should be able to choose based on what project I have to implement.
 
 Decent Article: https://www.quora.com/What-are-pros-and-cons-of-PostgreSQL-and-MySQL<br>
 https://www.wikivs.com/wiki/MySQL_vs_PostgreSQL
 
 ## Apache Cassandra
 
-- Describe NoSql /  RDBMS and their basic differences (loose definitions just to compare).
-- Define what a "distributed database" is. Give examples of distributed DB’s.
-- Is Apache Cassandra an RDBMS or NoSQL DB? (It’s NoSql, but it has a SQL like syntax).
+- Describe NoSql /  RDBMS and their basic differences (use loosely based definitions just to compare).
+- Define the concept of a "distributed database". Give examples of some other distributed DB’s.
+- Is Apache Cassandra an RDBMS or NoSQL DB? 
+    - It’s NoSql, but it has a SQL like syntax so explain how this is so.
 - What are the differences between Cassandra and other NoSql DB’s
 - How does it store data?
     - Does it use traditional data structures?
     - https://wiki.apache.org/cassandra/DataModel
-    - Database Denormalization (define it and describe it and discuss why it can speed things up)
+    - Database denormalization (define it and describe it and discuss why it can speed things up)
+        - What would some of the negative side effects of denormalization? 
 - How does cassandra perform against RDBMS’s?
 - Does Cassandra support joins, subqueries, etc?
 - Does Cassandra support transactions?
@@ -40,7 +42,7 @@ https://academy.datastax.com/demos/brief-introduction-apache-cassandra
 
 ## SQL lite
 
-- Describe traditional RDBMS:
+- Describe traditional RDBMS (general overview to lay groundwork):
     - how it stores data
     - disk access
     - transactions 
@@ -51,6 +53,7 @@ https://academy.datastax.com/demos/brief-introduction-apache-cassandra
     - Does it scale smoothly (work well if it gets large)?
     - Does it provide all functionality of traditional RDBMS?
     - Can SQLite support multiple users and multiple DB’s?
+    - What would the major market be for SqlLite (what apps / software gravitates toward SqlLite)?
 - MOST IMPORTANTLY (discuss comparable alternatives):
     - http://www.developereconomics.com/five-popular-databases-for-mobile/
     - Berkeley DB 
@@ -58,9 +61,9 @@ https://academy.datastax.com/demos/brief-introduction-apache-cassandra
 
 ## No SQL DB VS RDBMS
 
-- Define No Sql and Rdbms (overview) 
+- Define No Sql and Rdbms (overview of each with loose definitions) 
 - Discuss general storage methods for generic Rdbms 
-    - B-Trees 
+    - B+ Trees 
     - When does data get written (Write Through, Write Back)
    - Discuss memory resident items vs items written to disk (indexing)
 - Now give examples using actual DBMS’s (Oracle, Sql Server, Mysql, Postgres , etc.) You don’t have to use all of them.
@@ -100,18 +103,29 @@ I will use “THEM” and “THEY” meaning “No Sql” and “Rdbms” togeth
 - Are there any Rdbms’s that are made for big data?
 - Conclusions
 
-Don’t forget to discuss performance!
+- Don’t forget to discuss performance!
+- And try to use images when describing things. 
+- I found this presentation: http://www.slideshare.net/Muratakal/rdbms-vs-nosql
+- Theres a bunch more on that site. It’s ok to use others materials. Just cite them.
 
-And try to use images when describing things. 
+## Spatial Extensions in RDBMS 
 
-I found this presentation: http://www.slideshare.net/Muratakal/rdbms-vs-nosql
+- What is a spatial extension?
+- What does this add to the traditional RDBMS? 
+    -  Additional data types (points, linestrings, multiLinestrings, etc.)
+    -  Additional functions added (distance, area, length,crosses,intersects,etc.)
+    -  Additional operators (e.g. `A @ B` means A is contained by B). Give us more examples of these types of operations. 
+- How does this effect querying?
+    - Give examples of types of queries (nearest neighbor, point in polygon, intersection, etc.) 
+- How does this effect indexing?
+    - Obviously by querying spatial data, our indexes must also adapt. Discuss the changes in approaches to indexing data.
+    - R-Trees is an obvious choice for indexing, but what is actually implemented in some of the common DB's (oracle, postgres, mysql) 
+- What kind of performance can we expect with spatial queries?
+- Emphasize the DB's that we discuss the most, you can mention others if they have features that are interesting. 
 
-Theres a bunch more on that site. It’s ok to use others materials. Just cite them.
-
-
-
-
-
+- http://www.cubrid.org/blog/dev-platform/20-minutes-to-understanding-spatial-database/
+- http://postgis.net/docs/manual-1.3/ch06.html#id439526
+- https://dev.mysql.com/doc/refman/5.0/en/opengis-geometry-model.html
 
 
 
