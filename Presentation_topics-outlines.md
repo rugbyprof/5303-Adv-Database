@@ -127,9 +127,29 @@ I will use “THEM” and “THEY” meaning “No Sql” and “Rdbms” togeth
 - http://postgis.net/docs/manual-1.3/ch06.html#id439526
 - https://dev.mysql.com/doc/refman/5.0/en/opengis-geometry-model.html
 
+## Performance and Scalability
 
-
+- Define scalability and typical ways to scale a DB (increased memory, and disk space)
+- Define performance and typical ways to increase performance 
+    - Database tuning
+    - Query optimization
+    - Increase hardware (Ram, Hardisk space)
+    - Database Partitioning
+        - Define Partitioning as a generic term
+        - Horizontal partitioning 
+        - Vertical partitioning
+    - Scaling Up vs Scaling Out
+- Now look at physical ways to increase performance on a large DB
+    - Clustering
+    - Sharding
+    - Clustering vs Sharding
+        - Parallel Query
+        - Shard Query
+- Finish with an overview of each point and how cost effective, or ease in implementation they would be. 
     
+http://code.google.com/p/shard-query/.
+https://www.percona.com/blog/2014/05/01/parallel-query-mysql-shard-query/
+http://passingbythewoods.blogspot.com/2008/09/database-harding-vs-mysql-clusters.html    
 
 
 
