@@ -1,6 +1,7 @@
 Write SQL data definition language creating the tables required to set up the Database, and SQL data manipulation to insert tuples into the following Database and queries to answer the questions listed below. 
 
 The program is to manage the airline flights, aircraft, passengers and pilots. The relations to be represented include: 
+
 1. These are the flights scheduled for the 2 days in question:
 
 |FLTNO	|	DATE	|	ORIGIN	|	DESTINATION |
@@ -18,43 +19,51 @@ The program is to manage the airline flights, aircraft, passengers and pilots. T
 |5	|	4-2	|	ORD	|	DFW |
 
 2. The Airline has the Following aircraft:
-ACNO		TYPE		CAPACITY		PILOTS
-N173WY		C-172		3			1
-N35A		B-18		9			2
-N412B		DC-3		21			2
-N747UA		B-747		300			3
+
+|ACNO	|	TYPE	|	CAPACITY	|	PILOTS|
+|-------|-------|---------|-------------|
+|N173WY	|	C-172	|	3	|		1|
+|N35A	|	B-18	|	9		|	2|
+|N412B	|	DC-3	|	21	|		2|
+|N747UA	|	B-747	|	300	|		3|
 
 3. These are the airline’s pilots:
-PILOTID		NAME	
-1030		Wright, Orville
-2137		Lindberg, Charles
-0241		Yeager, Chuck
-7305		Post, Wiley
-2033		Boyington, Greg
-4315		Lovell, James
-3102		Hoover, Bob
-0029		Tibbets, Paul
+
+|PILOTID|		NAME|
+|---------|-------------|
+|1030	|	Wright, Orville|
+|2137	|	Lindberg, Charles|
+|0241	|	Yeager, Chuck|
+|7305	|	Post, Wiley|
+|2033	|	Boyington, Greg|
+|4315	|	Lovell, James|
+|3102	|	Hoover, Bob|
+|0029	|	Tibbets, Paul|
 
 4. A List of passengers for April 1st and 2nd. 
-PASSID		NAME
-1001		Simpson, Richard
-1002		Halverson, Ranette
-1003		Carpenter, Stewart
-1004		Griffin, Terry
-1005		Gordon, Scott
-1101		Mouse, Mickey
-1102		Duck, Donald
-1103		Bunny, Bugs
-1104		Moose, Bullwinkle
-1105		Fudd, Elmer
-1011 		Wayne, John
-1012		Mazurki, Mike
-1013		Marvin, Lee
-1014		Romero, Cesar
-1015		Lamour, Dorothy 
+
+|PASSID	|	NAME|
+|---------|-------------|
+|1001	|	Simpson, Richard|
+|1002	|	Halverson, Ranette|
+|1003	|	Carpenter, Stewart|
+|1004	|	Griffin, Terry|
+|1005	|	Gordon, Scott|
+|1101	|	Mouse, Mickey|
+|1102	|	Duck, Donald|
+|1103	|	Bunny, Bugs|
+|1104	|	Moose, Bullwinkle|
+|1105	|	Fudd, Elmer|
+|1011 |		Wayne, John|
+|1012	|	Mazurki, Mike|
+|1013	|	Marvin, Lee|
+|1014	|	Romero, Cesar|
+|1015	|	Lamour, Dorothy |
 
 5. The aircraft assignments are:
-ACNO		FLTNO		DATE
+
+|ACNO	|	FLTNO	|	DATE|
+|-------|---------|-------------|
 N35A		1		4-1
 N173WY		2		4-1
 N412B		3		4-1
