@@ -64,17 +64,17 @@ The program is to manage the airline flights, aircraft, passengers and pilots. T
 
 |ACNO	|	FLTNO	|	DATE|
 |-------|---------|-------------|
-N35A		1		4-1
-N173WY		2		4-1
-N412B		3		4-1
-N35A		4		4-1
-N173WY		5		4-1
-N412B		6		4-2
-N173WY		1		4-2
-N35A		2		4-2
-N747UA		3		4-2
-N173WY		4		4-2
-N35A		5		4-2
+|N35A	|	1	|	4-1 |
+|N173WY	|	2	|	4-1 |
+|N412B	|	3	|	4-1 |
+|N35A	|	4	|	4-1 |
+|N173WY	|	5	|	4-1 |
+|N412B	|	6	|	4-2 |
+|N173WY	|	1	|	4-2 |
+|N35A	|	2	|	4-2 |
+|N747UA	|	3	|	4-2 |
+|N173WY	|	4	|	4-2 |
+|N35A	|	5	|	4-2 |
 
 6. The pilot assignments are:
 PILOTID		FLTNO		DATE
