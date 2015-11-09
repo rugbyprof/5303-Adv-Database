@@ -1,8 +1,10 @@
+### Sql Assignment
+
 Write SQL data definition language creating the tables required to set up the Database, and SQL data manipulation to insert tuples into the following Database and queries to answer the questions listed below. 
 
 The program is to manage the airline flights, aircraft, passengers and pilots. The relations to be represented include: 
 
-1. These are the flights scheduled for the 2 days in question:
+#### These are the flights scheduled for the 2 days in question:
 
 |FLTNO	|	DATE	|	ORIGIN	|	DESTINATION |
 |-------|-------|---------|-------------|
@@ -18,7 +20,7 @@ The program is to manage the airline flights, aircraft, passengers and pilots. T
 |4	|	4-2	|	DIA	|	DFW |
 |5	|	4-2	|	ORD	|	DFW |
 
-2. The Airline has the Following aircraft:
+#### The Airline has the Following aircraft:
 
 |ACNO	|	TYPE	|	CAPACITY	|	PILOTS|
 |-------|-------|---------|-------------|
@@ -27,7 +29,7 @@ The program is to manage the airline flights, aircraft, passengers and pilots. T
 |N412B	|	DC-3	|	21	|		2|
 |N747UA	|	B-747	|	300	|		3|
 
-3. These are the airline’s pilots:
+#### These are the airline’s pilots:
 
 |PILOTID|		NAME|
 |---------|-------------|
@@ -40,7 +42,7 @@ The program is to manage the airline flights, aircraft, passengers and pilots. T
 |3102	|	Hoover, Bob|
 |0029	|	Tibbets, Paul|
 
-4. A List of passengers for April 1st and 2nd. 
+#### A List of passengers for April 1st and 2nd. 
 
 |PASSID	|	NAME|
 |---------|-------------|
@@ -60,7 +62,7 @@ The program is to manage the airline flights, aircraft, passengers and pilots. T
 |1014	|	Romero, Cesar|
 |1015	|	Lamour, Dorothy |
 
-5. The aircraft assignments are:
+#### The aircraft assignments are:
 
 |ACNO	|	FLTNO	|	DATE|
 |-------|---------|-------------|
@@ -76,7 +78,7 @@ The program is to manage the airline flights, aircraft, passengers and pilots. T
 |N173WY	|	4	|	4-2 |
 |N35A	|	5	|	4-2 |
 
-6. The pilot assignments are:
+#### The pilot assignments are:
 
 |PILOTID	|	FLTNO	|	DATE|
 |-------|---------|-------------|
@@ -98,9 +100,7 @@ The program is to manage the airline flights, aircraft, passengers and pilots. T
 |0029	|	5	|	4-2 |
 
 
-
-
-7. The passengers ticketed are:
+#### The passengers ticketed are:
 
 |PASSID	|	FLTNO	|	DATE|
 |-------|---------|-------------|
@@ -133,7 +133,7 @@ The program is to manage the airline flights, aircraft, passengers and pilots. T
 |1013	|	5	|	4-1 |
 |1015	|	5	|	4-1 |
 
-Answer the following queries.
+#### Answer the following queries.
 
 1. Print a passenger list for flight 3 on 4-1
 2. Print a passenger list for flight 5 on 4-2
