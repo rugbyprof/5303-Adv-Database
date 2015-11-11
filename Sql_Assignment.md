@@ -84,7 +84,7 @@ The program is to manage the airline flights, aircraft, passengers and pilots. T
 |-------|---------|-------------|
 |1030	|	1	|	4-1 |
 |7305	|	1	|	4-1 |
-|2137|	|	2	|	4-1 |
+|2137 |	2	|	4-1 |
 |0241	|	3	|	4-1 |
 |1030	|	4	|	4-1 |
 |7305	|	4	|	4-1 |
