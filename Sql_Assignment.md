@@ -183,4 +183,4 @@ Your answer here
 ```
 
 Use the same question format for each answer. Points will be deducted for wrong formatting. 
->Note: In the example, I had to use single quotes instead of backticks so the markdown interpreter wouldn't convert them to markdown.
+>Note: In the example, I had to use single quotes (''') instead of backticks (```) so the markdown interpreter wouldn't convert them to markdown.
