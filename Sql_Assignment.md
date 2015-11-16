@@ -1,5 +1,7 @@
 ### Sql Assignment
 
+Due: 16 Nov (Monday by Midnight).
+
 Write SQL data definition language creating the tables required to set up the Database, and SQL data manipulation to insert tuples into the following Database and queries to answer the questions listed below. 
 
 The program is to manage the airline flights, aircraft, passengers and pilots. The relations to be represented include: 
