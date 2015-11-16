@@ -169,11 +169,11 @@ Email a .md (Markdown) file to: `terry.griffin@mwsu.edu` with the subject: `Sql 
 Print a passenger list for flight 3 on 4-1
 
 SQL:
-```
+\`\`\`
 SELECT * .....
 FROM .... 
 WHERE ...
-```
+\`\\``
 
 #### Answer:
 ```
