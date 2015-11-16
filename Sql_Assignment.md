@@ -156,3 +156,30 @@ The program is to manage the airline flights, aircraft, passengers and pilots. T
 17. Print a list of pilots who fly only one type of plane.
 18. Print a list of passengers booked on flights assigned to pilot=1030.
 19. Print a list of pilots assigned to fly plane=N35A.
+
+
+#### Submit: 
+Email a .md (Markdown) file to: `terry.griffin@mwsu.edu` with the subject: `Sql Flight Assignment` and have it in the following format:
+
+```
+### Title: Sql Flight Assignment
+### Your Name: Rahit Mahabir
+
+#### Question 1:
+Print a passenger list for flight 3 on 4-1
+
+SQL:
+```
+SELECT * .....
+FROM .... 
+WHERE ...
+```
+
+#### Answer:
+```
+Your answer here
+```
+
+```
+
+Use the same question format for each answer. Points will be deducted for wrong formatting. 
