@@ -21,7 +21,7 @@ Read:
 
 ### Content 
 
-- _____ Readability (-15 points if paper is unintelligible)
+- _____ Readability 
 
 - _____ Originality (based on TurnItIn)
 
