@@ -3,6 +3,7 @@
 Read: 
 - https://github.com/rugbyprof/5303-Adv-Database/blob/master/Writing_Across_the_Curriculum.md
 - https://github.com/rugbyprof/5303-Adv-Database/blob/master/How_To_Write_A_Research_Paper.md
+- http://cs.mwsu.edu/documents/GraduatePaperFormat.pdf
 
 ### Format 
  
