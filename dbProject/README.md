@@ -10,7 +10,7 @@
 
 - README.md - This file explaining the project
 - site - folder containing the web pages for the project
-    - [](https://github.com/rugbyprof/5303-Adv-Database/edit/master/dbProject/site/index.php) - main page for internet site
+    - index.php - main page for internet site
     - register.php - registration page for site
     - etc.
 - documents - contains all documents for project
