@@ -8,9 +8,9 @@
 
 ### Project located at the following (ONLY list the members that have copies on cs3):
 
-- [](http://cs3.mwsu.edu/~member1/dbProject/site)
-- [](http://cs3.mwsu.edu/~member2/dbProject/site)
-- [](http://cs3.mwsu.edu/~member3/dbProject/site)
+- http://cs3.mwsu.edu/~member1/dbProject/site
+- http://cs3.mwsu.edu/~member2/dbProject/site
+- http://cs3.mwsu.edu/~member3/dbProject/site
 
 
 ### File List (list every folder and file in your project with a small explanation of what it is:)
