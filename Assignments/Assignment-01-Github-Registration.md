@@ -53,8 +53,10 @@ Now that we have our communication client set up, we probably need to start gett
 command line prowess, so we need to give it some assistance.
 
 
-### Step 2: Gitbash
+### Step 2: Command Line Interface (Telnet Client)
 ---
+
+#### Gitbash
 ![](https://d17oy1vhnax1f7.cloudfront.net/items/160M141x29360Y0f0T0l/gwindows_logo_72.hF1V.png)
 
 From Gitbash's website:
@@ -70,6 +72,26 @@ Don't worry about `Git` just yet. Simply install Git for windows.
 
 Download Gitbash from [here](https://git-for-windows.github.io/). This page also gives a little more information about what your installing. 
 
+#### Putty
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/433k3t2F1R2Q0s1E3K0K/putty.png?X-CloudApp-Visitor-Id=1094421)
+
+PuTTY is an SSH and telnet client, developed originally by Simon Tatham for the Windows platform. PuTTY is open source software that is available with source code and is developed and supported by a group of volunteers.
+
+It doesn't provide a "linux" or "bash" type interface, it simply offers an interface to a server that allows remote logins.
+
+#### Bitvise
+
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/2K2L232m1Q1n173B1I2X/Screen%20Shot%202016-08-29%20at%203.51.00%20PM.png?X-CloudApp-Visitor-Id=1094421)
+
+Bitvise SSH Client is an SSH and SFTP client for Windows. It is developed and supported professionally by Bitvise. The SSH Client is robust, easy to install, easy to use, and supports all features supported by PuTTY, as well as the following:
+
+- graphical SFTP file transfer;
+- single-click Remote Desktop tunneling;
+- auto-reconnecting capability;
+- dynamic port forwarding through an integrated proxy;
+- an FTP-to-SFTP protocol bridge.
+
+Download [here](https://www.bitvise.com/ssh-client-download)
 
 ### Step 3: Digital Ocean
 
