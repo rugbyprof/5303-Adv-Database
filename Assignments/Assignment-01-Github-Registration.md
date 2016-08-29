@@ -81,14 +81,14 @@ view an online tutorial [here](https://www.digitalocean.com/community/tutorials/
 
 -----
 
-### A. [Sign up](https://cloud.digitalocean.com/registrations/new) for Digital Ocean.
+#### A. [Sign up](https://cloud.digitalocean.com/registrations/new) for Digital Ocean.
 
 This will cost you around $5.00 + tax for the entire month. 
 
 -----
 
 
-### B. [Create a new Droplet](https://cloud.digitalocean.com/droplets/new)
+#### B. [Create a new Droplet](https://cloud.digitalocean.com/droplets/new)
 
 ### Create Droplets
 #### Choose an image:
@@ -118,13 +118,13 @@ This will cost you around $5.00 + tax for the entire month.
 
 -----
 
-### C. IP Address & Password
+#### C. IP Address & Password
 
 - The IP address that is assigned to your "droplet", is your only connection to your server.
 - The root password will be emailed to you.
 - You need both IP address & password to access your new server.
 
-### D. Accessing Your Server
+#### D. Accessing Your Server
 
 - Open some type of "terminal" (like [putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)) application and log into your server using:
     - The IP address given to you
