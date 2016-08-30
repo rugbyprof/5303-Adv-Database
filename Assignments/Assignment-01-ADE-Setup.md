@@ -105,7 +105,9 @@ view an online tutorial [here](https://www.digitalocean.com/community/tutorials/
 
 #### A. [Sign up](https://cloud.digitalocean.com/registrations/new) for Digital Ocean.
 
-This will cost you around $5.00 + tax for the entire month. 
+This will cost you around $5.00 + tax for the entire month.
+
+Use the code __`DROPLET10`__ for a $10 dollar credit for "new" users.
 
 -----
 
