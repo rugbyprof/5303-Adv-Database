@@ -231,7 +231,7 @@ a means to push your files to a central repository. So if your using a lab or pe
 - When you create a Github account, you must choose a `username`. 
 - This is very important to remember, because you will update the class roster with this username so I know where to find all your assignments.
 - Create a repository named:
-    - `5393-advdb-yourlastname`
+    - `5303-AdvDB-yourlastname`
     - replace the `yourlastname` with your last name to make it unique.
 - Check the box that says: "Add a README.md file"
 
@@ -266,7 +266,7 @@ Add:
 1. Your name (last, first)
 2. Your email
 3. Your github username<sup>*</sup>
-4. A link to your 2143-OOP repository<sup>*</sup>
+4. A link to your 5303-AdvDB repository<sup>*</sup>
 
 *Your repository name and your github username are NOT the same thing.
 
@@ -277,7 +277,7 @@ Add:
 Every email must have a minimum of two items included:
 
 - The course number and title in the subject:
-    - `2143 OOP`
+    - `5303-AdvDBs`
 - Your name
 
 I can't promise an answer if you don't provide those two pieces of information.
