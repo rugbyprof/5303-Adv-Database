@@ -267,6 +267,7 @@ Add:
 2. Your email
 3. Your github username<sup>*</sup>
 4. A link to your 5303-AdvDB repository<sup>*</sup>
+5. Ip address of your server
 
 *Your repository name and your github username are NOT the same thing.
 
