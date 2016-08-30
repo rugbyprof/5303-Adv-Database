@@ -2,6 +2,9 @@
 | Command	      | Meaning                                       |
 |---------------|------------------------------------------------|
 | `ls	`          | list files and directories                    |
+| `ls -l`	        | do a long listing showing permissions and file sizes                |
+| `ls -la`	        | same as above + show hidden files and directories                |
+| `ls -lah`	        | same as above + make file sizes human readable                |
 | `ls -a`	        | list all files and directories                |
 | `mkdir`	        | make a directory                              |
 | `cd directory`	| change to named directory                     |
