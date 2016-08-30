@@ -257,7 +257,7 @@ a means to push your files to a central repository. So if your using a lab or pe
 ![](https://d3vv6lp55qjaqc.cloudfront.net/items/2Y3p3e0B3t362M1Z020X/Apps-Google-Drive-Sheets-icon.png?X-CloudApp-Visitor-Id=1094421)
 #### Update the Class Roster:
 
-- Here is a link to our class roster on google docs: https://docs.google.com/spreadsheets/d/1wX5f7oQNqYAx6Hj1KRe35Fv28uLIAsv40_QTgXh9-LA/edit?usp=sharing
+- Here is a link to our class roster on google docs: https://docs.google.com/spreadsheets/d/1Ryb4wiL9mQjTCPeLLASosfHuUi3YnZ6AlEXQChcUCQw/edit?usp=sharing
 
 - Update the roster by adding your information to it. 
 
