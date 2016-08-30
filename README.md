@@ -4,7 +4,7 @@ A database course covering relational and no-sql databases.
 Sources: [NoSql](http://www.lezinter.net/tmp/noSQL.pdf)
 
 ## Roster
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1Ryb4wiL9mQjTCPeLLASosfHuUi3YnZ6AlEXQChcUCQw/edit#gid=0)
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1Ryb4wiL9mQjTCPeLLASosfHuUi3YnZ6AlEXQChcUCQw/edit?usp=sharing)
 
 - Days: MW 1600pm 1720pm 
 - Location: BO 320 
