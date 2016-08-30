@@ -16,7 +16,7 @@ Sources: [NoSql](http://www.lezinter.net/tmp/noSQL.pdf)
 
 
 ## Course Topics:
-
+TBD
 
 ## Grading:	
 
