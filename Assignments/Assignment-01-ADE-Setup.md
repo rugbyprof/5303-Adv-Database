@@ -261,7 +261,7 @@ a means to push your files to a central repository. So if your using a lab or pe
 
 - Here is a link to our class roster on google docs: https://docs.google.com/spreadsheets/d/1Ryb4wiL9mQjTCPeLLASosfHuUi3YnZ6AlEXQChcUCQw/edit?usp=sharing
 
-- Update the roster by adding your information to it. 
+- Update the roster by adding your information to it.
 
 Add:
 
