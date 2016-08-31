@@ -1,0 +1,594 @@
+{
+    "query": "tablet",
+    "sort": "relevance",
+    "responseGroup": "base",
+    "totalResults": 67196,
+    "start": 1,
+    "numItems": 10,
+    "items": [
+        {
+            "itemId": 167860067,
+            "parentItemId": 167860067,
+            "name": "Google Android 4.4 Tablet 7\" Touchscreen 4GB Quad Core with Wi-Fi and Bluetooth",
+            "msrp": 99.99,
+            "salePrice": 37.99,
+            "upc": "754292143906",
+            "categoryPath": "Electronics\/iPad & Tablets\/Android Tablets",
+            "longDescription": "Features:Color: WhiteAndroid 4.4 KitKatARMv7 Quad-Core 1.3GHz processor512MB RAM4GB flash stoargeBuilt-in speakerGPU: Mali-400 MP802.11b\/g\/n Wireless LANBluetooth connectivityMicroSD slot1.9MP rear facing camera0.3MP front facing camera7-inch capacitive touchscreen display (800 x 480)Google Play Store pre-loadedVolume +\/-Power buttonMicro USBSD Card slot3.5 mm headphone jackBattery Specifications:Lithium Polymer1-Cell2500mAhPower Adapter Specifications:Input: 100-240V ~ 50\/60, 0.3AOutput: 5V---2APackage Includes:QX70W 7&quot; Capacitive Touchscreen TabletAndroid 4.4 KitKat pre-installedAC power adapterMicro USB Cable",
+            "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/572619a6-68d8-4f06-92d1-b7c8d98f3a34_1.22c6e8a315d82cdc7c1f739937669e7f.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+            "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/572619a6-68d8-4f06-92d1-b7c8d98f3a34_1.22c6e8a315d82cdc7c1f739937669e7f.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "largeImage": "https:\/\/i5.walmartimages.com\/asr\/572619a6-68d8-4f06-92d1-b7c8d98f3a34_1.22c6e8a315d82cdc7c1f739937669e7f.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+            "productTrackingUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Fwww.walmart.com%252Fip%252F7-1-3Ghz-Quad-Core-Capacitive-Touchscreen-512MB-4GB-WiFi-Android-Tablet-QX70W%252F167860067%253Faffp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "standardShipRate": 0,
+            "marketplace": true,
+            "sellerInfo": "Altatac",
+            "productUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Fwww.walmart.com%2Fip%2F7-1-3Ghz-Quad-Core-Capacitive-Touchscreen-512MB-4GB-WiFi-Android-Tablet-QX70W%2F167860067%3Faffp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "customerRating": "5.0",
+            "customerRatingImage": "http:\/\/i2.walmartimages.com\/i\/CustRating\/5.gif",
+            "categoryNode": "3944_1078524_1231200",
+            "bundle": false,
+            "stock": "Available",
+            "addToCartUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D167860067%7C1%26affp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "affiliateAddToCartUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Faffil.walmart.com%252Fcart%252FaddToCart%253Fitems%253D167860067%257C1%2526affp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "freeShippingOver50Dollars": false,
+            "imageEntities": [
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/572619a6-68d8-4f06-92d1-b7c8d98f3a34_1.22c6e8a315d82cdc7c1f739937669e7f.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/572619a6-68d8-4f06-92d1-b7c8d98f3a34_1.22c6e8a315d82cdc7c1f739937669e7f.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/572619a6-68d8-4f06-92d1-b7c8d98f3a34_1.22c6e8a315d82cdc7c1f739937669e7f.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "PRIMARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/16b3c55b-a42f-4134-a66e-f4136fbf3f83_1.493482b28b92d9bc7b97e1647154a12a.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/16b3c55b-a42f-4134-a66e-f4136fbf3f83_1.493482b28b92d9bc7b97e1647154a12a.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/16b3c55b-a42f-4134-a66e-f4136fbf3f83_1.493482b28b92d9bc7b97e1647154a12a.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/65d678ce-53aa-47cc-91d7-31043cda46b6_1.1b7ea7e627bc4f1e55a9da930cfb44a6.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/65d678ce-53aa-47cc-91d7-31043cda46b6_1.1b7ea7e627bc4f1e55a9da930cfb44a6.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/65d678ce-53aa-47cc-91d7-31043cda46b6_1.1b7ea7e627bc4f1e55a9da930cfb44a6.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                }
+            ],
+            "offerType": "ONLINE_ONLY",
+            "shippingPassEligible": false,
+            "availableOnline": true
+        },
+        {
+            "itemId": 45804389,
+            "parentItemId": 45804389,
+            "name": "RCA 7\" Tablet 16GB Quad Core includes Keyboard \/ Case",
+            "msrp": 69.99,
+            "salePrice": 59,
+            "upc": "062118773504",
+            "categoryPath": "Electronics\/iPad & Tablets\/Android Tablets",
+            "shortDescription": "&lt;p&gt;Introducing the RCA 7 Voyager II 7-inch Google Certified Tablet. Operating on Android's sweetest operating system yet, Android 5.0 (Lollipop), you can enjoy more of what the Google Play store has to offer, whether you're into gaming, social apps, music, movies or are looking for the latest productivity app. Use the included keyboard case to quickly compose emails, update social statuses and surf the Web. Share a smile with friends and family using the tablet's front camera. Use the tablet's built-in Bluetooth capability to connect and pair with compatible devices. Whether taking in a movie, playing a favorite game or surfing the Web, the RCA tablet's quad-core processor and 16GB flash-storage provide an excellent portable experience.&lt;\/p&gt;",
+            "longDescription": "&lt;b&gt;RCA Voyager Pro with WiFi 7&quot; Touchscreen Tablet PC:&lt;\/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Technical Specifications:&lt;\/b&gt;&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;1.3GHz Quad-Core processor&lt;\/li&gt;&lt;li&gt;1GB DDR of system memory&lt;\/li&gt;&lt;li&gt;7.0&quot; touchscreen, 1024 x 600 resolution&lt;\/li&gt;&lt;li&gt;Built-in WiFi and Bluetooth v4.0&lt;\/li&gt;&lt;\/ul&gt;&lt;b&gt;Additional Features:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Front 1MP webcam&lt;\/li&gt;&lt;li&gt;microUSB 2.0 port, headphone jack, microphone jack&lt;\/li&gt;&lt;li&gt;16GB onboard storage memory, additional memory via microSD card slot&lt;\/li&gt;&lt;li&gt;Rechargeable lithium-ion battery&lt;\/li&gt;&lt;li&gt;Weighs 0.61 lbs; 7.3&quot; x 0.5&quot; x 4.5&quot; dimensions&lt;\/li&gt;&lt;\/ul&gt;&lt;b&gt;Software and Applications:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Android 5.0 OS (Lollipop)&lt;\/li&gt;&lt;li&gt;Media Formats: popular media formats&lt;\/li&gt;&lt;\/ul&gt;&lt;b&gt;What's in the Box:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Tablet, battery, keyboard, case and AC adapter&lt;\/li&gt;&lt;\/ul&gt;&lt;br&gt;&lt;b&gt;What's a Tablet PC?&lt;\/b&gt;&lt;br&gt;&lt;br&gt;Tablet PCs are compact, ultra-portable entertainment devices that let you read email, surf the Internet, read eBooks, view photos, play games, listen to music and watch video files. Most tablets are based on a smaller operating system, which allows you to purchase and download additional applications from supported stores. Tablet PCs do not have a CD\/DVD drive and will not run Microsoft Windows or its applications. Tablet PCs function as a secondary device for casual entertainment purposes, and are not meant to replace a computer. They are ideal for use around the home and on the go with WiFi or 3-4G mobile broadband connections (pay as you go, contract may be required for service).",
+            "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/3849139f-82ee-4e71-a3db-dff313a30942_1.8fe72f7c18a453827839db98d62243ec.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+            "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/3849139f-82ee-4e71-a3db-dff313a30942_1.8fe72f7c18a453827839db98d62243ec.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "largeImage": "https:\/\/i5.walmartimages.com\/asr\/3849139f-82ee-4e71-a3db-dff313a30942_1.8fe72f7c18a453827839db98d62243ec.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+            "productTrackingUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Fwww.walmart.com%252Fip%252FRCA-7-Tablet-16GB-Quad-Core-includes-Keyboard-Case%252F45804389%253Faffp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "standardShipRate": 0,
+            "marketplace": false,
+            "modelNumber": "RCT6773W42KC C",
+            "productUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Fwww.walmart.com%2Fip%2FRCA-7-Tablet-16GB-Quad-Core-includes-Keyboard-Case%2F45804389%3Faffp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "customerRating": "4.19",
+            "numReviews": 1210,
+            "customerRatingImage": "http:\/\/i2.walmartimages.com\/i\/CustRating\/4_2.gif",
+            "categoryNode": "3944_1078524_1231200",
+            "bundle": false,
+            "stock": "Available",
+            "addToCartUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D45804389%7C1%26affp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "affiliateAddToCartUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Faffil.walmart.com%252Fcart%252FaddToCart%253Fitems%253D45804389%257C1%2526affp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "giftOptions": {
+                "allowGiftWrap": false,
+                "allowGiftMessage": false,
+                "allowGiftReceipt": false
+            },
+            "imageEntities": [
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/52ea55e8-6a16-4af8-b879-b9d1fe8572e9_1.96e2f24cf393b51d855bcde2e3a46e2c.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/52ea55e8-6a16-4af8-b879-b9d1fe8572e9_1.96e2f24cf393b51d855bcde2e3a46e2c.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/52ea55e8-6a16-4af8-b879-b9d1fe8572e9_1.96e2f24cf393b51d855bcde2e3a46e2c.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/69d8aed3-837f-4e6d-8416-09609c49fcb8_1.5edeb2146ebb64d0fe7b76123ac0eba9.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/69d8aed3-837f-4e6d-8416-09609c49fcb8_1.5edeb2146ebb64d0fe7b76123ac0eba9.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/69d8aed3-837f-4e6d-8416-09609c49fcb8_1.5edeb2146ebb64d0fe7b76123ac0eba9.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/f0f0b2e2-310a-407a-b94b-42850ee90602_1.82417d24f426f2888514ec7765e75830.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/f0f0b2e2-310a-407a-b94b-42850ee90602_1.82417d24f426f2888514ec7765e75830.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/f0f0b2e2-310a-407a-b94b-42850ee90602_1.82417d24f426f2888514ec7765e75830.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/3849139f-82ee-4e71-a3db-dff313a30942_1.8fe72f7c18a453827839db98d62243ec.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/3849139f-82ee-4e71-a3db-dff313a30942_1.8fe72f7c18a453827839db98d62243ec.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/3849139f-82ee-4e71-a3db-dff313a30942_1.8fe72f7c18a453827839db98d62243ec.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "PRIMARY"
+                }
+            ],
+            "offerType": "ONLINE_AND_STORE",
+            "shippingPassEligible": true,
+            "availableOnline": true
+        },
+        {
+            "itemId": 45804400,
+            "parentItemId": 45804400,
+            "name": "RCA 7\" Tablet 16GB Quad Core.",
+            "msrp": 59.99,
+            "salePrice": 49.98,
+            "upc": "062118773108",
+            "categoryPath": "Electronics\/iPad & Tablets\/Android Tablets",
+            "shortDescription": "&lt;p&gt;Introducing the RCA 7 Voyager II 7-inch Google Certified Tablet. Operating on Android's sweetest operating system yet, Android 5.0 (Lollipop), you can enjoy more of what the Google Play store has to offer, whether you're into gaming, social apps, music, movies or are looking for the latest productivity app. Share a smile with friends and family using the tablet's front camera. Use the tablet's built-in Bluetooth capability to connect and pair with compatible devices. Whether taking in a movie, playing a favorite game or surfing the Web, the RCA tablet's quad-core processor and 16GB flash-storage provide an excellent portable experience.&lt;\/p&gt;",
+            "longDescription": "&lt;b&gt;RCA 7 Voyager II with WiFi 7&quot; Touchscreen Tablet PC:&lt;\/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Technical Specifications:&lt;\/b&gt;&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;1.3GHz Quad-Core processor&lt;\/li&gt;&lt;li&gt;1GB DDR of system memory&lt;\/li&gt;&lt;li&gt;7.0&quot; touchscreen, 1024 x 600 resolution&lt;\/li&gt;&lt;li&gt;Built-in WiFi and Bluetooth v4.0&lt;\/li&gt;&lt;\/ul&gt;&lt;b&gt;Additional Features:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Front 1MP webcam&lt;\/li&gt;&lt;li&gt;microUSB 2.0 port, headphone jack, microphone jack&lt;\/li&gt;&lt;li&gt;16GB onboard storage memory, additional memory via microSD card slot&lt;\/li&gt;&lt;li&gt;Rechargeable lithium-ion battery&lt;\/li&gt;&lt;li&gt;Weighs 0.61 lbs; 7.3&quot; x 0.5&quot; x 4.5&quot; dimensions&lt;\/li&gt;&lt;\/ul&gt;&lt;b&gt;Software and Applications:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Android 5.0 OS (Lollipop)&lt;\/li&gt;&lt;li&gt;Media Formats: popular media formats&lt;\/li&gt;&lt;\/ul&gt;&lt;b&gt;What's in the Box:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Tablet, battery and AC adapter&lt;\/li&gt;&lt;\/ul&gt;&lt;br&gt;&lt;b&gt;What's a Tablet PC?&lt;\/b&gt;&lt;br&gt;&lt;br&gt;Tablet PCs are compact, ultra-portable entertainment devices that let you read email, surf the Internet, read eBooks, view photos, play games, listen to music and watch video files. Most tablets are based on a smaller operating system, which allows you to purchase and download additional applications from supported stores. Tablet PCs do not have a CD\/DVD drive and will not run Microsoft Windows or its applications. Tablet PCs function as a secondary device for casual entertainment purposes, and are not meant to replace a computer. They are ideal for use around the home and on the go with WiFi or 3-4G mobile broadband connections (pay as you go, contract may be required for service).",
+            "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/3eb004b5-95c8-42cd-aae5-550e48408619_1.abb2adcdab58a126beeab4fbbaab4eb4.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+            "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/3eb004b5-95c8-42cd-aae5-550e48408619_1.abb2adcdab58a126beeab4fbbaab4eb4.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "largeImage": "https:\/\/i5.walmartimages.com\/asr\/3eb004b5-95c8-42cd-aae5-550e48408619_1.abb2adcdab58a126beeab4fbbaab4eb4.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+            "productTrackingUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Fwww.walmart.com%252Fip%252FRCA-7-Tablet-16GB-Quad-Core%252F45804400%253Faffp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "standardShipRate": 5.97,
+            "marketplace": false,
+            "modelNumber": "RCT6773W42BF C",
+            "productUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Fwww.walmart.com%2Fip%2FRCA-7-Tablet-16GB-Quad-Core%2F45804400%3Faffp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "customerRating": "3.964",
+            "numReviews": 1439,
+            "customerRatingImage": "http:\/\/i2.walmartimages.com\/i\/CustRating\/4.gif",
+            "categoryNode": "3944_1078524_1231200",
+            "bundle": false,
+            "stock": "Available",
+            "addToCartUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D45804400%7C1%26affp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "affiliateAddToCartUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Faffil.walmart.com%252Fcart%252FaddToCart%253Fitems%253D45804400%257C1%2526affp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "giftOptions": {
+                "allowGiftWrap": false,
+                "allowGiftMessage": false,
+                "allowGiftReceipt": false
+            },
+            "imageEntities": [
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/3eb004b5-95c8-42cd-aae5-550e48408619_1.abb2adcdab58a126beeab4fbbaab4eb4.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/3eb004b5-95c8-42cd-aae5-550e48408619_1.abb2adcdab58a126beeab4fbbaab4eb4.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/3eb004b5-95c8-42cd-aae5-550e48408619_1.abb2adcdab58a126beeab4fbbaab4eb4.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "PRIMARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/f4ea8ff8-9227-4559-b59b-346f5469793f_1.deaa7a63f4e24562c55c60c668f353f1.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/f4ea8ff8-9227-4559-b59b-346f5469793f_1.deaa7a63f4e24562c55c60c668f353f1.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/f4ea8ff8-9227-4559-b59b-346f5469793f_1.deaa7a63f4e24562c55c60c668f353f1.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/084e7c3a-04eb-4b02-bc31-2358a5f3076b_1.9d2e84e1bd6c48296616f98303683d19.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/084e7c3a-04eb-4b02-bc31-2358a5f3076b_1.9d2e84e1bd6c48296616f98303683d19.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/084e7c3a-04eb-4b02-bc31-2358a5f3076b_1.9d2e84e1bd6c48296616f98303683d19.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/3ac31ad7-e738-4c7f-add7-7c980afbd042_1.8fb6f21e0a6bcde85460082af8bfffa4.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/3ac31ad7-e738-4c7f-add7-7c980afbd042_1.8fb6f21e0a6bcde85460082af8bfffa4.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/3ac31ad7-e738-4c7f-add7-7c980afbd042_1.8fb6f21e0a6bcde85460082af8bfffa4.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                }
+            ],
+            "offerType": "ONLINE_AND_STORE",
+            "shippingPassEligible": true,
+            "availableOnline": true
+        },
+        {
+            "itemId": 45804384,
+            "parentItemId": 45804384,
+            "name": "RCA Viking Pro 10.1\" 2-in-1 Tablet 32GB Quad Core",
+            "msrp": 129.99,
+            "salePrice": 79.98,
+            "upc": "062118630319",
+            "categoryPath": "Electronics\/Computers\/Laptops\/Shop Laptops by Type\/All Laptop Computers",
+            "shortDescription": "&lt;p&gt;Versatile and powerful, the RCA Viking Pro 10.1&quot; 2-in-1 Tablet with detachable keyboard offers an adjustable and multi-faceted user experience to suit a wide range of uses. The 10 Viking Pro operates on Android 5.0 (Lollipop) and showcases the operating system's brand-new, critically-acclaimed visual design. The Viking Pro's amazingly clear, 10.1-inch high definition screen makes for an incredibly vivid and detailed viewing experience, and the impressive 1.3GHz quad-core processor is powerful enough to zip through applications and tasks quickly. Use the detachable keyboard and built-in trackpad to update your social statuses, compose emails and navigate the Web. When it's time to get down to business, open up the included WPS Office app to create compelling documents and spreadsheets. Effortlessly transition the RCA 10 Viking Pro into a stand-alone tablet by detaching the keyboard. Available in Pink, Sky Blue, Purple or Charcoal for a stylish, personal 2-in-1 tablet experience.&lt;\/p&gt;",
+            "longDescription": "&lt;b&gt;RCA Viking Pro 2-in-1 with WIFi 10.1&quot; Touchscreen Tablet PC:&lt;\/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Technical Specifications:&lt;\/b&gt;&lt;br&gt;&lt;br&gt;&lt;ul&gt;&lt;li&gt;1.3GHz Quad-Core processor&lt;\/li&gt;&lt;li&gt;1GB DDR of system memory&lt;\/li&gt;&lt;li&gt;10.1&quot; touchscreen, 1280 x 800 resolution&lt;\/li&gt;&lt;li&gt;Built-in WiFi and Bluetooth v4.0&lt;\/li&gt;&lt;\/ul&gt;&lt;b&gt;Additional Features:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Back 2MP webcam and front 1MP webcam&lt;\/li&gt;&lt;li&gt;microUSB 2.0 port, USB 2.0 port, miniHDMI port, headphone jack, microphone jack, DC-in jack&lt;\/li&gt;&lt;li&gt;32GB onboard storage memory, additional memory via microSD card slot&lt;\/li&gt;&lt;li&gt;Up to 6 hours of run time on a full charge&lt;\/li&gt;&lt;li&gt;Weighs 1.15 lbs; 10.2&quot; x 0.39&quot; x 6.5&quot; dimensions&lt;\/li&gt;&lt;\/ul&gt;&lt;b&gt;Software and Applications:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Android 5.0 OS (Lollipop)&lt;\/li&gt;&lt;li&gt;Media Formats: popular media formats&lt;\/li&gt;&lt;\/ul&gt;&lt;b&gt;What's in the Box:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Tablet, battery, keyboard and AC adapter&lt;\/li&gt;&lt;\/ul&gt;&lt;br&gt;&lt;b&gt;What's a Tablet PC?&lt;\/b&gt;&lt;br&gt;&lt;br&gt;Tablet PCs are compact, ultra-portable entertainment devices that let you read email, surf the Internet, read eBooks, view photos, play games, listen to music and watch video files. Most tablets are based on a smaller operating system, which allows you to purchase and download additional applications from supported stores. Tablet PCs do not have a CD\/DVD drive and will not run Microsoft Windows or its applications. Tablet PCs function as a secondary device for casual entertainment purposes, and are not meant to replace a computer. They are ideal for use around the home and on the go with WiFi or 3-4G mobile broadband connections (pay as you go, contract may be required for service).",
+            "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/df0cc73e-554e-48dc-bdb9-7c7c5d472dbe_1.cbc9a626ce04f47994ce00a81002b21c.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+            "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/df0cc73e-554e-48dc-bdb9-7c7c5d472dbe_1.cbc9a626ce04f47994ce00a81002b21c.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "largeImage": "https:\/\/i5.walmartimages.com\/asr\/df0cc73e-554e-48dc-bdb9-7c7c5d472dbe_1.cbc9a626ce04f47994ce00a81002b21c.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+            "productTrackingUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Fwww.walmart.com%252Fip%252FRCA-Viking-Pro-10.1-2-in-1-Tablet-32GB-Quad-Core%252F45804384%253Faffp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "standardShipRate": 0,
+            "marketplace": false,
+            "modelNumber": "RCT6303W87DKF C",
+            "productUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Fwww.walmart.com%2Fip%2FRCA-Viking-Pro-10.1-2-in-1-Tablet-32GB-Quad-Core%2F45804384%3Faffp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "customerRating": "4.357",
+            "numReviews": 2253,
+            "customerRatingImage": "http:\/\/i2.walmartimages.com\/i\/CustRating\/4_4.gif",
+            "categoryNode": "3944_3951_1089430",
+            "bundle": false,
+            "stock": "Available",
+            "addToCartUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D45804384%7C1%26affp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "affiliateAddToCartUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Faffil.walmart.com%252Fcart%252FaddToCart%253Fitems%253D45804384%257C1%2526affp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "giftOptions": {
+                "allowGiftWrap": false,
+                "allowGiftMessage": false,
+                "allowGiftReceipt": false
+            },
+            "imageEntities": [
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/59aad7c5-30c9-41f1-bce6-e42d3d7e6cab_1.8e6b567906d726b4edbb9558bb84f414.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/59aad7c5-30c9-41f1-bce6-e42d3d7e6cab_1.8e6b567906d726b4edbb9558bb84f414.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/59aad7c5-30c9-41f1-bce6-e42d3d7e6cab_1.8e6b567906d726b4edbb9558bb84f414.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/27f3244b-a150-4abe-89cf-3bd8b68f8315_1.694fc2f53144be7b71278f801b18d180.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/27f3244b-a150-4abe-89cf-3bd8b68f8315_1.694fc2f53144be7b71278f801b18d180.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/27f3244b-a150-4abe-89cf-3bd8b68f8315_1.694fc2f53144be7b71278f801b18d180.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/df0cc73e-554e-48dc-bdb9-7c7c5d472dbe_1.cbc9a626ce04f47994ce00a81002b21c.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/df0cc73e-554e-48dc-bdb9-7c7c5d472dbe_1.cbc9a626ce04f47994ce00a81002b21c.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/df0cc73e-554e-48dc-bdb9-7c7c5d472dbe_1.cbc9a626ce04f47994ce00a81002b21c.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "PRIMARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/541c9c11-f7ce-445f-87aa-a6ab441533ad_1.10a793eec546d6a9bcf91e7d37cdfcf7.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/541c9c11-f7ce-445f-87aa-a6ab441533ad_1.10a793eec546d6a9bcf91e7d37cdfcf7.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/541c9c11-f7ce-445f-87aa-a6ab441533ad_1.10a793eec546d6a9bcf91e7d37cdfcf7.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                }
+            ],
+            "offerType": "ONLINE_AND_STORE",
+            "shippingPassEligible": true,
+            "availableOnline": true
+        },
+        {
+            "itemId": 45804385,
+            "parentItemId": 45804385,
+            "name": "RCA Cambio 10.1\" 2-in-1 Tablet 32GB Intel Atom Z3735F Quad-Core Processor Windows 10",
+            "msrp": 159.99,
+            "salePrice": 99.98,
+            "upc": "062118010128",
+            "categoryPath": "Electronics\/iPad & Tablets\/Windows Tablets\/All Windows Tablets",
+            "shortDescription": "Introducing the RCA Cambio 10.1-inch high-resolution Windows tablet with detachable keyboard. Powered by an Intel processor, the RCA Cambio is ready to tackle any task. Preloaded with Windows 10, the RCA Cambio boasts a clean and easy-to-use user interface. Create powerful documents and slideshows with Microsoft Office mobile apps including Word mobile, PowerPoint mobile and Excel Mobile. Store your files on the ample built-in 32GB flash memory or use the microSD card slot which supports up to 64GB of additional storage. Use the Cambio's Bluetooth capability to connect and pair with nearby compatible devices. Connect with the world and setup a videoconference using the Cambio's front 1MP or rear 2MP cameras.",
+            "longDescription": "&lt;br&gt;&lt;b&gt;RCA Cambio W101 V2 2-in-1 with WiFi 10.1&quot; Touchscreen Tablet PC:&lt;\/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Technical Specifications:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Intel Z3735 processor&lt;\/li&gt;&lt;li&gt;2GB DDR of system memory&lt;\/li&gt;&lt;li&gt;10.1&quot; touchscreen, 1280 x 800 resolution&lt;\/li&gt;&lt;li&gt;Built-in WiFi and Bluetooth v4.0&lt;\/li&gt;&lt;\/ul&gt;&lt;b&gt;Additional Features:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Back 2MP webcam and front 1MP webcam&lt;\/li&gt;&lt;li&gt;microUSB 2.0 port, USB 2.0 port, miniHDMI port, headphone jack, microphone jack, DC-in jack&lt;\/li&gt;&lt;li&gt;32GB onboard storage memory, additional memory via microSD card slot&lt;\/li&gt;&lt;li&gt;Up to 6 hours of run time on a full charge&lt;\/li&gt;&lt;li&gt;Weighs 1.15 lbs; 10.2&quot; x 0.39&quot; x 6.5&quot; dimensions&lt;\/li&gt;&lt;\/ul&gt;&lt;b&gt;Software and Applications:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Windows 10 OS&lt;&lt;li&gt;Media Formats: popular media formats&lt;\/li&gt;&lt;\/ul&gt;&lt;b&gt;What's in the Box:&lt;\/b&gt;&lt;ul&gt;&lt;li&gt;Tablet, battery, keyboard and AC adapter&lt;\/li&gt;&lt;\/ul&gt;&lt;br&gt;&lt;b&gt;What's a Tablet PC?&lt;\/b&gt;&lt;br&gt;&lt;br&gt;Tablet PCs are compact, ultra-portable entertainment devices that let you read email, surf the Internet, read eBooks, view photos, play games, listen to music and watch video files. Most tablets are based on a smaller operating system, which allows you to purchase and download additional applications from supported stores. Tablet PCs do not have a CD\/DVD drive and will not run Microsoft Windows or its applications. Tablet PCs function as a secondary device for casual entertainment purposes, and are not meant to replace a computer. They are ideal for use around the home and on the go with WiFi or 3-4G mobile broadband connections (pay as you go, contract may be required for service).",
+            "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/7387d491-2799-44ba-bb16-84a8c4f497db_1.bba1706ae177439ed00a283247262e67.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+            "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/7387d491-2799-44ba-bb16-84a8c4f497db_1.bba1706ae177439ed00a283247262e67.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "largeImage": "https:\/\/i5.walmartimages.com\/asr\/7387d491-2799-44ba-bb16-84a8c4f497db_1.bba1706ae177439ed00a283247262e67.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+            "productTrackingUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Fwww.walmart.com%252Fip%252FRCA-Cambio-10.1-2-in-1-Tablet-32GB-Intel-Atom-Z3735F-Quad-Core-Processor-Windows-10%252F45804385%253Faffp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "standardShipRate": 0,
+            "marketplace": false,
+            "modelNumber": "W101V2 B",
+            "productUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Fwww.walmart.com%2Fip%2FRCA-Cambio-10.1-2-in-1-Tablet-32GB-Intel-Atom-Z3735F-Quad-Core-Processor-Windows-10%2F45804385%3Faffp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "customerRating": "3.764",
+            "numReviews": 52,
+            "customerRatingImage": "http:\/\/i2.walmartimages.com\/i\/CustRating\/3_8.gif",
+            "categoryNode": "3944_1078524_1231197",
+            "bundle": false,
+            "stock": "Available",
+            "addToCartUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D45804385%7C1%26affp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "affiliateAddToCartUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Faffil.walmart.com%252Fcart%252FaddToCart%253Fitems%253D45804385%257C1%2526affp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "giftOptions": {
+                "allowGiftWrap": false,
+                "allowGiftMessage": false,
+                "allowGiftReceipt": false
+            },
+            "imageEntities": [
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/b8d77600-faf1-456e-89d9-4110d785ebc2_1.913b4d6c1faea229a92b96e0e72e2e90.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/b8d77600-faf1-456e-89d9-4110d785ebc2_1.913b4d6c1faea229a92b96e0e72e2e90.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/b8d77600-faf1-456e-89d9-4110d785ebc2_1.913b4d6c1faea229a92b96e0e72e2e90.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/7387d491-2799-44ba-bb16-84a8c4f497db_1.bba1706ae177439ed00a283247262e67.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/7387d491-2799-44ba-bb16-84a8c4f497db_1.bba1706ae177439ed00a283247262e67.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/7387d491-2799-44ba-bb16-84a8c4f497db_1.bba1706ae177439ed00a283247262e67.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "PRIMARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/96a553ff-ffe9-45cc-8f81-67cdf44ddb99_1.e745b32bf8b9f570e56d33c923bb9dd1.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/96a553ff-ffe9-45cc-8f81-67cdf44ddb99_1.e745b32bf8b9f570e56d33c923bb9dd1.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/96a553ff-ffe9-45cc-8f81-67cdf44ddb99_1.e745b32bf8b9f570e56d33c923bb9dd1.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/290ec54a-33c1-46a4-97ee-f64ac11021a6_1.b77e71aa9a7e7a71ae2df1851c6162d6.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/290ec54a-33c1-46a4-97ee-f64ac11021a6_1.b77e71aa9a7e7a71ae2df1851c6162d6.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/290ec54a-33c1-46a4-97ee-f64ac11021a6_1.b77e71aa9a7e7a71ae2df1851c6162d6.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                }
+            ],
+            "offerType": "ONLINE_AND_STORE",
+            "shippingPassEligible": true,
+            "availableOnline": true
+        },
+        {
+            "itemId": 47521951,
+            "parentItemId": 47521951,
+            "name": "Skytex SP1026 16GB 10.1\" Touchscreen Dual Camera WiFi Bluetooth Android Tablet",
+            "msrp": 129.99,
+            "salePrice": 59,
+            "upc": "859044004402",
+            "categoryPath": "Electronics\/iPad & Tablets\/Android Tablets",
+            "shortDescription": "The SKYTEX SKYPAD is a quad-core multimedia tablet that features Android 5.0 (Lollipop) operating system for fast, reliable and smooth media performance.",
+            "longDescription": "The SKYTEX SP1026 is a Poweful Lightweight Multimedia Tablet Featuring Android 5.0 Lollipop and a stunning 10&quot; HI-RES (1024X600) Capacitive Touch Screen Display and a powerful Quad Core 1.3GHz processor, 1GB RAM for fast, reliable, and smooth media performance. It comes with 16GB of storage and has a microSD expansion slot for additional storage. In addition it has built-in Dual Camera's, Bluetooth, GPS, WiFi.&lt;br&gt;&lt;br&gt;Features:&lt;br&gt;Black color&lt;br&gt;Android 5.0 Lollipop pre-installed&lt;br&gt;Quad-Core 1.3GHz processor&lt;br&gt;1 GB RAM&lt;br&gt;16 GB internal storage&lt;br&gt;10.1-inch capacitive touchscreen display&lt;br&gt;1024 x 600 resolution&lt;br&gt;802.11b\/g\/n Wireless LAN&lt;br&gt;Bluetooth&lt;br&gt;0.3 MP front-facing camera&lt;br&gt;2.0 MP rear-facing camera&lt;br&gt;Built-in speaker&lt;br&gt;Supports G-sensor &amp; GPS&lt;br&gt;microSD\/SDHC card slot (supports up to 32 GB)&lt;br&gt;Supports Google Play&lt;br&gt;&lt;br&gt;Controls:&lt;br&gt;Power button&lt;br&gt;Volume +\/-&lt;br&gt;&lt;br&gt;I\/O Ports:&lt;br&gt;One (1) microSD card slot&lt;br&gt;One (1) Micro USB port&lt;br&gt;One (1) 3.5 mm headphone jack&lt;br&gt;&lt;br&gt;Power Adapter Specifications:&lt;br&gt;Input: 100 - 240V, 50\/60Hz&lt;br&gt;Output: 5V, 2000mA&lt;br&gt;&lt;br&gt;Unit Dimensions:&lt;br&gt;6 x 10.25 x 0.5-inches (H x W x D, approximate)&lt;br&gt;&lt;br&gt;Package Includes:&lt;br&gt;Skytex Skypad SP1026 16GB 10.1-inch Tablet&lt;br&gt;Android 5.0 Lollipop pre-installed&lt;br&gt;AC adapter",
+            "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/03891593-133c-417f-8206-e2d380cff9c7_1.447730b8ee3e37021b0aa248db22fd6d.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+            "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/03891593-133c-417f-8206-e2d380cff9c7_1.447730b8ee3e37021b0aa248db22fd6d.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "largeImage": "https:\/\/i5.walmartimages.com\/asr\/03891593-133c-417f-8206-e2d380cff9c7_1.447730b8ee3e37021b0aa248db22fd6d.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+            "productTrackingUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Fwww.walmart.com%252Fip%252FSKYTEX-SKYPAD-with-WiFi-10.1-Touchscreen-Tablet-PC-Featuring-Android-5.0-Lollipop-Operating-System%252F47521951%253Faffp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "standardShipRate": 0,
+            "marketplace": true,
+            "modelNumber": "SP1026",
+            "sellerInfo": "Altatac",
+            "productUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Fwww.walmart.com%2Fip%2FSKYTEX-SKYPAD-with-WiFi-10.1-Touchscreen-Tablet-PC-Featuring-Android-5.0-Lollipop-Operating-System%2F47521951%3Faffp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "customerRating": "3.154",
+            "numReviews": 3,
+            "customerRatingImage": "http:\/\/i2.walmartimages.com\/i\/CustRating\/3_2.gif",
+            "categoryNode": "3944_1078524_1231200",
+            "bundle": false,
+            "stock": "Not available",
+            "addToCartUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D47521951%7C1%26affp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "affiliateAddToCartUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Faffil.walmart.com%252Fcart%252FaddToCart%253Fitems%253D47521951%257C1%2526affp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "freeShippingOver50Dollars": false,
+            "imageEntities": [
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/75a9ba39-ca19-4953-8565-893907a8e003_1.f0a14ef8dff139aa67c183e98ecfb9c3.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/75a9ba39-ca19-4953-8565-893907a8e003_1.f0a14ef8dff139aa67c183e98ecfb9c3.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/75a9ba39-ca19-4953-8565-893907a8e003_1.f0a14ef8dff139aa67c183e98ecfb9c3.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/03891593-133c-417f-8206-e2d380cff9c7_1.447730b8ee3e37021b0aa248db22fd6d.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/03891593-133c-417f-8206-e2d380cff9c7_1.447730b8ee3e37021b0aa248db22fd6d.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/03891593-133c-417f-8206-e2d380cff9c7_1.447730b8ee3e37021b0aa248db22fd6d.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "PRIMARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/40013a9b-0c03-4407-89c4-d7c7d95d5c6c_1.42f2b7d50c8b7d7b38d9b4524fefdd13.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/40013a9b-0c03-4407-89c4-d7c7d95d5c6c_1.42f2b7d50c8b7d7b38d9b4524fefdd13.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/40013a9b-0c03-4407-89c4-d7c7d95d5c6c_1.42f2b7d50c8b7d7b38d9b4524fefdd13.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                }
+            ],
+            "offerType": "ONLINE_ONLY",
+            "shippingPassEligible": false,
+            "availableOnline": false
+        },
+        {
+            "itemId": 49557130,
+            "parentItemId": 49557130,
+            "name": "TG-TEK 16GB 10.1\" Touchscreen Dual Camera WiFi Quad Core Android 5.1 Tablet",
+            "msrp": 79.99,
+            "salePrice": 59.99,
+            "upc": "731236278863",
+            "categoryPath": "Electronics\/iPad & Tablets\/Android Tablets",
+            "shortDescription": "The TGH1051 tablet from TG-TEK is all you need for your mobile processing needs. Running the Android 5.1 Lolipop operating system on a blazing fast 1.6GHz Allwinner processor, coupled with 16GB of internal storage (expandable via microSD card slot) a beautiful 10.1&quot; touchscreen and WiFi and Bluetooth 4.0 connectivity, this tablet has everything you could ask for.",
+            "longDescription": "&lt;span&gt;&lt;strong&gt;TG-TEK 16GB 10.1&quot; Touchscreen Dual Camera WiFi Quad Core Android 5.1 Tablet:&lt;\/strong&gt;&lt;\/span&gt;&lt;br&gt;&nbsp;&lt;br&gt;&lt;strong&gt;Technical Specifications:&lt;\/strong&gt;&lt;ul class=&quot;noindent&quot;&gt;&lt;li&gt;1.6GHz Allwinner A33 quad-core processor processor&lt;\/li&gt;&lt;li&gt;1GB DDR3 of system memory&lt;\/li&gt;&lt;li&gt;10.1&quot; touchscreen, 1024 x 600 resolution, virtual keyboard&lt;\/li&gt;&lt;li&gt;Built-in 802.11b\/g\/n WiFi and Bluetooth 4.0&lt;\/li&gt;&lt;li style=&quot;list-style: none&quot;&gt;&lt;strong&gt;Additional Features:&lt;\/strong&gt;&lt;\/li&gt;&lt;\/ul&gt;&lt;ul class=&quot;noindent&quot;&gt;&lt;li&gt;Back 2MP webcam and front 0.3MP webcam with microphone&lt;\/li&gt;&lt;li&gt;1 x miniUSB 2.0 port, 1 x 3.5mm audio out jack&lt;\/li&gt;&lt;li&gt;16GB onboard storage memory, additional memory via microSD card slot&lt;\/li&gt;&lt;li&gt;2.1W speaker&lt;\/li&gt;&lt;li&gt;Built-in gyro-sensor&lt;\/li&gt;&lt;li&gt;4000mAh battery&lt;\/li&gt;&lt;li&gt;Weighs 1.32 lbs; 11.2&quot; x 1.9&quot; x 8.5&quot; dimensions&lt;\/li&gt;&lt;li style=&quot;list-style: none&quot;&gt;&lt;strong&gt;Software and Applications:&lt;\/strong&gt;&lt;\/li&gt;&lt;\/ul&gt;&lt;ul class=&quot;noindent&quot;&gt;&lt;li&gt;Android 5.1 OS (Lolipop)&lt;\/li&gt;&lt;li&gt;Gmail, Google Maps, Google Talk, Google eBooks, YouTube, Google Movie Maker, Games&lt;\/li&gt;&lt;li&gt;Adobe Flash Player, Quickoffice viewer, Android browser and Google Play (for applications)&lt;\/li&gt;&lt;li&gt;Android Music Player&lt;\/li&gt;&lt;li&gt;Media Formats: AAC, H.263\/H.264, MP3, MPEG-1\/2\/4, WAV, MVC, AVS, MJPEG, RMVB, VC-1, AVI, MOV, MP4, ASF, VOB, DAT, Ogg Vorbis, FLAC, etc.&lt;\/li&gt;&lt;li style=&quot;list-style: none&quot;&gt;&lt;strong&gt;What's in the Box:&lt;\/strong&gt;&lt;\/li&gt;&lt;\/ul&gt;&lt;ul class=&quot;noindent&quot;&gt;&lt;li&gt;Tablet, AC adapter and cable&lt;\/li&gt;&lt;li style=&quot;list-style: none&quot;&gt;&lt;br&gt;&lt;strong&gt;What's a Tablet PC?&lt;\/strong&gt;&lt;br&gt;&nbsp;&lt;br&gt;Tablet PCs are compact, ultra-portable entertainment devices that let you read email, surf the Internet, read eBooks, view photos, play games, listen to music and watch video files. Most tablets are based on a smaller operating system, which allows you to purchase and download additional applications from supported stores. Tablet PCs do not have a CD\/DVD drive and will not run Microsoft Windows or its applications. Tablet PCs function as a secondary device for casual entertainment purposes and are not meant to replace a computer. They are ideal for use around the home and on the go with WiFi or 3-4G mobile broadband connections (pay as you go, contract may be required for service).&lt;\/li&gt;&lt;\/ul&gt;",
+            "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/0b2c9f85-50d8-4e3c-9272-83b695ece22a_1.84c882fa828d36fbecb8f66011ebf07f.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+            "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/0b2c9f85-50d8-4e3c-9272-83b695ece22a_1.84c882fa828d36fbecb8f66011ebf07f.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "largeImage": "https:\/\/i5.walmartimages.com\/asr\/0b2c9f85-50d8-4e3c-9272-83b695ece22a_1.84c882fa828d36fbecb8f66011ebf07f.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+            "productTrackingUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Fwww.walmart.com%252Fip%252Fspan-TG-TEK-16GB-10.1-Touchscreen-Dual-Camera-WiFi-Quad-Core-Android-5.1-Tablet-span%252F49557130%253Faffp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "standardShipRate": 0,
+            "marketplace": false,
+            "modelNumber": "TG-TEK TGH1051",
+            "productUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Fwww.walmart.com%2Fip%2Fspan-TG-TEK-16GB-10.1-Touchscreen-Dual-Camera-WiFi-Quad-Core-Android-5.1-Tablet-span%2F49557130%3Faffp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "customerRating": "3.727",
+            "numReviews": 6,
+            "customerRatingImage": "http:\/\/i2.walmartimages.com\/i\/CustRating\/3_7.gif",
+            "categoryNode": "3944_1078524_1231200",
+            "bundle": false,
+            "stock": "Available",
+            "addToCartUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D49557130%7C1%26affp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "affiliateAddToCartUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Faffil.walmart.com%252Fcart%252FaddToCart%253Fitems%253D49557130%257C1%2526affp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "giftOptions": {
+                "allowGiftWrap": false,
+                "allowGiftMessage": false,
+                "allowGiftReceipt": false
+            },
+            "imageEntities": [
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/95af5ed0-cf3e-4aba-975c-eff11640f297_1.be6c57bdd31e0304f87e235f8dd8e076.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/95af5ed0-cf3e-4aba-975c-eff11640f297_1.be6c57bdd31e0304f87e235f8dd8e076.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/95af5ed0-cf3e-4aba-975c-eff11640f297_1.be6c57bdd31e0304f87e235f8dd8e076.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/6477acee-10ac-4455-a05a-8f49928440aa_1.fae7eb75ddd72e36dc725b6c839cd273.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/6477acee-10ac-4455-a05a-8f49928440aa_1.fae7eb75ddd72e36dc725b6c839cd273.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/6477acee-10ac-4455-a05a-8f49928440aa_1.fae7eb75ddd72e36dc725b6c839cd273.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/e18475a7-2676-4e7e-9383-7216143711a0_1.8945c2ee42f3e81379328fdaac1e3151.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/e18475a7-2676-4e7e-9383-7216143711a0_1.8945c2ee42f3e81379328fdaac1e3151.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/e18475a7-2676-4e7e-9383-7216143711a0_1.8945c2ee42f3e81379328fdaac1e3151.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/0b2c9f85-50d8-4e3c-9272-83b695ece22a_1.84c882fa828d36fbecb8f66011ebf07f.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/0b2c9f85-50d8-4e3c-9272-83b695ece22a_1.84c882fa828d36fbecb8f66011ebf07f.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/0b2c9f85-50d8-4e3c-9272-83b695ece22a_1.84c882fa828d36fbecb8f66011ebf07f.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "PRIMARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/0b96eeac-74ef-402a-9ed2-9d941bdcbd66_1.673f5eebe46bb8326f7ba07b6fe3e76b.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/0b96eeac-74ef-402a-9ed2-9d941bdcbd66_1.673f5eebe46bb8326f7ba07b6fe3e76b.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/0b96eeac-74ef-402a-9ed2-9d941bdcbd66_1.673f5eebe46bb8326f7ba07b6fe3e76b.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/80c137aa-8f2c-48d1-ab1d-4003e03c276c_1.c1690b5e5bd8375f22075cbd66768988.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/80c137aa-8f2c-48d1-ab1d-4003e03c276c_1.c1690b5e5bd8375f22075cbd66768988.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/80c137aa-8f2c-48d1-ab1d-4003e03c276c_1.c1690b5e5bd8375f22075cbd66768988.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                }
+            ],
+            "offerType": "ONLINE_AND_STORE",
+            "shippingPassEligible": false,
+            "availableOnline": true
+        },
+        {
+            "itemId": 51077603,
+            "parentItemId": 51077603,
+            "name": "Samsung Galaxy Tab E Lite with WiFi 7.0\" Touchscreen Tablet PC Featuring Android 4.4 (KitKat) Operating System",
+            "msrp": 119.99,
+            "seeDetailsInCart": true,
+            "upc": "887276095721",
+            "categoryPath": "Electronics\/iPad & Tablets\/Android Tablets",
+            "shortDescription": "short description is not available",
+            "longDescription": "N",
+            "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/377e0636-5a88-40a7-a4fe-0300c2bc4bb4_1.ae76244fb8e164b95e91cabb875b7100.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+            "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/377e0636-5a88-40a7-a4fe-0300c2bc4bb4_1.ae76244fb8e164b95e91cabb875b7100.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "largeImage": "https:\/\/i5.walmartimages.com\/asr\/377e0636-5a88-40a7-a4fe-0300c2bc4bb4_1.ae76244fb8e164b95e91cabb875b7100.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+            "productTrackingUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Fwww.walmart.com%252Fip%252FSamsung-Galaxy-Tab-E-Lite-with-WiFi-7.0-Touchscreen-Tablet-PC-Featuring-Android-4.4-KitKat-Operating-System%252F51077603%253Faffp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "standardShipRate": 0,
+            "marketplace": false,
+            "modelNumber": "SM-T113NDWAXAR",
+            "productUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Fwww.walmart.com%2Fip%2FSamsung-Galaxy-Tab-E-Lite-with-WiFi-7.0-Touchscreen-Tablet-PC-Featuring-Android-4.4-KitKat-Operating-System%2F51077603%3Faffp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "customerRating": "4.56",
+            "customerRatingImage": "http:\/\/i2.walmartimages.com\/i\/CustRating\/4_6.gif",
+            "categoryNode": "3944_1078524_1231200",
+            "bundle": false,
+            "stock": "Available",
+            "addToCartUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D51077603%7C1%26affp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "affiliateAddToCartUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Faffil.walmart.com%252Fcart%252FaddToCart%253Fitems%253D51077603%257C1%2526affp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "giftOptions": {
+                "allowGiftWrap": false,
+                "allowGiftMessage": false,
+                "allowGiftReceipt": false
+            },
+            "imageEntities": [
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/377e0636-5a88-40a7-a4fe-0300c2bc4bb4_1.ae76244fb8e164b95e91cabb875b7100.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/377e0636-5a88-40a7-a4fe-0300c2bc4bb4_1.ae76244fb8e164b95e91cabb875b7100.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/377e0636-5a88-40a7-a4fe-0300c2bc4bb4_1.ae76244fb8e164b95e91cabb875b7100.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "PRIMARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/bfd68735-2c2c-4771-92a8-c0f273fee018_1.214ab50ea602067395881844b3e04624.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/bfd68735-2c2c-4771-92a8-c0f273fee018_1.214ab50ea602067395881844b3e04624.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/bfd68735-2c2c-4771-92a8-c0f273fee018_1.214ab50ea602067395881844b3e04624.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/f301926c-82b9-4602-a2c0-b2e7c66b0858_1.c01132ce3764c061965069d404665496.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/f301926c-82b9-4602-a2c0-b2e7c66b0858_1.c01132ce3764c061965069d404665496.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/f301926c-82b9-4602-a2c0-b2e7c66b0858_1.c01132ce3764c061965069d404665496.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/405b7589-2d9b-4a74-ac66-5992188fea7b_1.8daae5e5e2cef65a81ebdcb1dfcdc7b1.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/405b7589-2d9b-4a74-ac66-5992188fea7b_1.8daae5e5e2cef65a81ebdcb1dfcdc7b1.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/405b7589-2d9b-4a74-ac66-5992188fea7b_1.8daae5e5e2cef65a81ebdcb1dfcdc7b1.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/13696bfc-ebe8-45b1-853b-335875fb9859_1.9d9248cff55db090ff0b54282536a777.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/13696bfc-ebe8-45b1-853b-335875fb9859_1.9d9248cff55db090ff0b54282536a777.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/13696bfc-ebe8-45b1-853b-335875fb9859_1.9d9248cff55db090ff0b54282536a777.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                }
+            ],
+            "offerType": "ONLINE_AND_STORE",
+            "shippingPassEligible": true,
+            "availableOnline": true
+        },
+        {
+            "itemId": 49920182,
+            "parentItemId": 49920182,
+            "name": "TG-TEK 7\" Tablet 8GB Quad Core Android 5.1 includes Custom Case",
+            "msrp": 49.98,
+            "salePrice": 39.98,
+            "upc": "731236279129",
+            "categoryPath": "Electronics\/iPad & Tablets\/Android Tablets",
+            "shortDescription": "The TG-TEK 7&quot; Quad Core 1.2GHz Android 5.1 (Lollipop) Tablet with Custom Case keeps you connected with the rest of the world through its built-in WiFi. The Android 5.1 (Lollipop) operating system supports a variety of applications. You can enjoy your favorite HD videos\/movies, music and photos on the high-resolution HD (1024 x 600) touchscreen. Download and enjoy popular apps and games from the pre-installed Google Play Store with over 1,000,000 apps to choose from. The 1GB RAM and 8GB of storage memory which is expandable to 64GB with microSD card gives you ample space to download and store music, images, videos, eBooks and more. Dual cameras for still photos and video.",
+            "longDescription": "&lt;strong&gt;TG-TEK 7&quot; Tablet 8GB Quad Core Android 5.1 includes Custom Case:&lt;\/strong&gt;&lt;br&gt;&nbsp;&lt;br&gt;&lt;strong&gt;Technical Specifications:&lt;\/strong&gt; &lt;ul class=&quot;noindent&quot;&gt;&lt;li&gt;1.2GHz quad-core processor&lt;\/li&gt;&lt;li&gt;1GB of system memory&lt;\/li&gt;&lt;li&gt;7&quot; touchscreen, 1024 x 600 resolution&lt;\/li&gt;&lt;li&gt;Built-in 802.11b\/g\/n WiFi&lt;\/li&gt;&lt;li style=&quot;list-style: none&quot;&gt;&lt;strong&gt;Additional Features:&lt;\/strong&gt;&lt;\/li&gt;&lt;\/ul&gt;&lt;ul class=&quot;noindent&quot;&gt;&lt;li&gt;Dual cameras&lt;\/li&gt;&lt;li&gt;1080p HD video playback&lt;\/li&gt;&lt;li&gt;miniUSB port, earphone input&lt;\/li&gt;&lt;li&gt;8GB onboard storage memory, additional memory via microSD card slot&lt;\/li&gt;&lt;li&gt;5GB cloud storage&lt;\/li&gt;&lt;li&gt;Rechargeable battery&lt;\/li&gt;&lt;li&gt;Weighs 0.5 lbs; 7.2&quot; x 4.6&quot; x 0.4&quot; dimensions&lt;\/li&gt;&lt;li style=&quot;list-style: none&quot;&gt;&lt;strong&gt;Software and Applications:&lt;\/strong&gt;&lt;\/li&gt;&lt;\/ul&gt;&lt;ul class=&quot;noindent&quot;&gt;&lt;li&gt;Android 5.1 OS (Lollipop)&lt;\/li&gt;&lt;li&gt;Google Play&lt;\/li&gt;&lt;li&gt;Media Formats: popular media formats&lt;\/li&gt;&lt;li style=&quot;list-style: none&quot;&gt;&lt;strong&gt;What's in the Box:&lt;\/strong&gt;&lt;\/li&gt;&lt;\/ul&gt;&lt;ul class=&quot;noindent&quot;&gt;&lt;li&gt;Tablet and AC adapter&lt;\/li&gt;&lt;li&gt;Custom case&lt;\/li&gt;&lt;li&gt;USB cable&lt;\/li&gt;&lt;li style=&quot;list-style: none&quot;&gt;&lt;br&gt;&lt;strong&gt;What's a Tablet PC?&lt;\/strong&gt;&lt;br&gt;&nbsp;&lt;br&gt;Tablet PCs are compact, ultra-portable entertainment devices that let you read email, surf the Internet, read eBooks, view photos, play games, listen to music and watch video files. Most tablets are based on a smaller operating system, which allows you to purchase and download additional applications from supported stores. Tablet PCs do not have a CD\/DVD drive and will not run Microsoft Windows or its applications. Tablet PCs function as a secondary device for casual entertainment purposes, and are not meant to replace a computer. They are ideal for use around the home and on the go with WiFi or 3-4G mobile broadband connections (pay as you go, contract may be required for service).&lt;\/li&gt;&lt;\/ul&gt;",
+            "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/61085985-c62c-4c07-b513-a4aaeb1b6d98_1.af0aec324bee180a0af80492cc0bc032.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+            "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/61085985-c62c-4c07-b513-a4aaeb1b6d98_1.af0aec324bee180a0af80492cc0bc032.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "largeImage": "https:\/\/i5.walmartimages.com\/asr\/61085985-c62c-4c07-b513-a4aaeb1b6d98_1.af0aec324bee180a0af80492cc0bc032.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+            "productTrackingUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Fwww.walmart.com%252Fip%252FTG-TEK-TG751C-BLK-with-WiFi-7-Touchscreen-Tablet-PC-Featuring-Android-5.1-Lollipop-Operating-System-Black%252F49920182%253Faffp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "standardShipRate": 5.97,
+            "marketplace": false,
+            "modelNumber": "TG TEK TG751C-BLK",
+            "productUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Fwww.walmart.com%2Fip%2FTG-TEK-TG751C-BLK-with-WiFi-7-Touchscreen-Tablet-PC-Featuring-Android-5.1-Lollipop-Operating-System-Black%2F49920182%3Faffp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "customerRating": "3.619",
+            "numReviews": 1,
+            "customerRatingImage": "http:\/\/i2.walmartimages.com\/i\/CustRating\/3_6.gif",
+            "categoryNode": "3944_1078524_1231200",
+            "bundle": false,
+            "stock": "Available",
+            "addToCartUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D49920182%7C1%26affp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "affiliateAddToCartUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Faffil.walmart.com%252Fcart%252FaddToCart%253Fitems%253D49920182%257C1%2526affp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "giftOptions": {
+                "allowGiftWrap": false,
+                "allowGiftMessage": false,
+                "allowGiftReceipt": false
+            },
+            "imageEntities": [
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/61085985-c62c-4c07-b513-a4aaeb1b6d98_1.af0aec324bee180a0af80492cc0bc032.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/61085985-c62c-4c07-b513-a4aaeb1b6d98_1.af0aec324bee180a0af80492cc0bc032.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/61085985-c62c-4c07-b513-a4aaeb1b6d98_1.af0aec324bee180a0af80492cc0bc032.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "PRIMARY"
+                }
+            ],
+            "offerType": "ONLINE_AND_STORE",
+            "shippingPassEligible": false,
+            "availableOnline": true
+        },
+        {
+            "itemId": 48633336,
+            "parentItemId": 48633336,
+            "name": "NuVision 8\" Tablet 16GB Intel Atom Z3735G Quad-Core Processor Android 4.4",
+            "msrp": 69.98,
+            "salePrice": 48.9,
+            "upc": "847742885188",
+            "categoryPath": "Electronics\/iPad & Tablets\/Android Tablets",
+            "shortDescription": "Experience your media on a brilliant IPS HD display. Powered by Google Android 4.4 (KitKat) and an Intel processor the NuVision TM800A510L TQ features 1GB RAM and 16GB onboard memory. Keep in touch on the go with 2.0MP front and rear cameras and built-in Bluetooth and WiFi.",
+            "longDescription": "&lt;strong&gt;NuVision TM800A510L TQ with WiFi 8&quot; Touchscreen Tablet PC:&lt;\/strong&gt;&lt;br&gt;&nbsp;&lt;br&gt;&lt;strong&gt;Technical Specifications:&lt;\/strong&gt; &lt;ul class=&quot;noindent&quot;&gt;&lt;li&gt;1.83GHz Intel 3735G quad-core processor&lt;\/li&gt;&lt;li&gt;1GB DDR of system memory&lt;\/li&gt;&lt;li&gt;8&quot; touchscreen, 1280 x 800 resolution&lt;\/li&gt;&lt;li&gt;Built-in 802.11 WiFi and Bluetooth&lt;\/li&gt;&lt;li style=&quot;list-style: none&quot;&gt;&lt;strong&gt;Additional Features:&lt;\/strong&gt;&lt;\/li&gt;&lt;\/ul&gt;&lt;ul class=&quot;noindent&quot;&gt;&lt;li&gt;Back 2MP webcam and front 2MP webcam with microphone&lt;\/li&gt;&lt;li&gt;microUSB 2.0 port, 3.5mm headphone jack&lt;\/li&gt;&lt;li&gt;16GB onboard storage memory, additional memory via TransFlash card slot&lt;\/li&gt;&lt;li&gt;Built-in speaker&lt;\/li&gt;&lt;li&gt;4000mAh rechargeable battery&lt;\/li&gt;&lt;li&gt;Weighs 0.8 lbs; 8.3&quot; x 0.4&quot; x 5.6&quot; dimensions&lt;\/li&gt;&lt;li style=&quot;list-style: none&quot;&gt;&lt;strong&gt;Software and Applications:&lt;\/strong&gt;&lt;\/li&gt;&lt;\/ul&gt;&lt;ul class=&quot;noindent&quot;&gt;&lt;li&gt;Android 4.4 OS (KitKat)&lt;\/li&gt;&lt;li&gt;Cloudlink, Playkids, AccuWeather, Maxthon Browser, eMusic, 25GB Free Cloud Storage and Google Play (for applications)&lt;\/li&gt;&lt;li&gt;Android Music Player&lt;\/li&gt;&lt;li&gt;Media Formats: popular media formats&lt;\/li&gt;&lt;li style=&quot;list-style: none&quot;&gt;&lt;strong&gt;What's in the Box:&lt;\/strong&gt;&lt;\/li&gt;&lt;\/ul&gt;&lt;ul class=&quot;noindent&quot;&gt;&lt;li&gt;Tablet and AC adapter&lt;\/li&gt;&lt;li style=&quot;list-style: none&quot;&gt;&lt;br&gt;&lt;strong&gt;What's a Tablet PC?&lt;\/strong&gt;&lt;br&gt;&nbsp;&lt;br&gt;Tablet PCs are compact, ultra-portable entertainment devices that let you read email, surf the Internet, read eBooks, view photos, play games, listen to music and watch video files. Most tablets are based on a smaller operating system, which allows you to purchase and download additional applications from supported stores. Tablet PCs do not have a CD\/DVD drive and will not run Microsoft Windows or its applications. Tablet PCs function as a secondary device for casual entertainment purposes and are not meant to replace a computer. They are ideal for use around the home and on the go with WiFi or 3-4G mobile broadband connections (pay as you go, contract may be required for service).&lt;\/li&gt;&lt;\/ul&gt;",
+            "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/c1e0d79f-fbe6-4d50-8c70-49761e56a543_1.1ec165490b84459cdf5f336ecfdd7f63.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+            "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/c1e0d79f-fbe6-4d50-8c70-49761e56a543_1.1ec165490b84459cdf5f336ecfdd7f63.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+            "largeImage": "https:\/\/i5.walmartimages.com\/asr\/c1e0d79f-fbe6-4d50-8c70-49761e56a543_1.1ec165490b84459cdf5f336ecfdd7f63.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+            "productTrackingUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Fwww.walmart.com%252Fip%252FNuVision-8-Tablet-16GB-Intel-Atom-Z3735G-Quad-Core-Processor-Android-4.4%252F48633336%253Faffp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "standardShipRate": 5.97,
+            "marketplace": false,
+            "modelNumber": "AVISION TM800A510L TQ",
+            "productUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Fwww.walmart.com%2Fip%2FNuVision-8-Tablet-16GB-Intel-Atom-Z3735G-Quad-Core-Processor-Android-4.4%2F48633336%3Faffp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "customerRating": "3.0",
+            "numReviews": 1,
+            "customerRatingImage": "http:\/\/i2.walmartimages.com\/i\/CustRating\/3.gif",
+            "categoryNode": "3944_1078524_1231200",
+            "bundle": false,
+            "stock": "Available",
+            "addToCartUrl": "http:\/\/c.affil.walmart.com\/t\/api02?l=http%3A%2F%2Faffil.walmart.com%2Fcart%2FaddToCart%3Fitems%3D48633336%7C1%26affp1%3DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%26affilsrc%3Dapi%26veh%3Daff%26wmlspartner%3Dreadonlyapi",
+            "affiliateAddToCartUrl": "http:\/\/linksynergy.walmart.com\/fs-bin\/click?id=|LSNID|&offerid=223073.7200&type=14&catid=8&subid=0&hid=7200&tmpid=1082&RD_PARM1=http%253A%252F%252Faffil.walmart.com%252Fcart%252FaddToCart%253Fitems%253D48633336%257C1%2526affp1%253DpaWwASDrbKVC-dibe9fUxhzzz9GGYWmt6moUZCKIIPY%2526affilsrc%253Dapi",
+            "imageEntities": [
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/c1e0d79f-fbe6-4d50-8c70-49761e56a543_1.1ec165490b84459cdf5f336ecfdd7f63.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/c1e0d79f-fbe6-4d50-8c70-49761e56a543_1.1ec165490b84459cdf5f336ecfdd7f63.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/c1e0d79f-fbe6-4d50-8c70-49761e56a543_1.1ec165490b84459cdf5f336ecfdd7f63.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "PRIMARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/a6b6b4d3-f53b-4095-9433-f0c7719bbe35_1.dd9ba346c06650377e78529598e2c539.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/a6b6b4d3-f53b-4095-9433-f0c7719bbe35_1.dd9ba346c06650377e78529598e2c539.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/a6b6b4d3-f53b-4095-9433-f0c7719bbe35_1.dd9ba346c06650377e78529598e2c539.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/12879048-eaeb-4101-b3cc-033c8d83efd9_1.43c5c45d3eaf65630438a3a1b752e44f.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/12879048-eaeb-4101-b3cc-033c8d83efd9_1.43c5c45d3eaf65630438a3a1b752e44f.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/12879048-eaeb-4101-b3cc-033c8d83efd9_1.43c5c45d3eaf65630438a3a1b752e44f.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                },
+                {
+                    "thumbnailImage": "https:\/\/i5.walmartimages.com\/asr\/83c17f82-7254-495e-bef9-32b8e648bd49_1.3099a589bb0026473841443c3dffdab0.jpeg?odnHeight=100&odnWidth=100&odnBg=FFFFFF",
+                    "mediumImage": "https:\/\/i5.walmartimages.com\/asr\/83c17f82-7254-495e-bef9-32b8e648bd49_1.3099a589bb0026473841443c3dffdab0.jpeg?odnHeight=180&odnWidth=180&odnBg=FFFFFF",
+                    "largeImage": "https:\/\/i5.walmartimages.com\/asr\/83c17f82-7254-495e-bef9-32b8e648bd49_1.3099a589bb0026473841443c3dffdab0.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF",
+                    "entityType": "SECONDARY"
+                }
+            ],
+            "offerType": "ONLINE_ONLY",
+            "shippingPassEligible": false,
+            "availableOnline": true
+        }
+    ],
+    "facets": []
+}
