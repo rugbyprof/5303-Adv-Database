@@ -2,7 +2,7 @@
 
 ### allProducts.json
 
-This file contains a json object / array with ~ 6000 products and their information.
+This file contains a json object / array with ~ 2000 products and their information.
 
 ### taxonomy.json
 
@@ -24,3 +24,7 @@ children of a major category that I am interested in (['Electronics','Cell Phone
 
 I then clean them up a bit and build a list that was used to query the walmart api for products.
 I left this file in here just as an example of php reading json.
+
+## read_products.php 
+
+Reads the json object 'allProducts.json' into an associative array.
