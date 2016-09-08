@@ -54,8 +54,6 @@ I've created a file called [keys.json](./keys.json) that holds each `column name
 
 ## Example Document Format
 
-Your sql statements will obviously be the corrected version.
-
 ---
 
 ## Homework 1
