@@ -5,7 +5,7 @@ Due: September 12th by Classtime.
 
 ## Overview
 
-This assignment is about creating a products database representing data found in [all_products.json](../walmart_data/all_products.json). 
+This assignment is about creating a products database representing data found in [all_products.json](../../walmart_data/all_products.json). 
 
 There will be (as of now) four tables:
 
