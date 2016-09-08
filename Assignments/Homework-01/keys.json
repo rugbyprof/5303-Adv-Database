@@ -1,0 +1,242 @@
+{
+    "actualColor": {
+        "type": "string",
+        "size": 29
+    },
+    "addToCartUrl": {
+        "type": "string",
+        "size": 221
+    },
+    "affiliateAddToCartUrl": {
+        "type": "string",
+        "size": 296
+    },
+    "age": {
+        "type": "string",
+        "size": 14
+    },
+    "allowGiftMessage": {
+        "type": "boolean",
+        "size": 1
+    },
+    "allowGiftReceipt": {
+        "type": "boolean",
+        "size": 1
+    },
+    "allowGiftWrap": {
+        "type": "boolean",
+        "size": 1
+    },
+    "availableOnline": {
+        "type": "boolean",
+        "size": 1
+    },
+    "brandName": {
+        "type": "string",
+        "size": 36
+    },
+    "bundle": {
+        "type": "boolean",
+        "size": 1
+    },
+    "categoryNode": {
+        "type": "string",
+        "size": 23
+    },
+    "categoryPath": {
+        "type": "string",
+        "size": 123
+    },
+    "character": {
+        "type": "string",
+        "size": 7
+    },
+    "clearance": {
+        "type": "boolean",
+        "size": 1
+    },
+    "color": {
+        "type": "string",
+        "size": 10
+    },
+    "customerRating": {
+        "type": "string",
+        "size": 5
+    },
+    "customerRatingImage": {
+        "type": "string",
+        "size": 48
+    },
+    "entityType": {
+        "type": "string",
+        "size": 9
+    },
+    "finish": {
+        "type": "string",
+        "size": 16
+    },
+    "freeShipToStore": {
+        "type": "boolean",
+        "size": 1
+    },
+    "freeShippingOver50Dollars": {
+        "type": "boolean",
+        "size": 1
+    },
+    "freight": {
+        "type": "boolean",
+        "size": 1
+    },
+    "gender": {
+        "type": "string",
+        "size": 6
+    },
+    "isbn": {
+        "type": "string",
+        "size": 13
+    },
+    "itemId": {
+        "type": "integer",
+        "size": 9
+    },
+    "largeImage": {
+        "type": "string",
+        "size": 149
+    },
+    "longDescription": {
+        "type": "string",
+        "size": 5540
+    },
+    "marketplace": {
+        "type": "boolean",
+        "size": 1
+    },
+    "maxItemsInOrder": {
+        "type": "integer",
+        "size": 6
+    },
+    "mediumImage": {
+        "type": "string",
+        "size": 149
+    },
+    "modelNumber": {
+        "type": "string",
+        "size": 53
+    },
+    "moneyDenomination": {
+        "type": "string",
+        "size": 2
+    },
+    "msrp": {
+        "type": "double",
+        "size": 7
+    },
+    "name": {
+        "type": "string",
+        "size": 200
+    },
+    "ninetySevenCentShipping": {
+        "type": "boolean",
+        "size": 0
+    },
+    "numReviews": {
+        "type": "integer",
+        "size": 5
+    },
+    "numberOfPieces": {
+        "type": "string",
+        "size": 1
+    },
+    "offerType": {
+        "type": "string",
+        "size": 16
+    },
+    "parentItemId": {
+        "type": "integer",
+        "size": 9
+    },
+    "personalizable": {
+        "type": "string",
+        "size": 30
+    },
+    "preOrder": {
+        "type": "boolean",
+        "size": 1
+    },
+    "preOrderShipsOn": {
+        "type": "string",
+        "size": 19
+    },
+    "price": {
+        "type": "double",
+        "size": 6
+    },
+    "productTrackingUrl": {
+        "type": "string",
+        "size": 416
+    },
+    "productUrl": {
+        "type": "string",
+        "size": 345
+    },
+    "rollBack": {
+        "type": "boolean",
+        "size": 1
+    },
+    "salePrice": {
+        "type": "double",
+        "size": 6
+    },
+    "screenSize": {
+        "type": "string",
+        "size": 9
+    },
+    "seeDetailsInCart": {
+        "type": "boolean",
+        "size": 1
+    },
+    "sellerInfo": {
+        "type": "string",
+        "size": 44
+    },
+    "shipToStore": {
+        "type": "boolean",
+        "size": 1
+    },
+    "shippingPassEligible": {
+        "type": "boolean",
+        "size": 1
+    },
+    "shortDescription": {
+        "type": "string",
+        "size": 1112
+    },
+    "size": {
+        "type": "string",
+        "size": 49
+    },
+    "specialBuy": {
+        "type": "boolean",
+        "size": 1
+    },
+    "standardShipRate": {
+        "type": "double",
+        "size": 5
+    },
+    "stock": {
+        "type": "string",
+        "size": 13
+    },
+    "thumbnailImage": {
+        "type": "string",
+        "size": 149
+    },
+    "twoThreeDayShippingRate": {
+        "type": "double",
+        "size": 6
+    },
+    "upc": {
+        "type": "string",
+        "size": 12
+    }
+}
