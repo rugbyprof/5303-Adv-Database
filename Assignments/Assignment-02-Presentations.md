@@ -156,6 +156,7 @@ I want this to be more of a demonstration of use, rather than an analysis on how
 - What is the implementation language, and why was it chosen?
 - Does it provide ACID semantics?
 - Type of storage (relational, file, document, key:value, etc)?
+- Does couchDB employ partitioning or sharding?
 - Discuss how Map/Reduce is employed.
 - Spend most of your talk here:
     - Discuss the HTTP API by giving actual examples. This means a demonstration showing curl commands on one of the groups servers.
@@ -167,6 +168,7 @@ I want this to be more of a demonstration of use, rather than an analysis on how
 - What are Graph database good for storing?
 - What is CQL or Cypher?
 - What language is Neo4J implemented in?
+- Does Neo4J employ partitioning or sharding?
 - What is the "Spring Data Project" and how does it tie in to Neo4J?
 - http://leilahaddou.github.io/neo4j-tutorial.html
 - http://www.quackit.com/neo4j/tutorial/
@@ -178,7 +180,7 @@ I want this to be more of a demonstration of use, rather than an analysis on how
 - Fault tolerent availability. What does this mean?
     - Discuss the network architecture and terminology.
 - Discuss replication strategies. 
-- Do distributed nosql databases worry about sharding?
+- Do distributed nosql databases worry about sharding or partitioning?
 - Riak discusses "tuning" for eventual and strong consistency.
     - Define: tuning strong/eventual consistency
     - Discuss as applied to Riak
