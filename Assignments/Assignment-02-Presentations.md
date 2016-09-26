@@ -208,6 +208,10 @@ I want this to be more of a demonstration of use, rather than an analysis on how
 - Provide a small demo showing CRUD operations.
 - https://intellipaat.com/tutorial/hbase-tutorial/
 
+
+
+Old Resources:
+
 - http://code.google.com/p/shard-query
 - https://www.percona.com/blog/2014/05/01/parallel-query-mysql-shard-query
 - http://passingbythewoods.blogspot.com/2008/09/database-harding-vs-mysql-clusters.html    
