@@ -170,6 +170,7 @@ I want this to be more of a demonstration of use, rather than an analysis on how
 - What language is Neo4J implemented in?
 - Does Neo4J employ partitioning or sharding?
 - What is the "Spring Data Project" and how does it tie in to Neo4J?
+- Provide a small demo showing CRUD operations.
 - http://leilahaddou.github.io/neo4j-tutorial.html
 - http://www.quackit.com/neo4j/tutorial/
 
@@ -186,6 +187,7 @@ I want this to be more of a demonstration of use, rather than an analysis on how
     - Discuss as applied to Riak
 - Riak gives storage options of: memory, disk, or both.
     - Give pros and cons for each of these
+- Provide a small demo showing CRUD operations.
 - http://www.littleriakbook.com/
   
 ## Hbase
@@ -203,6 +205,7 @@ I want this to be more of a demonstration of use, rather than an analysis on how
     - Define each term and explain giving pro's and cons.
 - Does not provide a SQL interface but it does provide a work around.
     - Describe how this is done and is it necessary?
+- Provide a small demo showing CRUD operations.
 - https://intellipaat.com/tutorial/hbase-tutorial/
 
 - http://code.google.com/p/shard-query
