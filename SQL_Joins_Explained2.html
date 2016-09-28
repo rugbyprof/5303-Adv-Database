@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)file:///Volumes/1TBHDD/griffin/Downloads/SQL%20Joins%20Explained.html -->
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:website="http://ogp.me/ns/website" lang="en-US" itemscope="" itemtype="http://schema.org/WebPage" class="yui3-js-enabled js flexbox canvas canvastext webgl no-touch hashchange history draganddrop rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms no-csstransforms3d csstransitions video audio svg inlinesvg svgclippaths wf-proximanova-n7-active wf-proximanova-i7-active wf-proximanova-n6-active wf-proximanova-n4-active wf-proximanova-i4-active wf-proximanova-n3-active wf-proximanova-i3-active wf-active" style="" id="yui_3_17_2_1_1475094569030_129"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/d44fa9/00000000000000003b9ad1b1/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7) format("woff2");font-weight:700;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/b7d7c0/00000000000000003b9ad1b2/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7) format("woff2");font-weight:700;font-style:italic;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/a77b68/00000000000000003b9ad1bb/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6) format("woff2");font-weight:600;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/04fb9d/00000000000000003b9ad1b9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4) format("woff2");font-weight:400;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/8f1252/00000000000000003b9ad1ba/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4) format("woff2");font-weight:400;font-style:italic;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/9c79bc/00000000000000003b9ad1b5/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3) format("woff2");font-weight:300;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/7b224b/00000000000000003b9ad1b6/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3) format("woff2");font-weight:300;font-style:italic;}</style><style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><script async="" src="file://www.googletagmanager.com/gtm.js?id=GTM-K7KZWM"></script><script async="" src="file://www.googletagmanager.com/gtm.js?id=GTM-K7KZWM"></script><script async="" src="file://static.hotjar.com/c/hotjar-98503.js?sv=5"></script><script src="./SQL_Joins_Explained2_files/modules-b8f33ddee80c6a690b3be20ca1f14dd4.js"></script><script async="" src="file://static.hotjar.com/c/hotjar-98503.js?sv=5"></script></head><body class="show-products-category-navigation   page-borders-thick canvas-style-normal  header-subtitle-none banner-alignment-center blog-layout-center project-layout-left-sidebar thumbnails-on-open-page-show-all social-icon-style-round  hide-info-footer     hide-article-author product-list-titles-under product-list-alignment-center product-item-size-11-square  product-gallery-size-11-square product-gallery-auto-crop show-product-price show-product-item-nav product-social-sharing  event-show-past-events event-thumbnails event-thumbnail-size-32-standard event-date-label  event-list-show-cats event-list-date event-list-time event-list-address   event-icalgcal-links  event-excerpts  event-item-back-link     hide-opentable-icons opentable-style-dark newsletter-style-dark small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square button-style-outline button-corner-style-square tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-bottom tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-light native-currency-code-usd collection-type-page collection-layout-default collection-5732257f62cd9460fe9ba2b6 homepage mobile-style-available site-title" id="collection-5732257f62cd9460fe9ba2b6" cz-shortcut-listen="true"><noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-MQTKHH" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K7KZWM');</script><div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important"></div>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <meta name="viewport" content="initial-scale=1">
+  
+  <!-- This is Squarespace. --><!-- rjmetrics-marketing-f47t -->
+<!--<base href="">--><!--<base href=".">--><base href=".">
+
+<title>SQL Joins Explained</title>
+<link rel="shortcut icon" type="image/x-icon" href="http://www.sql-join.com/favicon.ico">
+<link rel="canonical" href="http://www.sql-join.com/">
+<meta property="og:site_name" content="SQL Joins Explained">
+<meta property="og:title" content="SQL Joins Explained">
+<meta property="og:url" content="http://www.sql-join.com/">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Definitions of SQL and SQL join, as well as an example of a SQL join using 
+tables from a relational database.">
+<meta itemprop="name" content="SQL Joins Explained">
+<meta itemprop="url" content="http://www.sql-join.com/">
+<meta itemprop="description" content="Definitions of SQL and SQL join, as well as an example of a SQL join using 
+tables from a relational database.">
+<meta name="twitter:title" content="SQL Joins Explained">
+<meta name="twitter:url" content="http://www.sql-join.com/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:description" content="Definitions of SQL and SQL join, as well as an example of a SQL join using 
+tables from a relational database.">
+<meta name="description" content="A resource explaining what a SQL join is, examples of different join types, 
+and the technical ETL documentation required to start joining tables.">
+<script type="text/javascript" async="" src="./SQL_Joins_Explained2_files/analytics.js"></script><script type="text/javascript" async="" src="./SQL_Joins_Explained2_files/analytics(1).js"></script><script async="" src="./SQL_Joins_Explained2_files/gtm.js"></script><script type="text/javascript" src="./SQL_Joins_Explained2_files/fmy8glv.js"></script>
+<style type="text/css">.tk-proxima-nova{font-family:"proxima-nova",sans-serif;}</style><style type="text/css">@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/d44fa9/00000000000000003b9ad1b1/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7) format("woff2");font-weight:700;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/b7d7c0/00000000000000003b9ad1b2/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7) format("woff2");font-weight:700;font-style:italic;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/a77b68/00000000000000003b9ad1bb/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n6) format("woff2");font-weight:600;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/04fb9d/00000000000000003b9ad1b9/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4) format("woff2");font-weight:400;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/8f1252/00000000000000003b9ad1ba/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4) format("woff2");font-weight:400;font-style:italic;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/9c79bc/00000000000000003b9ad1b5/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3) format("woff2");font-weight:300;font-style:normal;}@font-face{font-family:proxima-nova;src:url(https://fonts.typekit.net/af/7b224b/00000000000000003b9ad1b6/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3) format("woff2");font-weight:300;font-style:italic;}</style><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<link rel="stylesheet" type="text/css" href="./SQL_Joins_Explained2_files/css">
+<script type="text/javascript">SQUARESPACE_ROLLUPS = {};</script>
+<script>(function(rollups, name) { if (!rollups[name]) { rollups[name] = {}; } rollups[name].js = ["//static.squarespace.com/universal/scripts-compressed/common-ee19a9a13efbde3f176f-min.js"]; })(SQUARESPACE_ROLLUPS, 'squarespace-common');</script>
+<script type="text/javascript" data-sqs-type="dynamic-assets-loader">(function() {(function(a){function e(b){-1!==b.indexOf(".js")?document.write("<script "+f+'crossorigin="anonymous" src="'+b+'">\x3c/script>'):document.write('<link rel="stylesheet" type="text/css" href="'+b+'" />')}var g=function(){var b=window.location.search,a=b.indexOf("exclude=");return-1<a&&(b=b.substr(a+8).split("&")[0])?b.split(","):[]}(),f;f=window.__beta_flag_should_defer?'defer="defer" ':"";try{if(window.top!=window&&window.top.Squarespace&&window.top.Squarespace.frameAvailable){window.top.Squarespace.frameAvailable(window,
+SQUARESPACE_ROLLUPS);return}}catch(h){console.error(h)}for(var c in a)if(!(-1<g.indexOf(c))){if(a[c].js)for(var d=0;d<a[c].js.length;d++)e(a[c].js[d]);if(a[c].css)for(d=0;d<a[c].css.length;d++)e(a[c].css[d])}})(SQUARESPACE_ROLLUPS);
+})();</script><script crossorigin="anonymous" src="file://static.squarespace.com/universal/scripts-compressed/common-ee19a9a13efbde3f176f-min.js"></script><script crossorigin="anonymous" src="./SQL_Joins_Explained2_files/common-ee19a9a13efbde3f176f-min.js"></script><script type="text/javascript" data-sqs-type="imageloader">(function() {var EXCLUDED_SIZES=function(){var a=window.location.search,b=a.indexOf("exclude_imageloader_sizes=");return-1<b&&(a=a.substr(b+26).split("&")[0])?a.split(",").map(function(a){return parseInt(a,10)}):[]}(),SQUARESPACE_SIZES=[2500,1500,1E3,750,500,300,100].filter(function(a){return-1===EXCLUDED_SIZES.indexOf(a)}),IMAGE_LOADING_CLASS="loading",ImageLoader=new function(){this.load=function(a,b){function d(a,b,c){var d=new Image;d.onload=b;d.onerror=c;d.src=a}a.getDOMNode&&(a=a.getDOMNode());var c=this._getDataFromNode(a,
+b),e=!(!c.dimensions||!c.dimensions.width||!c.dimensions.height),g=c.load+"";if("false"===g)return!1;var h=c.mode;if(e&&("fit"===h||"fill"===h)){h=a.parentNode;if(!h)return console.error("Not doing anything, parentNode not found."),!1;if(!this.refresh(a,b,h))return!1}var n=this._intendToLoad(a,c);if("string"===typeof n&&"viewport"!==g){var m=this.getUrl(n,c),g=a.getAttribute("data-image-resolution");a.getAttribute("src")!==m&&this.isValidResolution(n,g)&&(a.onload=function(){a.className=a.className.replace(IMAGE_LOADING_CLASS,
+" ").trim();a.setAttribute("data-image-resolution",n)},!a.getAttribute("src")&&-1===a.className.indexOf(IMAGE_LOADING_CLASS)&&(a.className+=(a.className?" ":"")+IMAGE_LOADING_CLASS),!a.getAttribute("src")&&e?(a.setAttribute("src",m),c.useBgImage&&(a.parentNode.style.backgroundImage="url("+m+")")):d(m,function(){e?a.setAttribute("src",m):(a.setAttribute("data-image-dimensions",this.width+"x"+this.height),ImageLoader.load(a,b))},function(){a.className=a.className.replace(IMAGE_LOADING_CLASS," ").trim();
+a.setAttribute("src",m)}));return!0}return n};this.refresh=function(a,b,d){a.getDOMNode&&(a=a.getDOMNode());d&&d.getDOMNode&&(d=d.getDOMNode());d=d||a.parentNode;if(!d)return console.error("Not doing anything, parentNode not found."),!1;var c=this._getDataFromNode(a,b),e=d.offsetWidth,g=d.offsetHeight;b=c.mode;if("none"!==b){var h=c.dimensions.width,n=c.dimensions.height,m=h/n,q=e/g;if(c.useBgImage&&"fill"===b&&"backgroundSize"in document.documentElement.style)return a.style.display="none",d.style.backgroundSize=
+"cover",d.style.backgroundPosition=100*c.focalPoint.x+"% "+100*c.focalPoint.y+"%",!0;if(c.fixedRatio)"fill"==b&&q>m||"fit"==b&&q<m?(k=100,l=100*(q/m),r=(100-l)*c.focalPoint.y,p=0):(k=100*(m/q),l=100,r=0,p=(100-k)*c.focalPoint.x),a.style.top=r+"%",a.style.left=p+"%",a.style.width=k+"%",a.style.height=l+"%";else{var f;"fill"===b?f=m>q?g/n:e/h:"fit"===b&&(f=m<q?g/n:e/h);!c.stretch&&"fit"==b&&1<f&&(f=1);var k=Math.ceil(h*f),l=Math.ceil(n*f);if(0===k||0===l)return!1;var p,r;"fill"===b?(p=Math.min(Math.max(e/
+2-k*c.focalPoint.x,e-k),0),r=Math.min(Math.max(g/2-l*c.focalPoint.y,g-l),0)):"fit"===b&&(f=c.fitAlignment,p=f.left?0:f.right?e-k:k<e?(e-k)/2:0,r=f.top?0:f.bottom?g-l:l<g?(g-l)/2:0,"inline"==this._getStyle(a,"display")&&(a.style.fontSize="0px"),this._resetAlt(a,function(){k-=a.offsetHeight-a.clientHeight;l-=a.offsetWidth-a.clientWidth}));a.style.top=Math.ceil(r)+"px";a.style.left=Math.ceil(p)+"px";a.style.width=Math.ceil(k)+"px";a.style.height=Math.ceil(l)+"px"}p=this._getStyle(d,"position");a.style.position=
+"relative"==p?"absolute":"relative";if("fill"==b&&(b=this._getStyle(d,"overflow"),!b||"hidden"!=b))d.style.overflow="hidden";return!0}};this._intendToLoad=function(a,b){function d(c,d){"none"===b.mode&&(a.style.width=null,a.style.height=null);var e=parseFloat(a.getAttribute(c)),f=parseFloat(e);if(!f||isNaN(f))e=h._getStyle(a,c),f=parseFloat(e);if(!f||isNaN(f))e=h._getStyle(a,"max-"+c,"max"+(c.substr(0,1).toUpperCase()+c.substr(1))),f=parseFloat(e);if(0===d||e)switch(h._stringType(e)){case "percentage":d=
+parseInt(e,10)/100*g["offset"+c.substr(0,1).toUpperCase()+c.substr(1)];break;case "number":d=parseInt(e,10)}!f&&0!==d&&!a.getAttribute("src")&&(d=0);return d}b=b||this._getDataFromNode(a);if(!b.source)return!1;var c=a.offsetWidth,e=a.offsetHeight,g=a.parentNode,h=this;this._resetAlt(a,function(){c=d("width",c);e=d("height",e)});0===c&&0===e?(c=b.dimensions.width,e=b.dimensions.height):0===c?c=this.getDimensionForValue("width",e,b):0===e&&(e=this.getDimensionForValue("height",c,b));"viewport"===b.load&&
+(a.style.width=Math.floor(c)+"px",a.style.height=Math.floor(e)+"px");return this.getSquarespaceSize(c,e,b)};this._getDataFromNode=function(a,b){b=b||{};var d={focalPoint:{x:0.5,y:0.5},dimensions:{width:null,height:null},mode:"none",fitAlignment:{center:!0},load:"true",stretch:!0,fixedRatio:!1};if(b.focalPoint)d.focalPoint=b.focalPoint;else{var c=a.getAttribute("data-image-focal-point");if(c&&(c=c.split(","))&&2==c.length)d.focalPoint={x:parseFloat(c[0]),y:parseFloat(c[1])}}if(b.dimensions)d.dimensions=
+b.dimensions;else if((c=a.getAttribute("data-image-dimensions"))&&(c=c.split("x"))&&2==c.length)d.dimensions={width:parseInt(c[0],10),height:parseInt(c[1],10)};b.mode?d.mode=b.mode:a.parentNode&&(c=a.parentNode.className,-1!==c.indexOf("content-fill")?d.mode="fill":-1!==c.indexOf("content-fit")&&(d.mode="fit"));if("fit"===d.mode&&a.parentNode&&(c=b.fitAlignment||a.getAttribute("data-alignment")||a.parentNode.getAttribute("data-alignment")))d.fitAlignment={top:-1!==c.indexOf("top"),left:-1!==c.indexOf("left"),
+center:-1!==c.indexOf("center"),right:-1!==c.indexOf("right"),bottom:-1!==c.indexOf("bottom")};b.load?d.load=b.load:(c=a.getAttribute("data-load"))&&(d.load=c);if("undefined"!==typeof b.stretch)d.stretch=b.stretch;else if(c=a.getAttribute("data-image-stretch"))d.stretch="true"===c?!0:!1;d.source=b.source?b.source:a.getAttribute("data-src");d.source&&this.isSquarespaceUrl(d.source)&&("http:"===d.source.substr(0,5)&&"https"===window.location.protocol.substr(0,5))&&(d.source=d.source.replace("http://",
+"https://"));if(b.fixedRatio)d.fixedRatio=b.fixedRatio;else if(c=a.getAttribute("data-fixed-ratio"))d.fixedRatio="true"==c;b.useBgImage?d.useBgImage=b.useBgImage:(c=a.getAttribute("data-use-bg-image"),d.useBgImage="true"===c||!0===c?!0:!1);return d};this._stringType=function(a){return"string"===typeof a&&-1!==a.indexOf("%")?"percentage":isNaN(parseInt(a,10))?NaN:"number"};this._getStyle=function(a,b,d){var c;a.currentStyle?c=a.currentStyle[d||b]:window.getComputedStyle&&(c=document.defaultView.getComputedStyle(a,
+null).getPropertyValue(b));return c};this._isVisible=function(a){a=a.getBoundingClientRect();return 0<=a.left&&0<=a.top||0<=a.bottom&&0<=a.right||0<=a.left&&0<=a.bottom||0<=a.right&&0<=a.top};this.getSquarespaceSize=function(a,b,d){a=Math.max(b/(d.dimensions.height/d.dimensions.width),a);"undefined"===typeof app&&"number"===typeof window.devicePixelRatio&&(a*=window.devicePixelRatio);for(b=1;b<SQUARESPACE_SIZES.length&&!(a>SQUARESPACE_SIZES[b]);b++);return SQUARESPACE_SIZES[b-1]+"w"};this.getDimensionForValue=
+function(a,b,d){var c=d.dimensions.width;d=d.dimensions.height;return"width"==a?c/d*b:"height"==a?d/c*b:NaN};this.getUrl=function(a,b){var d=b.source;return a&&("/"==d[0]||this.isSquarespaceUrl(d))?(-1===d.indexOf("format="+a)&&(d=d+(-1!==d.indexOf("?")?"&":"?")+"format="+a),d):b.source};this.isSquarespaceUrl=function(a){return-1!==a.indexOf("squarespace.com")||-1!==a.indexOf("squarespace.net")||-1!==a.indexOf("sqsp.net")};this.isValidResolution=function(a,b){a=parseInt(a,10);b=parseInt(b,10);return isNaN(a)||
+isNaN(b)?!0:a>b};this._resetAlt=function(a,b){var d=a.getAttribute("alt"),c=d&&0<d.length&&!a.getAttribute("src");if(c){var e=a.style.display;a.removeAttribute("alt");a.style.display="none";a.offsetHeight+0;a.style.display=e}b.call(this);c&&a.setAttribute("alt",d)};this.bootstrap=function(){var a=document.images;if(0<a.length)for(var b=0,d=a.length;b<d;b++)((a[b].hasAttribute?a[b].hasAttribute("data-image"):a[b].attributes["data-image"])||(a[b].hasAttribute?a[b].hasAttribute("data-src"):a[b].attributes["data-src"]))&&
+"false"!==(a[b].getAttribute?a[b].getAttribute("data-load"):a[b].attributes["data-load"])+""&&ImageLoader.load(a[b])}};window.ImageLoader=ImageLoader;window.YUI&&YUI.add("squarespace-imageloader",function(a){},"1.0",{requires:[]});
+})();</script>
+<script>Static.SQUARESPACE_CONTEXT = {"facebookAppId":"314192535267336","rollups":{"squarespace-announcement-bar":{"css":"//static.squarespace.com/universal/styles-compressed/announcement-bar-d41d8cd98f00b204e9800998ecf8427e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/announcement-bar-7bbfc709b9943f043857-min.js"},"squarespace-audio-player":{"css":"//static.squarespace.com/universal/styles-compressed/audio-player-76e4bfcc3f9830beb388bae2002fbe6c-min.css","js":"//static.squarespace.com/universal/scripts-compressed/audio-player-220cd154f040ce2033ef-min.js"},"squarespace-blog-collection-list":{"css":"//static.squarespace.com/universal/styles-compressed/blog-collection-list-d41d8cd98f00b204e9800998ecf8427e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/blog-collection-list-b43c2b582b5225926a0e-min.js"},"squarespace-calendar-block-renderer":{"css":"//static.squarespace.com/universal/styles-compressed/calendar-block-renderer-edb9ea58c015fca447b97a2948a5c589-min.css","js":"//static.squarespace.com/universal/scripts-compressed/calendar-block-renderer-867d13729d8f14e1ed1c-min.js"},"squarespace-chartjs-helpers":{"css":"//static.squarespace.com/universal/styles-compressed/chartjs-helpers-9935a41d63cf08ca108505d288c1712e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/chartjs-helpers-28f002df6ba2c6643164-min.js"},"squarespace-comments":{"css":"//static.squarespace.com/universal/styles-compressed/comments-da0a3c7180341dad8e71d2e1746d08a1-min.css","js":"//static.squarespace.com/universal/scripts-compressed/comments-482dbb6e35f167fd7838-min.js"},"squarespace-dialog":{"css":"//static.squarespace.com/universal/styles-compressed/dialog-c88f372c40a33112d5ee06509be7e7d8-min.css","js":"//static.squarespace.com/universal/scripts-compressed/dialog-96b9cd5fc7b1bcbf4e88-min.js"},"squarespace-events-collection":{"css":"//static.squarespace.com/universal/styles-compressed/events-collection-edb9ea58c015fca447b97a2948a5c589-min.css","js":"//static.squarespace.com/universal/scripts-compressed/events-collection-b932b76783a20a298df7-min.js"},"squarespace-gallery-collection-list":{"css":"//static.squarespace.com/universal/styles-compressed/gallery-collection-list-d41d8cd98f00b204e9800998ecf8427e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/gallery-collection-list-f34199118ab1a5ee11ec-min.js"},"squarespace-image-zoom":{"css":"//static.squarespace.com/universal/styles-compressed/image-zoom-ae974921915aeccaff8ad60c60e19c31-min.css","js":"//static.squarespace.com/universal/scripts-compressed/image-zoom-9b4eefb535e2d361bf3c-min.js"},"squarespace-pinterest":{"css":"//static.squarespace.com/universal/styles-compressed/pinterest-d41d8cd98f00b204e9800998ecf8427e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/pinterest-181656e656da787e9aa8-min.js"},"squarespace-product-quick-view":{"css":"//static.squarespace.com/universal/styles-compressed/product-quick-view-eb4b900ac0155bed2f175aa82e2a7c17-min.css","js":"//static.squarespace.com/universal/scripts-compressed/product-quick-view-597f8a41a6244a0827b4-min.js"},"squarespace-products-collection-item-v2":{"css":"//static.squarespace.com/universal/styles-compressed/products-collection-item-v2-ae974921915aeccaff8ad60c60e19c31-min.css","js":"//static.squarespace.com/universal/scripts-compressed/products-collection-item-v2-8296b823b0009db80448-min.js"},"squarespace-products-collection-list-v2":{"css":"//static.squarespace.com/universal/styles-compressed/products-collection-list-v2-ae974921915aeccaff8ad60c60e19c31-min.css","js":"//static.squarespace.com/universal/scripts-compressed/products-collection-list-v2-cdd67a65b49c3adde50d-min.js"},"squarespace-search-page":{"css":"//static.squarespace.com/universal/styles-compressed/search-page-9e3daa07ec7490c2f0be98a39351cb63-min.css","js":"//static.squarespace.com/universal/scripts-compressed/search-page-2a987bc6564effd31861-min.js"},"squarespace-share-buttons":{"js":"//static.squarespace.com/universal/scripts-compressed/share-buttons-8c964f97e67e0b7c409b-min.js"},"squarespace-simple-liking":{"css":"//static.squarespace.com/universal/styles-compressed/simple-liking-09fa291ec2800c97714f0d157fd0a6ca-min.css","js":"//static.squarespace.com/universal/scripts-compressed/simple-liking-649a3adc225fc5d36f1e-min.js"},"squarespace-social-buttons":{"css":"//static.squarespace.com/universal/styles-compressed/social-buttons-7a696232d1cd101fd62b5f174f9ae6ff-min.css","js":"//static.squarespace.com/universal/scripts-compressed/social-buttons-5bd2da56ca364ef6144f-min.js"},"squarespace-tourdates":{"css":"//static.squarespace.com/universal/styles-compressed/tourdates-d41d8cd98f00b204e9800998ecf8427e-min.css","js":"//static.squarespace.com/universal/scripts-compressed/tourdates-055f59f2f401adade860-min.js"}},"pageType":2,"website":{"id":"5732253c8a65e244fd589e4c","identifier":"rjmetrics-marketing-f47t","websiteType":1,"contentModifiedOn":1470066647719,"cloneable":false,"siteStatus":{},"language":"en-US","timeZone":"America/New_York","machineTimeZoneOffset":-14400000,"timeZoneOffset":-14400000,"timeZoneAbbr":"EDT","siteTitle":"SQL Joins Explained","siteDescription":"","shareButtonOptions":{"3":true,"7":true,"8":true,"6":true,"5":true,"1":true,"4":true},"authenticUrl":"http://www.sql-join.com","internalUrl":"http://rjmetrics-marketing-f47t.squarespace.com","baseUrl":"http://www.sql-join.com","primaryDomain":"www.sql-join.com","typekitId":"fmy8glv","statsMigrated":false,"imageMetadataProcessingEnabled":false},"websiteSettings":{"id":"5732253c8a65e244fd589e4f","websiteId":"5732253c8a65e244fd589e4c","subjects":[],"country":"US","state":"PA","markdownMode":false,"simpleLikingEnabled":true,"mobileInfoBarSettings":{"isContactEmailEnabled":false,"isContactPhoneNumberEnabled":false,"isLocationEnabled":false,"isBusinessHoursEnabled":false},"lastAgreedTermsOfService":2,"defaultPostFormat":"%y/%m/%d/%t","commentLikesAllowed":true,"commentAnonAllowed":true,"commentThreaded":true,"commentApprovalRequired":false,"commentAvatarsOn":true,"commentSortType":2,"commentFlagThreshold":0,"commentFlagsAllowed":true,"commentEnableByDefault":true,"commentDisableAfterDaysDefault":0,"disqusShortname":"","homepageTitleFormat":"%s","collectionTitleFormat":"%c \u2014 %s","itemTitleFormat":"%i \u2014 %s","commentsEnabled":false,"contactPhoneNumber":"","allowSquarespacePromotion":true,"storeSettings":{"returnPolicy":null,"termsOfService":null,"privacyPolicy":null,"paymentSettings":{},"expressCheckout":false,"useLightCart":false,"showNoteField":false,"shippingCountryDefaultValue":"US","billToShippingDefaultValue":false,"showShippingPhoneNumber":false,"isShippingPhoneRequired":false,"showBillingPhoneNumber":false,"isBillingPhoneRequired":false,"currenciesSupported":["USD","CAD","GBP","AUD","EUR","CHF","NOK","SEK","DKK"],"defaultCurrency":"USD","selectedCurrency":"USD","measurementStandard":1,"orderConfirmationInjectCode":"","showCustomCheckoutForm":false,"enableMailingListOptInByDefault":true,"sameAsRetailLocation":false,"stripeConnected":false,"isLive":false,"storeState":3},"useEscapeKeyToLogin":true,"ssBadgeType":1,"ssBadgePosition":4,"ssBadgeVisibility":1,"ssBadgeDevices":1,"pinterestOverlayOptions":{"mode":"disabled"},"ampEnabled":false},"websiteCloneable":false,"collection":{"title":"SQL Joins Explained","id":"5732257f62cd9460fe9ba2b6","fullUrl":"/","type":10},"subscribed":false,"appDomain":"squarespace.com","templateTweakable":true,"tweakJSON":{"outerPadding":"35px","pagePadding":"20px","product-gallery-auto-crop":"true","product-image-auto-crop":"false","topPadding":"0px"},"templateId":"50521cf884aeb45fa5cfdb80","pageFeatures":[1,2,4],"impersonatedSession":false,"demoCollections":[{"collectionId":"56d73fa2c2ea51af9150397a","deleted":true},{"collectionId":"56d73faf07eaa0500957fd07","deleted":true},{"collectionId":"56d73ffc859fd045d0337663","deleted":true},{"collectionId":"56d748f301dbae7a6d77a085","deleted":true},{"collectionId":"56d748fd01dbae7a6d77a0ff","deleted":true},{"collectionId":"56d74904b6aa604e5dddc2d5","deleted":true},{"collectionId":"56d749d9f699bb41e6c05ac0","deleted":true},{"collectionId":"56d74a0145bf212e1e8fda87","deleted":true},{"collectionId":"56d74a4407eaa05009586c60","deleted":true},{"collectionId":"56d74b162b8dde44a009ea5b","deleted":true},{"collectionId":"56d74d8260b5e9a191ff9472","deleted":true},{"collectionId":"56d74e1a859fd045d0340c5a","deleted":true},{"collectionId":"56d74e9d9f7266eea24dcb08","deleted":true},{"collectionId":"56d74fac59827e4e2353b34b","deleted":true},{"collectionId":"56d75559c6fc0864a0e01ca0","deleted":true},{"collectionId":"56d75ee9746fb902cc96143a","deleted":true}],"isFacebookTab":false,"tzData":{"zones":[[-300,"US","E%sT",null]],"rules":{"US":[[1967,2006,null,"Oct","lastSun","2:00","0","S"],[1987,2006,null,"Apr","Sun>=1","2:00","1:00","D"],[2007,"max",null,"Mar","Sun>=8","2:00","1:00","D"],[2007,"max",null,"Nov","Sun>=1","2:00","0","S"]]}}};</script><script type="text/javascript"> SquarespaceFonts.loadViaContext(); Squarespace.load(window);</script><script type="application/ld+json">{"@context":"http://schema.org","@type":"WebSite","url":"http://www.sql-join.com","name":"SQL Joins Explained","description":""}</script><!--[if gte IE 9]> <link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5732253c8a65e244fd589e4c/34/50521cf884aeb45fa5cfdb80/5732253c8a65e244fd589e53/894-05142015/1470068507060/site.css?&filterFeatures=false&part=1"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5732253c8a65e244fd589e4c/34/50521cf884aeb45fa5cfdb80/5732253c8a65e244fd589e53/894-05142015/1470068507060/site.css?&filterFeatures=false&part=2"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5732253c8a65e244fd589e4c/34/50521cf884aeb45fa5cfdb80/5732253c8a65e244fd589e53/894-05142015/1470068507060/site.css?&filterFeatures=false&part=3"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5732253c8a65e244fd589e4c/34/50521cf884aeb45fa5cfdb80/5732253c8a65e244fd589e53/894-05142015/1470068507060/site.css?&filterFeatures=false&part=4"/><![endif]-->
+<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5732253c8a65e244fd589e4c/34/50521cf884aeb45fa5cfdb80/5732253c8a65e244fd589e53/894-05142015/1470068507060/site.css?&filterFeatures=false&noMedia=true&part=1"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5732253c8a65e244fd589e4c/34/50521cf884aeb45fa5cfdb80/5732253c8a65e244fd589e53/894-05142015/1470068507060/site.css?&filterFeatures=false&noMedia=true&part=2"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5732253c8a65e244fd589e4c/34/50521cf884aeb45fa5cfdb80/5732253c8a65e244fd589e53/894-05142015/1470068507060/site.css?&filterFeatures=false&noMedia=true&part=3"/><link rel="stylesheet" type="text/css" href="//static1.squarespace.com/static/sitecss/5732253c8a65e244fd589e4c/34/50521cf884aeb45fa5cfdb80/5732253c8a65e244fd589e53/894-05142015/1470068507060/site.css?&filterFeatures=false&noMedia=true&part=4"/><![endif]-->
+<!--[if !IE]> --><link rel="stylesheet" type="text/css" href="./SQL_Joins_Explained2_files/site.css"><!-- <![endif]-->
+<script src="./SQL_Joins_Explained2_files/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(
+    function()
+    {
+ 
+    jQuery('body').prepend('<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MQTKHH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>' +
+
+'<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\': new Date().getTime(),event:\'gtm.js\'});var f=d.getElementsByTagName(s)[0],' +
+
+'j=d.createElement(s),dl=l!=\'dataLayer\'?\'&l=\'+l:\'\';j.async=true;j.src=\'//www.googletagmanager.com/gtm.js?id=\'+i+dl;f.parentNode.insertBefore(j,f);' +
+
+'})(window,document,\'script\',\'dataLayer\',\'GTM-K7KZWM\');<\/script>');
+ 
+    }
+ 
+    );
+
+</script>
+
+<link href="./SQL_Joins_Explained2_files/bootstrap.min.css" rel="stylesheet" media="screen">
+<script src="./SQL_Joins_Explained2_files/bootstrap.min.js" type="text/javascript"></script>
+<meta name="google-site-verification" content="rmGj-gESE55DweaWTAUcBwWSS1Pv2MO5yHILnox8gDM"><!-- End of Squarespace Headers -->
+  <script src="./SQL_Joins_Explained2_files/site-bundle.js" type="text/javascript"></script>
+<script async="" src="./SQL_Joins_Explained2_files/hotjar-98503.js"></script><script src="./SQL_Joins_Explained2_files/modules-b8f33ddee80c6a690b3be20ca1f14dd4(1).js"></script>
+
+<noscript>&amp;lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-MQTKHH" height="0" width="0" style="display:none;visibility:hidden"&amp;gt;&amp;lt;/iframe&amp;gt;</noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K7KZWM');</script>
+<script type="text/javascript" id="">(function(a,c,e,f,d,b){a.hj=a.hj||function(){(a.hj.q=a.hj.q||[]).push(arguments)};a._hjSettings={hjid:98503,hjsv:5};d=c.getElementsByTagName("head")[0];b=c.createElement("script");b.async=1;b.src=e+a._hjSettings.hjid+f+a._hjSettings.hjsv;d.appendChild(b)})(window,document,"//static.hotjar.com/c/hotjar-",".js?sv\x3d");</script>
+
+  <div id="canvas">
+
+    <div id="mobileNav" class="">
+      <div class="wrapper">
+        <nav class="main-nav mobileNav"><ul>
+    
+
+        <li class="page-collection active-link">
+
+          
+
+            
+              <a href="http://www.sql-join.com/">What is a SQL Join?</a>
+            
+
+            
+
+
+          
+
+        </li>
+
+    
+
+        <li class="page-collection">
+
+          
+
+            
+              <a href="http://www.sql-join.com/sql-join-types/">SQL Join Types</a>
+            
+
+            
+
+
+          
+
+        </li>
+
+    
+
+        <li class="page-collection">
+
+          
+
+            
+              <a href="http://www.sql-join.com/preparing-data/">Preparing Data</a>
+            
+
+            
+
+
+          
+
+        </li>
+
+    
+
+        <li class="page-collection">
+
+          
+
+            
+              <a href="http://www.sql-join.com/data-sources/">Data Sources</a>
+            
+
+            
+
+
+          
+
+        </li>
+
+    
+</ul>
+</nav>
+
+      </div>
+    </div>
+    <div id="mobileMenuLink"><a>Menu</a></div>
+
+    <header id="header" class="clear">
+
+    
+
+      <div id="upper-logo">
+        <h1 class="logo" data-content-field="site-title">
+          <a href="http://www.sql-join.com/">SQL Joins Explained</a>
+        </h1>
+      </div>
+      <script>
+      if (parseInt(Y.one('body').getComputedStyle('width'),10) <= 640) {
+        Y.use('squarespace-ui-base', function(Y) {
+          Y.one("#upper-logo .logo").plug(Y.Squarespace.TextShrink, {
+            parentEl: Y.one('#upper-logo')
+          });
+        });
+      }
+      </script>
+
+      
+      <div class="site-info">
+        <div class="site-address">Street Address</div>
+        <div class="site-city-state">City, State, Zip</div>
+        <div class="site-phone">Phone Number</div>
+      </div>
+      
+
+      <div class="site-tag-line">
+        
+      </div>
+
+      <div class="custom-info">
+        <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Header Subtitle: Custom Content" data-type="block-field" data-updated-on="1381761023501" id="customInfoBlock"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-81eee4bbda3d9efd0834"><div class="sqs-block-content"><p class="text-align-center">Your Custom Text Here</p></div></div></div></div></div>
+      </div>
+
+      <div id="lower-logo">
+        <h1 class="logo" data-content-field="site-title" data-shrink-original-size="60"><a href="http://www.sql-join.com/">SQL Joins Explained</a></h1>
+      </div>
+      <script>
+        Y.use('squarespace-ui-base', function(Y) {
+          Y.one("#lower-logo .logo").plug(Y.Squarespace.TextShrink, {
+            parentEl: Y.one('#lower-logo')
+          });
+        });
+      </script>
+
+    
+      <div id="topNav">
+  
+</div>
+
+
+    </header>
+
+    <div class="page-divider top-divider"></div>
+
+    <!-- // page image or divider -->
+    
+      
+        
+      
+    
+
+    <section id="page" class="clear" role="main" data-content-field="main-content" data-collection-id="5732257f62cd9460fe9ba2b6" data-edit-main-image="Banner" style="opacity: 1;">
+
+      <!-- // CATEGORY NAV -->
+      
+
+      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1470066046939" id="page-5732257f62cd9460fe9ba2b6"><div class="row sqs-row" id="yui_3_17_2_1_1475094569030_128"><div class="col sqs-col-12 span-12" id="yui_3_17_2_1_1475094569030_127"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_2_1464034741888_7920"><div class="sqs-block-content"><h1>What is a SQL join?</h1><p>A SQL join is a Structured Query Language (<strong>SQL</strong>) instruction to combine data from two sets of data (e.g. two tables).&nbsp;Before we dive into the details of a SQL join, let’s briefly discuss what SQL is, and why someone would want to perform a SQL join.</p><p>SQL is a special-purpose programming language designed for managing information in a relational database management system (<strong>RDBMS</strong>). The word relational here is key; it specifies that the database management system is organized in such a way that there are clear relations defined between different sets of data.&nbsp;</p><p>Typically, you need to extract, transform, and load data into your RDBMS before you’re able to manage it using SQL, which you can accomplish by using a tool like <a target="_blank" href="https://www.stitchdata.com/features/?utm_source=sqljoin&amp;utm_medium=microsite&amp;utm_campaign=sqljoin-microsite">Stitch</a>.</p></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_2_1464875471445_53453"><div class="sqs-block-content"><h1>Relational Database Example</h1><p>Imagine you’re running a store and would like to record information about your customers and their orders. By using a relational database, you can save this information as two tables that represent two distinct entities: customers and orders.</p><h2>Customers</h2></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_2_1463418198253_10944"><div class="sqs-block-content"><table border="1" cellpadding="5">
+<tbody><tr>
+<th align="left">customer_id</th>
+<th align="left">first_name</th>
+<th align="left">last_name</th>
+<th align="left">email</th>
+<th align="left">address</th>
+<th align="left">city</th>
+<th align="left">state</th>
+<th align="left">zip</th>
+</tr>
+<tr>
+<td>1</td>
+<td>George</td>
+<td>Washington</td>
+<td>gwashington@usa.gov</td>
+<td>3200 Mt Vernon Hwy</td>
+<td>Mount Vernon</td>
+<td>VA</td>
+<td>22121</td>
+</tr>
+<tr>
+<td>2</td>
+<td>John</td>
+<td>Adams</td>
+<td>jadams@usa.gov</td>
+<td>1250 Hancock St</td>
+<td>Quincy</td>
+<td>MA</td>
+<td>02169</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Thomas</td>
+<td>Jefferson</td>
+<td>tjefferson@usa.gov</td>
+<td>931 Thomas Jefferson Pkwy</td>
+<td>Charlottesville</td>
+<td>VA</td>
+<td>22902</td>
+</tr>
+<tr>
+<td>4</td>
+<td>James</td>
+<td>Madison</td>
+<td>jmadison@usa.gov</td>
+<td>11350 Constitution Hwy</td>
+<td>Orange</td>
+<td>VA</td>
+<td>22960</td>
+</tr>
+<tr>
+<td>5</td>
+<td>James</td>
+<td>Monroe</td>
+<td>jmonroe@usa.gov</td>
+<td>2050 James Monroe Parkway</td>
+<td>Charlottesville</td>
+<td>VA</td>
+<td>22902</td>
+</tr>
+</tbody></table></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_2_1464034741888_14464"><div class="sqs-block-content"><p>Here, information about each customer is stored in its own row, with columns specifying different bits of information, like their first name, last name, and email address. Additionally, we associate a unique customer number, or primary key, with each customer record.</p><h2>Orders</h2></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_6_1463493704429_8209"><div class="sqs-block-content"><table border="1" cellpadding="5">
+<tbody><tr>
+<th align="left">order_id</th>
+<th align="left">order_date</th>
+<th align="left">amount</th>
+<th align="left">customer_id</th>
+</tr>
+<tr>
+<td>1</td>
+<td>07/04/1776</td>
+<td>$234.56</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>03/14/1760</td>
+<td>$78.50</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>05/23/1784</td>
+<td>$124.00</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>09/03/1790</td>
+<td>$65.50</td>
+<td>3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>07/21/1795</td>
+<td>$25.50</td>
+<td>10</td>
+</tr>
+<tr>
+<td>6</td>
+<td>11/27/1787</td>
+<td>$14.40</td>
+<td>9</td>
+
+</tr></tbody></table>
+</div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_2_1464034741888_18840"><div class="sqs-block-content"><p>Again, each row contains information about a specific order. Each order has its own unique identification key <code>order_id</code> assigned to it as well.</p></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_2_1464034741888_19926"><div class="sqs-block-content"><h2>Relational Model</h2><p>You’ve probably noticed that these two examples share similar information. You can see these simple relations diagrammed below:</p></div></div><div class="row sqs-row" id="yui_3_17_2_1_1475094569030_147"><div class="col sqs-col-3 span-3"><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-yui_3_17_2_2_1464294448923_13483"><div class="sqs-block-content">&nbsp;</div></div></div><div class="col sqs-col-6 span-6" id="yui_3_17_2_1_1475094569030_146"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_5_1464120206210_10888"><div class="sqs-block-content" id="yui_3_17_2_1_1475094569030_145">
+	<div class="image-block-outer-wrapper layout-caption-below " id="yui_3_17_2_1_1475094569030_144">
+	
+		<div class="intrinsic" style="max-width:1500.0px;" id="yui_3_17_2_1_1475094569030_143">
+			
+				<div style="padding-bottom:39.66666793823242%;" class="image-block-wrapper   has-aspect-ratio" data-description="" id="yui_3_17_2_1_1475094569030_142">
+					<noscript>&amp;lt;img src="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/574762ed2eeb8175e6942d1e/1464296183284/"  /&amp;gt;</noscript><img class="thumb-image loaded" data-src="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/574762ed2eeb8175e6942d1e/1464296183284/" data-image="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/574762ed2eeb8175e6942d1e/1464296183284/" data-image-dimensions="1500x595" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="574762ed2eeb8175e6942d1e" data-type="image" src="./SQL_Joins_Explained2_files/saved_resource(1)" data-image-resolution="500w" style="top: 0%; left: -0.0494315%; width: 100.099%; height: 100%; position: absolute;">
+				</div>
+			
+
+			
+
+		</div>
+	
+	</div>
+
+</div></div></div><div class="col sqs-col-3 span-3"><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-yui_3_17_2_2_1464294448923_14741"><div class="sqs-block-content">&nbsp;</div></div></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_5_1464120206210_11107"><div class="sqs-block-content"><p>Note that the orders table contains two keys: one for the order and one for the customer who placed that order. In scenarios when there are multiple keys in a table, the key that refers to the entity being described in that table is called the <strong>Primary Key </strong>(PK)&nbsp;and other key is called a <strong>Foreign Key </strong>(FK).</p></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_2_1464034741888_26652"><div class="sqs-block-content"><p>In our example, <code>order_id</code> is a primary key in the orders table, while <code>customer_id</code> is both a primary key in the customers table, and a foreign key in the orders table. Primary and foreign keys are essential to describing relations between the tables, and in performing SQL joins.</p></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_2_1464034741888_26735"><div class="sqs-block-content"><h1>SQL Join Example</h1></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_2_1464034741888_28061"><div class="sqs-block-content"><p>Let’s say we want to find all orders placed by a particular customer. We can do this by joining the customers and orders tables together using the relationship established by the <code>customer_id</code> key:</p></div></div><div class="sqs-block embed-block sqs-block-embed" data-block-json="{&quot;hSize&quot;:null,&quot;floatDir&quot;:null,&quot;html&quot;:&quot;&lt;script src=\&quot;https://gist.github.com/dan81989/08d3d24302611c452e8d13b9c5b26ea8.js\&quot;&gt;&lt;/script&gt;&quot;,&quot;resolvedBy&quot;:&quot;manual&quot;,&quot;resolved&quot;:true}" data-block-type="22" id="block-yui_3_17_2_2_1464034741888_29135"><div class="sqs-block-content" id="yui_3_17_2_1_1475094569030_118" style="visibility: visible; opacity: 1; height: auto;"><script src="./SQL_Joins_Explained2_files/08d3d24302611c452e8d13b9c5b26ea8.js"></script><link rel="stylesheet" href="./SQL_Joins_Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15.css"><div id="gist36042862" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-all-orders-placed-by-a-customer" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-text">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-all-orders-placed-by-a-customer-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-all-orders-placed-by-a-customer-LC1" class="blob-code blob-code-inner js-file-line">select order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-all-orders-placed-by-a-customer-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-all-orders-placed-by-a-customer-LC2" class="blob-code blob-code-inner js-file-line">from customers</td>
+      </tr>
+      <tr>
+        <td id="file-all-orders-placed-by-a-customer-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-all-orders-placed-by-a-customer-LC3" class="blob-code blob-code-inner js-file-line">join orders</td>
+      </tr>
+      <tr>
+        <td id="file-all-orders-placed-by-a-customer-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-all-orders-placed-by-a-customer-LC4" class="blob-code blob-code-inner js-file-line">   on customers.customer_id = orders.customer_id</td>
+      </tr>
+      <tr>
+        <td id="file-all-orders-placed-by-a-customer-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-all-orders-placed-by-a-customer-LC5" class="blob-code blob-code-inner js-file-line">where customer_id = 3</td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/08d3d24302611c452e8d13b9c5b26ea8/raw/fab7c2179cf841647c786551f68224f31da1bf26/all-orders-placed-by-a-customer" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/08d3d24302611c452e8d13b9c5b26ea8#file-all-orders-placed-by-a-customer">all-orders-placed-by-a-customer</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<link rel="stylesheet" href="./SQL_Joins_Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15(1).css"><div id="gist36042862" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-all-orders-placed-by-a-customer" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-text">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-all-orders-placed-by-a-customer-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-all-orders-placed-by-a-customer-LC1" class="blob-code blob-code-inner js-file-line">select order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-all-orders-placed-by-a-customer-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-all-orders-placed-by-a-customer-LC2" class="blob-code blob-code-inner js-file-line">from customers</td>
+      </tr>
+      <tr>
+        <td id="file-all-orders-placed-by-a-customer-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-all-orders-placed-by-a-customer-LC3" class="blob-code blob-code-inner js-file-line">join orders</td>
+      </tr>
+      <tr>
+        <td id="file-all-orders-placed-by-a-customer-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-all-orders-placed-by-a-customer-LC4" class="blob-code blob-code-inner js-file-line">   on customers.customer_id = orders.customer_id</td>
+      </tr>
+      <tr>
+        <td id="file-all-orders-placed-by-a-customer-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-all-orders-placed-by-a-customer-LC5" class="blob-code blob-code-inner js-file-line">where customer_id = 3</td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/08d3d24302611c452e8d13b9c5b26ea8/raw/fab7c2179cf841647c786551f68224f31da1bf26/all-orders-placed-by-a-customer" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/08d3d24302611c452e8d13b9c5b26ea8#file-all-orders-placed-by-a-customer">all-orders-placed-by-a-customer</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_2_1464034741888_30119"><div class="sqs-block-content"><p>Here, we’re joining the two tables using the <code>join</code> keyword, and specifying what key to use when joining the tables in the <code>on customers.customer_id = orders.customer_id</code> line following the join statement.  Here is the result of the above SQL query, which includes two orders placed by Thomas Jefferson (customer_id = 3):</p></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_2_1464294448923_18311"><div class="sqs-block-content"><table border="1" cellpadding="5">
+<tbody><tr>
+<th align="left">order_id</th>
+<th align="left">order_date</th>
+<th align="left">order_amount</th>
+  </tr>
+<tr>
+  <td>2</td>
+<td>3/14/1760</td>
+<td>$78.50</td>
+  </tr>
+<tr>
+<td>4</td>
+<td>9/03/1790</td>
+<td>$65.50</td>
+  </tr>
+</tbody></table></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_2_1464034741888_29606"><div class="sqs-block-content"><p>This particular join is an example of an “inner” join. Depending on the kind of analysis you’d like to perform, you may want to use a different method. There are actually a number of different ways to join the two tables together, depending on your application. The next section will explain inner, left, right, and full joins, and provide examples using the data tables used above.</p></div></div><div class="sqs-block button-block sqs-block-button" data-block-type="53" id="block-yui_3_17_2_19_1463493704429_45169"><div class="sqs-block-content">
+</div></div></div></div></div>
+      <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1470066110228" id="page-57322598e32140d252ff03c6"><div class="row sqs-row" id="yui_3_17_2_1_1475094582201_138"><div class="col sqs-col-12 span-12" id="yui_3_17_2_1_1475094582201_137"><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_3_1464034741888_36287"><div class="sqs-block-content"><h1>Basic SQL Join Types</h1><p>There are four basic types of SQL joins: inner, left, right, and full.&nbsp;The easiest and most intuitive way to explain the difference between these four types is by using a Venn diagram, which shows all possible logical relations between data sets.&nbsp;</p><p>Again, it's important to stress that before you can begin using any join type, you'll need to extract the data and load it into an RDBMS like Amazon Redshift, where you can query tables from multiple sources. You build that process manually, or you can use an ETL service like <a target="_blank" href="https://www.stitchdata.com/features/?utm_source=sqljoin&amp;utm_medium=microsite&amp;utm_campaign=sqljoin-microsite">Stitch</a>, which automates that process for you.</p></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_3_1464959084051_34166"><div class="sqs-block-content"><p>Let’s say we have two sets of data in our relational database: table A and table B, with some sort of relation specified by primary and foreign keys. The result of joining these tables together can be visually represented by the following diagram:&nbsp;</p></div></div><div class="row sqs-row" id="yui_3_17_2_1_1475094582201_157"><div class="col sqs-col-4 span-4"><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-yui_3_17_2_6_1464120206210_17324"><div class="sqs-block-content">&nbsp;</div></div></div><div class="col sqs-col-3 span-3" id="yui_3_17_2_1_1475094582201_156"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_6_1464120206210_15481"><div class="sqs-block-content" id="yui_3_17_2_1_1475094582201_155">
+	<div class="image-block-outer-wrapper layout-caption-below " id="yui_3_17_2_1_1475094582201_154">
+	
+		<div class="intrinsic" style="max-width:803.0px;" id="yui_3_17_2_1_1475094582201_153">
+			
+				<div style="padding-bottom:57.285179138183594%;" class="image-block-wrapper   has-aspect-ratio" data-description="" id="yui_3_17_2_1_1475094582201_152">
+					<noscript>&amp;lt;img src="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744bcf3e321402cfdfa7128/1464122619821/"  /&amp;gt;</noscript><img class="thumb-image loaded" data-src="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744bcf3e321402cfdfa7128/1464122619821/" data-image="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744bcf3e321402cfdfa7128/1464122619821/" data-image-dimensions="803x460" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5744bcf3e321402cfdfa7128" data-type="image" src="./SQL Join Types — SQL Joins Explained2_files/saved_resource(1)" data-image-resolution="300w" style="top: -0.0576111%; left: 0%; width: 100%; height: 100.115%; position: absolute;">
+				</div>
+			
+
+			
+
+		</div>
+	
+	</div>
+
+</div></div></div><div class="col sqs-col-5 span-5"><div class="sqs-block spacer-block sqs-block-spacer sized vsize-1" data-block-type="21" id="block-yui_3_17_2_6_1464120206210_20507"><div class="sqs-block-content">&nbsp;</div></div></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_6_1464120206210_15700"><div class="sqs-block-content"><p>The extent of the overlap, if any, is determined by how many records in Table A match the records in Table B. Depending on what subset of data we would like to select from the two tables, the four join types can be visualized by highlighting the corresponding sections of the Venn diagram:</p></div></div><div class="row sqs-row" id="yui_3_17_2_1_1475094582201_175"><div class="col sqs-col-3 span-3" id="yui_3_17_2_1_1475094582201_174"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_6_1464120206210_27776"><div class="sqs-block-content" id="yui_3_17_2_1_1475094582201_173">
+	<div class="image-block-outer-wrapper layout-caption-below " id="yui_3_17_2_1_1475094582201_172">
+	
+		<div class="intrinsic" style="max-width:900.0px;" id="yui_3_17_2_1_1475094582201_171">
+			
+				<div style="padding-bottom:77.77777862548828%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Select all records from Table A and Table B, where the join condition is met.&lt;/p&gt;" id="yui_3_17_2_1_1475094582201_170">
+					<noscript>&amp;lt;img src="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744bd97d210b89c3e15a61f/1464122780890/"  alt="Select all records from Table A and Table B, where the join condition is met."  /&amp;gt;</noscript><img class="thumb-image loaded" data-src="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744bd97d210b89c3e15a61f/1464122780890/" data-image="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744bd97d210b89c3e15a61f/1464122780890/" data-image-dimensions="900x700" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5744bd97d210b89c3e15a61f" data-type="image" alt="Select all records from Table A and Table B, where the join condition is met." src="./SQL Join Types — SQL Joins Explained2_files/saved_resource(2)" data-image-resolution="300w" style="top: 0%; left: -0.190985%; width: 100.382%; height: 100%; position: absolute;">
+				</div>
+			
+
+			
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Select all records from Table A and Table B, where the join condition is met.</p></div>
+			</div>
+			
+
+		</div>
+	
+	</div>
+
+</div></div></div><div class="col sqs-col-3 span-3" id="yui_3_17_2_1_1475094582201_192"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_6_1464120206210_29828"><div class="sqs-block-content" id="yui_3_17_2_1_1475094582201_191">
+	<div class="image-block-outer-wrapper layout-caption-below " id="yui_3_17_2_1_1475094582201_190">
+	
+		<div class="intrinsic" style="max-width:900.0px;" id="yui_3_17_2_1_1475094582201_189">
+			
+				<div style="padding-bottom:77.77777862548828%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Select all records from Table A, along with records from Table B for which the join condition is met (if at all).&lt;/p&gt;" id="yui_3_17_2_1_1475094582201_188">
+					<noscript>&amp;lt;img src="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744bdad40261de572cbbc49/1464122809233/"  alt="Select all records from Table A, along with records from Table B for which the join condition is met (if at all)."  /&amp;gt;</noscript><img class="thumb-image loaded" data-src="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744bdad40261de572cbbc49/1464122809233/" data-image="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744bdad40261de572cbbc49/1464122809233/" data-image-dimensions="900x700" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5744bdad40261de572cbbc49" data-type="image" alt="Select all records from Table A, along with records from Table B for which the join condition is met (if at all)." src="./SQL Join Types — SQL Joins Explained2_files/saved_resource(3)" data-image-resolution="300w" style="top: 0%; left: -0.190985%; width: 100.382%; height: 100%; position: absolute;">
+				</div>
+			
+
+			
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Select all records from Table A, along with records from Table B for which the join condition is met (if at all).</p></div>
+			</div>
+			
+
+		</div>
+	
+	</div>
+
+</div></div></div><div class="col sqs-col-3 span-3" id="yui_3_17_2_1_1475094582201_209"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_6_1464120206210_25004"><div class="sqs-block-content" id="yui_3_17_2_1_1475094582201_208">
+	<div class="image-block-outer-wrapper layout-caption-below " id="yui_3_17_2_1_1475094582201_207">
+	
+		<div class="intrinsic" style="max-width:900.0px;" id="yui_3_17_2_1_1475094582201_206">
+			
+				<div style="padding-bottom:77.77777862548828%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Select all records from Table B, along with records from Table A for which the join condition is met (if at all).&lt;/p&gt;" id="yui_3_17_2_1_1475094582201_205">
+					<noscript>&amp;lt;img src="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744bd78d210b89c3e15a4a9/1464122755467/"  alt="Select all records from Table B, along with records from Table A for which the join condition is met (if at all)."  /&amp;gt;</noscript><img class="thumb-image loaded" data-src="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744bd78d210b89c3e15a4a9/1464122755467/" data-image="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744bd78d210b89c3e15a4a9/1464122755467/" data-image-dimensions="900x700" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5744bd78d210b89c3e15a4a9" data-type="image" alt="Select all records from Table B, along with records from Table A for which the join condition is met (if at all)." src="./SQL Join Types — SQL Joins Explained2_files/saved_resource(4)" data-image-resolution="300w" style="top: 0%; left: -0.190985%; width: 100.382%; height: 100%; position: absolute;">
+				</div>
+			
+
+			
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Select all records from Table B, along with records from Table A for which the join condition is met (if at all).</p></div>
+			</div>
+			
+
+		</div>
+	
+	</div>
+
+</div></div></div><div class="col sqs-col-3 span-3" id="yui_3_17_2_1_1475094582201_226"><div class="sqs-block image-block sqs-block-image" data-block-type="5" id="block-yui_3_17_2_6_1464120206210_31894"><div class="sqs-block-content" id="yui_3_17_2_1_1475094582201_225">
+	<div class="image-block-outer-wrapper layout-caption-below " id="yui_3_17_2_1_1475094582201_224">
+	
+		<div class="intrinsic" style="max-width:900.0px;" id="yui_3_17_2_1_1475094582201_223">
+			
+				<div style="padding-bottom:77.77777862548828%;" class="image-block-wrapper   has-aspect-ratio" data-description="&lt;p&gt;Select all records from Table A and Table B, regardless of whether the join condition is met or not.&lt;/p&gt;" id="yui_3_17_2_1_1475094582201_222">
+					<noscript>&amp;lt;img src="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744be65c6fc08b3af1b0fbd/1464122985024/"  alt="Select all records from Table A and Table B, regardless of whether the join condition is met or not."  /&amp;gt;</noscript><img class="thumb-image loaded" data-src="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744be65c6fc08b3af1b0fbd/1464122985024/" data-image="https://static1.squarespace.com/static/5732253c8a65e244fd589e4c/t/5744be65c6fc08b3af1b0fbd/1464122985024/" data-image-dimensions="900x700" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5744be65c6fc08b3af1b0fbd" data-type="image" alt="Select all records from Table A and Table B, regardless of whether the join condition is met or not." src="./SQL Join Types — SQL Joins Explained2_files/saved_resource(5)" data-image-resolution="300w" style="top: 0%; left: -0.190985%; width: 100.382%; height: 100%; position: absolute;">
+				</div>
+			
+
+			
+			<div class="image-caption-wrapper">
+				<div class="image-caption"><p>Select all records from Table A and Table B, regardless of whether the join condition is met or not.</p></div>
+			</div>
+			
+
+		</div>
+	
+	</div>
+
+</div></div></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_6_1464120206210_52177"><div class="sqs-block-content"><h1>Examples of SQL Join Types</h1></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_6_1464120206210_55218"><div class="sqs-block-content"><p>Let's use the tables we introduced in the “What is a SQL join?” section to show examples of these joins in action. The relationship between the two tables is specified by the <code>customer_id</code> key, which is the "primary key" in customers table and a "foreign key" in the orders table:</p></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_8_1464120206210_21234"><div class="sqs-block-content"><table border="1" cellpadding="5">
+<tbody><tr>
+<th align="left">customer_id</th>
+<th align="left">first_name</th>
+<th align="left">last_name</th>
+<th align="left">email</th>
+<th align="left">address</th>
+<th align="left">city</th>
+<th align="left">state</th>
+<th align="left">zipcode</th>
+</tr>
+<tr>
+<td>1</td>
+<td>George</td>
+<td>Washington</td>
+<td>gwashington@usa.gov</td>
+<td>3200 Mt Vernon Hwy</td>
+<td>Mount Vernon</td>
+<td>VA</td>
+<td>22121</td>
+</tr>
+<tr>
+<td>2</td>
+<td>John</td>
+<td>Adams</td>
+<td>jadams@usa.gov</td>
+<td>1250 Hancock St</td>
+<td>Quincy</td>
+<td>MA</td>
+<td>02169</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Thomas</td>
+<td>Jefferson</td>
+<td>tjefferson@usa.gov</td>
+<td>931 Thomas Jefferson Pkwy</td>
+<td>Charlottesville</td>
+<td>VA</td>
+<td>22902</td>
+</tr>
+<tr>
+<td>4</td>
+<td>James</td>
+<td>Madison</td>
+<td>jmadison@usa.gov</td>
+<td>11350 Constitution Hwy</td>
+<td>Orange</td>
+<td>VA</td>
+<td>22960</td>
+</tr>
+<tr>
+<td>5</td>
+<td>James</td>
+<td>Monroe</td>
+<td>jmonroe@usa.gov</td>
+<td>2050 James Monroe Parkway</td>
+<td>Charlottesville</td>
+<td>VA</td>
+<td>22902</td>
+</tr>
+</tbody></table></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_8_1464120206210_22727"><div class="sqs-block-content"><table border="1" cellpadding="5">
+<tbody><tr>
+<th align="left">order_id</th>
+<th align="left">order_date</th>
+<th align="left">amount</th>
+<th align="left">customer_id</th>
+</tr>
+<tr>
+<td>1</td>
+<td>07/04/1776</td>
+<td>$234.56</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>03/14/1760</td>
+<td>$78.50</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>05/23/1784</td>
+<td>$124.00</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>09/03/1790</td>
+<td>$65.50</td>
+<td>3</td>
+</tr>
+</tbody></table>
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_6_1464120206210_25292"><div class="sqs-block-content"><p>Note that (1) not every customer in our customers table has placed an order and (2) there are a few orders for which no customer record exists in our customers table.</p><h2>Inner Join</h2><p>Let’s say we wanted to get a list of those customers who placed an order and the details of the order they placed. This would be a perfect fit for an inner join, since an inner join returns records at the intersection of the two tables.</p></div></div><div class="sqs-block embed-block sqs-block-embed" data-block-json="{&quot;hSize&quot;:null,&quot;floatDir&quot;:null,&quot;html&quot;:&quot;&lt;script src=\&quot;https://gist.github.com/dan81989/aaeef78733287143f43446a29a1f62b1.js\&quot;&gt;&lt;/script&gt;&quot;,&quot;resolvedBy&quot;:&quot;manual&quot;,&quot;resolved&quot;:true}" data-block-type="22" id="block-yui_3_17_2_8_1464120206210_24356"><div class="sqs-block-content" id="yui_3_17_2_1_1475094582201_118" style="visibility: visible; opacity: 1; height: auto;"><script src="./SQL Join Types — SQL Joins Explained2_files/aaeef78733287143f43446a29a1f62b1.js"></script><link rel="stylesheet" href="./SQL Join Types — SQL Joins Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15.css"><div id="gist36096067" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-inner-join-sql" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-sql">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-inner-join-sql-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-inner-join-sql-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">select</span> first_name, last_name, order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-inner-join-sql-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-inner-join-sql-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> customers c</td>
+      </tr>
+      <tr>
+        <td id="file-inner-join-sql-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-inner-join-sql-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">inner join</span> orders o</td>
+      </tr>
+      <tr>
+        <td id="file-inner-join-sql-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-inner-join-sql-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">on</span> <span class="pl-c1">c</span>.<span class="pl-c1">customer_id</span> <span class="pl-k">=</span> <span class="pl-c1">o</span>.<span class="pl-c1">customer_id</span></td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/aaeef78733287143f43446a29a1f62b1/raw/f2220e81174dbdc167c5fd0d478f81ce5348ed64/inner-join.sql" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/aaeef78733287143f43446a29a1f62b1#file-inner-join-sql">inner-join.sql</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<link rel="stylesheet" href="./SQL Join Types — SQL Joins Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15(1).css"><div id="gist36096067" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-inner-join-sql" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-sql">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-inner-join-sql-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-inner-join-sql-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">select</span> first_name, last_name, order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-inner-join-sql-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-inner-join-sql-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> customers c</td>
+      </tr>
+      <tr>
+        <td id="file-inner-join-sql-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-inner-join-sql-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">inner join</span> orders o</td>
+      </tr>
+      <tr>
+        <td id="file-inner-join-sql-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-inner-join-sql-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">on</span> <span class="pl-c1">c</span>.<span class="pl-c1">customer_id</span> <span class="pl-k">=</span> <span class="pl-c1">o</span>.<span class="pl-c1">customer_id</span></td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/aaeef78733287143f43446a29a1f62b1/raw/f2220e81174dbdc167c5fd0d478f81ce5348ed64/inner-join.sql" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/aaeef78733287143f43446a29a1f62b1#file-inner-join-sql">inner-join.sql</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_3_1464200403263_12831"><div class="sqs-block-content"><table border="1" cellpadding="5">
+<tbody><tr>
+<th align="left">first_name</th>
+<th align="left">last_name</th>
+<th align="left">order_date</th>
+<th align="left">order_amount</th>
+</tr><tr>
+<td>George</td>
+<td>Washington</td>
+<td>07/4/1776</td>
+<td>$234.56</td>
+</tr>
+<tr>
+<td>John</td>
+<td>Adams</td>
+<td>05/23/1784</td>
+<td>$124.00</td>
+</tr>
+<tr>
+<td>Thomas</td>
+<td>Jefferson</td>
+<td>03/14/1760</td>
+<td>$78.50</td>
+</tr>
+<tr>
+<td>Thomas</td>
+<td>Jefferson</td>
+<td>09/03/1790</td>
+<td>$65.50</td>
+</tr>
+</tbody></table>
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_3_1464200403263_19468"><div class="sqs-block-content"><p>Note that only George Washington, John Adams and Thomas Jefferson placed orders, with Thomas Jefferson placing two separate orders on 3/14/1760 and 9/03/1790.</p><h2>Left Join</h2><p>If we wanted to simply append information about orders to our customers table, regardless of whether a customer placed an order or not, we would use a left join. A left join returns all records from table A and any matching records from table B.</p></div></div><div class="sqs-block embed-block sqs-block-embed" data-block-json="{&quot;hSize&quot;:null,&quot;floatDir&quot;:null,&quot;html&quot;:&quot;&lt;script src=\&quot;https://gist.github.com/dan81989/cf6bde6540bb49780d75ba20f837e13d.js\&quot;&gt;&lt;/script&gt;&quot;,&quot;resolvedBy&quot;:&quot;manual&quot;,&quot;resolved&quot;:true}" data-block-type="22" id="block-yui_3_17_2_3_1464200403263_22820"><div class="sqs-block-content" id="yui_3_17_2_1_1475094582201_120" style="visibility: visible; opacity: 1; height: auto;"><script src="./SQL Join Types — SQL Joins Explained2_files/cf6bde6540bb49780d75ba20f837e13d.js"></script><link rel="stylesheet" href="./SQL Join Types — SQL Joins Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15.css"><div id="gist36126974" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-left-join-sql" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-sql">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-left-join-sql-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-left-join-sql-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">select</span> first_name, last_name, order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-left-join-sql-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-left-join-sql-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> customers c</td>
+      </tr>
+      <tr>
+        <td id="file-left-join-sql-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-left-join-sql-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">left join</span> orders o</td>
+      </tr>
+      <tr>
+        <td id="file-left-join-sql-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-left-join-sql-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">on</span> <span class="pl-c1">c</span>.<span class="pl-c1">customer_id</span> <span class="pl-k">=</span> <span class="pl-c1">o</span>.<span class="pl-c1">customer_id</span></td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/cf6bde6540bb49780d75ba20f837e13d/raw/bd94f50c044db5610f528b492359c6103d9b3c7f/left-join.sql" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/cf6bde6540bb49780d75ba20f837e13d#file-left-join-sql">left-join.sql</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<link rel="stylesheet" href="./SQL Join Types — SQL Joins Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15(1).css"><div id="gist36126974" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-left-join-sql" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-sql">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-left-join-sql-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-left-join-sql-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">select</span> first_name, last_name, order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-left-join-sql-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-left-join-sql-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> customers c</td>
+      </tr>
+      <tr>
+        <td id="file-left-join-sql-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-left-join-sql-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">left join</span> orders o</td>
+      </tr>
+      <tr>
+        <td id="file-left-join-sql-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-left-join-sql-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">on</span> <span class="pl-c1">c</span>.<span class="pl-c1">customer_id</span> <span class="pl-k">=</span> <span class="pl-c1">o</span>.<span class="pl-c1">customer_id</span></td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/cf6bde6540bb49780d75ba20f837e13d/raw/bd94f50c044db5610f528b492359c6103d9b3c7f/left-join.sql" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/cf6bde6540bb49780d75ba20f837e13d#file-left-join-sql">left-join.sql</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_3_1464200403263_24820"><div class="sqs-block-content"><table border="1" cellpadding="5">
+<tbody><tr>
+<th align="left">first_name</th>
+<th align="left">last_name</th>
+<th align="left">order_date</th>
+<th align="left">order_amount</th>
+</tr>
+<tr>
+<td>George
+</td><td>Washington
+</td><td>07/04/1776
+</td><td>$234.56
+</td></tr>
+<tr>
+<td>John
+</td><td>Adams
+</td><td>05/23/1784
+</td><td>$124.00
+</td></tr>
+<tr>
+<td>Thomas
+</td><td>Jefferson
+</td><td>03/14/1760
+</td><td>$78.50
+</td></tr>
+<tr>
+<td>Thomas
+</td><td>Jefferson
+</td><td>09/03/1790
+</td><td>$65.50
+</td></tr>
+<tr>
+<td>James 
+</td><td>Madison
+</td><td>NULL
+</td><td>NULL
+</td></tr>
+<tr>
+<td>James 
+</td><td>Monroe
+</td><td>NULL
+</td><td>NULL
+</td></tr>
+</tbody></table>
+</div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_3_1464200403263_111298"><div class="sqs-block-content"><p>Note that since there were no matching records for James Madison and James Monroe in our orders table, the <code>order_date</code> and <code>order_amount</code> are <code>NULL</code>, which simply means there is no data for these fields.</p></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_3_1464200403263_41894"><div class="sqs-block-content"><p>So why would this be useful? By simply adding a “where order_date is NULL” line to our SQL query, it returns a list of all customers who have not placed an order:</p></div></div><div class="sqs-block embed-block sqs-block-embed" data-block-json="{&quot;hSize&quot;:null,&quot;floatDir&quot;:null,&quot;html&quot;:&quot;&lt;script src=\&quot;https://gist.github.com/dan81989/41de34784f09c5296df3765f981c805a.js\&quot;&gt;&lt;/script&gt;&quot;,&quot;resolvedBy&quot;:&quot;manual&quot;,&quot;resolved&quot;:true}" data-block-type="22" id="block-yui_3_17_2_3_1464200403263_45404"><div class="sqs-block-content" id="yui_3_17_2_1_1475094582201_122" style="visibility: visible; opacity: 1; height: auto;"><script src="./SQL Join Types — SQL Joins Explained2_files/41de34784f09c5296df3765f981c805a.js"></script><link rel="stylesheet" href="./SQL Join Types — SQL Joins Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15.css"><div id="gist36127073" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-left-join-alt-sql" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-sql">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-left-join-alt-sql-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-left-join-alt-sql-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">select</span> first_name, last_name, order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-left-join-alt-sql-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-left-join-alt-sql-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> customers c</td>
+      </tr>
+      <tr>
+        <td id="file-left-join-alt-sql-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-left-join-alt-sql-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">left join</span> orders o</td>
+      </tr>
+      <tr>
+        <td id="file-left-join-alt-sql-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-left-join-alt-sql-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">on</span> <span class="pl-c1">c</span>.<span class="pl-c1">customer_id</span> <span class="pl-k">=</span> <span class="pl-c1">o</span>.<span class="pl-c1">customer_id</span></td>
+      </tr>
+      <tr>
+        <td id="file-left-join-alt-sql-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-left-join-alt-sql-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-k">where</span> order_date is <span class="pl-k">NULL</span></td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/41de34784f09c5296df3765f981c805a/raw/e4c05b274d6851883231a085f69289e537296b78/left-join-alt.sql" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/41de34784f09c5296df3765f981c805a#file-left-join-alt-sql">left-join-alt.sql</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<link rel="stylesheet" href="./SQL Join Types — SQL Joins Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15(1).css"><div id="gist36127073" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-left-join-alt-sql" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-sql">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-left-join-alt-sql-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-left-join-alt-sql-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">select</span> first_name, last_name, order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-left-join-alt-sql-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-left-join-alt-sql-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> customers c</td>
+      </tr>
+      <tr>
+        <td id="file-left-join-alt-sql-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-left-join-alt-sql-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">left join</span> orders o</td>
+      </tr>
+      <tr>
+        <td id="file-left-join-alt-sql-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-left-join-alt-sql-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">on</span> <span class="pl-c1">c</span>.<span class="pl-c1">customer_id</span> <span class="pl-k">=</span> <span class="pl-c1">o</span>.<span class="pl-c1">customer_id</span></td>
+      </tr>
+      <tr>
+        <td id="file-left-join-alt-sql-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-left-join-alt-sql-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-k">where</span> order_date is <span class="pl-k">NULL</span></td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/41de34784f09c5296df3765f981c805a/raw/e4c05b274d6851883231a085f69289e537296b78/left-join-alt.sql" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/41de34784f09c5296df3765f981c805a#file-left-join-alt-sql">left-join-alt.sql</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_3_1464200403263_46218"><div class="sqs-block-content"><h2>Right Join</h2><p>Right join is a mirror version of the left join and allows to get a list of all orders, appended with customer information.</p></div></div><div class="sqs-block embed-block sqs-block-embed" data-block-json="{&quot;hSize&quot;:null,&quot;floatDir&quot;:null,&quot;html&quot;:&quot;&lt;script src=\&quot;https://gist.github.com/dan81989/9d8858796184fdfc375b9d21fa3147f8.js\&quot;&gt;&lt;/script&gt;&quot;,&quot;resolvedBy&quot;:&quot;manual&quot;,&quot;resolved&quot;:true}" data-block-type="22" id="block-yui_3_17_2_3_1464200403263_49100"><div class="sqs-block-content" id="yui_3_17_2_1_1475094582201_124" style="visibility: visible; opacity: 1; height: auto;"><script src="./SQL Join Types — SQL Joins Explained2_files/9d8858796184fdfc375b9d21fa3147f8.js"></script><link rel="stylesheet" href="./SQL Join Types — SQL Joins Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15.css"><div id="gist36127102" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-right-join-sql" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-sql">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-right-join-sql-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-right-join-sql-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">select</span> first_name, last_name, order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-right-join-sql-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-right-join-sql-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> customers c</td>
+      </tr>
+      <tr>
+        <td id="file-right-join-sql-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-right-join-sql-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">right join</span> orders o</td>
+      </tr>
+      <tr>
+        <td id="file-right-join-sql-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-right-join-sql-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">on</span> <span class="pl-c1">c</span>.<span class="pl-c1">customer_id</span> <span class="pl-k">=</span> <span class="pl-c1">o</span>.<span class="pl-c1">customer_id</span></td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/9d8858796184fdfc375b9d21fa3147f8/raw/c5e9a950f8c3fe1d1616236e0b76ebd87e6d238b/right-join.sql" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/9d8858796184fdfc375b9d21fa3147f8#file-right-join-sql">right-join.sql</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<link rel="stylesheet" href="./SQL Join Types — SQL Joins Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15(1).css"><div id="gist36127102" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-right-join-sql" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-sql">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-right-join-sql-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-right-join-sql-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">select</span> first_name, last_name, order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-right-join-sql-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-right-join-sql-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> customers c</td>
+      </tr>
+      <tr>
+        <td id="file-right-join-sql-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-right-join-sql-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">right join</span> orders o</td>
+      </tr>
+      <tr>
+        <td id="file-right-join-sql-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-right-join-sql-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">on</span> <span class="pl-c1">c</span>.<span class="pl-c1">customer_id</span> <span class="pl-k">=</span> <span class="pl-c1">o</span>.<span class="pl-c1">customer_id</span></td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/9d8858796184fdfc375b9d21fa3147f8/raw/c5e9a950f8c3fe1d1616236e0b76ebd87e6d238b/right-join.sql" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/9d8858796184fdfc375b9d21fa3147f8#file-right-join-sql">right-join.sql</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_3_1464200403263_50138"><div class="sqs-block-content"><table border="1" cellpadding="5">
+<tbody><tr>
+<th align="left">first_name</th>
+<th align="left">last_name</th>
+<th align="left">order_date</th>
+<th align="left">order_amount</th>
+</tr>
+<tr>
+<td>George</td>
+<td>Washington</td>
+<td>07/04/1776</td>
+<td>$234.56</td>
+</tr>
+<tr>
+<td>Thomas</td>
+<td>Jefferson</td>
+<td>03/14/1760</td>
+<td>$78.50</td>
+</tr>
+<tr>
+<td>John</td>
+<td>Adams</td>
+<td>05/23/1784</td>
+<td>$124.00</td>
+</tr>
+<tr>
+<td>Thomas</td>
+<td>Jefferson</td>
+<td>09/03/1790</td>
+<td>$65.50</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>NULL</td>
+<td>07/21/1795</td>
+<td>$25.50</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>NULL</td>
+<td>11/27/1787</td>
+<td>$14.40</td>
+</tr>
+</tbody></table></div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_3_1464200403263_120417"><div class="sqs-block-content"><p>Note that since there were no matching customer records for orders placed in 1795 and 1787, the <code>first_name</code> and <code>last_name</code> fields are <code>NULL</code> in the resulting set.</p>
+
+<p>Also note that the order in which the tables are joined is important. We are right joining the orders table to the customers table. If we were to right join the customers table to the orders table, the result would be the same as left joining the orders table to the customers table.</p></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_3_1464200403263_59055"><div class="sqs-block-content"><p>Why is this useful? Simply adding a “where first_name is NULL” line to our SQL query returns a list of all orders for which we failed to record information about the customers who placed them:</p></div></div><div class="sqs-block embed-block sqs-block-embed" data-block-json="{&quot;hSize&quot;:null,&quot;floatDir&quot;:null,&quot;html&quot;:&quot;&lt;script src=\&quot;https://gist.github.com/dan81989/f058077a5cf311370b975320b6feae35.js\&quot;&gt;&lt;/script&gt;&quot;,&quot;resolvedBy&quot;:&quot;manual&quot;,&quot;resolved&quot;:true}" data-block-type="22" id="block-yui_3_17_2_3_1464200403263_60515"><div class="sqs-block-content" id="yui_3_17_2_1_1475094582201_126" style="visibility: visible; opacity: 1; height: auto;"><script src="./SQL Join Types — SQL Joins Explained2_files/f058077a5cf311370b975320b6feae35.js"></script><link rel="stylesheet" href="./SQL Join Types — SQL Joins Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15.css"><div id="gist36127185" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-right-join-alt-sql" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-sql">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-right-join-alt-sql-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-right-join-alt-sql-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">select</span> first_name, last_name, order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-right-join-alt-sql-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-right-join-alt-sql-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> customers c</td>
+      </tr>
+      <tr>
+        <td id="file-right-join-alt-sql-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-right-join-alt-sql-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">right join</span> orders o</td>
+      </tr>
+      <tr>
+        <td id="file-right-join-alt-sql-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-right-join-alt-sql-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">on</span> <span class="pl-c1">c</span>.<span class="pl-c1">customer_id</span> <span class="pl-k">=</span> <span class="pl-c1">o</span>.<span class="pl-c1">customer_id</span></td>
+      </tr>
+      <tr>
+        <td id="file-right-join-alt-sql-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-right-join-alt-sql-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-k">where</span> first_name is <span class="pl-k">NULL</span></td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/f058077a5cf311370b975320b6feae35/raw/102e9c6de68c1619835070db1a757ff2bff954d5/right-join-alt.sql" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/f058077a5cf311370b975320b6feae35#file-right-join-alt-sql">right-join-alt.sql</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<link rel="stylesheet" href="./SQL Join Types — SQL Joins Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15(1).css"><div id="gist36127185" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-right-join-alt-sql" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-sql">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-right-join-alt-sql-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-right-join-alt-sql-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">select</span> first_name, last_name, order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-right-join-alt-sql-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-right-join-alt-sql-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> customers c</td>
+      </tr>
+      <tr>
+        <td id="file-right-join-alt-sql-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-right-join-alt-sql-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">right join</span> orders o</td>
+      </tr>
+      <tr>
+        <td id="file-right-join-alt-sql-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-right-join-alt-sql-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">on</span> <span class="pl-c1">c</span>.<span class="pl-c1">customer_id</span> <span class="pl-k">=</span> <span class="pl-c1">o</span>.<span class="pl-c1">customer_id</span></td>
+      </tr>
+      <tr>
+        <td id="file-right-join-alt-sql-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-right-join-alt-sql-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-k">where</span> first_name is <span class="pl-k">NULL</span></td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/f058077a5cf311370b975320b6feae35/raw/102e9c6de68c1619835070db1a757ff2bff954d5/right-join-alt.sql" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/f058077a5cf311370b975320b6feae35#file-right-join-alt-sql">right-join-alt.sql</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_3_1464200403263_61373"><div class="sqs-block-content"><h2>Full Join</h2><p>Finally, for a list of all records from both tables, we can use a full join.</p></div></div><div class="sqs-block embed-block sqs-block-embed" data-block-json="{&quot;hSize&quot;:null,&quot;floatDir&quot;:null,&quot;html&quot;:&quot;&lt;script src=\&quot;https://gist.github.com/dan81989/e75f33b8c43765dd3194cea2f4cacdca.js\&quot;&gt;&lt;/script&gt;&quot;,&quot;resolvedBy&quot;:&quot;manual&quot;,&quot;resolved&quot;:true}" data-block-type="22" id="block-yui_3_17_2_3_1464200403263_63966"><div class="sqs-block-content" id="yui_3_17_2_1_1475094582201_128" style="visibility: visible; opacity: 1; height: auto;"><script src="./SQL Join Types — SQL Joins Explained2_files/e75f33b8c43765dd3194cea2f4cacdca.js"></script><link rel="stylesheet" href="./SQL Join Types — SQL Joins Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15.css"><div id="gist36127218" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-full-join-sql" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-sql">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-full-join-sql-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-full-join-sql-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">select</span> first_name, last_name, order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-full-join-sql-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-full-join-sql-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> customers c</td>
+      </tr>
+      <tr>
+        <td id="file-full-join-sql-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-full-join-sql-LC3" class="blob-code blob-code-inner js-file-line">full <span class="pl-k">join</span> orders o</td>
+      </tr>
+      <tr>
+        <td id="file-full-join-sql-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-full-join-sql-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">on</span> <span class="pl-c1">c</span>.<span class="pl-c1">customer_id</span> <span class="pl-k">=</span> <span class="pl-c1">o</span>.<span class="pl-c1">customer_id</span></td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/e75f33b8c43765dd3194cea2f4cacdca/raw/fc55a80b116f1838bc9269618fe3a72aa7144f99/full-join.sql" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/e75f33b8c43765dd3194cea2f4cacdca#file-full-join-sql">full-join.sql</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<link rel="stylesheet" href="./SQL Join Types — SQL Joins Explained2_files/gist-embed-de68fecedb7588e2c9c61c68ea84191c5cef4febbe0dec0ea64f8496c2b11a15(1).css"><div id="gist36127218" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-full-join-sql" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-sql">
+      <table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-full-join-sql-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-full-join-sql-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">select</span> first_name, last_name, order_date, order_amount</td>
+      </tr>
+      <tr>
+        <td id="file-full-join-sql-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-full-join-sql-LC2" class="blob-code blob-code-inner js-file-line"><span class="pl-k">from</span> customers c</td>
+      </tr>
+      <tr>
+        <td id="file-full-join-sql-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-full-join-sql-LC3" class="blob-code blob-code-inner js-file-line">full <span class="pl-k">join</span> orders o</td>
+      </tr>
+      <tr>
+        <td id="file-full-join-sql-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-full-join-sql-LC4" class="blob-code blob-code-inner js-file-line"><span class="pl-k">on</span> <span class="pl-c1">c</span>.<span class="pl-c1">customer_id</span> <span class="pl-k">=</span> <span class="pl-c1">o</span>.<span class="pl-c1">customer_id</span></td>
+      </tr>
+</tbody></table>
+
+  </div>
+
+  </div>
+  
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/dan81989/e75f33b8c43765dd3194cea2f4cacdca/raw/fc55a80b116f1838bc9269618fe3a72aa7144f99/full-join.sql" style="float:right">view raw</a>
+        <a href="https://gist.github.com/dan81989/e75f33b8c43765dd3194cea2f4cacdca#file-full-join-sql">full-join.sql</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+</div></div><div class="sqs-block code-block sqs-block-code" data-block-type="23" id="block-yui_3_17_2_3_1464200403263_65046"><div class="sqs-block-content"><table border="1" cellpadding="5">
+<tbody><tr>
+<th align="left">first_name</th>
+<th align="left">last_name</th>
+<th align="left">order_date</th>
+<th align="left">order_amount</th>
+</tr>
+<tr>
+<td>George</td>
+<td>Washington</td>
+<td>07/04/1776</td>
+<td>$234.56</td>
+</tr>
+<tr>
+<td>Thomas</td>
+<td>Jefferson</td>
+<td>03/14/1760</td>
+<td>$78.50</td>
+</tr>
+<tr>
+<td>John</td>
+<td>Adams</td>
+<td>05/23/1784</td>
+<td>$124.00</td>
+</tr>
+<tr>
+<td>Thomas</td>
+<td>Jefferson</td>
+<td>09/03/1790</td>
+<td>$65.50</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>NULL</td>
+<td>07/21/1795</td>
+<td>$25.50</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>NULL</td>
+<td>11/27/1787</td>
+<td>$14.40</td>
+</tr>
+<tr>
+<td>James</td>
+<td>Madison</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>James</td>
+<td>Monroe</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+</tbody></table></div></div><div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-yui_3_17_2_3_1464200403263_79073"><div class="sqs-block-content"><h2>What’s next?</h2><p>The four basic SQL joins described above let you tie the different pieces of data together, and allow you to start asking and answering more challenging questions about it. Yet often it is getting the data into your database or a data warehouse and keeping it up-to-date that is a challenging task.<span style="font-size:16px">&nbsp;</span>This is especially true if you have multiple sources of data living in completely different places. The next section explains how you can integrate all of your data in a single data warehouse, and ensure its quality and accuracy.&nbsp;</p></div></div><div class="sqs-block button-block sqs-block-button" data-block-type="53" id="block-yui_3_17_2_20_1463493704429_14227"><div class="sqs-block-content">
+</div></div></div></div></div>
+
+    </section>
+
+    <div class="sqs-layout sqs-grid-12 columns-12 empty" data-layout-label="SQL Join Types Footer Content" data-type="block-field" id="collection-57322598e32140d252ff03c6"><div class="row sqs-row"><div class="col sqs-col-12 span-12"></div></div></div>
+
+    <!-- <div class="page-divider bottom-divider"></div> -->
+
+    <div class="info-footer-wrapper clear">
+      <div class="info-footer">
+      <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Info Footer Content" data-type="block-field" data-updated-on="1411670375842" id="infoFooterBlock"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block summary-v2-block sqs-block-summary-v2" data-block-json="{&quot;collectionId&quot;:&quot;5052176b84aeb45fa5cfcc8a&quot;,&quot;design&quot;:&quot;autogrid&quot;,&quot;headerText&quot;:&quot;Featured&quot;,&quot;textSize&quot;:&quot;small&quot;,&quot;pageSize&quot;:1,&quot;imageAspectRatio&quot;:&quot;Auto&quot;,&quot;columnWidth&quot;:600,&quot;gutter&quot;:0,&quot;listImageSize&quot;:30,&quot;listImageAlignment&quot;:&quot;left&quot;,&quot;slidesPerRow&quot;:3,&quot;textAlignment&quot;:&quot;left&quot;,&quot;showTitle&quot;:true,&quot;showThumbnail&quot;:false,&quot;showExcerpt&quot;:false,&quot;showReadMoreLink&quot;:false,&quot;showPrice&quot;:true,&quot;showPastOrUpcomingEvents&quot;:&quot;Upcoming&quot;,&quot;metadataPosition&quot;:&quot;below-content&quot;,&quot;primaryMetadata&quot;:&quot;none&quot;,&quot;secondaryMetadata&quot;:&quot;none&quot;,&quot;filter&quot;:{},&quot;autoCrop&quot;:true,&quot;lightbox&quot;:false,&quot;mixedContent&quot;:true,&quot;hSize&quot;:null,&quot;floatDir&quot;:null}" data-block-type="55" id="block-yui_3_17_2_1_1411670098573_15867"><div class="sqs-block-content"><div class="sqs-state-message error">You must select a collection to display.</div></div></div></div></div></div>
+      
+        
+      
+      </div>
+    </div>
+    </section>
+
+    <div class="sqs-layout sqs-grid-12 columns-12 empty" data-layout-label="SQL Joins Explained Footer Content" data-type="block-field" id="collection-5732257f62cd9460fe9ba2b6"><div class="row sqs-row"><div class="col sqs-col-12 span-12"></div></div></div>
+
+    <!-- <div class="page-divider bottom-divider"></div> -->
+
+    <div class="info-footer-wrapper clear">
+      <div class="info-footer">
+      <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Info Footer Content" data-type="block-field" data-updated-on="1411670375842" id="infoFooterBlock"><div class="row sqs-row"><div class="col sqs-col-12 span-12"><div class="sqs-block summary-v2-block sqs-block-summary-v2" data-block-json="{&quot;collectionId&quot;:&quot;5052176b84aeb45fa5cfcc8a&quot;,&quot;design&quot;:&quot;autogrid&quot;,&quot;headerText&quot;:&quot;Featured&quot;,&quot;textSize&quot;:&quot;small&quot;,&quot;pageSize&quot;:1,&quot;imageAspectRatio&quot;:&quot;Auto&quot;,&quot;columnWidth&quot;:600,&quot;gutter&quot;:0,&quot;listImageSize&quot;:30,&quot;listImageAlignment&quot;:&quot;left&quot;,&quot;slidesPerRow&quot;:3,&quot;textAlignment&quot;:&quot;left&quot;,&quot;showTitle&quot;:true,&quot;showThumbnail&quot;:false,&quot;showExcerpt&quot;:false,&quot;showReadMoreLink&quot;:false,&quot;showPrice&quot;:true,&quot;showPastOrUpcomingEvents&quot;:&quot;Upcoming&quot;,&quot;metadataPosition&quot;:&quot;below-content&quot;,&quot;primaryMetadata&quot;:&quot;none&quot;,&quot;secondaryMetadata&quot;:&quot;none&quot;,&quot;filter&quot;:{},&quot;autoCrop&quot;:true,&quot;lightbox&quot;:false,&quot;mixedContent&quot;:true,&quot;hSize&quot;:null,&quot;floatDir&quot;:null}" data-block-type="55" id="block-yui_3_17_2_1_1411670098573_15867"><div class="sqs-block-content"><div class="sqs-state-message error">You must select a collection to display.</div></div></div></div></div></div>
+      
+        
+      
+      </div>
+    </div>
+
+    <footer id="footer" class="clear">
+      <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Footer Content" data-type="block-field" data-updated-on="1463514122280" id="footerBlock"><div class="row sqs-row"><div class="col sqs-col-12 span-12"></div></div></div>
+    </footer>
+
+  </div>
+
+  <div></div>
+
+  <div class="modal fade category-cta" id="myModal"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button></div><div class="modal-body"><div class="row"><div class="col-sm-12"><h1>Want to join multiple data sources together?</h1><p><strong>Stitch</strong> stream all of your data directly to Redshift so you can focus on analysis, not data consolidation.</p><a href="https://www.stitchdata.com/features/?utm_source=sqljoin&amp;utm_medium=microsite&amp;utm_campaign=sqljoin-microsite" class="btn cta-btn">Try it Today</a></div></div></div></div></div></div>
+
+
+
+<footer class="site-footer" role="contentinfo">
+	
+</footer>
+
+<script type="text/javascript">
+  var modalShown = false;
+  $(document).on('mouseleave', leaveFromTop);
+  function leaveFromTop(e){
+    var windowWidth = $(window).width();
+    if(window.modalShown == false){
+      if(windowWidth > 860){
+        if( e.clientY < 40 ){ // less than 60px is close enough to the top
+          $('#myModal').modal('show');
+          dataLayer.push({"event":"modal-load"});
+          modalShown = true;
+        };
+      };
+    };
+  };
+
+  $('#myModal').on('hidden.bs.modal', function (e) {
+    dataLayer.push({"event":"modal-dismiss"});
+  });
+
+  $(window).resize(function(){
+    var newWindowWidth = $(window).width();
+    if(newWindowWidth < 861){
+      $('#myModal').modal('hide');
+    }
+  });
+</script><script type="text/javascript" data-sqs-type="imageloader-bootstraper">(function() {if(window.ImageLoader) { window.ImageLoader.bootstrap(); }})();</script>
+<script>Squarespace.afterBodyLoad(Y);</script>
+
+
+
+
+
+
+
+<script type="text/javascript" id="">(function(a,c,e,f,d,b){a.hj=a.hj||function(){(a.hj.q=a.hj.q||[]).push(arguments)};a._hjSettings={hjid:98503,hjsv:5};d=c.getElementsByTagName("head")[0];b=c.createElement("script");b.async=1;b.src=e+a._hjSettings.hjid+f+a._hjSettings.hjsv;d.appendChild(b)})(window,document,"//static.hotjar.com/c/hotjar-",".js?sv\x3d");</script><div id="ads"></div><div id="ads"></div></body></html>
