@@ -37,7 +37,8 @@ In RDBMS schema design for above requirements will have minimum three tables.
 
 While in MongoDB schema design will have one collection post and has the following structure:
 
-```json
+```
+{
    _id: POST_ID
    title: TITLE_OF_POST, 
    description: POST_DESCRIPTION,
