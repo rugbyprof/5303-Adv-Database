@@ -1,8 +1,4 @@
-<div class="col-md-7 middle-col">
-
 # MongoDB - Data Modelling
-
-* * *
 
 Data in MongoDB has a flexible schema.documents in the same collection do not need to have the same set of fields or structure, and common fields in a collectionâ€™s documents may hold different types of data.
 
@@ -40,7 +36,7 @@ In RDBMS schema design for above requirements will have minimum three tables.
 
 While in MongoDB schema design will have one collection post and has the following structure:
 
-<pre class="prettyprint notranslate">{
+```json
    _id: POST_ID
    title: TITLE_OF_POST, 
    description: POST_DESCRIPTION,
@@ -63,17 +59,13 @@ While in MongoDB schema design will have one collection post and has the followi
       }
    ]
 }
-</pre>
+```
 
 So while showing the data, in RDBMS you need to join three tables and in mongodb data will be shown from one collection only.
 
-* * *
 
-<div class="col-md-7 middle-col">
 
 # MongoDB - Create Database
-
-<div class="topgooglead">
 
 ## The use Command
 
@@ -83,46 +75,52 @@ MongoDB **use DATABASE_NAME** is used to create database. The command will creat
 
 Basic syntax of **use DATABASE** statement is as follows:
 
-<pre class="prettyprint notranslate">use DATABASE_NAME
-</pre>
+
+```
+use DATABASE_NAME
+```
 
 ### Example:
 
 If you want to create a database with name **<mydb>**, then **use DATABASE** statement would be as follows:
 
-<pre class="prettyprint notranslate">>use mydb
+```
+>use mydb
 switched to db mydb
-</pre>
+```
 
 To check your currently selected database use the command **db**
 
-<pre class="prettyprint notranslate">>db
+```
+>db
 mydb
-</pre>
+```
 
 If you want to check your databases list, then use the command **show dbs**.
 
-<pre class="prettyprint notranslate">>show dbs
+```
+
+>show dbs
 local     0.78125GB
 test      0.23012GB
-</pre>
+```
 
 Your created database (mydb) is not present in list. To display database you need to insert atleast one document into it.
 
-<pre class="prettyprint notranslate">>db.movie.insert({"name":"tutorials point"})
+```
+>db.movie.insert({"name":"tutorials point"})
 >show dbs
 local      0.78125GB
 mydb       0.23012GB
 test       0.23012GB
-</pre>
+```
 
 In mongodb default database is test. If you didn't create any database then collections will be stored in test database.
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - Drop Database
 
-* * *
 
 ## The dropDatabase() Method
 
@@ -132,8 +130,9 @@ MongoDB **db.dropDatabase()** command is used to drop a existing database.
 
 Basic syntax of **dropDatabase()** command is as follows:
 
-<pre class="prettyprint notranslate">db.dropDatabase()
-</pre>
+```
+db.dropDatabase()
+```
 
 This will delete the selected database. If you have not selected any database, then it will delete default 'test' database
 
@@ -141,35 +140,36 @@ This will delete the selected database. If you have not selected any database, t
 
 First, check the list available databases by using the command **show dbs**
 
-<pre class="prettyprint notranslate">>show dbs
+```
+>show dbs
 local      0.78125GB
 mydb       0.23012GB
 test       0.23012GB
 >
-</pre>
+```
 
 If you want to delete new database **<mydb>**, then **dropDatabase()** command would be as follows:
 
-<pre class="prettyprint notranslate">>use mydb
+```
+>use mydb
 switched to db mydb
 >db.dropDatabase()
 >{ "dropped" : "mydb", "ok" : 1 }
 >
-</pre>
+```
 
 Now check list of databases
 
-<pre class="prettyprint notranslate">>show dbs
+```
+>show dbs
 local      0.78125GB
 test       0.23012GB
 >
-</pre>
+```
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - Create Collection
-
-* * *
 
 ## The createCollection() Method
 
@@ -179,8 +179,9 @@ MongoDB **db.createCollection(name, options)** is used to create collection.
 
 Basic syntax of **createCollection()** command is as follows
 
-<pre class="prettyprint notranslate">db.createCollection(name, options)
-</pre>
+```
+db.createCollection(name, options)
+```
 
 In the command, **name** is name of collection to be created. **Options** is a document and used to specify configuration of collection
 
@@ -288,45 +289,43 @@ While inserting the document, MongoDB first checks size field of capped collecti
 
 Basic syntax of **createCollection()** method without options is as follows
 
-<pre class="prettyprint notranslate">>use test
+```
+>use test
 switched to db test
 >db.createCollection("mycollection")
 { "ok" : 1 }
 >
-</pre>
+```
 
 You can check the created collection by using the command **show collections**
 
-<pre class="prettyprint notranslate">>show collections
+```
+>show collections
 mycollection
 system.indexes
-</pre>
+```
 
 Following example shows the syntax of **createCollection()** method with few important options:
 
-<pre class="prettyprint notranslate">>db.createCollection("mycol", { capped : true, autoIndexID : true, size : 6142800, max : 10000 } )
+```
+>db.createCollection("mycol", { capped : true, autoIndexID : true, size : 6142800, max : 10000 } )
 { "ok" : 1 }
 >
-</pre>
+```
 
 In mongodb you don't need to create collection. MongoDB creates collection automatically, when you insert some document.
 
-<pre class="prettyprint notranslate">>db.tutorialspoint.insert({"name" : "tutorialspoint"})
+```
+>db.tutorialspoint.insert({"name" : "tutorialspoint"})
 >show collections
 mycol
 mycollection
 system.indexes
 tutorialspoint
 >
-</pre>
-
-* * *
-
-<div class="col-md-7 middle-col">
+```
 
 # MongoDB - Drop Collection
-
-* * *
 
 ## The drop() Method
 
@@ -336,14 +335,16 @@ MongoDB's **db.collection.drop()** is used to drop a collection from the databas
 
 Basic syntax of **drop()** command is as follows
 
-<pre class="prettyprint notranslate">db.COLLECTION_NAME.drop()
-</pre>
+```
+db.COLLECTION_NAME.drop()
+```
 
 ### Example:
 
 First, check the available collections into your database **mydb**
 
-<pre class="prettyprint notranslate">>use mydb
+```
+>use mydb
 switched to db mydb
 >show collections
 mycol
@@ -351,33 +352,29 @@ mycollection
 system.indexes
 tutorialspoint
 >
-</pre>
+```
 
 Now drop the collection with the name **mycollection**
 
-<pre class="prettyprint notranslate">>db.mycollection.drop()
+```
+>db.mycollection.drop()
 true
 >
-</pre>
+```
 
 Again check the list of collections into database
 
-<pre class="prettyprint notranslate">>show collections
+```
+>show collections
 mycol
 system.indexes
 tutorialspoint
 >
-</pre>
+```
 
 drop() method will return true, if the selected collection is dropped successfully otherwise it will return false
 
-* * *
-
-<div class="col-md-7 middle-col">
-
 # MongoDB - Datatypes
-
-* * *
 
 MongoDB supports many datatypes whose list is given below:
 
@@ -411,11 +408,9 @@ MongoDB supports many datatypes whose list is given below:
 
 *   **Regular expression** : This datatype is used to store regular expression
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - Insert Document
-
-* * *
 
 ## The insert() Method
 
@@ -425,12 +420,13 @@ To insert data into MongoDB collection, you need to use MongoDB's **insert()** o
 
 Basic syntax of **insert()** command is as follows âˆ’
 
-<pre class="result notranslate">>db.COLLECTION_NAME.insert(document)
-</pre>
+```
+>db.COLLECTION_NAME.insert(document)
+```
 
 ### Example
 
-<pre class="prettyprint notranslate">>db.mycol.insert({
+```>db.mycol.insert({
    _id: ObjectId(7df78ad8902c),
    title: 'MongoDB Overview', 
    description: 'MongoDB is no sql database',
@@ -439,7 +435,7 @@ Basic syntax of **insert()** command is as follows âˆ’
    tags: ['mongodb', 'database', 'NoSQL'],
    likes: 100
 })
-</pre>
+```
 
 Here **mycol** is our collection name, as created in previous tutorial. If the collection doesn't exist in the database, then MongoDB will create this collection and then insert document into it.
 
@@ -447,14 +443,16 @@ In the inserted document if we don't specify the _id parameter, then MongoDB ass
 
 _id is 12 bytes hexadecimal number unique for every document in a collection. 12 bytes are divided as follows âˆ’
 
-<pre class="result notranslate">_id: ObjectId(4 bytes timestamp, 3 bytes machine id, 2 bytes process id, 3 bytes incrementer)
-</pre>
+```
+_id: ObjectId(4 bytes timestamp, 3 bytes machine id, 2 bytes process id, 3 bytes incrementer)
+```
 
 To insert multiple documents in single query, you can pass an array of documents in insert() command.
 
 ### Example
 
-<pre class="prettyprint notranslate">>db.post.insert([
+```
+>db.post.insert([
    {
       title: 'MongoDB Overview', 
       description: 'MongoDB is no sql database',
@@ -481,15 +479,11 @@ To insert multiple documents in single query, you can pass an array of documents
       ]
    }
 ])
-</pre>
+```
 
 To insert the document you can use **db.post.save(document)** also. If you don't specify **_id** in the document then **save()** method will work same as **insert()** method. If you specify _id then it will replace whole data of document containing _id as specified in save() method.
 
-<div class="col-md-7 middle-col">
-
 # MongoDB - Query Document
-
-* * *
 
 ## The find() Method
 
@@ -499,8 +493,9 @@ To query data from MongoDB collection, you need to use MongoDB's **find()** meth
 
 Basic syntax of **find()** method is as follows
 
-<pre class="result notranslate">>db.COLLECTION_NAME.find()
-</pre>
+```
+>db.COLLECTION_NAME.find()
+```
 
 **find()**method will display all the documents in a non structured way.
 
@@ -510,12 +505,14 @@ To display the results in a formatted way, you can use **pretty()** method.
 
 ### Syntax
 
-<pre class="result notranslate">>db.mycol.find().pretty()
-</pre>
+```
+>db.mycol.find().pretty()
+```
 
 ## Example
 
-<pre class="prettyprint notranslate">>db.mycol.find().pretty()
+```
+>db.mycol.find().pretty()
 {
    "_id": ObjectId(7df78ad8902c),
    "title": "MongoDB Overview", 
@@ -526,7 +523,7 @@ To display the results in a formatted way, you can use **pretty()** method.
    "likes": "100"
 }
 >
-</pre>
+```
 
 Apart from find() method there is **findOne()** method, that returns only one document.
 
@@ -632,14 +629,16 @@ To query the document on the basis of some condition, you can use following oper
 
 In the **find()** method if you pass multiple keys by separating them by ',' then MongoDB treats it **AND** condition. Basic syntax of **AND** is shown below âˆ’
 
-<pre class="result notranslate">>db.mycol.find({key1:value1, key2:value2}).pretty()
-</pre>
+```
+>db.mycol.find({key1:value1, key2:value2}).pretty()
+```
 
 ### Example
 
 Below given example will show all the tutorials written by 'tutorials point' and whose title is 'MongoDB Overview'
 
-<pre class="prettyprint notranslate">>db.mycol.find({"by":"tutorials point","title": "MongoDB Overview"}).pretty()
+```
+>db.mycol.find({"by":"tutorials point","title": "MongoDB Overview"}).pretty()
 {
    "_id": ObjectId(7df78ad8902c),
    "title": "MongoDB Overview", 
@@ -650,9 +649,9 @@ Below given example will show all the tutorials written by 'tutorials point' and
    "likes": "100"
 }
 >
-</pre>
+```
 
-For the above given example equivalent where clause will be **' where by='tutorials point' AND title = 'MongoDB Overview' '**. You can pass any number of key, value pairs in find clause.
+For the above given example equivalent where clause will be ` where by='tutorials point' AND title = 'MongoDB Overview' ` You can pass any number of key, value pairs in find clause.
 
 ## OR in MongoDB
 
@@ -660,20 +659,22 @@ For the above given example equivalent where clause will be **' where by='tutori
 
 To query documents based on the OR condition, you need to use **$or** keyword. Basic syntax of **OR** is shown below âˆ’
 
-<pre class="prettyprint notranslate">>db.mycol.find(
+```
+>db.mycol.find(
    {
       $or: [
          {key1: value1}, {key2:value2}
       ]
    }
 ).pretty()
-</pre>
+```
 
 ### Example
 
 Below given example will show all the tutorials written by 'tutorials point' or whose title is 'MongoDB Overview'
 
-<pre class="prettyprint notranslate">>db.mycol.find({$or:[{"by":"tutorials point"},{"title": "MongoDB Overview"}]}).pretty()
+```
+>db.mycol.find({$or:[{"by":"tutorials point"},{"title": "MongoDB Overview"}]}).pretty()
 {
    "_id": ObjectId(7df78ad8902c),
    "title": "MongoDB Overview", 
@@ -684,7 +685,7 @@ Below given example will show all the tutorials written by 'tutorials point' or 
    "likes": "100"
 }
 >
-</pre>
+```
 
 ## Using AND and OR together
 
@@ -692,7 +693,8 @@ Below given example will show all the tutorials written by 'tutorials point' or 
 
 Below given example will show the documents that have likes greater than 100 and whose title is either 'MongoDB Overview' or by is 'tutorials point'. Equivalent sql where clause is **'where likes>10 AND (by = 'tutorials point' OR title = 'MongoDB Overview')'**
 
-<pre class="prettyprint notranslate">>db.mycol.find({"likes": {$gt:10}, $or: [{"by": "tutorials point"},
+```
+>db.mycol.find({"likes": {$gt:10}, $or: [{"by": "tutorials point"},
    {"title": "MongoDB Overview"}]}).pretty()
 {
    "_id": ObjectId(7df78ad8902c),
@@ -704,15 +706,10 @@ Below given example will show the documents that have likes greater than 100 and
    "likes": "100"
 }
 >
-</pre>
-
-<
-
-<div class="col-md-7 middle-col">
+```
 
 # MongoDB - Update Document
 
-* * *
 
 MongoDB's **update()** and **save()** methods are used to update document into a collection. The update() method update values in the existing document while the save() method replaces the existing document with the document passed in save() method.
 
@@ -724,33 +721,37 @@ The update() method updates values in the existing document.
 
 Basic syntax of **update()** method is as follows
 
-<pre class="result notranslate">>db.COLLECTION_NAME.update(SELECTIOIN_CRITERIA, UPDATED_DATA)
-</pre>
+```
+>db.COLLECTION_NAME.update(SELECTIOIN_CRITERIA, UPDATED_DATA)
+```
 
 ### Example
 
 Consider the mycol collection has following data.
 
-<pre class="prettyprint notranslate">{ "_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
+```json 
+{ "_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
 { "_id" : ObjectId(5983548781331adf45ec6), "title":"NoSQL Overview"}
 { "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point Overview"}
-</pre>
+```
 
 Following example will set the new title 'New MongoDB Tutorial' of the documents whose title is 'MongoDB Overview'
 
-<pre class="prettyprint notranslate">>db.mycol.update({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Tutorial'}})
+```
+>db.mycol.update({'title':'MongoDB Overview'},{$set:{'title':'New MongoDB Tutorial'}})
 >db.mycol.find()
 { "_id" : ObjectId(5983548781331adf45ec5), "title":"New MongoDB Tutorial"}
 { "_id" : ObjectId(5983548781331adf45ec6), "title":"NoSQL Overview"}
 { "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point Overview"}
 >
-</pre>
+```
 
 By default mongodb will update only single document, to update multiple you need to set a paramter 'multi' to true.
 
-<pre class="prettyprint notranslate">>db.mycol.update({'title':'MongoDB Overview'},
+```
+>db.mycol.update({'title':'MongoDB Overview'},
    {$set:{'title':'New MongoDB Tutorial'}},{multi:true})
-</pre>
+```
 
 ## MongoDB Save() Method
 
@@ -760,14 +761,16 @@ The **save()** method replaces the existing document with the new document passe
 
 Basic syntax of mongodb **save()** method is shown below âˆ’
 
-<pre class="result notranslate">>db.COLLECTION_NAME.save({_id:ObjectId(),NEW_DATA})
-</pre>
+```
+>db.COLLECTION_NAME.save({_id:ObjectId(),NEW_DATA})
+```
 
 ### Example
 
 Following example will replace the document with the _id '5983548781331adf45ec7'
 
-<pre class="prettyprint notranslate">>db.mycol.save(
+```
+>db.mycol.save(
    {
       "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point Overview",
          "by":"Tutorials Point"
@@ -779,13 +782,11 @@ Following example will replace the document with the _id '5983548781331adf45ec7'
 { "_id" : ObjectId(5983548781331adf45ec6), "title":"NoSQL Overview"}
 { "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point Overview"}
 >
-</pre>
+```
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - Delete Document
-
-* * *
 
 ## The remove() Method
 
@@ -799,48 +800,49 @@ MongoDB's **remove()** method is used to remove document from the collection. re
 
 Basic syntax of **remove()** method is as follows
 
-<pre class="prettyprint notranslate">>db.COLLECTION_NAME.remove(DELLETION_CRITTERIA)
-</pre>
+```
+>db.COLLECTION_NAME.remove(DELLETION_CRITTERIA)
+```
 
 ### Example
 
 Consider the mycol collectioin has following data.
 
-<pre class="prettyprint notranslate">{ "_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
+```json 
+{"_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
 { "_id" : ObjectId(5983548781331adf45ec6), "title":"NoSQL Overview"}
 { "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point Overview"}
-</pre>
+```
 
 Following example will remove all the documents whose title is 'MongoDB Overview'
 
-<pre class="prettyprint notranslate">>db.mycol.remove({'title':'MongoDB Overview'})
+```
+>db.mycol.remove({'title':'MongoDB Overview'})
 >db.mycol.find()
 { "_id" : ObjectId(5983548781331adf45ec6), "title":"NoSQL Overview"}
 { "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point Overview"}
 >
-</pre>
+```
 
 ## Remove only one
 
 If there are multiple records and you want to delete only first record, then set **justOne** parameter in **remove()** method
 
-<pre class="prettyprint notranslate">>db.COLLECTION_NAME.remove(DELETION_CRITERIA,1)
-</pre>
+```>db.COLLECTION_NAME.remove(DELETION_CRITERIA,1)
+```
 
 ## Remove All documents
 
 If you don't specify deletion criteria, then mongodb will delete whole documents from the collection. **This is equivalent of SQL's truncate command.**
 
-<pre class="prettyprint notranslate">>db.mycol.remove({})
+```>db.mycol.remove({})
 >db.mycol.find()
 >
-</pre>
+```
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - Projection
-
-* * *
 
 In mongodb projection meaning is selecting only necessary data rather than selecting whole of the data of a document. If a document has 5 fields and you need to show only 3, then select only 3 fields from them.
 
@@ -852,34 +854,34 @@ MongoDB's **find()** method, explained in [MongoDB Query Document](http://www.tu
 
 Basic syntax of **find()** method with projection is as follows
 
-<pre class="prettyprint notranslate">>db.COLLECTION_NAME.find({},{KEY:1})
-</pre>
+```
+>db.COLLECTION_NAME.find({},{KEY:1})
+```
 
 ### Example
 
 Consider the collection mycol has the following data
 
-<pre class="prettyprint notranslate">{ "_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
+```json "_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
 { "_id" : ObjectId(5983548781331adf45ec6), "title":"NoSQL Overview"}
 { "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point Overview"}
-</pre>
+```
 
 Following example will display the title of the document while quering the document.
 
-<pre class="prettyprint notranslate">>db.mycol.find({},{"title":1,_id:0})
+```>db.mycol.find({},{"title":1,_id:0})
 {"title":"MongoDB Overview"}
 {"title":"NoSQL Overview"}
 {"title":"Tutorials Point Overview"}
 >
-</pre>
+```
 
 Please note **_id** field is always displayed while executing **find()** method, if you don't want this field, then you need to set it as 0
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - Limit Records
 
-* * *
 
 ## The Limit() Method
 
@@ -889,25 +891,28 @@ To limit the records in MongoDB, you need to use **limit()** method. **limit()**
 
 Basic syntax of **limit()** method is as follows
 
-<pre class="prettyprint notranslate">>db.COLLECTION_NAME.find().limit(NUMBER)
-</pre>
+```
+>db.COLLECTION_NAME.find().limit(NUMBER)
+```
 
 ### Example
 
 Consider the collection myycol has the following data
 
-<pre class="prettyprint notranslate">{ "_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
+```json 
+{"_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
 { "_id" : ObjectId(5983548781331adf45ec6), "title":"NoSQL Overview"}
 { "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point Overview"}
-</pre>
+```
 
 Following example will display only 2 documents while quering the document.
 
-<pre class="prettyprint notranslate">>db.mycol.find({},{"title":1,_id:0}).limit(2)
+```
+>db.mycol.find({},{"title":1,_id:0}).limit(2)
 {"title":"MongoDB Overview"}
 {"title":"NoSQL Overview"}
 >
-</pre>
+```
 
 If you don't specify number argument in **limit()** method then it will display all documents from the collection.
 
@@ -919,25 +924,26 @@ Apart from limit() method there is one more method **skip()** which also accepts
 
 Basic syntax of **skip()** method is as follows
 
-<pre class="prettyprint notranslate">>db.COLLECTION_NAME.find().limit(NUMBER).skip(NUMBER)
-</pre>
+```>db.COLLECTION_NAME.find().limit(NUMBER).skip(NUMBER)
+```
 
 ### Example:
 
 Following example will only display only second document.
 
-<pre class="prettyprint notranslate">>db.mycol.find({},{"title":1,_id:0}).limit(1).skip(1)
+```
+>db.mycol.find({},{"title":1,_id:0}).limit(1).skip(1)
 {"title":"NoSQL Overview"}
 >
-</pre>
+```
 
 Please note default value in **skip()** method is 0
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - Sort Records
 
-* * *
+
 
 ## The sort() Method
 
@@ -947,36 +953,35 @@ To sort documents in MongoDB, you need to use **sort()** method. **sort()** meth
 
 Basic syntax of **sort()** method is as follows
 
-<pre class="prettyprint notranslate">>db.COLLECTION_NAME.find().sort({KEY:1})
-</pre>
+```
+>db.COLLECTION_NAME.find().sort({KEY:1})
+```
 
 ### Example
 
 Consider the collection myycol has the following data
 
-<pre class="prettyprint notranslate">{ "_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
+```json 
+{"_id" : ObjectId(5983548781331adf45ec5), "title":"MongoDB Overview"}
 { "_id" : ObjectId(5983548781331adf45ec6), "title":"NoSQL Overview"}
 { "_id" : ObjectId(5983548781331adf45ec7), "title":"Tutorials Point Overview"}
-</pre>
+```
 
 Following example will display the documents sorted by title in descending order.
 
-<pre class="prettyprint notranslate">>db.mycol.find({},{"title":1,_id:0}).sort({"title":-1})
+```>db.mycol.find({},{"title":1,_id:0}).sort({"title":-1})
 {"title":"Tutorials Point Overview"}
 {"title":"NoSQL Overview"}
 {"title":"MongoDB Overview"}
 >
-</pre>
+```
 
 Please note if you don't specify the sorting preference, then **sort()** method will display documents in ascending order.
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - Indexing
 
-<div class="topgooglead">
-
-* * *
 
 Indexes support the efficient resolution of queries. Without indexes, MongoDB must scan every document of a collection to select those documents that match the query statement. This scan is highly inefficient and require the mongodb to process a large volume of data.
 
@@ -990,22 +995,25 @@ To create an index you need to use ensureIndex() method of mongodb.
 
 Basic syntax of **ensureIndex()** method is as follows()
 
-<pre class="prettyprint notranslate">>db.COLLECTION_NAME.ensureIndex({KEY:1})
-</pre>
+```
+>db.COLLECTION_NAME.ensureIndex({KEY:1})
+```
 
 Here key is the name of field on which you want to create index and 1 is for ascending order. To create index in descending order you need to use -1.
 
 ### Example
 
-<pre class="prettyprint notranslate">>db.mycol.ensureIndex({"title":1})
+```
+>db.mycol.ensureIndex({"title":1})
 >
-</pre>
+```
 
 In **ensureIndex()** method you can pass multiple fields, to create index on multiple fields.
 
-<pre class="prettyprint notranslate">>db.mycol.ensureIndex({"title":1,"description":-1})
+```
+>db.mycol.ensureIndex({"title":1,"description":-1})
 >
-</pre>
+```
 
 **ensureIndex()** method also accepts list of options (which are optional), whose list is given below:
 
@@ -1127,11 +1135,11 @@ In **ensureIndex()** method you can pass multiple fields, to create index on mul
 
 </table>
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - Aggregation
 
-* * *
+
 
 Aggregations operations process data records and return computed results. Aggregation operations group values from multiple documents together, and can perform a variety of operations on the grouped data to return a single result. In sql count(*) and with group by is an equivalent of mongodb aggregation.
 
@@ -1143,14 +1151,15 @@ For the aggregation in mongodb you should use **aggregate()** method.
 
 Basic syntax of **aggregate()** method is as follows
 
-<pre class="prettyprint notranslate">>db.COLLECTION_NAME.aggregate(AGGREGATE_OPERATION)
-</pre>
+```>db.COLLECTION_NAME.aggregate(AGGREGATE_OPERATION)
+```
 
 ### Example:
 
 In the collection you have the following data:
 
-<pre class="prettyprint notranslate">{
+```json
+{
    _id: ObjectId(7df78ad8902c)
    title: 'MongoDB Overview', 
    description: 'MongoDB is no sql database',
@@ -1177,11 +1186,12 @@ In the collection you have the following data:
    tags: ['neo4j', 'database', 'NoSQL'],
    likes: 750
 },
-</pre>
+```
 
 Now from the above collection if you want to display a list that how many tutorials are written by each user then you will use **aggregate()** method as shown below:
 
-<pre class="prettyprint notranslate">> db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : 1}}}])
+```
+> db.mycol.aggregate([{$group : {_id : "$by_user", num_tutorial : {$sum : 1}}}])
 {
    "result" : [
       {
@@ -1196,7 +1206,7 @@ Now from the above collection if you want to display a list that how many tutori
    "ok" : 1
 }
 >
-</pre>
+```
 
 Sql equivalent query for the above use case will be **select by_user, count(*) from mycol group by by_user**
 
@@ -1314,11 +1324,11 @@ Possible stages in aggregation framework are following:
 *   **$limit:** This limits the amount of documents to look at by the given number starting from the current position.s
 *   **$unwind:** This is used to unwind document that are using arrays. when using an array the data is kind of pre-joinded and this operation will be undone with this to have individual documents again. Thus with this stage we will increase the amount of documents for the next stage.
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - Replication
 
-* * *
+
 
 Replication is the process of synchronizing data across multiple servers. Replication provides redundancy and increases data availability with multiple copies of data on different database servers, replication protects a database from the loss of a single server. Replication also allows you to recover from hardware failure and service interruptions. With additional copies of the data, you can dedicate one to disaster recovery, reporting, or backup.
 
@@ -1362,13 +1372,15 @@ In this tutorial we will convert standalone mongod instance to a replica set. To
 
 Now start the mongodb server by specifying **--replSet** option. Basic syntax of **--replSet** is given below:
 
-<pre class="prettyprint notranslate">mongod --port "PORT" --dbpath "YOUR_DB_DATA_PATH" --replSet "REPLICA_SET_INSTANCE_NAME"
-</pre>
+```mongod 
+--port "PORT" --dbpath "YOUR_DB_DATA_PATH" --replSet "REPLICA_SET_INSTANCE_NAME"
+```
 
 ### Example
 
-<pre class="prettyprint notranslate">mongod --port 27017 --dbpath "D:\set up\mongodb\data" --replSet rs0
-</pre>
+```mongod 
+--port 27017 --dbpath "D:\set up\mongodb\data" --replSet rs0
+```
 
 It will start a mongod instance with the name rs0, on port 27017\. Now start the command prompt and connect to this mongod instance. In mongo client issue the command **rs.initiate()** to initiate a new replica set. To check the replica set configuration issue the command **rs.conf()**. To check the status of replica sete issue the command **rs.status()**.
 
@@ -1380,24 +1392,26 @@ To add members to replica set, start mongod instances on multiple machines. Now 
 
 Basic syntax of **rs.add()** command is as follows:
 
-<pre class="prettyprint notranslate">>rs.add(HOST_NAME:PORT)
-</pre>
+```
+>rs.add(HOST_NAME:PORT)
+```
 
 ### Example
 
 Suppose your mongod instance name is **mongod1.net** and it is running on port **27017**. To add this instance to replica set issue the command **rs.add()** in mongo client.
 
-<pre class="prettyprint notranslate">>rs.add("mongod1.net:27017")
+```
+>rs.add("mongod1.net:27017")
 >
-</pre>
+```
 
 You can add mongod instance to replica set only when you are connected to primary node. To check whether you are connected to primary or not issue the command **db.isMaster()** in mongo client.
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - Sharding
 
-* * *
+
 
 ## Sharding
 
@@ -1431,11 +1445,11 @@ In the above given diagram there are three main components which are described b
 
 *   **Query Routers:** Query Routers are basically mongos instances, interface with client applications and direct operations to the appropriate shard. The query router processes and targets operations to shards and then returns results to the clients. A sharded cluster can contain more than one query router to divide the client request load. A client sends requests to one query router. Generally a sharded cluster have many query routers.
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - Create Backup
 
-* * *
+
 
 ## Dump MongoDB Data
 
@@ -1445,8 +1459,10 @@ To create backup of database in mongodb you should use **mongodump** command. Th
 
 Basic syntax of **mongodump** command is as follows
 
-<pre class="prettyprint notranslate">>mongodump
-</pre>
+
+```
+>mongodump
+```
 
 ### Example
 
@@ -1454,8 +1470,9 @@ Start your mongod server. Assuming that your mongod server is running on localho
 
 Consider the mycol collection has following data.
 
-<pre class="prettyprint notranslate">>mongodump
-</pre>
+```
+>mongodump
+```
 
 The command will connect to the server running at **127.0.0.1** and port **27017** and back all data of the server to directory **/bin/dump/**. Output of the command is shown below:
 
@@ -1519,23 +1536,25 @@ To restore backup data mongodb's **mongorestore** command is used. This command 
 
 Basic syntax of **mongorestore** command is
 
-<pre class="prettyprint notranslate">>mongorestore
-</pre>
+```
+>mongorestore
+```
 
 Output of the command is shown below:
 
 ![DB Stats](https://d3vv6lp55qjaqc.cloudfront.net/items/2l0i39353t2T1K323Z11/mongorestore.png?X-CloudApp-Visitor-Id=1094421)
 
-<div class="col-md-7 middle-col">
+
 
 # MongoDB - PHP
 
-* * *
+
 
 To use mongodb with php you need to use mongodb php driver. Download the driver from the url [Download PHP Driver](https://s3.amazonaws.com/drivers.mongodb.org/php/index.html). Make sure to download latest release of it. Now unzip the archive and put php_mongo.dll in your PHP extension directory ("ext" by default) and add the following line to your php.ini file âˆ’
 
-<pre class="result notranslate">extension = php_mongo.dll
-</pre>
+```php
+extension = php_mongo.dll
+```
 
 ## Make a connection and Select a database
 
@@ -1543,7 +1562,8 @@ To make a connection, you need to specify database name, if database doesn't exi
 
 Code snippets to connect to database would be as follows âˆ’
 
-<pre class="prettyprint notranslate"><?php
+```php
+<?php
    // connect to mongodb
    $m = new MongoClient();
 
@@ -1553,19 +1573,21 @@ Code snippets to connect to database would be as follows âˆ’
 
    echo "Database mydb selected";
 ?>
-</pre>
+```
 
 When program is executed, it will produce the following result âˆ’
 
-<pre class="result notranslate">Connection to database successfully
+```
+Connection to database successfully
 Database mydb selected
-</pre>
+```
 
 ## Create a collection
 
 Code snippets to create a collection would be as follows âˆ’
 
-<pre class="prettyprint notranslate"><?php
+```php
+<?php
    // connect to mongodb
    $m = new MongoClient();
    echo "Connection to database successfully";
@@ -1576,14 +1598,15 @@ Code snippets to create a collection would be as follows âˆ’
    $collection = $db->createCollection("mycol");
    echo "Collection created succsessfully";
 ?>
-</pre>
+```
 
 When program is executed, it will produce the following result âˆ’
 
-<pre class="result notranslate">Connection to database successfully
+```
+Connection to database successfully
 Database mydb selected
 Collection created succsessfully
-</pre>
+```
 
 ## Insert a document
 
@@ -1591,7 +1614,8 @@ To insert a document into mongodb, **insert()** method is used.
 
 Code snippets to insert a documents âˆ’
 
-<pre class="prettyprint notranslate"><?php
+```php
+<?php
    // connect to mongodb
    $m = new MongoClient();
    echo "Connection to database successfully";
@@ -1613,15 +1637,16 @@ Code snippets to insert a documents âˆ’
    $collection->insert($document);
    echo "Document inserted successfully";
 ?>
-</pre>
+```
 
 When program is executed, it will produce the following result âˆ’
 
-<pre class="result notranslate">Connection to database successfully
+```php
+Connection to database successfully
 Database mydb selected
 Collection selected succsessfully
 Document inserted successfully
-</pre>
+```
 
 ## Find all documents
 
@@ -1629,7 +1654,8 @@ To select all documents from the collection, find() method is used.
 
 Code snippets to select all documents âˆ’
 
-<pre class="prettyprint notranslate"><?php
+```php
+<?php
    // connect to mongodb
    $m = new MongoClient();
    echo "Connection to database successfully";
@@ -1647,17 +1673,18 @@ Code snippets to select all documents âˆ’
       echo $document["title"] . "\n";
    }
 ?>
-</pre>
+```
 
 When program is executed, it will produce the following result âˆ’
 
-<pre class="result notranslate">Connection to database successfully
+```
+Connection to database successfully
 Database mydb selected
 Collection selected succsessfully
 {
    "title": "MongoDB"
 }
-</pre>
+```
 
 ## Update a document
 
@@ -1665,7 +1692,8 @@ To update a document , you need to use update() method.
 
 In the below given example we will update the title of inserted document to **MongoDB Tutorial**. Code snippets to update a document âˆ’
 
-<pre class="prettyprint notranslate"><?php
+```php
+<?php
    // connect to mongodb
    $m = new MongoClient();
    echo "Connection to database successfully";
@@ -1691,11 +1719,12 @@ In the below given example we will update the title of inserted document to **Mo
       echo $document["title"] . "\n";
    }
 ?>
-</pre>
+```
 
 When program is executed, it will produce the following result âˆ’
 
-<pre class="result notranslate">Connection to database successfully
+```
+Connection to database successfully
 Database mydb selected
 Collection selected succsessfully
 Document updated successfully
@@ -1703,7 +1732,7 @@ Updated document
 {
    "title": "MongoDB Tutorial"
 }
-</pre>
+```
 
 ## Delete a document
 
@@ -1711,7 +1740,8 @@ To delete a document , you need to use remove() method.
 
 In the below given example we will remove the documents that has title **MongoDB Tutorial**. Code snippets to delete document âˆ’
 
-<pre class="prettyprint notranslate"><?php
+```php
+<?php
    // connect to mongodb
    $m = new MongoClient();
    echo "Connection to database successfully";
@@ -1736,15 +1766,16 @@ In the below given example we will remove the documents that has title **MongoDB
       echo $document["title"] . "\n";
    }
 ?>
-</pre>
+```
 
 When program is executed, it will produce the following result âˆ’
 
-<pre class="result notranslate">Connection to database successfully
+```
+Connection to database successfully
 Database mydb selected
 Collection selected succsessfully
 Documents deleted successfully
-</pre>
+```
 
 In the above given example second parameter is boolean type and used for **justOne** field of **remove()** method.
 
