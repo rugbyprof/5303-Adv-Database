@@ -696,8 +696,7 @@ Below given example will show all the tutorials written by 'tutorials point' or 
 Below given example will show the documents that have likes greater than 100 and whose title is either 'MongoDB Overview' or by is 'tutorials point'. Equivalent sql where clause is **'where likes>10 AND (by = 'tutorials point' OR title = 'MongoDB Overview')'**
 
 ```
->db.mycol.find({"likes": {$gt:10}, $or: [{"by": "tutorials point"},
-   {"title": "MongoDB Overview"}]}).pretty()
+>db.mycol.find({"likes": {$gt:10}, $or: [{"by": "tutorials point"},{"title": "MongoDB Overview"}]}).pretty()
 {
    "_id": ObjectId(7df78ad8902c),
    "title": "MongoDB Overview", 
