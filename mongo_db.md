@@ -428,7 +428,8 @@ Basic syntax of **insert()** command is as follows âˆ’
 
 ### Example
 
-```>db.mycol.insert({
+```
+>db.mycol.insert({
    _id: ObjectId(7df78ad8902c),
    title: 'MongoDB Overview', 
    description: 'MongoDB is no sql database',
