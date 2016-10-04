@@ -1,4 +1,5 @@
 # MongoDB - Data Modelling
+Source: https://www.tutorialspoint.com/mongodb/
 
 Data in MongoDB has a flexible schema.documents in the same collection do not need to have the same set of fields or structure, and common fields in a collectionâ€™s documents may hold different types of data.
 
@@ -36,7 +37,8 @@ In RDBMS schema design for above requirements will have minimum three tables.
 
 While in MongoDB schema design will have one collection post and has the following structure:
 
-```json
+```
+{
    _id: POST_ID
    title: TITLE_OF_POST, 
    description: POST_DESCRIPTION,
@@ -426,7 +428,8 @@ Basic syntax of **insert()** command is as follows âˆ’
 
 ### Example
 
-```>db.mycol.insert({
+```
+>db.mycol.insert({
    _id: ObjectId(7df78ad8902c),
    title: 'MongoDB Overview', 
    description: 'MongoDB is no sql database',
@@ -694,8 +697,7 @@ Below given example will show all the tutorials written by 'tutorials point' or 
 Below given example will show the documents that have likes greater than 100 and whose title is either 'MongoDB Overview' or by is 'tutorials point'. Equivalent sql where clause is **'where likes>10 AND (by = 'tutorials point' OR title = 'MongoDB Overview')'**
 
 ```
->db.mycol.find({"likes": {$gt:10}, $or: [{"by": "tutorials point"},
-   {"title": "MongoDB Overview"}]}).pretty()
+>db.mycol.find({"likes": {$gt:10}, $or: [{"by": "tutorials point"},{"title": "MongoDB Overview"}]}).pretty()
 {
    "_id": ObjectId(7df78ad8902c),
    "title": "MongoDB Overview", 
