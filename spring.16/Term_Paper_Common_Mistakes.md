@@ -1,3 +1,5 @@
+## Term Paper Common Mistakes
+
 - Abstract on a separate page before content, and after title page.
 - Don't assume reader knows the meaning of a word (e.g. mapreduce). If it is not general computer science knowledge (or very common in a field of computer science) then it needs to be explained or defined.
 - First time you use an acronym, define it (e.g. "... in the Hadoop File System (HDFS) ... " then you can use the acronym on its own.
