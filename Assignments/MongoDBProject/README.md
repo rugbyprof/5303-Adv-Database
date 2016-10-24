@@ -4,7 +4,7 @@ This will be a three part project:
 
 1. Load the data into mongoDB using pymongo 
 2. Run a set of query's getting a feel for performance.
-    - May be informational: https://www.mongodb.com/blog/post/joins-and-other-aggregation-enhancements-coming-in-mongodb-3-2-part-1-of-3-introduction
+    - May be informational: [Coming in Mongo 3.2]( https://www.mongodb.com/blog/post/joins-and-other-aggregation-enhancements-coming-in-mongodb-3-2-part-1-of-3-introduction)
 3. Create an API using flask to use as our DB intermediary. 
 
 ### Part 1:
