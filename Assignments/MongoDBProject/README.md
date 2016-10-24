@@ -6,7 +6,7 @@ Each file is composed of a single object type, one json-object per-line.
 Take a look at some examples to get you started: https://github.com/Yelp/dataset-examples.
 
 ### business
-```json
+```python
 {
     "type": "business",
     "business_id": (encrypted business id),
@@ -35,7 +35,7 @@ Take a look at some examples to get you started: https://github.com/Yelp/dataset
 }
 ```
 ### review
-```json
+```python
 {
     "type": "review",
     "business_id": (encrypted business id),
@@ -47,7 +47,7 @@ Take a look at some examples to get you started: https://github.com/Yelp/dataset
 }
 ```
 ### user
-```json
+```python
 {
     "type": "user",
     "user_id": (encrypted user id),
@@ -66,7 +66,7 @@ Take a look at some examples to get you started: https://github.com/Yelp/dataset
 }
 ```
 ### check-in
-```json
+```python
 {
     "type": "checkin",
     "business_id": (encrypted business id),
@@ -81,7 +81,7 @@ Take a look at some examples to get you started: https://github.com/Yelp/dataset
 }
 ```
 ### tip
-```json
+```python
 {
     "type": "tip",
     "text": (tip text),
@@ -93,7 +93,7 @@ Take a look at some examples to get you started: https://github.com/Yelp/dataset
 ```
 ### photos (from the photos auxiliary file)
 This file is formatted as a JSON list of objects.
-```json
+```python
 [
     {
         "photo_id": (encrypted photo id),
