@@ -1,9 +1,15 @@
 ## Mongo DB Project
 
-Taken from here: https://www.yelp.com/dataset_challenge/dataset
+This will be a three part project:
 
-Each file is composed of a single object type, one json-object per-line.
-Take a look at some examples to get you started: https://github.com/Yelp/dataset-examples.
+1. Load the data into mongoDB using pymongo 
+2. Run a set of query's getting a feel for performance.
+3. Create an API using flask to use as our DB intermediary. 
+
+### Part 1:
+Part one of the project will be to load the dataset downloaded from here: https://www.yelp.com/dataset_challenge/dataset. 
+
+Each file is composed of a single object type, one json-object per-line. Use the python script provided in this directory to help you get each of these data sets loaded into your mongo instance.
 
 ### business
 ```python
