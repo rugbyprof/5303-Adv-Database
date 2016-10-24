@@ -14,9 +14,8 @@ collection = db.yelp
 
 files =  glob.glob("./yelp_challenge_dataset/*.json")
 
-#for file in files:
-i = 1000
-f = open(files[0])
-for line in f:
-    line = json.loads(line)
-    collection.insert(line)
+for file in files:
+f = open(file)
+    for line in f:
+        line = json.loads(line)
+        collection.insert(line)
