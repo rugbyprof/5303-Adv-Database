@@ -12,6 +12,8 @@ Part one of the project will be to load the dataset downloaded from here: https:
 
 Each file is composed of a single object type, one json-object per-line. Use the python script provided in this directory to help you get each of these data sets loaded into your mongo instance.
 
+Before you put all of your data in one collection, read the following: https://docs.mongodb.com/manual/data-modeling/ and use this to decide how your data should be modeled. Should it be left as is? Should some of the documents be embedded within some other documents? Can there be a performance increase in either solution?
+
 ### business
 ```python
 {
