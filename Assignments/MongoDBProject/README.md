@@ -45,6 +45,8 @@ if not TEST:
 files = ['business.json','checkin.json','review.json','tip.json','user.json']
 
 # This function to add a proper 2D "loc [x,y]" object to the document
+# Make sure you create a 2D index after this file runs !!!
+# e.g. db.yelp.business.createIndex({"loc":"2d"})
 def add_2D_location(json):
     if 'longitude' in json and 'latitude' in json:
         loc = [json['longitude'],json['latitude']]
