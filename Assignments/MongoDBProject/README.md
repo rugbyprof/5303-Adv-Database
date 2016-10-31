@@ -88,7 +88,7 @@ Each file is composed of a single object type, one json-object per-line. Use the
 
 Before you put all of your data in one collection, read the following: https://docs.mongodb.com/manual/data-modeling/ and use this to decide how your data should be modeled. Should it be left as is? Should some of the documents be embedded within some other documents? Can there be a performance increase in either solution?
 
-This article brings up an intersting way to name your collections using dot '.' notation. For your project it could be a handy organizational tool. It also discusses `capped` collections, another interesting topic (that we probably don't need for this project).
+This article brings up an interesting way to name your collections using dot '.' notation. For your project it could be a handy organizational tool. It also discusses `capped` collections, another interesting topic (that we probably don't need for this project).
 http://www.w3resource.com/mongodb/databases-documents-collections.php
 
 
