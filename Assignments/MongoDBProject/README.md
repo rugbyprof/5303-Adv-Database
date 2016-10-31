@@ -117,3 +117,63 @@ This file is formatted as a JSON list of objects.
     {...}
 ]
 ```
+
+## Part 2
+
+Some sources:
+- https://docs.mongodb.com/v3.2/reference/operator/aggregation/match/
+- https://docs.mongodb.com/v3.2/reference/operator/aggregation/group/
+
+### Typical Queries
+
+1. Find all restaurants with zip code `75205 & 75225`
+
+1. Find all restaurants in city `Oklahoma City`
+
+1. Find the restaurants within 5 miles `33.8719656,-98.5329437`
+
+1. Find all the reviews for restaurant `X`
+
+1. Find all the reviews for restaurant `X` that are 5 stars.
+
+1. Find all the users that have been 'yelping' for over 5 years.
+
+1. Find the `business` that has the `tip` with the most ***likes***.
+
+1. Find the average `review_count` for users.
+
+1. Find all the users that are considered `elite`.
+
+1. Find the longest `elite` user.
+
+1. Of `elite` users, whats the average number of years someone is `elite`.
+
+
+### Difficult?
+
+1. Find the probable city a user lives in based on a set of reviews 
+
+1. Find the busiest checkin times for all businesses in the `75205 & 75225` zip codes.
+
+1. Find the business with the most checkins from Friday at 5pm until Sunday morning at 2am. 
+
+1. Given a restaurant, count the number of reviews by star. Should have 5 different counts, one for each star.
+
+1. Find all restaurants with over a `3.5 star rating` average rating.
+
+### Some Help
+
+- help on counting stars question
+```mongo
+db.yelp.review.aggregate([ 
+    { $match: {"stars":5}},
+    { $group: { _id: null, count: { $sum: 1 } } }
+]);
+```
+
+
+- help on distance query
+- https://myadventuresincoding.wordpress.com/2011/10/02/mongodb-geospatial-queries/
+```mongo
+db.yelp.business.find({loc: {$near:[-115.169667629538, 36.122129247067]}})
+```
