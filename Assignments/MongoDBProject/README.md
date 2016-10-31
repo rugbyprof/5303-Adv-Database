@@ -10,6 +10,80 @@ This will be a three part project:
 ### Part 1:
 Part one of the project will be to load the dataset downloaded from here: https://www.yelp.com/dataset_challenge/dataset. 
 
+Here is a python script using pymongo to help load your data. This will NOT work if you simply cut and past. Read the comments.
+
+```python
+"""
+Place this script inside your yelp data directory and call it load_yelp.py for example.
+The script expects your files to be named:
+    business.json
+    checkin.json
+    review.json
+    tip.json
+    user.json
+
+First TEST the script by simply running it. If it's not in the proper location or 
+your files are named incorrectly it will error. When your ready to run it live change
+TEST = False. 
+
+Do not forget to change DATABASENAME!!
+"""
+import os
+import json
+
+from pymongo import MongoClient
+from bson import Binary, Code
+
+DATABASENAME = 'nameyourdatabasehere'
+TEST = True
+
+client = MongoClient('localhost', 27017)
+if not TEST:
+    db = client[DATABASENAME]
+
+# Inside your yelp data directory, rename your files accordingly:
+files = ['business.json','checkin.json','review.json','tip.json','user.json']
+
+# This function to add a proper 2D "loc [x,y]" object to the document
+def add_2D_location(json):
+    if 'longitude' in json and 'latitude' in json:
+        loc = [json['longitude'],json['latitude']]
+        json['loc'] = loc
+    return json
+
+"""
+Following loops through the file list creating collections of name:
+    yelp.business
+    yelp.checkin
+    yelp.review
+    yelp.tip
+    yelp.user
+"""
+for file in files:
+    name,ext  = file.split('.')
+    collection_name = 'yelp.'+name
+    print(collection_name)
+    
+    # Creates collection in mongo here: 
+    if not TEST:
+        collection = db[collection_name]
+    
+    # Deletes documents from collection every time it's run
+    if not TEST:
+        result = collection.delete_many({})
+    
+    # Open actual data file and read a line at a time
+    f = open(file)
+    for line in f:
+        # read a line, convert to json, add 2D location
+        line = add_2D_location(json.loads(line))
+        
+        # insert into collection
+        if not TEST:
+            collection.insert(line)
+       
+```
+
 Each file is composed of a single object type, one json-object per-line. Use the python script provided in this directory to help you get each of these data sets loaded into your mongo instance.
 
 Before you put all of your data in one collection, read the following: https://docs.mongodb.com/manual/data-modeling/ and use this to decide how your data should be modeled. Should it be left as is? Should some of the documents be embedded within some other documents? Can there be a performance increase in either solution?
@@ -174,6 +248,7 @@ db.yelp.review.aggregate([
 
 - help on distance query
 - https://myadventuresincoding.wordpress.com/2011/10/02/mongodb-geospatial-queries/
+- http://blog.mlab.com/2014/08/a-primer-on-geospatial-data-and-mongodb/
 ```mongo
 db.yelp.business.find({loc: {$near:[-115.169667629538, 36.122129247067]}})
 ```
