@@ -2,10 +2,10 @@
 
 This will be a three part project:
 
-1. Load the data into mongoDB using pymongo 
-2. Run a set of query's getting a feel for performance.
+1. Load the data into mongoDB using pymongo  (Due: 2 Nov)
+2. Run a set of query's getting a feel for performance. (Due: 7 Nov)
     - May be informational: [Coming in Mongo 3.2]( https://www.mongodb.com/blog/post/joins-and-other-aggregation-enhancements-coming-in-mongodb-3-2-part-1-of-3-introduction)
-3. Create an API using flask to use as our DB intermediary. 
+3. Create an API using flask to use as our DB intermediary. (Due: TBD)
 
 ### Part 1:
 Part one of the project will be to load the dataset downloaded from here: https://www.yelp.com/dataset_challenge/dataset. 
