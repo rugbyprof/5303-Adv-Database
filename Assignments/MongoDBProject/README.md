@@ -202,8 +202,8 @@ Some sources:
 
 ### Typical Queries
 
-1. Find all restaurants with zip code `X or Y`
-
+1. Find all restaurants with zip code `X or Y` 
+    - Using 89117 and 89122 answer = 1083
 1. Find all restaurants in city `X`
 
 1. Find the restaurants within 5 miles of `lat , lon`
