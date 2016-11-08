@@ -202,11 +202,11 @@ Some sources:
 
 ### Typical Queries
 
-1. Find all restaurants with zip code `75205 & 75225`
+1. Find all restaurants with zip code `X or Y`
 
-1. Find all restaurants in city `Oklahoma City`
+1. Find all restaurants in city `X`
 
-1. Find the restaurants within 5 miles `33.8719656,-98.5329437`
+1. Find the restaurants within 5 miles of `lat , lon`
 
 1. Find all the reviews for restaurant `X`
 
