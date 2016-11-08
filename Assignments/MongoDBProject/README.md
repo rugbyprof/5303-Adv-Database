@@ -203,15 +203,15 @@ Some sources:
 ### Typical Queries
 
 1. Find all restaurants with zip code `X or Y` 
-    - Using 89117 and 89122 answer = 1083
+    -` Using 89117 and 89122 answer = 1083`
 1. Find all restaurants in city `X`
-    - Las Vegas results in 20382
+    - `Las Vegas results in 20382`
 1. Find the restaurants within 5 miles of `lat , lon`
-    This Lon,Lat [ -80.839186,35.226504 ] gives ~ 290
+    - `This Lon,Lat [ -80.839186,35.226504 ] gives ~ 290`
 1. Find all the reviews for restaurant `X`
-    - business_id hB3kH0NgM5LkEWMnMMDnHw results in 20 
+    - `business_id hB3kH0NgM5LkEWMnMMDnHw results in 20 `
 1. Find all the reviews for restaurant `X` that are 5 stars.
-    - business_id P1fJb2WQ1mXoiudj8UE44w results in 25
+    - `business_id P1fJb2WQ1mXoiudj8UE44w results in 25`
 1. Find all the users that have been 'yelping' for over 5 years.
 
 1. Find the `business` that has the `tip` with the most ***likes***.
