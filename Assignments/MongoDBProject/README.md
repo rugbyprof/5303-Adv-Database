@@ -205,7 +205,7 @@ Some sources:
 1. Find all restaurants with zip code `X or Y` 
     - Using 89117 and 89122 answer = 1083
 1. Find all restaurants in city `X`
-
+    - Las Vegas results in 20382
 1. Find the restaurants within 5 miles of `lat , lon`
 
 1. Find all the reviews for restaurant `X`
