@@ -3,7 +3,7 @@
 This will be a three part project:
 
 1. Load the data into mongoDB using pymongo  (Due: 2 Nov)
-2. Run a set of query's getting a feel for performance. (Due: 7 Nov)
+2. Run a set of query's getting a feel for performance. (Due: 10 Nov)
     - May be informational: [Coming in Mongo 3.2]( https://www.mongodb.com/blog/post/joins-and-other-aggregation-enhancements-coming-in-mongodb-3-2-part-1-of-3-introduction)
 3. Create an API using flask to use as our DB intermediary. (Due: TBD)
 
@@ -195,6 +195,9 @@ This file is formatted as a JSON list of objects.
 ```
 
 ## Part 2
+
+#### Print out of each mongo query or comperable python code due Thursday by 1800 
+printed out and given to me or my box.
 
 Some sources:
 - https://docs.mongodb.com/v3.2/reference/operator/aggregation/match/
