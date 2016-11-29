@@ -7,10 +7,15 @@ This will be a three part project:
     - May be informational: [Coming in Mongo 3.2]( https://www.mongodb.com/blog/post/joins-and-other-aggregation-enhancements-coming-in-mongodb-3-2-part-1-of-3-introduction)
 3. Create an API using flask to use as our DB intermediary. (Due: TBD)
 
+### General Requirements:
+- Create a folder called `mongoDB-Project`.
+- Place this folder in your github repository so that it is not in any other folder (it is at the root of your repo).
+- 
+
 ### Part 1:
 Part one of the project will be to load the dataset downloaded from here: https://www.yelp.com/dataset_challenge/dataset. 
 
-Here is a python script using pymongo to help load your data. This will NOT work if you simply cut and past. Read the comments.
+Here is a python script using pymongo to help load your data. This will NOT work if you simply cut and paste. Read the comments.
 
 ```python
 """
@@ -193,6 +198,11 @@ This file is formatted as a JSON list of objects.
     {...}
 ]
 ```
+
+### Results
+
+- Log in to mongo
+- Run the `show databases` command
 
 ## Part 2
 
