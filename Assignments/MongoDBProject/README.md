@@ -318,3 +318,12 @@ if x > 0:
         print(sorted_dict[i])
 
 ```
+## Part 3
+
+This portion of the project requires that you write an api to interact with your database. 
+
+### Resources:
+- Starter [code](./api.py) 
+- Flask api [documentation](http://www.flaskapi.org/#example)
+- Mongo create [index](https://docs.mongodb.com/getting-started/shell/indexes/)
+
