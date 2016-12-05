@@ -320,10 +320,48 @@ if x > 0:
 ```
 ## Part 3
 
-This portion of the project requires that you write an api to interact with your database. 
+This portion of the project requires that you write an api to interact with your database. You can use the resources below along with what I've covered in class to get this done. Since you have already implemented the queries in part 2, converting them to something that runs using the flask api should not be to hard. 
 
 ### Resources:
-- Starter [code](./api.py) 
-- Flask api [documentation](http://www.flaskapi.org/#example)
-- Mongo create [index](https://docs.mongodb.com/getting-started/shell/indexes/)
+- [Starter code](./api.py) 
+- [Flask api documentation](http://www.flaskapi.org/#example)
+- [Mongo create index](https://docs.mongodb.com/getting-started/shell/indexes/)
+
+### Routes
+
+Create routes to fullfull the "typical queries" in part two. 
+
+1. Find all restaurants with zip code `X or Y` 
+    - Route Name: `/zip/<args>`
+    - Example: `curl -X GET http://11.22.33.44:5000/zip/zips=89117,89122:start=0:limit=20`
+1. Find all restaurants in city `X`
+    - Route Name: `/city/<args>`
+    - Example: `curl -X GET http://11.22.33.44:5000/city/city="las vegas":start=0:limit=20`
+1. Find the restaurants within 5 miles of `lat , lon`
+    - Route Name: `/closest/<args>`
+    - Example: `curl -X GET http://11.22.33.44:5000/closest/lon=-80.839186:lat=35.226504:start=0:limit=20`
+1. Find all the reviews for restaurant `X`
+    - Route Name: `/reviews/<args>`
+    - Example: `curl -X GET http://11.22.33.44:5000/reviews/id=hB3kH0NgM5LkEWMnMMDnHw:start=0:limit=20`
+1. Find all the reviews for restaurant `X` that are 5 stars.
+    - Route Name: `/stars/<args>`
+    - Example: `curl -X GET http://11.22.33.44:5000/stars/num_stars=5:start=0:limit=20`
+1. Find all the users that have been 'yelping' for over 5 years.
+    - Route Name: `/yelping/<args>`
+    - Example: `curl -X GET http://11.22.33.44:5000/yelping/min_years=5:start=0:limit=20`
+1. Find the `business` that has the `tip` with the most ***likes***.
+    - Route Name: `/most_likes/<args>`
+    - Example: `curl -X GET http://11.22.33.44:5000/most_likes/start=0:limit=20`
+1. Find the average `review_count` for users.
+    - Route Name: `/review_count/`
+    - Example: `curl -X GET http://11.22.33.44:5000/review_count/`
+1. Find all the users that are considered `elite`.
+    - Route Name: `/elite/<args>`
+    - Example: `curl -X GET http://11.22.33.44:5000/elite/start=0:limit=20`
+1. Find the longest `elite` user.
+    - Route Name: `/elite/<args>`
+    - Example: `curl -X GET http://11.22.33.44:5000/elite/start=0:limit=1:sorted=reverse`
+1. Of `elite` users, whats the average number of years someone is `elite`.
+    - Route Name: `/avg_elite/`
+    - Example: `curl -X GET http://11.22.33.44:5000/avg_elite/`
 
