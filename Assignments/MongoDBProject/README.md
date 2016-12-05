@@ -8,6 +8,7 @@ This will be a three part project:
 3. Create an API using flask to use as our DB intermediary. (Due: TBD)
 
 ### General Requirements:
+- You can work in pairs (two people, no more)
 - Create a folder called `mongoDB-Project`.
 - Place this folder in your github repository so that it is not in any other folder (it is at the root of your repo).
 - Create a folder called `api` and put your `api.py` within this folder
