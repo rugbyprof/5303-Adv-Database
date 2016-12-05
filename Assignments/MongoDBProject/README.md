@@ -1,4 +1,5 @@
 ## Mongo DB Project
+#### Due: Monday Dec 12th, @ 5:45 and no later
 
 This will be a three part project:
 
@@ -14,6 +15,15 @@ This will be a three part project:
 - Create a folder called `api` and put your `api.py` within this folder
 - Your api should run from your server at this address: `http://your_ip_address:5000`
 - However your code should be available `/var/www/html/your_repo_name/mongoDB-Project`
+- Necessary files that should be in your project:
+    - load_yelp.py     (loads the database)
+    - mongo_queries.py (runs your queries from part 2)
+    - api/api.py       (your api)
+- What to turn in:
+    - Cover sheet with your names on it and information on how to access your api.
+    - Print out of your mongo_queries.py
+    - print out of your answers from the queries.
+    - Print out of your api.py
 
 ### Part 1:
 Part one of the project will be to load the dataset downloaded from here: https://www.yelp.com/dataset_challenge/dataset. 
@@ -209,8 +219,9 @@ This file is formatted as a JSON list of objects.
 
 ## Part 2
 
-#### Print out of each mongo query or comperable python code due Thursday by 1800 
-printed out and given to me or my box.
+#### Print out of each mongo query or comperable python code due Thursday by 1800 printed out and given to me or my box.
+
+These queries should be available on you or your partners server within the project folder in a filename called `mongo_queries.py`
 
 Some sources:
 - https://docs.mongodb.com/v3.2/reference/operator/aggregation/match/
@@ -324,6 +335,8 @@ if x > 0:
 ## Part 3
 
 This portion of the project requires that you write an api to interact with your database. You can use the resources below along with what I've covered in class to get this done. Since you have already implemented the queries in part 2, converting them to something that runs using the flask api should not be to hard. 
+
+Your api should be available within the project folder at this location: `api/api.py`
 
 ### Resources:
 - [Starter code](./api.py) 
