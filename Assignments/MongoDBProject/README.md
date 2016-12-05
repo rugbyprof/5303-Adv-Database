@@ -10,7 +10,9 @@ This will be a three part project:
 ### General Requirements:
 - Create a folder called `mongoDB-Project`.
 - Place this folder in your github repository so that it is not in any other folder (it is at the root of your repo).
-- 
+- Create a folder called `api` and put your `api.py` within this folder
+- Your api should run from your server at this address: `http://your_ip_address:5000`
+- However your code should be available `/var/www/html/your_repo_name/mongoDB-Project`
 
 ### Part 1:
 Part one of the project will be to load the dataset downloaded from here: https://www.yelp.com/dataset_challenge/dataset. 
