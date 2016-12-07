@@ -22,19 +22,14 @@ app = FlaskAPI(__name__)
 CORS(app)
 
 client = pymongo.MongoClient('localhost', 27017)
-
-# change the following to fit your database configuration
-
-db = client['5303DB']   
+db = client['5303DB']
 businessdb = db['yelp.business']
 review = db['yelp.review']
 userdb = db['yelp.user']
-testdb = db['yelp.test']
 
 
 parser = reqparse.RequestParser()
 
-# ROUTES
 """=================================================================================="""
 """=================================================================================="""
 """=================================================================================="""
@@ -50,7 +45,21 @@ def index():
             func_list[rule.rule] = app.view_functions[rule.endpoint].__doc__
     return func_list
 
+   
+"""=================================================================================="""
+@app.route("/find_zips/<args>", methods=['GET'])
+def find_zips(args):
+
+    args = myParseArgs(args)
     
+    data = []
+    
+    zip = args['zip']
+    result = businessdb.find({},{"full_address":1,"_id":0})
+    for r in result:
+        data.append(r)
+    return data
+   
 """=================================================================================="""
 @app.route("/user/<args>", methods=['GET'])
 def user(args):
@@ -81,25 +90,8 @@ def user(args):
 
     return {"data":data}
     
-"""=================================================================================="""
-@app.route("/test/", methods=['POST'])
-def test():
-    
-    data = request.data
-    #testdb.insert(request)
-    
-    return data
 
-@app.route("/<int:key>/", methods=['POST'])
-def findkey(key):
-    
-    data = request.data
-    data['key'] = key
-    #testdb.insert(request)
-    
-    return data
-    
-"""=================================================================================="""
+
 @app.route("/business/<args>", methods=['GET'])
 def business(args):
 
@@ -114,12 +106,7 @@ def business(args):
     
 
     return {"data":data}
-    
-# HELPER METHODS
 """=================================================================================="""
-"""=================================================================================="""
-"""=================================================================================="""
-
 def snap_time(time,snap_val):
     time = int(time)
     m = time % snap_val
