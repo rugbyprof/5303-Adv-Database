@@ -57,8 +57,11 @@ def find_zips(args):
     zip = args['zip']
     result = businessdb.find({},{"full_address":1,"_id":0})
     for r in result:
-        data.append(r)
-    return data
+        parts = r['full_address'].split(' ')
+        target = parts[-1]
+        if len(target) == 5 and target == zip:
+            data.append(r['full_address'])
+    return {"data":data}
    
 """=================================================================================="""
 @app.route("/user/<args>", methods=['GET'])
