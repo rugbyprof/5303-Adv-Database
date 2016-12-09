@@ -361,7 +361,7 @@ Create routes to fullfull the "typical queries" in part two.
     - Example: `curl -X GET http://11.22.33.44:5000/reviews/id=hB3kH0NgM5LkEWMnMMDnHw:start=0:limit=20`
 1. Find all the reviews for restaurant `X` that are 5 stars.
     - Route Name: `/stars/<args>`
-    - Example: `curl -X GET http://11.22.33.44:5000/stars/num_stars=5:start=0:limit=20`
+    - Example: `curl -X GET http://11.22.33.44:5000/stars/id=hB3kH0NgM5LkEWMnMMDnHw:num_stars=5:start=0:limit=20`
 1. Find all the users that have been 'yelping' for over 5 years.
     - Route Name: `/yelping/<args>`
     - Example: `curl -X GET http://11.22.33.44:5000/yelping/min_years=5:start=0:limit=20`
