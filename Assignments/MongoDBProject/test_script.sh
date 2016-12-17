@@ -5,7 +5,7 @@ curl -X GET http://$1:5000/zip/zips=89117,89122:start=0:limit=20 >> output.txt
 
 echo "\n" >> output.txt
 
-curl -X GET http://$1:5000/city/city="las vegas":start=0:limit=20 >> output.txt
+curl -X GET http://$1:5000/city/?city="las vegas":start=0:limit=20 >> output.txt
 
 echo "\n" >> output.txt
 
