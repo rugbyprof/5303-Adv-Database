@@ -1,0 +1,238 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  overflow-y: scroll;
+}
+
+#product-list-row div.col-lg-3{
+	margin-top: 10px;
+}
+
+#profile-promote div.col-lg-4{
+	margin-top: 10px;
+}
+
+.content-area-white{
+	background-color:#FFF; 
+	margin-top:-15px; 
+	padding:10px; 
+	border-left:1px solid #DDD;
+	border-right:1px solid #DDD;
+	border-bottom:1px solid #DDD;
+}
+.nav-tabs 
+{
+	
+	margin-bottom: 15px;
+}
+
+.jumbotron{
+	margin-top: -10px;
+	margin-bottom: 0px;
+	background-color: #DDD;
+}
+.contact-form  .control-label {
+    text-align: left;
+}
+
+.navbar-brand 
+{
+	padding-top:7px;
+	padding-bottom:0px;
+}
+
+.post-content h2
+{
+	font-size: 30px;
+}
+
+.post-content h6
+{
+	font-size: 24px;
+	margin-top: 25px;
+}
+
+.post-content p
+{
+	margin-left: 10px;
+}
+.post-content p img
+{
+	margin-top: 10px;
+}
+
+.post-content ol, .post-content ul
+{
+	padding-left:25px;
+}
+
+.panel-success > .panel-heading
+{
+	background-color: #4cae4c;
+	border-color: #4cae4c;
+}
+
+.panel-success
+{
+	border-color: #4cae4c;
+}
+
+.panel-success > .panel-heading
+{
+	color: #FFF;
+}
+
+a {
+	color: #4cae4c;
+	text-decoration: none;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #4cae4c;
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #4cae4c;
+  outline: 0;
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #ffffff;
+  background-color: #4cae4c;
+}
+
+.nav .caret {
+  border-top-color: #4cae4c;
+  border-bottom-color: #4cae4c;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #ffffff;
+  cursor: default;
+  background-color: #4cae4c;
+  border-color: #4cae4c;
+}
+
+
+
+a.thumbnail:hover,
+a.thumbnail:focus {
+  /*border-color: #4cae4c;*/
+}
+
+
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  z-index: 2;
+  color: #ffffff;
+  background-color: #4cae4c;
+  border-color: #4cae4c;
+}
+
+a {
+  color: #4cae4c;
+  text-decoration: none;
+}
+
+
+.btn-link {
+  font-weight: normal;
+  color: #4cae4c;
+  cursor: pointer;
+  border-radius: 0;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  color: #4cae4c;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+a:hover,
+a:focus {
+  color: #4cae4c;
+  text-decoration: underline;
+}
+
+.hide-overflow
+{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    width:100%;
+    display:block;
+    padding: 2px 0px;
+}
+
+#sharethis {
+	height: 22px;
+}
+#sharethis span
+{
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+      box-sizing: content-box;
+}
+
+.pagination .current,
+.pagination .disabled {
+    float: left;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: #999;
+    text-decoration: none;
+    border: 1px solid #DDD;
+    border-left-width: 0;
+}
+
+.pagination > li.disabled:first-child  {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-left-width: 1px;
+}
+
+.pagination > li.disabled:last-child {
+   border-top-right-radius: 3px;
+   border-bottom-right-radius: 3px;
+   border-right-width: 1px;
+}
+
+.post-comment{
+	margin-top:30px;
+}
+
+.home-banner {
+	background-image: url("../img/bg.jpg");
+}
+
+.udp-cta {
+    color: #fff;
+    background-color: #fe5e25;
+    border-color: #fe5e25;
+}
+
+.udp-cta strong{
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    border-bottom: 2px solid #4cae4c;
+}

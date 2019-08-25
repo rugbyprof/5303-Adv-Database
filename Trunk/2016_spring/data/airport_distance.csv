@@ -1,0 +1,212 @@
+"Airport (from)","Airport (to)","Distance (miles)"
+"LAX","SLC",590.24
+"LAX","JFK",2469.11
+"LAX","ATL",1940
+"LAX","ORD",1740
+"LAX","DFW",1230
+"LAX","FAT",209
+"LAX","MEM",1610
+"LAX","CMH",1990
+"LAX","DSM",1440
+"LAX","BOS",2600
+"LAX","DEN",860
+"LAX","IND",1810
+"LAX","MCO",2210
+"LAX","MSY",1670
+"LAX","PHX",369
+"LAX","SEA",954
+"LAX","IAD",2280
+"LAX","MSP",1530
+"LAX","PWM",2630
+"SLC","JFK",1980
+"SLC","ATL",1590
+"SLC","ORD",1250
+"SLC","DFW",986
+"SLC","FAT",500
+"SLC","MEM",1260
+"SLC","CMH",1520
+"SLC","DSM",953
+"SLC","BOS",2100
+"SLC","DEN",390
+"SLC","IND",1350
+"SLC","MCO",1930
+"SLC","MSY",1430
+"SLC","PHX",508
+"SLC","SEA",687
+"SLC","IAD",1820
+"SLC","MSP",989
+"SLC","PWM",2120
+"JFK","ATL",760
+"JFK","ORD",737
+"JFK","DFW",1390
+"JFK","FAT",2460
+"JFK","MEM",963
+"JFK","CMH",481
+"JFK","DSM",1030
+"JFK","BOS",186
+"JFK","DEN",1620
+"JFK","IND",662
+"JFK","MCO",945
+"JFK","MSY",1180
+"JFK","PHX",2150
+"JFK","SEA",2410
+"JFK","IAD",227
+"JFK","MSP",1020
+"JFK","PWM",273
+"ATL","ORD",606
+"ATL","DFW",729
+"ATL","FAT",1990
+"ATL","MEM",330
+"ATL","CMH",448
+"ATL","DSM",741
+"ATL","BOS",945
+"ATL","DEN",1200
+"ATL","IND",433
+"ATL","MCO",404
+"ATL","MSY",424
+"ATL","PHX",1580
+"ATL","SEA",2180
+"ATL","IAD",535
+"ATL","MSP",906
+"ATL","PWM",1030
+"ORD","DFW",801
+"ORD","FAT",1730
+"ORD","MEM",492
+"ORD","CMH",295
+"ORD","DSM",297
+"ORD","BOS",863
+"ORD","DEN",885
+"ORD","IND",177
+"ORD","MCO",1010
+"ORD","MSY",838
+"ORD","PHX",1440
+"ORD","SEA",1710
+"ORD","IAD",587
+"ORD","MSP",333
+"ORD","PWM",897
+"DFW","FAT",1310
+"DFW","MEM",430
+"DFW","CMH",925
+"DFW","DSM",624
+"DFW","BOS",1560
+"DFW","DEN",640
+"DFW","IND",761
+"DFW","MCO",983
+"DFW","MSY",448
+"DFW","PHX",865
+"DFW","SEA",1660
+"DFW","IAD",1170
+"DFW","MSP",852
+"DFW","PWM",1620
+"FAT","MEM",1660
+"FAT","CMH",1990
+"FAT","DSM",1430
+"FAT","BOS",2590
+"FAT","DEN",842
+"FAT","IND",1810
+"FAT","MCO",2290
+"FAT","MSY",1750
+"FAT","PHX",492
+"FAT","SEA",749
+"FAT","IAD",2290
+"FAT","MSP",1490
+"FAT","PWM",2610
+"MEM","CMH",518
+"MEM","DSM",490
+"MEM","BOS",1140
+"MEM","DEN",870
+"MEM","IND",382
+"MEM","MCO",683
+"MEM","MSY",350
+"MEM","PHX",1260
+"MEM","SEA",1870
+"MEM","IAD",741
+"MEM","MSP",701
+"MEM","PWM",1200
+"CMH","DSM",572
+"CMH","BOS",637
+"CMH","DEN",1150
+"CMH","IND",181
+"CMH","MCO",803
+"CMH","MSY",807
+"CMH","PHX",1670
+"CMH","SEA",2010
+"CMH","IAD",298
+"CMH","MSP",624
+"CMH","PWM",693
+"DSM","BOS",1160
+"DSM","DEN",588
+"DSM","IND",406
+"DSM","MCO",1140
+"DSM","MSY",820
+"DSM","PHX",1150
+"DSM","SEA",1460
+"DSM","IAD",870
+"DSM","MSP",232
+"DSM","PWM",1190
+"BOS","DEN",1750
+"BOS","IND",814
+"BOS","MCO",1120
+"BOS","MSY",1370
+"BOS","PHX",2290
+"BOS","SEA",2490
+"BOS","IAD",411
+"BOS","MSP",1120
+"BOS","PWM",95.3
+"DEN","IND",974
+"DEN","MCO",1540
+"DEN","MSY",1060
+"DEN","PHX",601
+"DEN","SEA",1020
+"DEN","IAD",1450
+"DEN","MSP",679
+"DEN","PWM",1780
+"IND","MCO",829
+"IND","MSY",710
+"IND","PHX",1490
+"IND","SEA",1860
+"IND","IAD",474
+"IND","MSP",502
+"IND","PWM",865
+"MCO","MSY",550
+"MCO","PHX",1840
+"MCO","SEA",2550
+"MCO","IAD",759
+"MCO","MSP",1310
+"MCO","PWM",1210
+"MSY","PHX",1300
+"MSY","SEA",2080
+"MSY","IAD",955
+"MSY","MSP",1040
+"MSY","PWM",1440
+"PHX","SEA",1110
+"PHX","IAD",1950
+"PHX","MSP",1270
+"PHX","PWM",2330
+"SEA","IAD",2300
+"SEA","MSP",1390
+"SEA","PWM",2480
+"IAD","MSP",905
+"IAD","PWM",492
+"MSP","PWM",1130
+,,
+"LAX","Los Angeles International Airport",
+"SLC","Salt Lake International Airport",
+"JFK","John F Kennedy Intl, New York City, NY ",
+"ATL","Hartsfield Intl Arpt, Atlanta, GA ",
+"ORD","O'Hare Intl Arpt, Chicago, IL ",
+"DFW","Dallas Ft Worth Intl, Dallas, TX ",
+"FAT","Fresno Air Terminal, Fresno, CA ",
+"MEM","Memphis Intl, Memphis, TN ",
+"CMH","Port Columbus Intl Arpt, Columbus, OH  ",
+"DSM","Des Moines Municipal Airport, Des Moines, IA ",
+"BOS","Logan Intl Arpt, Boston, MA ",
+"DEN","Denver Intl Arpt, Denver, CO (DEN) ",
+"IND","Indianapolis Intl Arpt, Indianapolis, IN ",
+"MCO","Orlando Intl Arpt, Orlando, FL ",
+"MSY","Louis Armstrong New Orleans International Airport, LA, USA",
+"PHX","Sky Harbor Intl Arpt, Phoenix, AZ ",
+"SEA","Seattle Tacoma Intl Arpt, Seattle, WA  ",
+"IAD","Washington Dulles Intl, Washington, DC ",
+"MSP","Minneapolis St Paul Intl, Minneapolis, MN  ",
+"PWM","Portland Intl Jetport, Portland, ME ",

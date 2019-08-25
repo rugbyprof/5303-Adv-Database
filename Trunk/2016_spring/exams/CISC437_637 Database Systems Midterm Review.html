@@ -1,0 +1,98 @@
+<head>
+<title>CISC437/637 Database Systems Midterm Review</title>
+<link rel=stylesheet type="text/css" href="course.css"/>
+</head>
+<body>
+<table width=100%>
+<tr><td align=left><font color="#000088">UDel CISC437/637-010 Database Systems, Spring 2010</font></td><td align=right><a href=index.html#news>news</a> | <a href=syllabus.html>syllabus</a> | <a href=syllabus.html#schedule>schedule</a> | <a href=homework.html>homework</a> | <a href=project.html>project</a> </td></tr>
+</table>
+<hr>
+<center>
+<h1>Midterm Review</h1>
+</center>
+The midterm will be on April 8th.  It will be closed-book and closed-note.  It will cover chapters 1-6 and 19 in the text.  It will not cover chapter 8 (indexing).  Expect to be asked to draw small E-R diagrams, translate them to relational schema, write and evaluate relational algebra queries, identify functional dependencies, decompose relations into BCNF, and write and evaluate SQL queries.
+<p>
+Study the solutions for HW1, HW2, and HW3.  I will also post some sample questions here sometime at the beginning of the week of Mar. 29.  To review SQL, I suggest the following problems in the book:
+<ol>
+<li>Problems 5.1-5.4 (writing SQL queries)
+<li>Problem 5.8 (integrity constraints in SQL)
+</ol>
+The best way to learn SQL is hands-on, so I suggest creating small tables in your database and actually trying some of the queries in chapter 5.
+
+<p>
+<h3>Sample questions</h3>
+Multiple choice:
+<ol>
+<li>A ______ is a stored procedure that is executed automatically in connection with data updates.
+<ol>
+<li>event handler
+<li>constructor
+<li>function
+<li>trigger
+</ol>
+Highlight for answer: <font color=white>4: trigger</font>
+<li>Suppose F is a set of functional dependencies containing A &rarr; ABCD, B &rarr; C, and B &rarr; D.  Which of the following is in the closure of F, i.e. which is implied by the dependencies in F?
+<ol>
+<li>CD &rarr; B
+<li>C &rarr; D
+<li>B &rarr; CD
+<li>BCD &rarr; A
+</ol>
+Highlight for answer: <font color=white>3: B &rarr; CD</font>
+</ol>
+Short answer:
+<ol>
+<li>Given the schema below, write a SQL query to find the average price of all fares on each airlines' flights from JFK.
+<p>
+Airlines(<u>code</u>:char(3), name:char(30))<br>
+Flights(<u>airlineCode</u>:char(3), <u>flightNum</u>:integer, origin:char(3), destination:char(3), onDate:date, depart:time, arrive:time, equip:char(3))<br>
+Fares(<u>airlineCode</u>:char(3), <u>flightNum</u>:integer, <u>fareCode</u>:char(1), price:real)
+<p>
+Highlight for answer: <font color=white>SELECT a.code, AVG(fa.price) FROM Airlines a, Flights fl, Fares fa WHERE a.code=fl.airlineCode AND fa.airlineCode=fl.airlineCode AND fa.flightNum=fl.flightNum AND fl.origin='JFK' GROUP BY a.code</font>
+
+<li>Construct an E-R diagram for the following set of requirements:
+<ol>
+<li>Each student may major in several subjects.
+<li>For each major, a given student has only one advisor.
+<li>Each major has several advisors.
+<li>Each advisor advises only one major.
+<li>Each advisor advises several students in one major.
+</ol>
+</ol>
+<p>
+<h3>BCNF vs 3NF</h3>
+The best way to understand BCNF intuitively is that each attribute of a record can be determined only by a key, and not by any non-key attribute or set of attributes.  In other words, the left-hand side of every functional dependency is a candidate key.  (When I say "determined", I mean by a FD in a provided set F or by a FD in the closure of F.  Always be careful that the determination is based on FDs that have been provided, and not based on the data or on intuition.)
+<p>
+3NF allows some attributes to be determined by some non-key values, but only if those non-key values are part of a candidate key.  This can introduce redundancy.
+<p>
+Example:  University faculty.  Requirements:  two professors can have the same name, but only if they are in different departments (names must be unique within departments).  A professor has one office.  Each department has its own building in which it has multiple offices.  Professors can share offices.
+<p>
+<table border=1>
+<tr><th>name</th><th>department</th><th>office</th><th>title</th><th>salary</th></tr>
+<tr><td>Alice</td><td>Math</td><td>Math 101</td><td>Professor</td><td>90,000</td></tr>
+<tr><td>Bob</td><td>Physics</td><td>Physics 202</td><td>Asst. Professor</td><td>80,000</td></tr>
+<tr><td>Charlie</td><td>Math</td><td>Math 101</td><td>Assoc. Professor</td><td>80,000</td></tr>
+<tr><td>Denise</td><td>Physics</td><td>Physics 204</td><td>Professor</td><td>92,000</td></tr>
+<tr><td>Jane</td><td>Physics</td><td>Physics 203</td><td>Asst. Professor</td><td>85,000</td></tr>
+<tr><td>Mark</td><td>CS</td><td>CS 190</td><td>Asst. Professor</td><td>86,000</td></tr>
+<tr><td>Mark</td><td>History</td><td>Hist 100</td><td>Assoc. Professor</td><td>70,000</td></tr>
+<tr><td>Ned</td><td>CS</td><td>CS 195</td><td>Professor</td><td>90,000</td></tr>
+<tr><td>Sarah</td><td>CS</td><td>CS 177</td><td>Asst. Professor</td><td>98,000</td></tr>
+<tr><td>Vanessa</td><td>History</td><td>Hist 100</td><td>Asst. Professor</td><td>40,000</td></tr>
+</table>
+<p>
+Requirements imply (name, department) is the primary key, but (name, office) is a candidate key since office determines department.  Functional dependencies implied by requirements are:
+<ol>
+<li>(name, department) &rarr; (name, department, office, title, salary)
+<li>office &rarr; department
+<li>(name, office) &rarr; (name, department, office, title, salary)
+</ol>
+This is in 3NF, but it is not in BCNF, because office alone is not a candidate key (the second FD vioaltes BCNF).  There is non-essential redundancy between department and office:  if we know the office, we automatically know the department.
+<p>
+We can put it in BCNF by replacing it with two new tables based on the FD office &rarr; department.  One table contains (name, office, title, salary), with (name, office) as primary key.  The second table contains (office, dept), with office as primary key.
+<p>
+The reason to use 3NF relations is that they can preserve dependencies without requiring joins.  That is not guaranteed for BCNF relations.  In the example above, after performing the BCNF decomposition we can no longer check whether the first FD holds without doing a join first.  Section 19.5.2 in the book has more on this.
+<p>
+The description of and need for 3NF is fairly technical.  I would not ask you to show that something is in 3NF on an exam, or to do a 3NF decomposition.  I might ask whether a decomposition that I give is dependency-preserving or not.  BCNF decompositions are definitely possible for exam questions.
+
+</body>

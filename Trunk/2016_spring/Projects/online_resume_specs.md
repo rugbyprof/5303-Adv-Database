@@ -1,0 +1,185 @@
+
+# Online Resume System
+
+## Spring 2015
+
+### Description
+
+In this project, you will design and implement an RDBMS to support the operations of an **on-line job/resume posting service**. 
+
+The basic idea behind your on-line job/resume posting service is that it will allow job seekers to post their resumes on your web site, companies to post descriptions of job openings, and job seekers and companies to browse/search the contents of your database (at least that part you want them to see). 
+
+Job seekers can use the web site to set up an interview with a perspective employer and, likewise, companies can use the web site to set up an interview with a perspective employee. Your system will also allow job seekers to attach an image of themselves to their resumes.
+
+### Specifications / Requirements:
+
+- The users of your system will be:
+    - Job seekers who upload their resumes to your web site
+    - Companies (recruitment personnel) who upload descriptions of job openings 
+    - Various employees of your web site: customer representatives who arrange interviews and provide other customer-related services, and the web site's manager. 
+
+The data items required for your database can be classified into six categories: 
+- resumes
+- companies
+- job categories
+- job descriptions
+- interviews
+- employees (of the web site).
+
+This classification does not imply any particular table arrangement. You are responsible for arranging the data items into tables, determining the relationships among tables and identifying the key attributes. 
+
+You should include indices in your tables to speed up query processing. You should base your choice of indices on the type and expected frequency of the queries. Finally, you should specify and enforce integrity constraints on the data.
+
+You will create your relational model using Mysql Workbench or Phpmyadmin Designer. 
+
+
+![](https://s3.amazonaws.com/f.cl.ly/items/2R0q41330k2k0N1O2G31/diagram.png)
+
+### Data / Actions
+
+#### Job Seeker:
+
+1. Social Security no.
+2. Last Name
+3. First Name
+4. Street Address
+5. City
+6. State
+7. Zip Code
+8. Credit Card no.
+8. Expiration month
+8. Expiration year
+8. CVC Code
+9. E-Mail Address
+9. Password
+10. Document (the actual resume)
+11. Date Posted
+12. Image (of the job seeker)
+14. Desired Job Categories
+15. Job Descriptions Downloaded
+16. Interviews
+17. Date of Last Download
+18. Outstanding Balance
+
+
+- Job seekers can post their resumes on your web site and indicate the kinds of jobs they are interested in. 
+- They can also browse your web site for job descriptions; when they find a job they are interested in, they can request an interview. 
+- Each time your web site arranges an interview for a job seeker, he or she will be charged $1.
+
+
+#### Company:
+
+1. Company Id
+2. Company Name
+3. Street Address
+4. City
+5. State
+6. Zip Code
+7. Telephone
+8. Job Descriptions Supplied
+9. Interviews Given
+10. Resumes Downloaded
+11. Date of Last Download
+12. Outstanding Balance
+
+- Companies may post job descriptions on your web site and browse the site for resumes of perspective employees. 
+- If they see a resume they like, they can request an interview with the job seeker. 
+- Each time your web site arranges an interview for a company, the company will be charged $10.
+
+#### Posted Jobs:
+
+1. Job Description ID
+2. Title
+3. Date Posted
+4. Document (actual job description)
+5. Job Category
+6. Company
+
+#### Job Categories:
+
+1. Job Category ID
+2. Job Category Name
+3. Parent Category
+4. Sub-Categories
+
+- Job categories are hierarchical. For example, the category Computers might have sub-categories Hardware, Software, Database, etc. 
+- Its parent category might be Information Technology.
+
+#### Interviews:
+
+1. Interview ID
+2. Company
+3. Job Seeker
+4. Date/Time
+5. Customer Representative
+
+- An interview is between a company and a job seeker. 
+- You should assign a customer representative of your web site to arrange/oversee each interview. 
+- You can choose any scheme you like for assigning customer representatives to interviews, as long as you document the scheme clearly. For example, you can assign a customer representative to each category in your job-classification hierarchy. 
+- The revenue generated under a category is credited to its representative.
+
+#### Employees:
+
+1. Social Security no.
+2. Last Name
+3. First Name
+4. Street Address
+5. City
+6. State
+7. Zip Code
+8. Telephone
+9. Start Date
+10. Hourly Rate
+
+- The employees of your web-site company include a number of customer representatives and a manager.
+
+### Transaction Support
+
+#### Manager Transactions:
+
+* Add, Edit and Delete information for an employee
+* Obtain a sales report for a particular month
+* Produce a comprehensive listing of all job seekers and companies
+* Produce a list of interviews by job seeker name, company name, or by job description
+* Produce a summary listing of revenue generated by a particular job seeker, company, or job description
+* Determine which job description generated most total revenue, and which customer representative generated most total revenue
+* Determine which job seeker or company generated most total revenue
+* Produce a Best-Sellers list of job descriptions
+* Determine the most popular company, in terms of number of interviews requested, for a particular job category
+
+- The manager is responsible for creating and maintaining the classification hierarchy of job types. 
+- When a new job description is received from a company, the manager must decide into which category to place the job description, and create a new category if necessary.
+
+#### Customer Representative Transactions:
+
+* Add, Edit and Delete information for a job seeker or company
+* Produce customer mailing lists
+* Produce a list of job suggestions for a given job seeker (based on that job seeker's past interviews)
+
+- The customers of your web site, i.e. job seekers and companies, should be able to easily browse your web site and and perform downloads and request interviews. 
+- While a customer will not be permitted to access the database directly, he or she should be able to retrieve useful information. 
+
+Job Seekers should be able to retrieve the following:
+
+* Customer account information
+* Job descriptions by a given company
+* Job descriptions of a particular type
+* Job descriptions with a particular keyword or set of keywords in the title
+* Best-Seller list of job descriptions
+* Personalized job-description suggestion list
+
+Companies should be able to retrieve the following:
+
+* Customer account information
+* Resumes of a particular job type
+* Best-Seller list of resumes
+* Personalized resume suggestion list
+
+Your database system should provide controlled access to the data by distinguishing between the different types of users: 
+- manager
+- customer representatives
+- customers
+
+* Customer Representatives should not be able to perform manage-level transactions; however, they should be able to read employee information, except for the hourly rate.
+* Customer Representatives should be able to record an interview.
+* A customer should not be allowed to access other customers' account information, or to any employee information.

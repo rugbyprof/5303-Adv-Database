@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!-- saved from url=(0226)http://seg.sharethis.com/getSegment.php?purl=http%3A%2F%2Fwww.startutorial.com%2Farticles%2Fview%2Fphp-crud-tutorial-part-2&jsref=http%3A%2F%2Fwww.startutorial.com%2Farticles%2Fview%2Fphp-crud-tutorial-part-1&rnd=1449099302921 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>iframe[id*="google_ads_iframe_"] { display: none !important; } </style><script>(function blockPopupsFunc(popupBlockMessage, showNotification, extensionId) {
+    var stndz = {
+        originalWindowOpen: window.open,
+        originalDocumentCreateElement: document.createElement,
+        originalDocumentCreateEvent: document.createEvent,
+        lastCreatedAnchor: undefined,
+        lastCreatedAnchorTime: undefined,
+        allowed: false
+    };
+
+    var windowOpenBlockRegex = /(mediaserver|directrev|tradeadexchange|liveadexchanger|ordingly\.com|terraclicks|tracki112\.com|popped|ahtamsu\.ru)/i;
+    window.open = function() {
+        var popupArguments = arguments;
+        var openPopupFunc = function() {
+            return stndz.originalWindowOpen.apply(window, popupArguments);
+        };
+
+        if (stndz.allowed)
+            return openPopupFunc();
+
+        var block = arguments[0] && windowOpenBlockRegex.test(arguments[0]);
+        if (block) {
+            showPopupNotification('ad-popup', arguments, openPopupFunc);
+            return { };
+        }
+
+        var targetName = arguments.length >= 2 ? arguments[1] : null;
+        if (targetName == '_parent' || targetName == '_self' || targetName == '_top')
+            return openPopupFunc();
+
+        if (!window.event)
+            return openPopupFunc();
+
+        var currentTargetValid = window.event &&
+            window.event.currentTarget &&
+            window.event.currentTarget !== window &&
+            window.event.currentTarget !== document &&
+            window.event.currentTarget !== document.body;
+
+        var targetValid = window.event &&
+            window.event.target &&
+            window.event.target.tagName == 'A' &&
+            window.event.target.href.indexOf('http') == -1;
+
+        if (currentTargetValid || targetValid) {
+            return openPopupFunc();
+        }
+
+        if (showNotification)
+            showPopupNotification('not-user-initiated', arguments);
+
+        return { };
+    };
+
+    document.createElement = function() {
+        var element = stndz.originalDocumentCreateElement.apply(document, arguments);
+        if (element.tagName == 'A') {
+            stndz.lastCreatedAnchorTime = new Date();
+            stndz.lastCreatedAnchor = element;
+        }
+
+        return element;
+    };
+
+    var anchorPopupsExcludedHosts = { 'sh.st': true };
+    document.createEvent = function() {
+        if (!stndz.allowed && arguments[0].toLocaleLowerCase().indexOf('mouse') > -1 && stndz.lastCreatedAnchorTime && new Date() - stndz.lastCreatedAnchorTime < 50) {
+            if (anchorPopupsExcludedHosts[document.location.host]) {
+                stndz.lastCreatedAnchor.target = "_top";
+            } else {
+                var anchor = stndz.lastCreatedAnchor;
+                showPopupNotification('create-link', null, function() { anchor.click(); });
+                return null;
+            }
+        }
+
+        return stndz.originalDocumentCreateEvent.apply(document, arguments);
+    };
+
+    window.addEventListener("message", function(event) {
+        switch (event.data.type) {
+            case 'stndz-show-popup-notification':
+                if (window !== window.top)
+                    return;
+
+                window.stndzPopupActionWindow = event.source;
+                window.stndzPopupClicked = function(option) {
+                    window.hidePopupNotification();
+                    window.stndzPopupActionWindow.postMessage({type: 'stndz-popup-action', option: option}, event.origin);
+                };
+
+                if (window.popupNotificationOpen) {
+                    window.highlightPopupNotification();
+                    return;
+                } else if (window.popupNotificationOpen === false) { // if it was previously opened just show it, the delegate to open the new window was created above
+                    window.showPopupNotification();
+                } else {
+                    var notificationElement = createNotificationOnPage();
+
+                    setTimeout(function() {
+                        window.showPopupNotification();
+                    }, 0);
+
+                    window.showPopupNotification = function() {
+                        window.popupNotificationOpen = true;
+
+                        notificationElement.style.top = '0px';
+
+                        var hidePopupNotificationId;
+                        window.hidePopupNotification = function() {
+                            window.popupNotificationOpen = false;
+                            notificationElement.style.top = '-40px';
+                            notificationElement.style.height = '30px';
+                            clearTimeout(hidePopupNotificationId);
+                        };
+
+                        hidePopupNotificationId = setTimeout(window.hidePopupNotification, 30 * 1000);
+                        notificationElement.onmouseover = function() {
+                            clearTimeout(hidePopupNotificationId);
+                        };
+                    };
+
+                    var helpOpen = false;
+                    var originalBackground = notificationElement.style.background;
+                    window.highlightPopupNotification = function() {
+                        notificationElement.style.background = '#FFFBCC';
+                        setTimeout(function() {
+                            notificationElement.style.background = originalBackground;
+                        }, 1000);
+
+                        notificationElement.style.height = '120px';
+                        helpOpen = true;
+                    };
+
+                    window.togglePopupNotificationHelp = function() {
+                        notificationElement.style.height = helpOpen ? '30px' : '120px';
+                        helpOpen = !helpOpen;
+                    };
+                }
+
+                break;
+
+            case 'stndz-popup-action':
+                window.stndzPopupAction && window.stndzPopupAction(event.data.option);
+                break;
+        }
+    }, false);
+
+    function allowPopupsOnThisPage() {
+        stndz.allowed = true;
+    }
+
+    function showPopupNotification(blockType, args, openPopupFunc) {
+        if (!showNotification)
+            return;
+
+        window.stndzPopupAction = function(option) {
+            if (option == 'once' || option == 'allow') {
+                allowPopupsOnThisPage();
+                popupBlockMessage.arguments = args;
+                openPopupFunc && openPopupFunc();
+            } else {
+                showNotification = false;
+            }
+
+            popupBlockMessage.option = option;
+            var stndzActivateFrame = document.getElementById("stndz-activate");
+            var windowToPost = stndzActivateFrame ? stndzActivateFrame.contentWindow : window;
+            windowToPost.postMessage(popupBlockMessage, '*');
+        };
+
+        window.top.postMessage({
+            type: 'stndz-show-popup-notification',
+            iframeGuid: popupBlockMessage.iframeGuid,
+            blockType: blockType
+        }, '*');
+    }
+
+    function createNotificationOnPage() {
+        var style = document.createElement('style');
+        style.textContent = '.stndz-popup-notification {' +
+        'width: 670px;' +
+        'height: 30px;' +
+        'position: fixed;' +
+        'overflow: hidden;' +
+        'top: -40px;' +
+        'margin: 0 auto;' +
+        'z-index: 2147483647;' +
+        'left: 0px;' +
+        'right: 0px;' +
+        'background: rgb(240, 240, 240);' +
+        'border-radius: 0px 0px 5px 5px;' +
+        'border: solid 1px #999999;' +
+        'box-shadow: 0px 2px 5px #444444;' +
+        'border-top: none; ' +
+        'line-height: 31px;' +
+        'font-size: 12px;' +
+        'font-family: sans-serif;' +
+        'color: #59595c;' +
+        'text-align: center;' +
+        'direction: ltr;' +
+        'transition-duration: 500ms;}' +
+        '.stndz-button {' +
+        'padding: 3px 15px !important;' +
+        'border: solid 1px #a4a6aa !important;' +
+        'height: 25px !important;' +
+        'border-radius: 5px !important;' +
+        'background-color: #3058b0 !important;' +
+        'background: linear-gradient(#f5f5f5, #dfdfdf) !important;' +
+        'box-shadow: inset 0px 1px 0px #ffffff, inset 0 -1px 2px #acacac !important;' +
+        'color: #555555 !important;' +
+        'font-size: 12px !important;' +
+        'line-height: 16px !important;' +
+        'font-family: sans-serif !important;' +
+        'text-align: center !important;' +
+        'background-repeat: no-repeat !important;' +
+        'text-decoration: none !important;}' +
+        '.stndz-button:hover{' +
+        'background: linear-gradient(#eeeeee, #d1d1d1) !important;' +
+        'text-decoration: none !important;' +
+        'color: #555555 !important;}';
+        document.documentElement.appendChild(style);
+
+        var div = document.createElement('div');
+        div.setAttribute('class', 'stndz-popup-notification');
+        div.innerHTML = '<img src="chrome-extension://' + extensionId + '/views/web_accessible/images/icon.png" style="top: 5px; left: 5px;height: 20px; display: initial;position: absolute;">' +
+        '&nbsp;<b>Site Popup Blocked:</b>' +
+        '&nbsp;&nbsp;<a href="javascript:void(0)" class="stndz-button" onclick="window.stndzPopupClicked(\'once\')">Allow once</a>' +
+        '&nbsp;&nbsp;<a href="javascript:void(0)" class="stndz-button" onclick="window.stndzPopupClicked(\'allow\')">Allow always</a>' +
+        '&nbsp;&nbsp;<a href="javascript:void(0)" class="stndz-button" onclick="window.stndzPopupClicked(\'block\')">Block always</a>' +
+        '&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)" onclick="window.togglePopupNotificationHelp()"><img src="chrome-extension://' + extensionId + '/views/web_accessible/images/help.png" style="opacity: 0.3; position: absolute; top: 7px; display: initial;right: 30px;" /></a>' +
+        '&nbsp;<a href="javascript:void(0)" onclick="window.hidePopupNotification()"><img src="chrome-extension://' + extensionId + '/views/web_accessible/images/close.png" style="opacity: 0.3; position: absolute; top: 7px; display: initial;right: 7px;" /></a>' +
+        '<br /><div style="line-height: 22px; text-align: left; padding: 0px 5px 0px 5px; font-size: 11px;">The site tried to open a popup and Stands blocked it.' +
+        '<br />if you don\'t trust this site you should click <b>"Block always"</b>, if you do click <b>"Allow always"</b>.' +
+        '<br />If you\'re not sure click <b>"Allow once"</b> which will open the popup and pause popup blocking for the current page visit.' +
+        '<br />You can always change your settings in the application window.</div>';
+        document.body.appendChild(div);
+
+        return div;
+    }
+})({"type":"popup-user-action","iframeGuid":"SezjTNIhX9DlYwo2YKAPTXvoouYaUs4BaToI"},true, 'lgblnfidahcdcjddiepkckcfdhpknnjh');</script>
+					<title>ShareThis Segmenter</title>
+				</head>
+				<body>
+					<!-- Google Tag Manager -->
+<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-TR24NF" 
+height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<script async="" src="gtm.js"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+{'gtm.start': new Date().getTime(),event:'gtm.js'}
+);var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TR24NF');</script>
+<!-- End Google Tag Manager --><script type="text/javascript">var ref=document.referrer;var lurl = (("https:" == document.location.protocol) ? "https://sb." : "http://b.")+"scorecardresearch.com/";lurl+="b?";lurl+="c1=7"+"&c2=8097938"+"&rn=" +Math.round(Math.random() * 2147483647 )+ "&c7=" + encodeURIComponent(document.location.href)+ "&c3=8097938"+ "&c8="+encodeURIComponent(document.title)+ ( (ref)? "&c9="+encodeURIComponent(document.referrer) :  "" )+ "&cv=2.2"+ "&cs=js";var logger = new Image(1,1);logger.src = lurl;logger.onload = function(){return;};</script>
+<!-- mapping not found: www.startutorial.com -->
+				
+				</body></html>

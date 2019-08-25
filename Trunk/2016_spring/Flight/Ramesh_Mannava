@@ -1,0 +1,520 @@
+### Title: Sql Flight Assignment
+### Your Name: Ramesh Mannava
+
+#### Question 1:
+Print a passenger list for flight 3 on 4-1
+
+SQL:
+'''
+SELECT p.name
+FROM passengers p
+WHERE p.passid
+IN (
+
+SELECT pt.passid
+FROM pass_ticketed pt
+WHERE pt.fltno =3
+AND pt.date =  '4-1'
+)
+LIMIT 0 , 30
+'''
+
+#### Answer:
+'''
+Duck, Donald
+Wayne, John
+Mazurki, Mike
+Marvin, Lee
+Romero, Cesar
+Lamour, Dorothy
+'''
+
+#### Question 2:
+Print a passenger list for flight 5 on 4-2
+
+SQL:
+
+'''
+SELECT p.name
+FROM passengers p
+WHERE p.passid
+IN (
+
+SELECT pt.passid
+FROM pass_ticketed pt
+WHERE pt.fltno =5
+AND pt.date =  '4-2'
+)
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+Mouse, Mickey
+Moose, Bullwinkle
+'''
+
+#### Question 3:
+Print a list of all overbooked flights.
+
+SQL:
+
+'''
+SELECT ac.acno
+FROM (
+
+SELECT asm.acno, COUNT( * ) AS capc
+FROM pass_ticketed pt, aircraft_assignments asm
+WHERE pt.fltno = asm.fltno
+AND pt.date = asm.date
+GROUP BY pt.fltno, pt.date
+)ac, aircraft act
+WHERE ac.acno = act.acno
+AND ac.capc > act.capacity
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+N173WY
+'''
+
+#### Question 4:
+Print a list of passengers with more than one ticket.
+
+SQL:
+
+'''
+SELECT p.name
+FROM passengers p
+WHERE p.passid
+IN (
+SELECT pt.passid
+FROM pass_ticketed pt
+GROUP BY pt.passid
+HAVING COUNT( * ) >1
+)
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+Simpson, Richard
+Halverson, Ranette
+Carpenter, Stewart
+Mouse, Mickey
+Duck, Donald
+Moose, Bullwinkle
+Wayne, John
+Mazurki, Mike
+Marvin, Lee
+Lamour, Dorothy
+'''
+
+#### Question 5:
+Print a list of passengers with more than one ticket on the same day.
+
+SQL:
+
+'''
+SELECT ps.name
+FROM passengers ps
+WHERE ps.passid
+IN (
+SELECT pt.passid
+FROM pass_ticketed pt
+GROUP BY pt.passid, pt.date
+HAVING COUNT( * ) >1
+)
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+Simpson, Richard
+Carpenter, Stewart
+Duck, Donald
+Wayne, John
+Marvin, Lee
+Lamour, Dorothy
+'''
+
+#### Question 6:
+Print a list of flights that use aircraft N173WY.
+
+SQL:
+
+'''
+SELECT fltno
+FROM aircraft_assignments
+WHERE acno =  'N173WY'
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+2
+5
+1
+4
+'''
+
+#### Question 7:
+Print a list of pilots who fly on April 1.
+
+SQL:
+
+'''
+SELECT * 
+FROM pilots
+WHERE pilotid
+IN (
+SELECT pilotid
+FROM pilot_assignments
+WHERE DATE =  '4-1'
+)
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+1030 Wright, Orville
+2137 Lindergh, Charles
+241  Yeager, Chuck
+7305 Post, Wiley
+'''
+
+#### Question 8:
+Print a list of pilots who fly on both days.
+
+SQL:
+
+'''
+SELECT p.pilotid,p.name
+FROM pilots p
+WHERE p.pilotid
+IN (
+SELECT pst.pilotid
+FROM pilot_assignments pst, pilot_assignments psg
+WHERE pst.pilotid = psg.pilotid
+AND pst.date != psg.date
+GROUP BY pst.pilotid
+HAVING COUNT( * ) >1
+)
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+1030 Wright, Orville
+241  Yeager, Chuck
+7305 Post, Wiley
+'''
+
+#### Question 9:
+Print a list of pilots who have two flights on the same day.
+
+SQL:
+
+'''
+SELECT p.pilotid, p.name
+FROM pilots p
+WHERE p.pilotid
+IN (
+SELECT pst.pilotid
+FROM pilot_assignments pst
+GROUP BY pst.pilotid, pst.date
+HAVING COUNT( * ) =2
+)
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+1030 Wright, Orville
+2137 Lindergh, Charles
+7305 Post, Wiley
+4315 Lovell, James
+29   Wittman. Steve
+'''
+
+#### Question 10:
+Print a List of flights that do not have a complete crew.
+
+SQL:
+
+'''
+SELECT ac.acno, aps.date, aps.fltno
+FROM (
+SELECT ps.date, ps.fltno, COUNT( * ) AS pilotcount, air.acno
+FROM pilot_assignments ps, aircraft_assignments air
+WHERE ps.date = air.date
+AND ps.fltno = air.fltno
+GROUP BY ps.date, ps.fltno, air.acno
+)aps, aircraft ac
+WHERE aps.pilotcount < ac.pilots
+AND aps.acno = ac.acno
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+N412B  4-1 3
+N747UA 4-2 3
+N412B  4-2 6
+'''
+
+#### Question 11:
+Print of list of flights where destination is DFW.
+
+SQL:
+
+'''
+SELECT DISTINCT (
+fltno
+)
+FROM flights
+WHERE destination =  'DFW'
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+4
+5
+6
+'''
+
+#### Question 12:
+Print a list of flights where origin or destination is LAX
+
+SQL:
+
+'''
+SELECT DISTINCT (
+fltno
+)
+FROM flights
+WHERE origin =  'LAX'
+OR destination =  'LAX'
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+3
+6
+'''
+
+#### Question 13:
+Print the origin and destination of flights with passenger equals Duck, Donald or Wayne, John.
+
+SQL:
+
+'''
+SELECT origin, destination
+FROM flights
+WHERE fltno
+IN (
+
+SELECT fltno
+FROM pass_ticketed
+WHERE passid
+IN (
+
+SELECT passid
+FROM passengers
+WHERE name
+IN (
+'Duck, Donald',  'Wayne, John'
+)
+)
+)
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+DFW LAX
+DIA DFW
+ORD DFW
+LAX DFW
+DFW LAX
+DIA DFW
+ORD DFW
+'''
+
+#### Question 14:
+Print a list of flight numbers and origins.
+
+SQL:
+
+'''
+SELECT DISTINCT (
+fltno
+), origin
+FROM flights
+LIMIT 0 , 30
+'''
+#### Answer:
+
+'''
+1 DFW
+2 DFW
+3 DFW
+4 DIA
+5 ORD
+6 LAX
+'''
+
+#### Question 15:
+Print a list of aircraft types from equipment assigned where pilot number=1030.
+
+SQL:
+
+'''
+SELECT DISTINCT (
+
+TYPE
+)
+FROM aircraft
+WHERE acno
+IN (
+
+SELECT acno
+FROM aircraft_assignments
+WHERE fltno
+IN (
+
+SELECT fltno
+FROM pilot_assignments
+WHERE pilotid =1030
+)
+)
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+C-172
+B-18
+'''
+
+#### Question 16:
+Print a list of pilots who fly with at least two other pilots.
+
+SQL:
+
+'''
+SELECT p.pilotid
+FROM (
+		SELECT psg.pilotid, psg.date, psg.fltno
+		FROM pilot_assignments psg
+		GROUP BY psg.date, psg.fltno
+		HAVING COUNT( * ) >2
+	)p, pilot_assignments ps
+WHERE p.date = ps.date
+AND p.fltno = ps.fltno
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+No Output
+'''
+
+#### Question 17:
+Print a list of pilots who fly only one type of plane.
+
+SQL:
+
+'''
+'''
+
+#### Answer:
+'''
+'''
+
+
+#### Question 18:
+Print a list of passengers booked on flights assigned to pilot=1030.
+
+SQL:
+
+'''
+SELECT name
+FROM passengers
+WHERE passid
+IN (
+
+SELECT passid
+FROM pass_ticketed
+WHERE fltno
+IN (
+
+SELECT fltno
+FROM pilot_assignments
+WHERE pilotid =1030
+)
+)
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+Simpson, Richard
+Halverson, Ranette
+Carpenter, Stewart
+Griffin, Terry
+Bunny, Bugs
+Wayne, John
+'''
+
+#### Question 19:
+Print a list of pilots assigned to fly plane=N35A.
+
+SQL:
+
+'''
+SELECT * 
+FROM pilots
+WHERE pilotid
+IN (
+
+SELECT pilotid
+FROM pilot_assignments
+WHERE fltno
+IN (
+
+SELECT fltno
+FROM aircraft_assignments
+WHERE acno =  'N35A'
+)
+)
+LIMIT 0 , 30
+'''
+
+#### Answer:
+
+'''
+1030 Wright, Orville
+2137 Lindergh, Charles
+7305 Post, Wiley
+4315 Lovell, James
+29   Wittman. Steve
+'''

@@ -1,51 +1,55 @@
-# 5303-Adv-Database
-A database course covering relational and no-sql databases.
+# 5303 Advanced Database
 
-Sources: [NoSql](http://www.lezinter.net/tmp/noSQL.pdf)
+### Roster
+![Excel Icon](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1bYgPP1VHlXR1vsjmkMO9vhk_x7y-GIcCIr0gdyWYdWQ/edit?usp=sharing)
 
-## Roster
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1Ryb4wiL9mQjTCPeLLASosfHuUi3YnZ6AlEXQChcUCQw/edit?usp=sharing)
+### General Course Info
 
-- Days: MW 1600pm 1720pm 
-- Location: BO 320 
-- Final Exam: Monday Dec 12th, 5:45 - 7:45 p.m.
-- Dates: August 29 - Dec 9
-- Holidays: 
-    - Thanksgiving November 23-25 
-- Last Day for “W” @ 4:00 p.m. : October 31
+- ___Days:___ MW 12:00 a.m. - 13:20 p.m.
+- ___Location:___ BO 320
+- [___Semester:___](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal1920.pdf)Mon August 26<sup>th</sup> - Fri Dec 7<sup>th</sup>
+- [___Holidays:___](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal1920.pdf)
+  1. ___Thanksgiving:___ Nov 27<sup>th</sup> - Sun Dec 1<sup>st</sup>
+- [___Last Day for “W”:___](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal1920.pdf) Mon Oct 28<sup>th</sup>
+- [___Final Exam:___](https://msutexas.edu/registrar/_assets/files/pdfs/fall19finals.pdf) Wednesday Dec 11<sup>th</sup>, 3:30 p.m. - 5:30 p.m.
+
+### Topics
+
+- SQL / RDBMS / Relational databases
+  - [Mysql](https://www.mysql.com/)
+  - [PostGres](https://www.postgresql.org/)
+- NoSQL / Non-relational databases
+  - Document Stores
+    1. [MongoDB](https://www.mongodb.com/)
+    2. [CouchBase](https://www.couchbase.com/)
+  - Wide Column Stores
+    1. [Cassandra](http://cassandra.apache.org/)
+    2. [Scylla](http://www.scylladb.com/)
+    3. [HBase](https://hbase.apache.org/)
+  - Key-Value Stores
+    1. [Redis](https://redis.io/)
+    2. [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
+  - Graph Databases
+    1. [Neo4J](https://neo4j.com/)
+- API Querying
+  - [GraphQL](https://graphql.org/)
+
+## Grading
+
+| Categories                                  |       | Grade |          |
+| :------------------------------------------ | :---: | :---: | :------: |
+| Presentations <sup>**1**</sup>              |  30%  |   A   |  89-100  |
+| Projects <sup>**2**</sup>                   |  30%  |   B   |  79-88   |
+| Final Exam <sup>**3**,</sup><sup>**4**</sup> |  30%  |   C   |  69-78   |
+| Github Portfolio <sup>**5**</sup>           |  10%  |   D   |  59-68   |
+|                                             |       |   F   | below 59 |
 
 
-## Course Topics:
-TBD
-
-## Grading:	
-
-| Categories                     |     |  Grade   |          | 
-|:------------------------------ |:---:|:--------:|:--------:|
-| Exams (3)<sup>**1**</sup>	     | 35% |  A       | 89-100   |
-| Programs (5-8)<sup>**2**</sup> | 15% |  B       |  79-88   |
-| Homework/Quizzes<sup>**3**</sup>|	25%|  C       | 69-78    |
-| Final<sup>**4**</sup>	         | 20% |  D       | 59-68    |
-| Participation	                 | 05% |  F       | below 59 |
-
-
->**1**. Lowest exam grade can be replaced by Final Exam grade (if deemed ok by instructor)
+>**1**. Each student will give 2 presentations over topics of the professors choosing.
 >
-**2**. Despite the low overall value of the programming portion of the course, ALL programs must be turned in running to pass the course.  They don't have to be necessarily correct, but they must run and they need to at least approach the solution (a "Hello World" program will not work). 
+>**2**. Programming projects will be assigned. Any project turned in must include basic instructions, comments, file descriptions and of course must run.
 >
->**3**. The worth of the "homework/quizzes" section of the course will be calculated by a function based on the number of assignments and quizzes. If zero homeworks / quizzes are assigned then they will be assigned a 0% portion. If at least 10 are assigned then the full 25% will be assigned as its weight. If the full weight is not used the class will decide how the remaining percentage points will be assigned. 
+>**3**. A final exam over general database topics will be given. As the semester progresses we will accumulate the necessary study materials from your projects and presentations, as well as my lessons.
 >
 >**4**. Plane ticket prices, events like weddings, or trips out of the country are not valid excuses for missing the final exam at its scheduled time. I will not make accommodations for anything other than an issue vetted by the dean of students. 
 
-## Misc:
-
-- Attending class is one of the primary keys to doing well in this class. Students may be dropped for excessive absences. There is no distinction made between excused and unexcused. 
-
-- Make-up exams are not given. If I see fit, then I will replace a missed exam with your final exam test grade. If you do miss an exam without prior approval, a letter from the dean of students will be needed as an excuse. 
-
-- A number of programming assignments will be made to code and execute. Microsoft Visual Studio 2013 or 2015 is recommended, although depending on class opinion, we may use QT4 for some assignments. 
-
-- Programs containing syntax errors are unacceptable and will be returned without grading (your programs must work). All submitted programs need to be submitted via Github. 
-
-
-- Periodically homework assignments will be taken up and graded. It is the student's responsibility to keep up with assignments and to ask questions over the assigned work, even if absent. All homework assignments are due at the specified time that may or may not be in conjunction with a class day. All assignments / homeworks will be uploaded via Github.

@@ -1,0 +1,414 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!--Converted with LaTeX2HTML 96.1 (Feb 5, 1996) by Nikos Drakos (nikos@cbl.leeds.ac.uk), CBLU, University of Leeds -->
+<HTML>
+<HEAD>
+<TITLE>Description of CSE 532 Database Programming Project</TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" LANG="EN">
+<center>
+<H1><FONT COLOR="#FF0000">CSE 532 -- Advanced Database Systems</FONT></H1>
+<H2>Fall 2001</H2>
+<H1>Requirements Specification for the Database Programming Project</H1>
+<H2>The information contained within this project description is subject
+    to change.  Please check this page frequently over the next couple
+    of weeks.</H2>
+<H2>Last Modified:  18 Sep 2001</H2>
+</center>
+<br>
+<P>
+In this project, you will design and implement an object-relational database
+system to support the operations of a <strong>streaming Video on Demand (VoD)
+web site</strong>.  You will use HTML and Java for the user interface, DB2
+for the database server, and Javascript, JDBC and SQL for connectivity between
+the user interface and database server.  The database server is accessible from
+any of the sbpub machines in Room 2206, and from the PCs in the Graduate
+PC lab (Computer Science Building, Room 1239).
+<P>
+To use a machine in the Grad PC lab, you need to physically be sitting in front
+of the machine.  Use your department account and password to log in.
+Regardless of where you do your development, you will need a
+separate account to access the DB2 server machine.  Please e-mail the TA
+<a href="mailto:yanrong@cs.sunysb.edu">Yan Rong</a>
+in order to receive your DB2 account information.
+Also, please see the <a href="http://www.cs.sunysb.edu/~yanrong/">Project Hints
+Page</a> for more information about accessing the DB2 Server.
+<P>
+If you own a PC, you are encouraged to develop as much of the code as possible
+on your PC, to ease the congestion in the PC and Pub labs.  As long as you use
+DB2 (or some similar database product supporting SQL 3 such as Oracle8i), HTML,
+Java/Javascript, JDBC, etc., it does not matter where your project runs.
+If you like, you can even bring in your own PC or laptop when it comes
+time to demo your project at the end of the semester.  The version of DB2
+running within the department is 7.1.
+<p>
+You can order or download a free copy of DB2 Universal Developer's Edition
+Version 7.1 from IBM by going to IBM's
+<a href="http://www-4.ibm.com/software/data/highered/">DB2 Scholars Program
+web site</a> and registering for the DB2 Scholars Program.
+<P>
+You are to work in teams of two.  Teams of any other size (including one and
+three) will not be allowed.   Pick a partner and also
+choose a name for your team.  Since you are expected to do a
+professional-looking job on this project, you can think of your team as a small
+hi-tech company.  E-mail the names of your team members and
+the name of your company to
+<a href="/cgi-bin/nomail.cgi/yanrong/0/2">yanrong AT cs DOT sunysb DOT edu</a>
+as soon as possible.  If you are unable to find a teammate, please let me know
+asap, and I will find one for you.
+<P>
+<!-- In a few weeks we hope to offer a tutorial session on Java, Javascript,
+and JDBC; we will keep you posted on this.
+Also, -->
+The TA is putting together a
+prototypical database system on which you can base your project.  We will give
+you access to the code, which should help you a lot.
+<!-- See the <a href="">project hints page</a>. -->
+In the meanwhile, you
+should start to become familiar with CGI programming, Java, JDBC, and HTML on
+your own.  Make sure you buy the books that we have recommended -- see the
+course homepage.
+<P>
+It is recommended that you regularly check the <a
+href="http://www.cs.sunysb.edu/~sas/courses/cse532/fall01/">course
+homepage</a>, for information on the term project.  The homepage will be
+updated from time to time with important information on how to proceed with the
+project.
+<P>
+The basic idea behind your VoD web site is that it will allow customers to
+browse/search the contents of your database (at least that part
+you want the customer to see) and to "rent" videos by streaming downloads
+at date/time specified by customers.
+Available videos should be organized into a
+<strong>classification hierarchy</strong> much like 
+the way the books portion of the <a href="http://www.amazon.com">amazon.com</a>
+web site is organized.  Each video-file download will be treated as a
+<strong>transaction</strong> by your system and the user charged accordingly.
+Your web site will maintain MPEG video files having the .mpg file extension.
+See <a href="http://www.mpeg.org/">www.mpeg.org</a> for further information
+about MPEG files.
+<P>
+Your database system must be based on the specifications and
+requirements that follow.
+<P>
+<H1><A NAME="SECTION00010000000000000000">1 System Users</A></H1>
+<P>
+The users of your system will be the customers that download streaming videos
+from your web site for viewing on their PCs or laptop computers; suppliers that
+capture videos as MPEG files and download these to your web site; customer
+representatives who process customer orders and provide other customer-related
+services; and the store's manager.  You should assume that the computer
+knowledge of the users is limited (say, that of a typical AOL subscriber), and
+thus your system must be easy to access, navigate, and operate.
+<P>
+<H1><A NAME="SECTION00020000000000000000">2 Required Data</A></H1>
+<P>
+The data items required for the music-store database can be classified into
+five categories: <EM>videos</EM>, <EM>customers</EM>, <EM>employees</EM>,
+<em>sales</em>, <em>suppliers</em>, and <em>orders</em>.
+<P> 
+This classification does not imply any particular table arrangement.  You are
+responsible for arranging the data items into tables, determining the
+relationships among tables and identifying the key attributes.  In addition,
+you should include indices in your tables to speed up query processing.
+You should base your choice of indices on the type and expected frequency of
+the queries outlined in Section&nbsp;<A HREF="main.html#sectxn">3</A>.
+Finally, you should specify and enforce integrity constraints on the data,
+including referential integrity constraints.
+<P>
+However, before you begin thinking about your relational model (i.e. tables,
+indices, etc.), you should first create an E-R diagram of your VoD
+database system.  The first project assignment, the details of which will be
+announced shortly, will ask you to create E-R, relational, and SQL models of
+your database system.
+<P>
+<H2><A NAME="SECTION00021000000000000000">2.1 Videos</A></H2>
+<P>
+The items required for this category include:
+<P>
+<UL><OL>
+<LI> Video ID
+<LI> Title
+<LI> Stars
+<LI> Director
+<LI> Year Produced
+<LI> Motion Picture/Video Company
+<LI> Motion Picture Association Rating
+<LI> Video Classification Type
+<LI> MPEG File
+<LI> Wholesale Price
+<LI> Download Price
+<LI> Current Sale Price
+<LI> Number of Rentals
+<LI> Number of Downloads
+<P>
+</OL></UL>
+<P>
+Each video has an associated MPEG file.
+Your database will classify videos according to the video classification
+type.  The classification scheme you are to implement should be tree-like.
+See the books section of the <a href="http://www.amazon.com">amazon.com</a> for
+a good example of such a classification hierarchy.  To implement such a
+hierarchy in your database system, you should use subtyping; i.e. make
+Video Classification Type 
+a user-defined data type, and subtype on that type.
+<P>
+As described in Section&nbsp;<A HREF="main.html#sectxn">3</A>, you will want to
+create web pages that allow a customer to download a video from
+your VoD web site as streaming video at a specified date/time.  You will also
+want to allow suppliers to upload video files to your web site, after having
+captured the video as an MPEG file.
+<!-- To implement the play and capture functionality you will need, you
+should ues Sun's Java Media Framework 2.1 (JMF2.1).  You can find the API for
+this package at
+<a href="http://www.java.sun.com/products/java-media/jmf/2.1/">the JMF2.1 web
+site</a>.
+-->
+<P>
+Although a streaming download of a video should accompany every rental of a
+video, the number of rentals and the number of copies downloaded
+<!-- (the last two items in the list above) -->
+can be different.  This can happen, for
+example, if you allow some video to be viewed for free as part of a
+promotional effort.
+<p>
+<H2><A NAME="SECTION00021000000000000000">2.2 Customer Data</A></H2>
+<P>
+The items required for this category include:
+<P>
+<UL><OL>
+<LI> Social Security no.
+<LI> Last Name
+<LI> First Name
+<LI> Street Address
+<LI> City
+<LI> State
+<LI> Zip Code
+<LI> Credit Card no.
+<LI> E-Mail Address
+<LI> Videos Rented (for each rental, include date/time and rental price)
+<LI> Videos Downloaded
+<LI> Date of Last Rental
+<LI> Date of Last Download
+<LI> Outstanding Balance
+<P>
+</OL></UL>
+<H2><A NAME="SECTION00023000000000000000">2.3 Employee Data</A></H2>
+<P>
+The items required for this category include:
+<P>
+<UL><OL>
+<LI> Social Security no.
+<LI> Last Name
+<LI> First Name
+<LI> Street Address
+<LI> City
+<LI> State
+<LI> Zip Code
+<LI> Telephone
+<LI> Start Date
+<LI> Hourly Rate
+<P>
+</OL></UL>
+<P>
+</OL></UL><H2><A NAME="SECTION00025000000000000000">2.4 Sales Data</A></H2>
+<P>
+The items required for this category include:
+<P>
+<DL COMPACT><OL>
+<LI> Transaction date and time
+<LI> Requested Viewing date/time
+<LI> Customer Representative
+<LI> Customer
+<LI> Videos downloaded and rental prices
+</OL></UL>
+<P>
+You are to assign a customer representative to each transaction.  This person
+is responsible for ensuring that the customer's order is filled properly and
+for answering any questions the customer may have regarding his or her
+transaction.  You can choose any scheme you like for assigning customer
+representatives to transactions, as long as you document the scheme clearly.
+It should also be made clear during your project demo how your scheme works.
+One possible scheme is that the store's manager assigns
+a customer representative to each category of videos in your
+classification hierarchy.  The revenue generated under a category is credited
+to its representative.
+<P>
+</OL>
+<P>
+</OL></UL><H2><A NAME="SECTION00025000000000000000">2.5 Supplier Data</A></H2>
+<P>
+The items required for this category include:
+<P>
+<DL COMPACT><OL>
+<LI> Supplier Id
+<LI> Company Name
+<LI> Street Address
+<LI> City
+<LI> State
+<LI> Zip Code
+<LI> Telephone
+<LI> Videos Supplied
+<LI> Cost of each Video Supplied
+<P>
+</OL>
+<P>
+</DL><H2><A NAME="SECTION00026000000000000000">2.6 Order Data</A></H2>
+<P>
+This category of data should include the following:
+<P>
+<UL><OL>
+<LI> Video Ordered
+<LI> Supplier Id
+<LI> Date Ordered
+<LI> Date Received
+</OL></UL>
+<P>
+<H1><A NAME="SECTION00030000000000000000">3 User-Level Transactions</A></H1>
+<P>
+<A NAME="sectxn">&#160;</A>
+A database <EM>transaction</EM> can be viewed as a small program (written in
+the DML) that either updates or queries the database.  Transactions that change
+the contents of the database must do so in a consistent manner.  Moreover,
+transactions should not interfere with one another when running concurrently.
+<P>
+What follows is a breakdown of the user-level transactions that your database
+system should support.
+<P>
+<H2><A NAME="SECTION00031000000000000000">3.1 Manager-Level Transactions</A></H2>
+<P>
+The manager should be able to:
+<P>
+<UL>
+<LI> Add, Edit and Delete information for an employee
+<LI> Obtain a sales report for a particular month
+<LI> Produce a comprehensive listing of all videos in stock
+<LI> Produce a list of rentals by video name or by customer name
+<LI> Produce a summary listing of revenue generated by a particular
+     video, video type, or customer.
+<LI> Determine which film star generated most total revenue,
+     and which customer representative generated most total revenue
+<LI> Determine which customer generated most total revenue
+<LI> Produce a Best-Sellers list of videos
+<LI> Add, Edit and Delete information for a supplier
+<LI> Place an order for videos with a supplier
+<LI> Update the database when the order is received to reflect the shipment
+<LI> Determine the least expensive supplier for a particular video
+</UL>
+<P>
+The manager is responsible for creating and maintaining the classification
+hierarchy of video types.  When a new video is received from a
+supplier, the manager must decide into which category to place the video,
+and create a new category if necessary.
+<P>
+<H2><A NAME="SECTION00032000000000000000">3.2 Customer-Representative-Level Transactions</A></H2>
+<P>
+Customer Representatives should be able to:
+<P>
+<UL>
+<LI> Add, Edit and Delete information for a customer
+<LI> Produce a customized menu for a customer
+<LI> List videos currently being offered at a special sale price
+<LI> Produce customer mailing lists
+<LI> Produce a list of video suggestions for a given customer (based on
+     that customer's past rentals)
+<P>
+</UL><H2><A NAME="SECTION00033000000000000000">3.3 Customer-Level Transactions</A></H2>
+<P>
+The customer should be able to easily browse the contents of your web site and
+make rentals and perform streaming downloads.  While the customer
+will not be permitted to access the database directly, the customer should be
+able to retrieve the following information.
+<P>
+<UL>
+<LI> Customer account information
+<LI> Videos currently being offered at a special sale price
+<LI> Videos by a given movie star, director, or rating value
+<LI> Videos of a particular type
+<LI> Videos with a particular keyword or set of keywords in the title
+<LI> Best-Seller list
+<LI> Personalized videos suggestion list
+</UL>
+<P>
+Customers should also be able to sample videos.  That is, they should be
+able to download the first few seconds of any streaming video, at no charge.
+<H2><A NAME="SECTION00033000000000000000">3.4 Supplier-Level Transactions</A></H2>
+<P>
+Suppliers should be able to fill orders they are contracted for.
+To do so, they should have the capability to capture video as MPEG files and
+download the files to your database in order to fill an order.
+<p>
+</UL><H1><A NAME="SECTION00040000000000000000">4 User Access Control</A></H1>
+<P>
+Your database system should provide controlled access to the data by
+distinguishing between the different types of users: manager, customer
+representatives, and customers.
+<P>
+<UL>
+<LI> Customer Representatives should not be able to perform manage-level
+     transactions; however, they should be able to read employee information,
+     except for the hourly rate.
+<LI> Customer Representatives should be able to record the receipt of an order
+     from a supplier.
+<LI> A customer should not be allowed to access other customers' account
+     information, or to any employee information.
+<P>
+<!-- </UL><H1><A NAME="SECTION00050000000000000000">5 Utilities</A></H1>
+<P>
+In addition to the transactions described above, the system
+should provide facilities for:
+<P>
+<UL>
+<LI> Allowing the manager to add and delete users
+<LI> Backing up the database files
+-->
+<P>
+</UL><H1><A NAME="SECTION00060000000000000000">6 User Interface</A></H1>
+<P>
+HTML and its successors provide facilities for creating pop-up and pull-down
+menus, value lists, input/output forms, labels and customized reports. You
+should make use of all of these capabilities, and in the process come up with a
+system that caters to users with only limited computer knowledge.  The
+information you provide to customers should look professional and inviting.
+<P>
+<H1><A NAME="SECTION00070000000000000000">7 Documentation</A></H1>
+<P>
+You will be required to supplement your completed database implementation 
+with a design document that contains information concerning your design
+criteria and decisions.  The following is a list of some of the information you
+should include:
+<P>
+<UL><LI>
+Entity-Relationship (E-R) Diagram of the complete database scheme<LI>
+Lucid description of the relational database scheme of your web site's
+database including a discussion of the reasoning behind your design decisions.
+Make clear how your design supports efficient query processing.<LI>
+A list of all functional dependencies in the relational database scheme<LI>
+Description of integrity constraints including referential integrity
+</UL>
+<P>
+You will also be required to submit a <EM>Users Guide</EM> that carefully
+explains how to use all aspects of the system.  It should be understandable by
+non-computer experts.  Be sure that the user interface (screen design, menu
+structure, etc.) is clearly explained.
+<P>
+<H1><A NAME="SECTION00080000000000000000">8 Grading</A></H1>
+<P>
+You will be given assignments to produce an E-R and relational model of your
+system.  The due dates for these assignments will be announced shortly.
+<P>
+All documentation should be done in HTML and be available on-line.  Do not
+hand-in any hardcopies of anything during this course unless I explicitly ask
+you to.
+<P>
+After you have submitted the final system, you will be asked to present a short
+(15 minutes) demo to myself or the TA.
+Demos will take place on the Friday and Saturday of the last week of classes.
+<P>
+<!-- <H1><A NAME="SECTION00090000000000000000">  About this document ... </A></H1>-->
+<BR> <HR>
+<P><ADDRESS>
+<I>Scott Smolka <BR>
+Last Modified:  Tue Sep 18 11:20:11 EDT 2001</I>
+</ADDRESS>
+</BODY>
+</HTML>
