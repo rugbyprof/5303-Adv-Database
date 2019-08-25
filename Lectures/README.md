@@ -1,1 +1,1 @@
-## Lessons
+## Lectures
