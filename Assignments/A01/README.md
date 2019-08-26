@@ -1,5 +1,5 @@
 ## Assignment 1 - Getting Started
-#### Due: Wednesday August 29th by 5:00pm
+#### Due: Wednesday August 29<sup>th</sup> by 5:00pm
 
 ## Getting Setup
 
