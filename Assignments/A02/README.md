@@ -37,3 +37,7 @@ More in class ...
 - API Querying
   - [GraphQL](https://graphql.org/)
   
+### Deliverables
+- Look for your top three DB's and submit them to me on slack with a private message.
+- Read a little bit about docker and install it on whatever dev machine you use. 
+- 
