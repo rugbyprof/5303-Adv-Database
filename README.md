@@ -9,7 +9,8 @@
 - ___Location:___ BO 320
 - [___Semester:___](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal1920.pdf)Mon August 26<sup>th</sup> - Fri Dec 7<sup>th</sup>
 - [___Holidays:___](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal1920.pdf)
-  - ___Thanksgiving:___ Nov 27<sup>th</sup> - Sun Dec 1<sup>st</sup>
+  - __Labor Day:__ Mon Sep 2<sup>nd</sup>
+  - ___Thanksgiving:___ Wed Nov 27<sup>th</sup> - Sun Dec 1<sup>st</sup>
 - [___Last Day for “W”:___](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal1920.pdf) Mon Oct 28<sup>th</sup>
 - [___Final Exam:___](https://msutexas.edu/registrar/_assets/files/pdfs/fall19finals.pdf) Wednesday Dec 11<sup>th</sup>, 3:30 p.m. - 5:30 p.m.
 
