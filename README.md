@@ -16,9 +16,12 @@
 
 ### Topics
 
+Typically database courses would involve `relational algebra` and `normal forms` and basically a theoretical side to RDBMS's. I've been teaching this as a survey of contemporary database choices along with projects to determine performance. So below is a list of databases that we will be looking at. 
+
 - SQL / RDBMS / Relational databases
   - [Mysql](https://www.mysql.com/)
   - [PostGres](https://www.postgresql.org/)
+  - [SqlIte](https://www.sqlite.org/index.html)
 - NoSQL / Non-relational databases
   - Document Stores
     - [MongoDB](https://www.mongodb.com/)
@@ -32,8 +35,11 @@
     - [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
   - Graph Databases
     - [Neo4J](https://neo4j.com/)
+  - Search Engine
+    - [Elastic Search](https://www.elastic.co/)
 - API Querying
   - [GraphQL](https://graphql.org/)
+  
 
 ## Grading
 
