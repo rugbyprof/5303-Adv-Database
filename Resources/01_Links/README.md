@@ -1,0 +1,1 @@
+- https://static.simonwillison.net/static/2010/redis-tutorial/
