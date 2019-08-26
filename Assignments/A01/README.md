@@ -88,7 +88,7 @@ I use github as a homebase for all assignments, lectures, and resources. It's ba
 - When you create a Github account, you must choose a `username`.
 - This is very important to remember, because you will update the class roster with this username so I know where to find all your assignments.
 - Create a repository named:
-    - `3013-DB-yourlastname`
+    - `5303-DB-yourlastname`
     - replace the `yourlastname` with your last name to make it unique.
 - Check the box that says: "Add a README.md file"
 
@@ -116,7 +116,7 @@ Add:
 1. Your name (last, first)
 2. Your email
 3. Your github username<sup>*</sup>
-4. A link to your 3013-DB repository<sup>*</sup>
+4. A link to your 5303-DB repository<sup>*</sup>
 
 *Your repository name and your github username are NOT the same thing.
 
