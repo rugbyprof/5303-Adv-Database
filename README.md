@@ -20,17 +20,17 @@
   - [PostGres](https://www.postgresql.org/)
 - NoSQL / Non-relational databases
   - Document Stores
-    1. [MongoDB](https://www.mongodb.com/)
-    2. [CouchBase](https://www.couchbase.com/)
+    - [MongoDB](https://www.mongodb.com/)
+    - [CouchBase](https://www.couchbase.com/)
   - Wide Column Stores
-    1. [Cassandra](http://cassandra.apache.org/)
-    2. [Scylla](http://www.scylladb.com/)
-    3. [HBase](https://hbase.apache.org/)
+    - [Cassandra](http://cassandra.apache.org/)
+    - [Scylla](http://www.scylladb.com/)
+    - [HBase](https://hbase.apache.org/)
   - Key-Value Stores
-    1. [Redis](https://redis.io/)
-    2. [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
+    - [Redis](https://redis.io/)
+    - [Amazon DynamoDB](https://aws.amazon.com/dynamodb/)
   - Graph Databases
-    1. [Neo4J](https://neo4j.com/)
+    - [Neo4J](https://neo4j.com/)
 - API Querying
   - [GraphQL](https://graphql.org/)
 
