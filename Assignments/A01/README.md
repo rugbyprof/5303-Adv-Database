@@ -116,7 +116,7 @@ Add:
 1. Your name (last, first)
 2. Your email
 3. Your github username<sup>*</sup>
-4. A link to your 1063-DS repository<sup>*</sup>
+4. A link to your 3013-DB repository<sup>*</sup>
 
 *Your repository name and your github username are NOT the same thing.
 
