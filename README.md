@@ -5,8 +5,8 @@
 
 ### General Course Info
 
-- ___Days:___ MW 12:00 a.m. - 13:20 p.m.
-- ___Location:___ BO 320
+- __Days:__ MW 12:00 a.m. - 13:20 p.m.
+- __Location:__ BO 320
 - [__Semester:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal1920.pdf)Mon August 26<sup>th</sup> - Fri Dec 7<sup>th</sup>
 - [__Holidays:__](https://msutexas.edu/registrar/_assets/files/pdfs/acadcal1920.pdf)
   - __Labor Day:__ Mon Sep 2<sup>nd</sup>
