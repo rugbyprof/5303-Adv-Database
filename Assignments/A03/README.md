@@ -23,7 +23,7 @@ Sounds easy but we need to get our script onto the server. This to is easy, but 
 - Do NOT forget it!! 
 - It also better not be a weak password!!
 
-- Look in [Resources](../../Resources) for a list of necessary commands.
+- Look in [Resources](../../Resources) for a list of helpful linux commands.
 
 
 ### FTP
