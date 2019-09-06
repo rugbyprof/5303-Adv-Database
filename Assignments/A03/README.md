@@ -51,7 +51,7 @@ Sounds easy but we need to get our script onto the server. This to is easy, but 
 - Create a folder in your home directory called `5303_db`
 - Put your script and data file in there.
 - Run the script by typing `php script.php`
-- If you don't see any errors, log in to [phpMyAdmi](https://cs2.msutexas.edu/phpmyadmin) and see if your table has data.
+- If you don't see any errors, log in to [phpMyAdmin](https://cs2.msutexas.edu/phpmyadmin) and see if your table has data.
 - If it does, you are done.
 - If it doesn't, go check your script for errors:
   - Make sure you added your username, password, and database name to the file.
