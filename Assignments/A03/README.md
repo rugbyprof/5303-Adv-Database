@@ -25,7 +25,6 @@ Sounds easy but we need to get our script onto the server. This to is easy, but 
 
 - Look in [Resources](../../Resources) for a list of necessary commands.
 
-```
 
 ### FTP
 
@@ -46,3 +45,16 @@ Sounds easy but we need to get our script onto the server. This to is easy, but 
   - `rsync -avz source/file user@server:/location/path`
   - `rsync -avz script.php username@cs2.msutexas.edu:/home/username/5303/script.php`
 
+
+#### Run the Script
+
+- Create a folder in your home directory called `5303_db`
+- Put your script and data file in there.
+- Run the script by typing `php script.php`
+- If you don't see any errors, log in to [phpMyAdmi](https://cs2.msutexas.edu/phpmyadmin) and see if your table has data.
+- If it does, you are done.
+- If it doesn't, go check your script for errors:
+  - Make sure you added your username, password, and database name to the file.
+  - Make sure it is executable (shouldn't have to be but ...) `chmod +x script.php`
+  - Make sure errors are turned on (top of file ) `error_reporting(-1);`
+  - Contact me ... 
