@@ -10,7 +10,7 @@ class myMysqli{
     var $Username;          //username for mysql connection
     var $Pasword;           //password for mysql connection
     var $Host;              //Host name
-    var $DbName             //Database Name
+    var $DbName;           //Database Name
     var $Conn;              //Datavase connection var
     var $Error;             //Error var
     var $Result;            //Var to hold query results
