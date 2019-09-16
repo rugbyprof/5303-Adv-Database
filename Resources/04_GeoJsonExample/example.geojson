@@ -123,11 +123,74 @@
                [
                   -64.68338012695312,
                   32.37184274299272
+               ]
+            ]
+         },
+         "properties":{
+            "title":"Path to destination",
+            "description":"Flight Path 1",
+            "stroke":"#0000ff",
+            "stroke-opacity":0.8,
+            "stroke-width":2,
+            "fill":"#555555",
+            "fill-opacity":0.3
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"LineString",
+            "coordinates":[
+               [
+                  -64.68338012695312,
+                  32.37184274299272
                ],
                [
                   -13.7109374,
                   21.24477234
+               ]
+            ]
+         },
+         "properties":{
+            "title":"Path to destination",
+            "description":"Flight Path 1",
+            "stroke":"#00ff00",
+            "stroke-opacity":0.8,
+            "stroke-width":2,
+            "fill":"#ff0000",
+            "fill-opacity":0.3
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"LineString",
+            "coordinates":[
+               [
+                  -13.7109374,
+                  21.24477234
                ],
+               [
+                  -68.31161499023438,
+                  -54.833127270087246
+               ]
+            ]
+         },
+         "properties":{
+            "title":"Path to destination",
+            "description":"Flight Path 1",
+            "stroke":"#00fff9",
+            "stroke-opacity":0.8,
+            "stroke-width":2,
+            "fill":"#00fff9",
+            "fill-opacity":0.3
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"LineString",
+            "coordinates":[
                [
                   -68.31161499023438,
                   -54.833127270087246
@@ -141,11 +204,11 @@
          "properties":{
             "title":"Path to destination",
             "description":"Flight Path 1",
-            "stroke":"#000000",
-            "stroke-opacity":0.4,
+            "stroke":"#A0ff00",
+            "stroke-opacity":0.8,
             "stroke-width":2,
-            "fill":"#555555",
-            "fill-opacity":0.3
+            "fill":"#A0ff00",
+            "fill-opacity":0.8
          }
       }
    ]
