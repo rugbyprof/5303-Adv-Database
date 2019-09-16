@@ -21,9 +21,10 @@ By generating GeoJson as your output, you can create a very readable and clear v
 Lets generate multiple kinds of routes. The goal is to get to some destination, but with a lot of sight seeing along the way.
 
 1. All the countries
-2. All the continents
+2. All the MBR's 
 3. In a circle (or polygon)
 4. Around the world
+5. Random Countries
 
 We will discuss parameters in class, and will allow the specs to change if problems arise.
 
