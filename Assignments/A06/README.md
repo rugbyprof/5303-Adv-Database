@@ -25,6 +25,7 @@ Lets generate multiple kinds of routes. The goal is to get to some destination, 
 3. In a circle (or polygon)
 4. Around the world
 5. Random Countries
+6. Make shapes or draw letters
 
 We will discuss parameters in class, and will allow the specs to change if problems arise.
 
