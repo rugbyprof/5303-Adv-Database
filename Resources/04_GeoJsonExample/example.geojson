@@ -33,8 +33,8 @@
             ]
          },
          "properties":{
-            "title":"Bermuda Mid Point",
-            "description":"Somewhere in Bermuda",
+            "title":"Africa End Point",
+            "description":"Somewhere in Africa",
             "marker-size":"medium",
             "marker-symbol":"airfield",
             "marker-color":"#f0f",
@@ -48,8 +48,8 @@
       {
          "type":"Feature",
          "properties":{
-            "title":"Africa Mid Point",
-            "description":"Somewhere in Africa",
+            "title":"Bermuda Mid Point",
+            "description":"Somewhere in Atlantic",
             "marker-size":"medium",
             "marker-symbol":"airport",
             "marker-color":"#00f",
