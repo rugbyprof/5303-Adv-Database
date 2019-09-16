@@ -26,6 +26,7 @@ Lets generate multiple kinds of routes. The goal is to get to some destination, 
 4. Around the world
 5. Random Countries
 6. Make shapes or draw letters
+7. How long to fly all routes, appended end to end.
 
 We will discuss parameters in class, and will allow the specs to change if problems arise.
 
