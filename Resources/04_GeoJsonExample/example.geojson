@@ -136,7 +136,7 @@
             "fill-opacity":0.3
          }
       },
-               "type":"Feature",
+     {"type":"Feature",
          "geometry":{
             "type":"LineString",
             "coordinates":[
@@ -187,7 +187,6 @@
       },
       {
 
-      {
          "type":"Feature",
          "geometry":{
             "type":"LineString",
@@ -214,6 +213,3 @@
       }
    ]
 }
-
-
-
