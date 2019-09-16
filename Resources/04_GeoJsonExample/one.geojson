@@ -1,42 +1,74 @@
 {
-    "type": "FeatureCollection",
-    "features": [{ "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-103.71093749999999,41.244772343082076]
-        },
-        "properties": {
-
-            "title": "Starting Point",
-            "description": "A description",
-            "marker-size": "medium",
-            "marker-symbol": "bus",
-            "marker-color": "#f00",
-            "stroke": "#555555",
-            "stroke-opacity": 1.0,
-            "stroke-width": 2,
-            "fill": "#555555",
-            "fill-opacity": 0.5
-        }
-    },
-      { "type": "Feature",
-        "geometry": {
-            "type": "Point",
-            "coordinates": [-13.71093749999999,21.244772343082076]
-        },
-        "properties": {
-
-            "title": "Ending Point",
-            "description": "A description",
-            "marker-size": "medium",
-            "marker-symbol": "airport",
-            "marker-color": "#f0f",
-            "stroke": "#555555",
-            "stroke-opacity": 1.0,
-            "stroke-width": 2,
-            "fill": "#555555",
-            "fill-opacity": 0.5
-        }
-    }
-                ]
+   "type":"FeatureCollection",
+   "features":[
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -103.71093749999999,
+               41.244772343082076
+            ]
+         },
+         "properties":{
+            "title":"Starting Point",
+            "description":"A description",
+            "marker-size":"medium",
+            "marker-symbol":"bus",
+            "marker-color":"#f00",
+            "stroke":"#555555",
+            "stroke-opacity":1.0,
+            "stroke-width":2,
+            "fill":"#555555",
+            "fill-opacity":0.5
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -13.71093749999999,
+               21.244772343082076
+            ]
+         },
+         "properties":{
+            "title":"Ending Point",
+            "description":"A description",
+            "marker-size":"medium",
+            "marker-symbol":"airport",
+            "marker-color":"#f0f",
+            "stroke":"#555555",
+            "stroke-opacity":1.0,
+            "stroke-width":2,
+            "fill":"#555555",
+            "fill-opacity":0.5
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"LineString",
+            "coordinates":[
+               [
+                  -103.7109374,
+                  41.24477234
+               ],
+               [
+                  -13.7109374,
+                  21.24477234
+               ]
+            ]
+         },
+         "properties":{
+            "title":"Path to destination",
+            "description":"Flight Path 1",
+            "stroke":"#000000",
+            "stroke-opacity":0.4,
+            "stroke-width":2,
+            "fill":"#555555",
+            "fill-opacity":0.3
+         }
+      }
+   ]
 }
