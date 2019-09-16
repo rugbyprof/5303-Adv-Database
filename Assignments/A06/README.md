@@ -31,7 +31,7 @@ Obviously we will need the [Mysql spatial convenience functions](https://dev.mys
 
 ## Database
 
-Create a table:
+Create a table called `Routes`:
 
 column      | type
 :---------- | :------------
