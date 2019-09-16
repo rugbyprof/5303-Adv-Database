@@ -1,4 +1,4 @@
-# Barebones Refactor - Worst Flight Planner Step 3
+# Route Visualizer - Worst Flight Planner Step 3
 
 ## Due: Monday September 23<sup>rd</sup>
 
