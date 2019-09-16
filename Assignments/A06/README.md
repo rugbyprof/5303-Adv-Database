@@ -1,8 +1,6 @@
 # Barebones Refactor - Worst Flight Planner Step 3
 
-## Due: Monday September 23
-
-<sup>th</sup>
+## Due: Monday September 23<sup>rd</sup>
 
 ## Overview
 
