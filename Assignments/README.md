@@ -7,4 +7,4 @@
  | [A04](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A04) | [ Flight Planner ](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A04) | [ Can we be the worst ever?](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A04) | [Due : TBD](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A04) |
  | [A05](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A05) | [ Barebones Refactor ](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A05) | [ Worst Flight Planner Step 2](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A05) | [Monday September 16 <sup>th</sup>](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A05) |
 
-<sup>Last Updated: 2019-09-16 (Mon @ 10:06)</sup>
+<sup>Last Updated: 2019-09-16 (Mon @ 11:13)</sup>
