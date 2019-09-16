@@ -128,7 +128,7 @@
          },
          "properties":{
             "title":"Path to destination",
-            "description":"Flight Path 1",
+           "description":"Leg 1 From: Nebraska to Bermuda",
             "stroke":"#0000ff",
             "stroke-opacity":0.8,
             "stroke-width":2,
@@ -153,7 +153,7 @@
          },
          "properties":{
             "title":"Path to destination",
-            "description":"Flight Path 1",
+            "description":"Flight Path 3",
             "stroke":"#00ff00",
             "stroke-opacity":0.8,
             "stroke-width":2,
@@ -170,7 +170,7 @@
                   -13.7109374,
                   21.24477234
                ],
-               [
+                [
                   -68.31161499023438,
                   -54.833127270087246
                ]
@@ -178,7 +178,7 @@
          },
          "properties":{
             "title":"Path to destination",
-            "description":"Flight Path 1",
+            "description":"Flight Path 4",
             "stroke":"#00fff9",
             "stroke-opacity":0.8,
             "stroke-width":2,
@@ -191,7 +191,7 @@
          "geometry":{
             "type":"LineString",
             "coordinates":[
-               [
+                [
                   -68.31161499023438,
                   -54.833127270087246
                ],
@@ -203,7 +203,7 @@
          },
          "properties":{
             "title":"Path to destination",
-            "description":"Flight Path 1",
+            "description":"Flight Path 5",
             "stroke":"#A0ff00",
             "stroke-opacity":0.8,
             "stroke-width":2,
@@ -213,3 +213,6 @@
       }
    ]
 }
+
+
+
