@@ -185,12 +185,16 @@ db.artists.find({ artistname : "Deep Purple" }).pretty()
 
 **AND Conditions**
 
+https://docs.mongodb.com/manual/reference/operator/query/lt/
+
 ```
 db.musicians.find( { instrument: "Drums", born: { $lt: 1950 } } )
 
 ```
 
 #### OR Conditions
+
+https://docs.mongodb.com/manual/reference/operator/query/lt/
 
 ```
 db.musicians.find(
@@ -202,11 +206,16 @@ db.musicians.find(
 
 #### The $in Operator
 
+https://docs.mongodb.com/manual/reference/operator/query/in/
+
 ```
 db.musicians.find( { instrument: { $in: [ "Vocals", "Guitar" ] } } )
 ```
 
 #### Query an Array of Documents
+
+https://docs.mongodb.com/manual/reference/operator/query/elemMatch/
+https://docs.mongodb.com/manual/reference/operator/query/gt/
 
 ```
 db.artists.find(
@@ -250,6 +259,8 @@ db.musicians.find( { instrument: "Vocals" }, { _id: 0, instrument: 0 } )
 ## Limit the Results of a Query
 
 #### Without Limit
+
+https://docs.mongodb.com/manual/reference/operator/query/exists/index.html
 
 ```
 db.artists.find( { albums: { $exists: false }} )
@@ -408,6 +419,7 @@ db.musicians.insert(
 
 - `$lookup` = left outer join :\
 
+https://docs.mongodb.com/manual/reference/operator/aggregation/lookup/index.html
 
 ```
 db.artists.aggregate([
@@ -452,6 +464,8 @@ db.artists.aggregate([
 ```
 db.musicians.find({ _id: 6 }).pretty()
 ```
+
+https://docs.mongodb.com/manual/reference/operator/update/set/index.html
 
 ```
 db.musicians.update(
@@ -517,6 +531,9 @@ mongoexport --db music --collection artists --query '{"artistname": "Miles Davis
 ## Delete a Document
 
 ### Delete One
+
+https://docs.mongodb.com/manual/reference/operator/query/in/
+
 ```
 db.artists.find( { artistname: { $in: [ "The Kooks", "Gang of Four", "Bastille" ] } } )
 ```
