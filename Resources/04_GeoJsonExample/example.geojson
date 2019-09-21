@@ -1,0 +1,215 @@
+{
+   "type":"FeatureCollection",
+   "features":[
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -103.71093749999999,
+               41.244772343082076
+            ]
+         },
+         "properties":{
+            "title":"Starting Point",
+            "description":"Somewhere in the US",
+            "marker-size":"medium",
+            "marker-symbol":"airport",
+            "marker-color":"#f00",
+            "stroke":"#555555",
+            "stroke-opacity":1,
+            "stroke-width":2,
+            "fill":"#555555",
+            "fill-opacity":0.5
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -13.71093749999999,
+               21.244772343082076
+            ]
+         },
+         "properties":{
+            "title":"Africa End Point",
+            "description":"Somewhere in Africa",
+            "marker-size":"medium",
+            "marker-symbol":"airfield",
+            "marker-color":"#f0f",
+            "stroke":"#555555",
+            "stroke-opacity":1,
+            "stroke-width":2,
+            "fill":"#555555",
+            "fill-opacity":0.5
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "title":"Bermuda Mid Point",
+            "description":"Somewhere in Atlantic",
+            "marker-size":"medium",
+            "marker-symbol":"airport",
+            "marker-color":"#00f",
+            "stroke":"#555555",
+            "stroke-opacity":1,
+            "stroke-width":2,
+            "fill":"#555555",
+            "fill-opacity":0.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -64.68338012695312,
+               32.37184274299272
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "title":"Nova Scotia Mid Point",
+            "description":"A description",
+            "marker-size":"medium",
+            "marker-symbol":"airport",
+            "marker-color":"#f0f",
+            "stroke":"#555555",
+            "stroke-opacity":1,
+            "stroke-width":2,
+            "fill":"#555555",
+            "fill-opacity":0.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -52.74261474609375,
+               47.615421267605434
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "title":"South America Mid Point",
+            "description":"A description",
+            "marker-size":"medium",
+            "marker-symbol":"airfield",
+            "marker-color":"#0ff",
+            "stroke":"#555555",
+            "stroke-opacity":1,
+            "stroke-width":2,
+            "fill":"#555555",
+            "fill-opacity":0.5
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               -68.31161499023438,
+               -54.833127270087246
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"LineString",
+            "coordinates":[
+               [
+                  -103.7109374,
+                  41.24477234
+               ],
+               [
+                  -64.68338012695312,
+                  32.37184274299272
+               ]
+            ]
+         },
+         "properties":{
+            "title":"Path to destination",
+           "description":"Leg 1 From: Nebraska to Bermuda",
+            "stroke":"#0000ff",
+            "stroke-opacity":0.8,
+            "stroke-width":2,
+            "fill":"#555555",
+            "fill-opacity":0.3
+         }
+      },
+     {"type":"Feature",
+         "geometry":{
+            "type":"LineString",
+            "coordinates":[
+               [
+                  -13.7109374,
+                  21.24477234
+               ],
+                [
+                  -68.31161499023438,
+                  -54.833127270087246
+               ]
+            ]
+         },
+         "properties":{
+            "title":"Path to destination",
+            "description":"Flight Path 4",
+            "stroke":"#00fff9",
+            "stroke-opacity":0.8,
+            "stroke-width":2,
+            "fill":"#00fff9",
+            "fill-opacity":0.3
+         }
+      },
+      {
+         "type":"Feature",
+         "geometry":{
+            "type":"LineString",
+            "coordinates":[
+               [
+                  -64.68338012695312,
+                  32.37184274299272
+               ],
+               [
+                  -13.7109374,
+                  21.24477234
+               ]
+            ]
+         },
+         "properties":{
+            "title":"Path to destination",
+            "description":"Flight Path 3",
+            "stroke":"#00ff00",
+            "stroke-opacity":0.8,
+            "stroke-width":2,
+            "fill":"#ff0000",
+            "fill-opacity":0.3
+         }
+      },
+      {
+
+         "type":"Feature",
+         "geometry":{
+            "type":"LineString",
+            "coordinates":[
+                [
+                  -68.31161499023438,
+                  -54.833127270087246
+               ],
+               [
+                  -52.74261474609375,
+                  47.615421267605434
+               ]
+            ]
+         },
+         "properties":{
+            "title":"Path to destination",
+            "description":"Flight Path 5",
+            "stroke":"#A0ff00",
+            "stroke-opacity":0.8,
+            "stroke-width":2,
+            "fill":"#A0ff00",
+            "fill-opacity":0.8
+         }
+      }
+   ]
+}
