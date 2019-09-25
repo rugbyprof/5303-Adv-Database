@@ -18,15 +18,15 @@ By generating GeoJson as your output, you can create a very readable and clear v
 
 ## Route Specifications
 
-Lets generate multiple kinds of routes. The goal is to get to some destination, but with a lot of sight seeing along the way.
+Lets generate multiple kinds of routes. The goal is to get to some destination, but with a lot of sight seeing along the way. As of now, do not worry about the routes table (you can if you want, but not necessary).
 
-1. All the countries
-2. All the MBR's 
+1. Find a path through all the countries. 
+2. All the MBR's (temp on hold, since no MBR's)
 3. In a circle (or polygon)
-4. Around the world
-5. Random Countries
-6. Make shapes or draw letters
-7. How long to fly all routes, appended end to end.
+4. Around the world. Stay along the equator to make it somewhat easier.
+5. Random Countries. Choose N random countries and create a flight path that goes through all of them.
+6. Make shapes or draw letter (consider this a bonus).
+7. How long to fly all routes, appended end to end. This will require the routes table. So determine the total length of time it would require to travel all routes (assume 500 mph travel speed). 
 
 We will discuss parameters in class, and will allow the specs to change if problems arise.
 
