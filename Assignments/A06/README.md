@@ -20,12 +20,12 @@ By generating GeoJson as your output, you can create a very readable and clear v
 
 Lets generate multiple kinds of routes. The goal is to get to some destination, but with a lot of sight seeing along the way. As of now, do not worry about the routes table (you can if you want, but not necessary).
 
-1. Find a path through all the countries. 
+1. Find a path through all the countries (listed in the cities table).
 2. All the MBR's (temp on hold, since no MBR's)
-3. In a circle (or polygon)
-4. Around the world. Stay along the equator to make it somewhat easier.
-5. Random Countries. Choose N random countries and create a flight path that goes through all of them.
-6. Make shapes or draw letter (consider this a bonus).
+3. In a circle (or polygon). Find a path from some center (like a city), and fly along some circular type shape to other cities and create a circuit that lets you finish where you started.
+4. Around the world. Stay along the equator to make it somewhat easier. Pick some starting city, and traverse the circumference of the world jumping from airport to airport (ensuring you don't fly farther than 750 miles 1126.54 km's per hop).
+5. Random Countries. Choose `N` random countries and create a flight path that goes through all of them.
+6. Make shapes or draw letter (consider this a bonus question).
 7. How long to fly all routes, appended end to end. This will require the routes table. So determine the total length of time it would require to travel all routes (assume 500 mph travel speed). 
 
 We will discuss parameters in class, and will allow the specs to change if problems arise.
