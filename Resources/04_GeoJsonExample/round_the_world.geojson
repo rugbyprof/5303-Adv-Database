@@ -1,4 +1,4 @@
- {
+{
     "type": "FeatureCollection",
     "feautures": [
         {
@@ -28,34 +28,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    8.75438023,
-                    -0.711739
+                    9.26268959,
+                    -1.57473004
                 ]
             },
             "properties": {
-                "title": "Port Gentil Airport",
-                "description": "Africa\/Libreville",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    11.05669975,
-                    -1.84513998
-                ]
-            },
-            "properties": {
-                "title": "Mouilla Ville Airport",
+                "title": "Omboue Hopital Airport",
                 "description": "Africa\/Libreville",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -94,35 +72,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    12.44130039,
-                    -1.18461001
+                    13.67310047,
+                    -0.665214
                 ]
             },
             "properties": {
-                "title": "Koulamoutou Mabimbi Airport",
+                "title": "Okondja Airport",
                 "description": "Africa\/Libreville",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    15.95009995,
-                    -0.53135002
-                ]
-            },
-            "properties": {
-                "title": "Owando Airport",
-                "description": "Africa\/Brazzaville",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
                 "marker-color": "#f00",
@@ -160,35 +116,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    19.78890038,
-                    1.22472
+                    21.49690056,
+                    2.17066002
                 ]
             },
             "properties": {
-                "title": "Basankusu Airport",
+                "title": "Lisala Airport",
                 "description": "Africa\/Kinshasa",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    23.37250137,
-                    -1.04810905
-                ]
-            },
-            "properties": {
-                "title": "Ikela Airport",
-                "description": "",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
                 "marker-color": "#f00",
@@ -226,35 +160,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    28.90789986,
-                    -2.46223998
+                    29.2385006,
+                    -1.67080998
                 ]
             },
             "properties": {
-                "title": "Kamembe Airport",
+                "title": "Goma International Airport",
                 "description": "Africa\/Kigali",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    29.95999908,
-                    -1.22611105
-                ]
-            },
-            "properties": {
-                "title": "Kabale Airport",
-                "description": "Africa\/Kampala",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
                 "marker-color": "#f00",
@@ -292,35 +204,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    32.17247009,
-                    -2.81366706
+                    32.93270111,
+                    -2.44448996
                 ]
             },
             "properties": {
-                "title": "Mchauru Airport",
-                "description": "",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    33.62279892,
-                    1.72768998
-                ]
-            },
-            "properties": {
-                "title": "Soroti Airport",
-                "description": "Africa\/Kampala",
+                "title": "Mwanza Airport",
+                "description": "Africa\/Dar_es_Salaam",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
                 "marker-color": "#f00",
@@ -358,12 +248,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    35.23889923,
-                    0.40445799
+                    36.81480026,
+                    -1.32172
                 ]
             },
             "properties": {
-                "title": "Eldoret International Airport",
+                "title": "Nairobi Wilson Airport",
                 "description": "Africa\/Nairobi",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -380,56 +270,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    36.86230087,
-                    -1.27726996
+                    39.95000076,
+                    -1.10000002
                 ]
             },
             "properties": {
-                "title": "Moi Air Base",
-                "description": "Africa\/Nairobi",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    38.19514084,
-                    0.16508301
-                ]
-            },
-            "properties": {
-                "title": "Mulika Lodge Airport",
-                "description": "Africa\/Nairobi",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    40.9131012,
-                    -2.25241995
-                ]
-            },
-            "properties": {
-                "title": "Manda Airstrip",
+                "title": "Bura East Airport",
                 "description": "Africa\/Nairobi",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -512,34 +358,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -48.47629929,
-                    -1.37925005
+                    -50.51670074,
+                    1.04278004
                 ]
             },
             "properties": {
-                "title": "Val de Cans\/J\u00falio Cezar Ribeiro International Airport",
-                "description": "America\/Belem",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -50.85820007,
-                    2.07751012
-                ]
-            },
-            "properties": {
-                "title": "Amap\u00e1 Airport",
+                "title": "Fazenda Campo Verde Airport",
                 "description": "America\/Fortaleza",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -556,12 +380,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -54.78583145,
-                    -2.42472196
+                    -55.83620071,
+                    -1.71407998
                 ]
             },
             "properties": {
-                "title": "Maestro Wilson Fonseca Airport",
+                "title": "Oriximin\u00e1 Airport",
                 "description": "America\/Belem",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -578,35 +402,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -56.12641144,
-                    2.026438
+                    -56.79243088,
+                    2.3544271
                 ]
             },
             "properties": {
-                "title": "Sipaliwini Airport",
+                "title": "Kwamalasoemoetoe Airport",
                 "description": "America\/Paramaribo",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -56.77719879,
-                    -2.67301989
-                ]
-            },
-            "properties": {
-                "title": "Parintins Airport",
-                "description": "America\/Boa_Vista",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
                 "marker-color": "#f00",
@@ -644,35 +446,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -66.08319855,
-                    -2.53260994
+                    -69.18579865,
+                    0.60750002
                 ]
             },
             "properties": {
-                "title": "Fonte Boa Airport",
+                "title": "Iauaret\u00ea Airport",
                 "description": "America\/Boa_Vista",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -69.57969666,
-                    -1.32860994
-                ]
-            },
-            "properties": {
-                "title": "La Pedrera Airport",
-                "description": "America\/Bogota",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
                 "marker-color": "#f00",
@@ -732,12 +512,34 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -74.77079773,
-                    -0.18227801
+                    -75.52639771,
+                    -0.77611101
                 ]
             },
             "properties": {
-                "title": "Caucaya Airport",
+                "title": "Tiputini Airport",
+                "description": "America\/Guayaquil",
+                "marker-size": "medium",
+                "marker-symbol": "airport",
+                "marker-color": "#f00",
+                "stroke": "#555555",
+                "stroke-opacity": 1,
+                "stroke-width": 2,
+                "fill": "#555555",
+                "fill-opacity": 0.5
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -76.60559845,
+                    0.97876698
+                ]
+            },
+            "properties": {
+                "title": "Villa Garz\u00f3n Airport",
                 "description": "America\/Bogota",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -754,101 +556,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -76.33779907,
-                    -0.122956
+                    -78.06269836,
+                    -1.50523996
                 ]
             },
             "properties": {
-                "title": "Tarapoa Airport",
+                "title": "Rio Amazonas Airport",
                 "description": "America\/Guayaquil",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -76.98680115,
-                    -0.46288601
-                ]
-            },
-            "properties": {
-                "title": "Francisco De Orellana Airport",
-                "description": "America\/Guayaquil",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -77.70809937,
-                    0.809506
-                ]
-            },
-            "properties": {
-                "title": "Teniente Coronel Luis a Mantilla Airport",
-                "description": "America\/Guayaquil",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -78.1207962,
-                    -2.29917002
-                ]
-            },
-            "properties": {
-                "title": "Coronel E Carvajal Airport",
-                "description": "America\/Guayaquil",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    -78.74919891,
-                    1.81441998
-                ]
-            },
-            "properties": {
-                "title": "La Florida Airport",
-                "description": "America\/Bogota",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
                 "marker-color": "#f00",
@@ -886,12 +600,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -79.68019867,
-                    -2.26103997
+                    -80.47219849,
+                    -1.04165006
                 ]
             },
             "properties": {
-                "title": "Taura Airport",
+                "title": "Reales Tamarindos Airport",
                 "description": "America\/Guayaquil",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -908,12 +622,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    -89.61740112,
-                    -0.91020602
+                    -90.26589966,
+                    -0.453758
                 ]
             },
             "properties": {
-                "title": "San Crist\u00f3bal Airport",
+                "title": "Seymour Airport",
                 "description": "Pacific\/Galapagos",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -952,35 +666,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    98.88890076,
-                    1.55594003
+                    99.70069885,
+                    -2.0991199
                 ]
             },
             "properties": {
-                "title": "Dr Ferdinand Lumban Tobing Airport",
-                "description": "Asia\/Jakarta",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    100.28099823,
-                    -0.78691697
-                ]
-            },
-            "properties": {
-                "title": "Minangkabau International Airport",
-                "description": "Asia\/Jakarta",
+                "title": "Rokot Airport",
+                "description": "",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
                 "marker-color": "#f00",
@@ -1018,35 +710,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    102.2519989,
-                    2.26336002
+                    103.30699921,
+                    2.04138994
                 ]
             },
             "properties": {
-                "title": "Malacca Airport",
+                "title": "Kluang Airport",
                 "description": "Asia\/Kuala_Lumpur",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    103.70899963,
-                    1.38725996
-                ]
-            },
-            "properties": {
-                "title": "Tengah Air Base",
-                "description": "Asia\/Singapore",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
                 "marker-color": "#f00",
@@ -1084,34 +754,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    109.40399933,
-                    -0.150711
+                    109.96299744,
+                    -1.81664002
                 ]
             },
             "properties": {
-                "title": "Supadio Airport",
-                "description": "Asia\/Jakarta",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    111.67299652,
-                    -2.70519996
-                ]
-            },
-            "properties": {
-                "title": "Iskandar Airport",
+                "title": "Ketapang(Rahadi Usman) Airport",
                 "description": "Asia\/Jakarta",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -1150,56 +798,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    113.76699829,
-                    2.6500001
+                    114.5306015,
+                    0.81059998
                 ]
             },
             "properties": {
-                "title": "Belaga Airport",
-                "description": "Asia\/Kuala_Lumpur",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    114.89387512,
-                    -0.94032502
-                ]
-            },
-            "properties": {
-                "title": "Beringin Airport",
-                "description": "Asia\/Jakarta",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    117.15699768,
-                    -0.48453099
-                ]
-            },
-            "properties": {
-                "title": "Temindung Airport",
+                "title": "Datadawai Airport",
                 "description": "Asia\/Makassar",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -1216,34 +820,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    117.54299927,
-                    0.3847
+                    117.37361145,
+                    2.83583331
                 ]
             },
             "properties": {
-                "title": "Sanggata\/Sangkimah Airport",
-                "description": "",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    120.65799713,
-                    -1.41674995
-                ]
-            },
-            "properties": {
-                "title": "Kasiguncu Airport",
+                "title": "Tanjung Harapan Airport",
                 "description": "Asia\/Makassar",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -1260,12 +842,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    122.77200317,
-                    -1.03892004
+                    120.3239975,
+                    -2.55802989
                 ]
             },
             "properties": {
-                "title": "Syukuran Aminuddin Amir Airport",
+                "title": "Andi Jemma Airport",
                 "description": "Asia\/Makassar",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -1282,12 +864,34 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    125.96700287,
-                    -2.0805099
+                    122.84999847,
+                    0.637119
                 ]
             },
             "properties": {
-                "title": "Emalamo Sanana Airport",
+                "title": "Jalaluddin Airport",
+                "description": "Asia\/Makassar",
+                "marker-size": "medium",
+                "marker-symbol": "airport",
+                "marker-color": "#f00",
+                "stroke": "#555555",
+                "stroke-opacity": 1,
+                "stroke-width": 2,
+                "fill": "#555555",
+                "fill-opacity": 0.5
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    127.89600372,
+                    1.18527997
+                ]
+            },
+            "properties": {
+                "title": "Kao Airport",
                 "description": "",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -1304,12 +908,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    128.32499695,
-                    2.04598999
+                    133.43899536,
+                    -2.53223991
                 ]
             },
             "properties": {
-                "title": "Pitu Airport",
+                "title": "Babo Airport",
                 "description": "Asia\/Jayapura",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -1326,78 +930,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    132.46330261,
-                    -1.15929997
+                    141.30279541,
+                    -2.69260001
                 ]
             },
             "properties": {
-                "title": "Ayawasi Airport",
-                "description": "",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    134.50610352,
-                    -2.72099996
-                ]
-            },
-            "properties": {
-                "title": "Wasior Airport",
-                "description": "Asia\/Jayapura",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    140.51600647,
-                    -2.57695007
-                ]
-            },
-            "properties": {
-                "title": "Sentani International Airport",
-                "description": "Asia\/Jayapura",
-                "marker-size": "medium",
-                "marker-symbol": "airport",
-                "marker-color": "#f00",
-                "stroke": "#555555",
-                "stroke-opacity": 1,
-                "stroke-width": 2,
-                "fill": "#555555",
-                "fill-opacity": 0.5
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    147.42399597,
-                    -2.06188989
-                ]
-            },
-            "properties": {
-                "title": "Momote Airport",
+                "title": "Vanimo Airport",
                 "description": "Pacific\/Port_Moresby",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -1414,13 +952,13 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    151.99777222,
-                    -2.66222215
+                    150.80799866,
+                    -2.57940006
                 ]
             },
             "properties": {
-                "title": "Simberi Airport",
-                "description": "",
+                "title": "Kavieng Airport",
+                "description": "Pacific\/Port_Moresby",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
                 "marker-color": "#f00",
@@ -1480,12 +1018,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    173.27099609,
-                    2.05860996
+                    173.03100586,
+                    1.00361001
                 ]
             },
             "properties": {
-                "title": "Marakei Airport",
+                "title": "Maiana Airport",
                 "description": "Pacific\/Tarawa",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -1546,12 +1084,12 @@
             "geometry": {
                 "type": "Point",
                 "coordinates": [
-                    175.97000122,
-                    -2.48583007
+                    176.41000366,
+                    -1.31444001
                 ]
             },
             "properties": {
-                "title": "Tamana Island Airport",
+                "title": "Nikunau Airport",
                 "description": "Pacific\/Tarawa",
                 "marker-size": "medium",
                 "marker-symbol": "airport",
@@ -1574,8 +1112,8 @@
                             -1.41027701
                         ],
                         [
-                            8.75438023,
-                            -0.711739
+                            9.26268959,
+                            -1.57473004
                         ]
                     ]
                 ],
@@ -1597,12 +1135,12 @@
                 "coordinates": [
                     [
                         [
-                            8.75438023,
-                            -0.711739
+                            9.26268959,
+                            -1.57473004
                         ],
                         [
-                            11.05669975,
-                            -1.84513998
+                            11.58139992,
+                            1.54311001
                         ]
                     ]
                 ],
@@ -1624,12 +1162,12 @@
                 "coordinates": [
                     [
                         [
-                            11.05669975,
-                            -1.84513998
-                        ],
-                        [
                             11.58139992,
                             1.54311001
+                        ],
+                        [
+                            13.67310047,
+                            -0.665214
                         ]
                     ]
                 ],
@@ -1651,12 +1189,12 @@
                 "coordinates": [
                     [
                         [
-                            11.58139992,
-                            1.54311001
+                            13.67310047,
+                            -0.665214
                         ],
                         [
-                            12.44130039,
-                            -1.18461001
+                            17.68470001,
+                            -2.71749997
                         ]
                     ]
                 ],
@@ -1678,12 +1216,12 @@
                 "coordinates": [
                     [
                         [
-                            12.44130039,
-                            -1.18461001
+                            17.68470001,
+                            -2.71749997
                         ],
                         [
-                            15.95009995,
-                            -0.53135002
+                            21.49690056,
+                            2.17066002
                         ]
                     ]
                 ],
@@ -1705,12 +1243,12 @@
                 "coordinates": [
                     [
                         [
-                            15.95009995,
-                            -0.53135002
+                            21.49690056,
+                            2.17066002
                         ],
                         [
-                            17.68470001,
-                            -2.71749997
+                            27.5883007,
+                            2.82761002
                         ]
                     ]
                 ],
@@ -1732,12 +1270,12 @@
                 "coordinates": [
                     [
                         [
-                            17.68470001,
-                            -2.71749997
+                            27.5883007,
+                            2.82761002
                         ],
                         [
-                            19.78890038,
-                            1.22472
+                            29.2385006,
+                            -1.67080998
                         ]
                     ]
                 ],
@@ -1759,12 +1297,12 @@
                 "coordinates": [
                     [
                         [
-                            19.78890038,
-                            1.22472
+                            29.2385006,
+                            -1.67080998
                         ],
                         [
-                            23.37250137,
-                            -1.04810905
+                            31.54999924,
+                            2.20000005
                         ]
                     ]
                 ],
@@ -1786,12 +1324,12 @@
                 "coordinates": [
                     [
                         [
-                            23.37250137,
-                            -1.04810905
+                            31.54999924,
+                            2.20000005
                         ],
                         [
-                            27.5883007,
-                            2.82761002
+                            32.93270111,
+                            -2.44448996
                         ]
                     ]
                 ],
@@ -1813,12 +1351,12 @@
                 "coordinates": [
                     [
                         [
-                            27.5883007,
-                            2.82761002
+                            32.93270111,
+                            -2.44448996
                         ],
                         [
-                            28.90789986,
-                            -2.46223998
+                            34.55345154,
+                            0.576208
                         ]
                     ]
                 ],
@@ -1840,12 +1378,12 @@
                 "coordinates": [
                     [
                         [
-                            28.90789986,
-                            -2.46223998
+                            34.55345154,
+                            0.576208
                         ],
                         [
-                            29.95999908,
-                            -1.22611105
+                            36.81480026,
+                            -1.32172
                         ]
                     ]
                 ],
@@ -1867,12 +1405,12 @@
                 "coordinates": [
                     [
                         [
-                            29.95999908,
-                            -1.22611105
+                            36.81480026,
+                            -1.32172
                         ],
                         [
-                            31.54999924,
-                            2.20000005
+                            39.95000076,
+                            -1.10000002
                         ]
                     ]
                 ],
@@ -1894,12 +1432,12 @@
                 "coordinates": [
                     [
                         [
-                            31.54999924,
-                            2.20000005
+                            39.95000076,
+                            -1.10000002
                         ],
                         [
-                            32.17247009,
-                            -2.81366706
+                            -41.73199844,
+                            -2.89374995
                         ]
                     ]
                 ],
@@ -1921,12 +1459,12 @@
                 "coordinates": [
                     [
                         [
-                            32.17247009,
-                            -2.81366706
+                            -41.73199844,
+                            -2.89374995
                         ],
                         [
-                            33.62279892,
-                            1.72768998
+                            45.30469894,
+                            2.01444006
                         ]
                     ]
                 ],
@@ -1948,12 +1486,12 @@
                 "coordinates": [
                     [
                         [
-                            33.62279892,
-                            1.72768998
+                            45.30469894,
+                            2.01444006
                         ],
                         [
-                            34.55345154,
-                            0.576208
+                            -44.23410034,
+                            -2.58536005
                         ]
                     ]
                 ],
@@ -1975,12 +1513,12 @@
                 "coordinates": [
                     [
                         [
-                            34.55345154,
-                            0.576208
+                            -44.23410034,
+                            -2.58536005
                         ],
                         [
-                            35.23889923,
-                            0.40445799
+                            -50.51670074,
+                            1.04278004
                         ]
                     ]
                 ],
@@ -2002,12 +1540,12 @@
                 "coordinates": [
                     [
                         [
-                            35.23889923,
-                            0.40445799
+                            -50.51670074,
+                            1.04278004
                         ],
                         [
-                            36.86230087,
-                            -1.27726996
+                            -55.83620071,
+                            -1.71407998
                         ]
                     ]
                 ],
@@ -2029,12 +1567,12 @@
                 "coordinates": [
                     [
                         [
-                            36.86230087,
-                            -1.27726996
+                            -55.83620071,
+                            -1.71407998
                         ],
                         [
-                            38.19514084,
-                            0.16508301
+                            -56.79243088,
+                            2.3544271
                         ]
                     ]
                 ],
@@ -2056,12 +1594,12 @@
                 "coordinates": [
                     [
                         [
-                            38.19514084,
-                            0.16508301
+                            -56.79243088,
+                            2.3544271
                         ],
                         [
-                            40.9131012,
-                            -2.25241995
+                            -62.91960144,
+                            -0.98129201
                         ]
                     ]
                 ],
@@ -2083,12 +1621,12 @@
                 "coordinates": [
                     [
                         [
-                            40.9131012,
-                            -2.25241995
+                            -62.91960144,
+                            -0.98129201
                         ],
                         [
-                            -41.73199844,
-                            -2.89374995
+                            -69.18579865,
+                            0.60750002
                         ]
                     ]
                 ],
@@ -2110,12 +1648,12 @@
                 "coordinates": [
                     [
                         [
-                            -41.73199844,
-                            -2.89374995
+                            -69.18579865,
+                            0.60750002
                         ],
                         [
-                            45.30469894,
-                            2.01444006
+                            72.99690247,
+                            0.48813099
                         ]
                     ]
                 ],
@@ -2137,12 +1675,12 @@
                 "coordinates": [
                     [
                         [
-                            45.30469894,
-                            2.01444006
+                            72.99690247,
+                            0.48813099
                         ],
                         [
-                            -44.23410034,
-                            -2.58536005
+                            -72.40830231,
+                            -0.58329999
                         ]
                     ]
                 ],
@@ -2164,12 +1702,12 @@
                 "coordinates": [
                     [
                         [
-                            -44.23410034,
-                            -2.58536005
+                            -72.40830231,
+                            -0.58329999
                         ],
                         [
-                            -48.47629929,
-                            -1.37925005
+                            -75.52639771,
+                            -0.77611101
                         ]
                     ]
                 ],
@@ -2191,12 +1729,12 @@
                 "coordinates": [
                     [
                         [
-                            -48.47629929,
-                            -1.37925005
+                            -75.52639771,
+                            -0.77611101
                         ],
                         [
-                            -50.85820007,
-                            2.07751012
+                            -76.60559845,
+                            0.97876698
                         ]
                     ]
                 ],
@@ -2218,12 +1756,12 @@
                 "coordinates": [
                     [
                         [
-                            -50.85820007,
-                            2.07751012
+                            -76.60559845,
+                            0.97876698
                         ],
                         [
-                            -54.78583145,
-                            -2.42472196
+                            -78.06269836,
+                            -1.50523996
                         ]
                     ]
                 ],
@@ -2245,12 +1783,12 @@
                 "coordinates": [
                     [
                         [
-                            -54.78583145,
-                            -2.42472196
+                            -78.06269836,
+                            -1.50523996
                         ],
                         [
-                            -56.12641144,
-                            2.026438
+                            -79.39199829,
+                            0.184203
                         ]
                     ]
                 ],
@@ -2272,12 +1810,12 @@
                 "coordinates": [
                     [
                         [
-                            -56.12641144,
-                            2.026438
+                            -79.39199829,
+                            0.184203
                         ],
                         [
-                            -56.77719879,
-                            -2.67301989
+                            -80.47219849,
+                            -1.04165006
                         ]
                     ]
                 ],
@@ -2299,12 +1837,12 @@
                 "coordinates": [
                     [
                         [
-                            -56.77719879,
-                            -2.67301989
+                            -80.47219849,
+                            -1.04165006
                         ],
                         [
-                            -62.91960144,
-                            -0.98129201
+                            -90.26589966,
+                            -0.453758
                         ]
                     ]
                 ],
@@ -2326,12 +1864,12 @@
                 "coordinates": [
                     [
                         [
-                            -62.91960144,
-                            -0.98129201
+                            -90.26589966,
+                            -0.453758
                         ],
                         [
-                            -66.08319855,
-                            -2.53260994
+                            96.32559967,
+                            2.41027999
                         ]
                     ]
                 ],
@@ -2353,12 +1891,12 @@
                 "coordinates": [
                     [
                         [
-                            -66.08319855,
-                            -2.53260994
+                            96.32559967,
+                            2.41027999
                         ],
                         [
-                            -69.57969666,
-                            -1.32860994
+                            99.70069885,
+                            -2.0991199
                         ]
                     ]
                 ],
@@ -2380,12 +1918,12 @@
                 "coordinates": [
                     [
                         [
-                            -69.57969666,
-                            -1.32860994
+                            99.70069885,
+                            -2.0991199
                         ],
                         [
-                            72.99690247,
-                            0.48813099
+                            101.46829987,
+                            -2.09299994
                         ]
                     ]
                 ],
@@ -2407,12 +1945,12 @@
                 "coordinates": [
                     [
                         [
-                            72.99690247,
-                            0.48813099
+                            101.46829987,
+                            -2.09299994
                         ],
                         [
-                            -72.40830231,
-                            -0.58329999
+                            103.30699921,
+                            2.04138994
                         ]
                     ]
                 ],
@@ -2434,12 +1972,12 @@
                 "coordinates": [
                     [
                         [
-                            -72.40830231,
-                            -0.58329999
+                            103.30699921,
+                            2.04138994
                         ],
                         [
-                            -74.77079773,
-                            -0.18227801
+                            104.69999695,
+                            -2.8982501
                         ]
                     ]
                 ],
@@ -2461,12 +1999,12 @@
                 "coordinates": [
                     [
                         [
-                            -74.77079773,
-                            -0.18227801
+                            104.69999695,
+                            -2.8982501
                         ],
                         [
-                            -76.33779907,
-                            -0.122956
+                            109.96299744,
+                            -1.81664002
                         ]
                     ]
                 ],
@@ -2488,12 +2026,12 @@
                 "coordinates": [
                     [
                         [
-                            -76.33779907,
-                            -0.122956
+                            109.96299744,
+                            -1.81664002
                         ],
                         [
-                            -76.98680115,
-                            -0.46288601
+                            111.98500061,
+                            2.26160002
                         ]
                     ]
                 ],
@@ -2515,12 +2053,12 @@
                 "coordinates": [
                     [
                         [
-                            -76.98680115,
-                            -0.46288601
+                            111.98500061,
+                            2.26160002
                         ],
                         [
-                            -77.70809937,
-                            0.809506
+                            114.5306015,
+                            0.81059998
                         ]
                     ]
                 ],
@@ -2542,12 +2080,12 @@
                 "coordinates": [
                     [
                         [
-                            -77.70809937,
-                            0.809506
+                            114.5306015,
+                            0.81059998
                         ],
                         [
-                            -78.1207962,
-                            -2.29917002
+                            117.37361145,
+                            2.83583331
                         ]
                     ]
                 ],
@@ -2569,12 +2107,12 @@
                 "coordinates": [
                     [
                         [
-                            -78.1207962,
-                            -2.29917002
+                            117.37361145,
+                            2.83583331
                         ],
                         [
-                            -78.74919891,
-                            1.81441998
+                            120.3239975,
+                            -2.55802989
                         ]
                     ]
                 ],
@@ -2596,12 +2134,12 @@
                 "coordinates": [
                     [
                         [
-                            -78.74919891,
-                            1.81441998
+                            120.3239975,
+                            -2.55802989
                         ],
                         [
-                            -79.39199829,
-                            0.184203
+                            122.84999847,
+                            0.637119
                         ]
                     ]
                 ],
@@ -2623,12 +2161,12 @@
                 "coordinates": [
                     [
                         [
-                            -79.39199829,
-                            0.184203
+                            122.84999847,
+                            0.637119
                         ],
                         [
-                            -79.68019867,
-                            -2.26103997
+                            127.89600372,
+                            1.18527997
                         ]
                     ]
                 ],
@@ -2650,12 +2188,12 @@
                 "coordinates": [
                     [
                         [
-                            -79.68019867,
-                            -2.26103997
+                            127.89600372,
+                            1.18527997
                         ],
                         [
-                            -89.61740112,
-                            -0.91020602
+                            133.43899536,
+                            -2.53223991
                         ]
                     ]
                 ],
@@ -2677,12 +2215,12 @@
                 "coordinates": [
                     [
                         [
-                            -89.61740112,
-                            -0.91020602
+                            133.43899536,
+                            -2.53223991
                         ],
                         [
-                            96.32559967,
-                            2.41027999
+                            141.30279541,
+                            -2.69260001
                         ]
                     ]
                 ],
@@ -2704,12 +2242,12 @@
                 "coordinates": [
                     [
                         [
-                            96.32559967,
-                            2.41027999
+                            141.30279541,
+                            -2.69260001
                         ],
                         [
-                            98.88890076,
-                            1.55594003
+                            150.80799866,
+                            -2.57940006
                         ]
                     ]
                 ],
@@ -2731,12 +2269,12 @@
                 "coordinates": [
                     [
                         [
-                            98.88890076,
-                            1.55594003
+                            150.80799866,
+                            -2.57940006
                         ],
                         [
-                            100.28099823,
-                            -0.78691697
+                            -157.3500061,
+                            1.98616004
                         ]
                     ]
                 ],
@@ -2758,12 +2296,12 @@
                 "coordinates": [
                     [
                         [
-                            100.28099823,
-                            -0.78691697
+                            -157.3500061,
+                            1.98616004
                         ],
                         [
-                            101.46829987,
-                            -2.09299994
+                            166.91900635,
+                            -0.54745799
                         ]
                     ]
                 ],
@@ -2785,12 +2323,12 @@
                 "coordinates": [
                     [
                         [
-                            101.46829987,
-                            -2.09299994
+                            166.91900635,
+                            -0.54745799
                         ],
                         [
-                            102.2519989,
-                            2.26336002
+                            173.03100586,
+                            1.00361001
                         ]
                     ]
                 ],
@@ -2812,12 +2350,12 @@
                 "coordinates": [
                     [
                         [
-                            102.2519989,
-                            2.26336002
+                            173.03100586,
+                            1.00361001
                         ],
                         [
-                            103.70899963,
-                            1.38725996
+                            -171.71000671,
+                            -2.76812005
                         ]
                     ]
                 ],
@@ -2839,12 +2377,12 @@
                 "coordinates": [
                     [
                         [
-                            103.70899963,
-                            1.38725996
+                            -171.71000671,
+                            -2.76812005
                         ],
                         [
-                            104.69999695,
-                            -2.8982501
+                            173.63699341,
+                            0.185278
                         ]
                     ]
                 ],
@@ -2866,585 +2404,18 @@
                 "coordinates": [
                     [
                         [
-                            104.69999695,
-                            -2.8982501
+                            173.63699341,
+                            0.185278
                         ],
                         [
-                            109.40399933,
-                            -0.150711
+                            176.41000366,
+                            -1.31444001
                         ]
                     ]
                 ],
                 "properties": {
                     "title": "Flight Path",
                     "description": "Leg 49",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            109.40399933,
-                            -0.150711
-                        ],
-                        [
-                            111.67299652,
-                            -2.70519996
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 50",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            111.67299652,
-                            -2.70519996
-                        ],
-                        [
-                            111.98500061,
-                            2.26160002
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 51",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            111.98500061,
-                            2.26160002
-                        ],
-                        [
-                            113.76699829,
-                            2.6500001
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 52",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            113.76699829,
-                            2.6500001
-                        ],
-                        [
-                            114.89387512,
-                            -0.94032502
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 53",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            114.89387512,
-                            -0.94032502
-                        ],
-                        [
-                            117.15699768,
-                            -0.48453099
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 54",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            117.15699768,
-                            -0.48453099
-                        ],
-                        [
-                            117.54299927,
-                            0.3847
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 55",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            117.54299927,
-                            0.3847
-                        ],
-                        [
-                            120.65799713,
-                            -1.41674995
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 56",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            120.65799713,
-                            -1.41674995
-                        ],
-                        [
-                            122.77200317,
-                            -1.03892004
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 57",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            122.77200317,
-                            -1.03892004
-                        ],
-                        [
-                            125.96700287,
-                            -2.0805099
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 58",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            125.96700287,
-                            -2.0805099
-                        ],
-                        [
-                            128.32499695,
-                            2.04598999
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 59",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            128.32499695,
-                            2.04598999
-                        ],
-                        [
-                            132.46330261,
-                            -1.15929997
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 60",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            132.46330261,
-                            -1.15929997
-                        ],
-                        [
-                            134.50610352,
-                            -2.72099996
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 61",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            134.50610352,
-                            -2.72099996
-                        ],
-                        [
-                            140.51600647,
-                            -2.57695007
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 62",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            140.51600647,
-                            -2.57695007
-                        ],
-                        [
-                            147.42399597,
-                            -2.06188989
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 63",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            147.42399597,
-                            -2.06188989
-                        ],
-                        [
-                            151.99777222,
-                            -2.66222215
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 64",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            151.99777222,
-                            -2.66222215
-                        ],
-                        [
-                            -157.3500061,
-                            1.98616004
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 65",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            -157.3500061,
-                            1.98616004
-                        ],
-                        [
-                            166.91900635,
-                            -0.54745799
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 66",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            166.91900635,
-                            -0.54745799
-                        ],
-                        [
-                            173.27099609,
-                            2.05860996
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 67",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            173.27099609,
-                            2.05860996
-                        ],
-                        [
-                            -171.71000671,
-                            -2.76812005
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 68",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            -171.71000671,
-                            -2.76812005
-                        ],
-                        [
-                            173.63699341,
-                            0.185278
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 69",
-                    "stroke": "#555555",
-                    "stroke-opacity": 1,
-                    "stroke-width": 2,
-                    "fill": "#555555",
-                    "fill-opacity": 0.5
-                }
-            }
-        },
-        {
-            "type": "Feature",
-            "geometry": {
-                "type": "Linestring",
-                "coordinates": [
-                    [
-                        [
-                            173.63699341,
-                            0.185278
-                        ],
-                        [
-                            175.97000122,
-                            -2.48583007
-                        ]
-                    ]
-                ],
-                "properties": {
-                    "title": "Flight Path",
-                    "description": "Leg 70",
                     "stroke": "#555555",
                     "stroke-opacity": 1,
                     "stroke-width": 2,
