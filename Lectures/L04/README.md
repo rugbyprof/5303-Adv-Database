@@ -41,6 +41,10 @@ Various links to install Python and Pip (python package manager) on windows.
 - Use Python to remove the bad objects (documents): 
   - `python filter_bad_docs.py` 
 
+#### Install Cosmos DB
+- Find and install Azure Cosmos DB as a VSCode Extension
+- https://code.visualstudio.com/docs/azure/mongodb
+- Open [THIS](./Scrapbook.Sightings.mongo) scrapbook and run.
 
 #### Good References
 - https://docs.docker.com/engine/reference/commandline/run/
@@ -56,6 +60,3 @@ Various links to install Python and Pip (python package manager) on windows.
 - `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id` - find ip address for container
 - `docker inspect container_id` - gives a ton of info about a container
 
-### VsCode And Mongo
-
- https://hackernoon.com/turning-vs-code-into-a-killer-mongodb-admin-tool-2514f1596a6c
