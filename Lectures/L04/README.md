@@ -39,7 +39,7 @@ Various links to install Python and Pip (python package manager) on windows.
   - `mongoimport --db ufos --collection sightings --type csv --headerline --file /path/to/ufo_sightings.csv`
   
 - Use Python to remove the bad objects (documents): 
-  - `python mongo_insert.py` 
+  - `python filter_bad_docs.py` 
 
 
 #### Good References
