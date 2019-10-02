@@ -1,0 +1,26 @@
+
+// Find all sightings
+db.sightings.find()
+
+// Create a 2D index on the sightings table
+db.sightings.createIndex( { loc : "2dsphere" } )
+
+// Removes a field from a document
+db.sightings.update({},{$unset: {coordinates:1}},{multi: true});
+
+// Remove an object with a specific id
+db.sightings.remove({"_id":ObjectId('5d94b9dbbf8bdec4f8ae15d9')})
+
+// Find all sightings near manhatten
+db.sightings.find(
+{
+     loc:
+       { $near :
+          {
+            $geometry: { type: "Point",  coordinates: [ -73.9667, 40.78 ] },
+            $minDistance: 1000,
+            $maxDistance: 1609
+          }
+       }
+   }
+   )
