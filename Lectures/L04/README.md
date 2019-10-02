@@ -29,11 +29,16 @@ Various links to install Python and Pip (python package manager) on windows.
     - `-p` Associate ports host-port:container-port
     - `mongo` the image name
 
-- Import the UFO's file to your mongo db:
-  - `mongoimport --db ufos --collection sightings --type csv --headerline --file /path/to/ufo_sightings.csv`
+- Connect to Mongo
+  - Create a db called `ufos`
+  - Create a collection called `sightings`
   
-#### Python Mongo Connect
-  - 
+- Exit Mongo
+
+- We could imp
+  - `mongoimport --db ufos --collection sightings --type csv --headerline --file /path/to/ufo_sightings.csv`
+- Run the 
+  - Find the `mongo_insert.py` file, and run it. 
 
 
 #### Good References
