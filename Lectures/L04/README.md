@@ -29,6 +29,13 @@ Various links to install Python and Pip (python package manager) on windows.
     - `-p` Associate ports host-port:container-port
     - `mongo` the image name
 
+- Import the UFO's file to your mongo db:
+  - `mongoimport --db ufos --collection sightings --type csv --headerline --file /path/to/ufo_sightings.csv`
+  
+#### Python Mongo Connect
+  - 
+
+
 #### Good References
 - https://docs.docker.com/engine/reference/commandline/run/
 - https://stackoverflow.com/questions/23735149/what-is-the-difference-between-a-docker-image-and-a-container
