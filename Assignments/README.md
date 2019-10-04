@@ -8,8 +8,4 @@
  | [A05](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A05) | [ Barebones Refactor ](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A05) | [ Worst Flight Planner Step 2](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A05) | [Monday September 16 <sup>th</sup>](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A05) |
  | [A06](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A06) | [ Route Visualizer ](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A06) | [ Worst Flight Planner Step 3](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A06) | [Monday September 23<sup>rd</sup>](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A06) |
 
-<<<<<<< HEAD
-<sup>Last Updated: 2019-09-30 (Mon @ 14:47)</sup>
-=======
-<sup>Last Updated: 2019-10-02 (Wed @ 11:55)</sup>
->>>>>>> ae8e4711c13b88f904c01cf97c09d96add6655fd
+<sup>Last Updated: 2019-10-04 (Fri @ 11:12)</sup>
