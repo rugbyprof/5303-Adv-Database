@@ -136,33 +136,7 @@
             "fill-opacity":0.3
          }
       },
-      {
-         "type":"Feature",
-         "geometry":{
-            "type":"LineString",
-            "coordinates":[
-               [
-                  -64.68338012695312,
-                  32.37184274299272
-               ],
-               [
-                  -13.7109374,
-                  21.24477234
-               ]
-            ]
-         },
-         "properties":{
-            "title":"Path to destination",
-            "description":"Flight Path 3",
-            "stroke":"#00ff00",
-            "stroke-opacity":0.8,
-            "stroke-width":2,
-            "fill":"#ff0000",
-            "fill-opacity":0.3
-         }
-      },
-      {
-         "type":"Feature",
+     {"type":"Feature",
          "geometry":{
             "type":"LineString",
             "coordinates":[
@@ -191,6 +165,32 @@
          "geometry":{
             "type":"LineString",
             "coordinates":[
+               [
+                  -64.68338012695312,
+                  32.37184274299272
+               ],
+               [
+                  -13.7109374,
+                  21.24477234
+               ]
+            ]
+         },
+         "properties":{
+            "title":"Path to destination",
+            "description":"Flight Path 3",
+            "stroke":"#00ff00",
+            "stroke-opacity":0.8,
+            "stroke-width":2,
+            "fill":"#ff0000",
+            "fill-opacity":0.3
+         }
+      },
+      {
+
+         "type":"Feature",
+         "geometry":{
+            "type":"LineString",
+            "coordinates":[
                 [
                   -68.31161499023438,
                   -54.833127270087246
@@ -213,6 +213,3 @@
       }
    ]
 }
-
-
-

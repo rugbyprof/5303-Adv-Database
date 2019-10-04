@@ -1,0 +1,3 @@
+db.nfl_stats.find();
+
+db.nfl_stats.find({"opponent":"TEN"})

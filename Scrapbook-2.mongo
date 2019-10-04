@@ -1,0 +1,22 @@
+db.keywords.find()
+db.links.find()
+db.metadata.find()
+
+db.metadata.find({"original_title":"Pocahontas"},{"id":1,"_id":0})
+
+db.metadata.aggregate(
+    {
+    $lookup:
+        {
+        from: "keywords",
+        localField: "id",
+        foreignField: "id",
+        as: "keywords"
+        }
+    }
+)
+
+db.ratings.distinct("rating").sort()
+
+db.ratings.find({"rating":4.5}).count()
+
