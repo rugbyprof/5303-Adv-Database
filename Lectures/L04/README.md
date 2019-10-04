@@ -29,6 +29,13 @@ Various links to install Python and Pip (python package manager) on windows.
     - `-p` Associate ports host-port:container-port
     - `mongo` the image name
 
+- Now (per Corbin) run the following to get the shell to run:
+  - `docker exec -it mongodb mongo`
+
+
+- Copy the UFO file into your container:
+  - `docker cp path/to/ufo_sightings.csv mongodb:/tmp/ufo_sightings.csv`
+
 - Connect to Mongo
   - Create a db called `ufos`
   - Create a collection called `sightings`
@@ -36,7 +43,7 @@ Various links to install Python and Pip (python package manager) on windows.
 - Exit Mongo
 
 - Import all the UFO Sightings:
-  - `mongoimport --db ufos --collection sightings --type csv --headerline --file /path/to/ufo_sightings.csv`
+  - `docker exec mongodb mongoimport --db ufos --collection sightings --type csv --headerline --file /tmp/ufo_sightings.csv`
   
 - Use Python to remove the bad objects (documents): 
   - `python filter_bad_docs.py` 
