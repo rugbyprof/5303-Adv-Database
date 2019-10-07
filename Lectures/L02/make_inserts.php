@@ -7,7 +7,7 @@ function processCSV($filename){
     return $csv;
 }
 
-$csv = processCSV('airports.dat');
+$csv = processCSV('../../Resources/01_Random_Data/airports.dat');
 
 $fp = fopen('goedata.sql','w');
 
