@@ -1,0 +1,32 @@
+version: '3'
+services:
+    myapp:
+        build: .
+        container_name: "myapp"
+        image: debian/latest
+        environment:
+            - NODE_ENV=development
+            - FOO=bar
+        volumes:
+            - .:/var/www:rw
+            - /tmp/.X11-unix:/tmp/.X11-unix:rw
+        ports:
+            - 3000:3000
+            - 9000:9000
+        links:
+            - mongodb
+        depends_on:
+            - mongodb
+    mongodb:
+        image: mongo:latest
+        container_name: "mongodb"
+        environment:
+          - MONGO_DATA_DIR=/data/db
+          - MONGO_LOG_DIR=/dev/null
+          - MONGODB_USER="user" 
+          - MONGODB_PASS="pass"
+        volumes:
+          - ./data/db:/data/db
+        ports:
+            - 27017:27017
+        command: mongod --bind_ip 0.0.0.0

@@ -1,6 +1,6 @@
 
 // Find all sightings
-db.sightings.find()
+db.sightings.find().count()
 
 // Create a 2D index on the sightings table
 db.sightings.createIndex( { loc : "2dsphere" } )
