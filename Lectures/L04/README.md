@@ -10,6 +10,10 @@ Various links to install Python and Pip (python package manager) on windows.
 - https://github.com/BurntSushi/nfldb/wiki/Python-&-pip-Windows-installation
 
 
+#### UFO File
+
+[UFO's](../../Resources/01_Random_Data/ufo_sightings.csv)
+
 ### Docker
 
 - Install Docker
@@ -66,4 +70,3 @@ Various links to install Python and Pip (python package manager) on windows.
 - `docker ps -a ` == `docker container ls -all` list all containers
 - `docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id` - find ip address for container
 - `docker inspect container_id` - gives a ton of info about a container
-
