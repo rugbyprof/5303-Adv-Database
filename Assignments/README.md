@@ -9,4 +9,4 @@
  | [A06](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A06) | [ Route Visualizer ](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A06) | [ Worst Flight Planner Step 3](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A06) | [Monday September 23<sup>rd</sup>](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A06) |
  | [A07](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A07) | [ Planes , UFOs, and  Earthquakes ](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A07) | [ Visualizing Armageddon Part 1](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A07) | [Wednesday October 16<sup>th</sup>](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A07) |
 
-<sup>Last Updated: 2019-10-07 (Mon @ 11:55)</sup>
+<sup>Last Updated: 2019-10-07 (Mon @ 14:56)</sup>
