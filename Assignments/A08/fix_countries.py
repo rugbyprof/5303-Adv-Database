@@ -33,11 +33,13 @@ for obj in countries.find():
         del(obj["name"])
         
         geojson = {}
+        geojson["loc"] = {}
         
-        rgeometry = rewind(obj)
+        rgeometry = rewind(obj["geometry"])
 
-        geojson["loc"] = rgeometry
+        geojson["loc"]["type"] = "Feature"
+        geojson["properties"] = {"name":name,"size":0}
+        geojson["loc"]["geometry"] = rgeometry
         geojson["name"] = name
-        # obj["loc"]["type"] = "feature"
 
         countries_geo.insert_one(geojson)
