@@ -1,0 +1,9 @@
+db.population.find()
+
+db.earthquakes.find()
+
+db.countries_geo.find({"name":"Russia"})
+
+db.countries_geo.createIndex( { "loc" : "2dsphere" } )
+
+db.countries_geo.findOne({ geometry: { $geoIntersects: { $geometry: { type: "Point", coordinates: [ -73.93414657, 40.82302903 ] } } } })
