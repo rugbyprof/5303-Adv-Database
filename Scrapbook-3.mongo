@@ -1,5 +1,0 @@
-db.population.find()
-
-db.earthquakes.find()
-
-db.countries.find({"properties.ADMIN":"Russia"})
