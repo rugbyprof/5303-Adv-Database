@@ -9,7 +9,6 @@ client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client["ufos"]
 sightings = db["sightings"]
 
-
 count = 0
 
 for obj in sightings.find():
