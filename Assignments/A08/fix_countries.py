@@ -10,6 +10,7 @@ import json
 import os
 
 path = "/Users/griffin/Code/Courses/1-Current_Courses/5303-Adv-Database/Resources/01_Random_Data/countries/"
+path = "/Users/griffin/1-Courses/5303-Adv-Database/Resources/01_Random_Data/countries"
 
 def write_country_file(name,geometry):
     location = os.path.join(path,name+'.geojson')
@@ -33,7 +34,6 @@ for obj in countries.find():
     mongo_id = obj["_id"]
     del(obj["_id"])
     name = obj["properties"]["ADMIN"]
-<<<<<<< HEAD
     obj["name"] = name
 
     path = "/Users/griffin/1-Courses/5303-Adv-Database/Resources/01_Random_Data/countries/"+name+".geojson"
@@ -57,21 +57,6 @@ for obj in countries.find():
         geojson["location"]["type"] = "Feature"
         geojson["properties"] = {"name":name,"size":0}
         geojson["location"]["geometry"] = rgeometry
+        geojson["name"] = name
 
         countries_geo.insert_one(geojson)
-=======
-
-    if not os.path.exists(os.path.join(path,name+'.geojson')):
-        write_country_file(name, obj["geometry"])
-    
-    f = open(os.path.join(path,name+'.geojson'),"r")
-    wound_geo = f.read()
-    geojson = json.loads(rewind(wound_geo))
-
-    
-    loc = {"name":name,"location":{"type":"feature","geometry":geojson}}
-
-    countries_geo.insert(loc)
-
-    
->>>>>>> 35f0246d63fc076b5710203d2392f162cacddb52
