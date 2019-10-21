@@ -6,6 +6,19 @@ db = client["armageddon"]
 ## GET YOUR OWN!!
 mapbox_access_token = "pk.eyJ1IjoicnVnYnlwcm9mIiwiYSI6ImNpZ3M1aDZwbzAyMnF1c20xcnM4ZGowYWQifQ.s6ghscOu98he230FV1_72w"
 
+def get_within_box(collection,bbox):
+    min_lon = bbox['min_lon']
+    max_lon = bbox['max_lon']
+    min_lat = bbox['min_lat']
+    max_lat = bbox['max_lat']
+
+    results = []
+
+    for res in db[collection].find({"loc": { "$geoWithin": { "$box":  [ [ min_lon, max_lat ], [ max_lon, min_lat ] ] } }}):
+        results.append(res)
+
+    return results
+
 def get_country_geojson(country):
     global db
     countries = db["countries"]
@@ -61,7 +74,7 @@ def get_bbox(points):
     max_lon = -180.0
     
     for point in points['lonlat']:
-        print(point)
+        #print(point)
         if float(point[1]) < min_lat:
             min_lat = float(point[1])
         if float(point[0]) < min_lon:

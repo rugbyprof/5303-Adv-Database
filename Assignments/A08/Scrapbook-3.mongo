@@ -37,11 +37,11 @@ db.ufos.find(
    }
 )
 
-db.contries_geo.createIndex( { 'location' : "2dsphere" } )
+db.countries_geo.createIndex( { 'location' : "2dsphere" } )
 
-db.contries_geo.createIndex( { 'location.coordinates' : "2dsphere" } )
+db.countries_geo.createIndex( { 'location.coordinates' : "2dsphere" } )
 
-db.contries_geo.ensureIndex({"loc.geometry":"2dsphere"})
+db.countries_geo.ensureIndex({"loc.geometry":"2dsphere"})
 
 db.countries_geo.find(
 { location: { 
@@ -50,3 +50,11 @@ db.countries_geo.find(
       $maxDistance: 8000 } } })
 
 db.countries_geo.getIndexes()
+
+db.ufos.find( {
+   loc: { $geoWithin: { $box:  [ [ -126, 49 ], [ -63, 18 ] ] } }
+} )
+
+db.volcanos.distinct("properties.PEI")
+
+db.plane_crashes.distinct("InjurySeverity")
