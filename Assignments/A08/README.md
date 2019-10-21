@@ -12,7 +12,7 @@ Perform the following using pymongo and plotly to visualize your results.
 - FileName: `arm2.py`
   - Show the Volcanos that have the top 3 worst PEI's (Population Exposure Index). Color them red, orange, yellow respectively with larger markers for the worst. Use a volcano or mountain icon for your markers. 
 - FileName: `arm3.py` 
-  - Show the worst plane crashes (with Fatalities). Red over 300, Orange over 200, Yellow over 100 and blue for the rest. Use plane icons to show where they were. 
+  - Show the worst plane crashes (with Fatalities). Red over 300, Orange over 200, Yellow over 100 and blue for the rest. Use plane icons to show where they occured. 
 
 Each file should output an html file with the same name. The html files should be placed in your cs2 server account at this path: `/home/yourusername/public_html/5303/armageddon/armX.html`
 
