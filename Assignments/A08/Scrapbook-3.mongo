@@ -24,7 +24,6 @@ db.ufos.createIndex({'loc':"2d"});
 
 db.ufos.getIndexes()
 
-<<<<<<< HEAD
 db.ufos.find(
    {
      loc:
@@ -43,15 +42,9 @@ db.countries_geo.createIndex( { 'location' : "2dsphere" } )
 db.countries_geo.createIndex( { 'location.coordinates' : "2dsphere" } )
 
 db.countries_geo.ensureIndex({"loc.geometry":"2dsphere"})
-=======
-db.contries_geo.createIndex( { 'location.coordinates' : "2dsphere" } )
-
-db.contries_geo.ensureIndex({"location.geometry":"2dsphere"})
->>>>>>> 423e97864ae6b0237dc8acbe0f90201e3148c767
 
 db.countries_geo.getIndexes()
 
-<<<<<<< HEAD
 db.countries_geo.getIndexes()
 
 db.ufos.find( {
@@ -61,6 +54,3 @@ db.ufos.find( {
 db.volcanos.distinct("properties.PEI")
 
 db.plane_crashes.distinct("InjurySeverity")
-=======
-db.countries_geo.dropIndexes()
->>>>>>> 423e97864ae6b0237dc8acbe0f90201e3148c767
