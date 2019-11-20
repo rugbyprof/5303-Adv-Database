@@ -6,11 +6,11 @@ I found a schema here: https://github.com/yoosuf/Messenger that handles many pos
 
 <a href="https://github.com/yoosuf/Messenger"><img src="https://raw.githubusercontent.com/yoosuf/Messenger/master/Messenger.png" width="300"></a>
 
-Therefore we should create a manageable schema that will be easier to populate and create simulated transactions. 
+Therefore we should create a manageable schema that will be easier to populate and easier to gemerate simulated transactions. 
 
 ### Managable Schema 
 
-This smaller schema will be easy to create random data for. It has 3 tables: 
+This smaller schema has 4 tables: 
 
 - Users
 - Messages
