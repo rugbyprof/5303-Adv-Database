@@ -1,0 +1,56 @@
+db.population.find()
+
+db.earthquakes.find()
+
+db.countries_geo.find({"name":"Russia"})
+
+db.countries_geo.ensureIndex({"geometry.coordinates" : "2d"});
+
+
+db.earthquakes.ensureIndex({"loc" : "2dsphere"});
+
+db.countries_geo.findOne({ geometry: { $geoIntersects: { $geometry: { type: "Point", coordinates: [ -73.93414657, 40.82302903 ] } } } })
+
+db.countries.find({ location:
+   { $geoWithin:
+      { $centerSphere: [ [ -73.93414657, 40.82302903 ], 80800 ] } } })
+
+db.ufos.createIndex( { 'loc' : "2dsphere" } )
+
+
+db.countries_geo.createIndex( { 'location.coordinates' : "2d" } )
+
+db.ufos.createIndex({'loc':"2d"});
+
+db.ufos.getIndexes()
+
+db.ufos.find(
+   {
+     loc:
+       { $near :
+          {
+            $geometry: { type: "Point",  coordinates: [ -73.9667, 40.78 ] },
+            $minDistance: 1000,
+            $maxDistance: 5000
+          }
+       }
+   }
+)
+
+db.countries_geo.createIndex( { 'location' : "2dsphere" } )
+
+db.countries_geo.createIndex( { 'location.coordinates' : "2dsphere" } )
+
+db.countries_geo.ensureIndex({"loc.geometry":"2dsphere"})
+
+db.countries_geo.getIndexes()
+
+db.countries_geo.getIndexes()
+
+db.ufos.find( {
+   loc: { $geoWithin: { $box:  [ [ -126, 49 ], [ -63, 18 ] ] } }
+} )
+
+db.volcanos.distinct("properties.PEI")
+
+db.plane_crashes.distinct("InjurySeverity")

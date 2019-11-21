@@ -1,0 +1,23 @@
+db.population.find()
+
+db.earthquakes.find()
+
+db.countries_geo.find({"name":"Russia"})
+
+db.countries_geo.createIndex( { "location.coordinates" : "2dsphere" } )
+
+db.countries_geo.findOne({ geometry: { $geoWithin: { $geometry: { type: "Point", coordinates: [ -73.93414657, 40.82302903 ] } } } })
+
+db.countries_geo.find({ _id: ObjectId('5da7ccdb22f4d9468294c344')})
+
+db.countries_geo.find({
+   location: {
+     $nearSphere: {
+       $geometry: {
+         type: 'Point',
+         coordinates: [-122.5, 37.1]
+       },
+       $maxDistance: 1448100
+     }
+   }
+ })
