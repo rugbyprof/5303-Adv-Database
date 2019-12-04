@@ -91,4 +91,11 @@ Your script should generate friendships amongst your Million users pretty close 
 
 <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/sms_messages_count.png" width="400">
 
-Since we don't have age, 
+### Deliverables
+
+Your script should be able to:
+- Generate 1 million users
+- Assign friendships according to the stats above
+- Generate messages according to the stats above (and the DB schema)
+
+Of course it also needs to able to insert its values into some database. That will be discussed in class today. 
