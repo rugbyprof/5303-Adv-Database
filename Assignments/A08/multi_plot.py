@@ -15,8 +15,6 @@ from geo import get_within_box
 from geo import get_center_point
 
 
-
-
 brazil_border = get_country_border("Brazil")
 
 brazil_center = get_center_point(brazil_border['lonlat'])

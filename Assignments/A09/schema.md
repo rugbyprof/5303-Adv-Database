@@ -31,7 +31,11 @@ Lastly, the **`User_Connections`** table exists to help (again) with generating 
 
 CREATE SCHEMA IF NOT EXISTS `chat_client` DEFAULT CHARACTER SET utf8 ;
 USE `chat_client` ;
+```
+Use this on https://mockaroo.com/5168be20 to generate users. It should take you to my schema. 
+<img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/mockaroo_user_structure.png">
 
+```sql
 -- -----------------------------------------------------
 -- Table `chat_client`.`Users`
 -- -----------------------------------------------------

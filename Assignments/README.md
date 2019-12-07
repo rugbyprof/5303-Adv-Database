@@ -10,4 +10,4 @@
  | [A07](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A07) | [ Planes , UFOs, and  Earthquakes ](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A07) | [ Visualizing Armageddon Part 1](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A07) | [Wednesday October 16<sup>th</sup>](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A07) |
  | [A08](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A08) | [ Visualizing Armageddon ](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A08) | [ Unnecessary Carnage](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A08) | [28 October by class time.](https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A08) |
 
-<sup>Last Updated: 2019-10-22 (Tue @ 09:17)</sup>
+<sup>Last Updated: 2019-11-22 (Fri @ 15:53)</sup>
