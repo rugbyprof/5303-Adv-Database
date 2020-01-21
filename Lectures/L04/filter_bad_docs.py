@@ -5,6 +5,10 @@ allowing us to create a spatial index and do distance queries.
 """
 import pymongo  # package for working with MongoDB
 
+
+def important_function():
+    print("this is important")
+
 client = pymongo.MongoClient("mongodb://localhost:27017/")
 db = client["ufos"]
 sightings = db["sightings"]
