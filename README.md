@@ -41,6 +41,30 @@ Typically database courses would involve `relational algebra` and `normal forms`
   - [GraphQL](https://graphql.org/)
   
 
+https://insights.stackoverflow.com/survey/2020#technology-databases
+
+When looking at database technologies, the results are mostly consistent with what we observed last year. MySQL has maintained the top spot, followed by PostgreSQL and Microsoft SQL Server. However, we see some slight growth in the popularity of Firebase, which edged out Elasticsearch this year.
+
+Percent = Users out of 41,811 responses who use this tech.
+
+|     | Database  | Percent | DB Type |
+|:---:|:----------|--------:|:----------|
+|   1  |MySQL | 53.5% |            |
+|  2   |PostgreSQL  | 38.5%|            |
+|  3   |Microsoft SQL Server  | 34.8%|            |
+|  4   |SQLite  | 30.6%|            |
+|  5   |MongoDB  | 26.7%|            |
+| 6    |Redis  | 20.5%|            |
+|  7   |MariaDB  | 16.9%|            |
+| 8    |Oracle  | 16.3%|            |
+| 9    |Elasticsearch  | 15.5%|            |
+| 10    |Firebase  | 13.9%|            |
+|  11   |DynamoDB  | 7.8%|            |
+|  12   |Cassandra  | 3.6%|            |
+|  13   |IBM DB2  | 2.9%|            |
+|  14   |Couchbase  | 2.0%|            |
+
+
 ## Grading
 
 | Categories                                  |       | Grade |          |
