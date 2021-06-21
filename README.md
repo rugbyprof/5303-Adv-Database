@@ -49,17 +49,17 @@ Percent = Users out of 41,811 responses who use this tech.
 
 |     | Database  | Percent | DB Type |
 |:---:|:----------|--------:|:----------|
-|   1  |MySQL | 53.5% |            |
-|  2   |PostgreSQL  | 38.5%|            |
-|  3   |Microsoft SQL Server  | 34.8%|            |
-|  4   |SQLite  | 30.6%|            |
-|  5   |MongoDB  | 26.7%|            |
-| 6    |Redis  | 20.5%|            |
-|  7   |MariaDB  | 16.9%|            |
-| 8    |Oracle  | 16.3%|            |
+|   1  |MySQL | 53.5% |    Relational        |
+|  2   |PostgreSQL  | 38.5%|Relational|
+|  3   |Microsoft SQL Server  | 34.8%|Relational|
+|  4   |SQLite  | 30.6%|Relational|
+|  5   |MongoDB  | 26.7%|NoSQL - Document Store|
+| 6    |Redis  | 20.5%|  NoSQL - Key Value Store        |
+|  7   |MariaDB  | 16.9%|   Relational         |
+| 8    |Oracle  | 16.3%|    Relational        |
 | 9    |Elasticsearch  | 15.5%|            |
-| 10    |Firebase  | 13.9%|            |
-|  11   |DynamoDB  | 7.8%|            |
+| 10    |Firebase  | 13.9%|  NoSQL          |
+|  11   |DynamoDB  | 7.8%| NoSQL - Key Value Store           |
 |  12   |Cassandra  | 3.6%|            |
 |  13   |IBM DB2  | 2.9%|            |
 |  14   |Couchbase  | 2.0%|            |
