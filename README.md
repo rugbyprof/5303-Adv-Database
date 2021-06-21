@@ -60,3 +60,5 @@ Typically database courses would involve `relational algebra` and `normal forms`
 >
 >**4**. Plane ticket prices, events like weddings, or trips out of the country are not valid excuses for missing the final exam at its scheduled time. I will not make accommodations for anything other than an issue vetted by the dean of students. 
 
+
+Hello
