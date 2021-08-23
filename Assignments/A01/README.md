@@ -1,5 +1,5 @@
 ## Assignment 1 - Getting Started
-#### Due: Wednesday August 29<sup>th</sup> by 5:00pm
+#### Due: Wednesday  25<sup>th</sup> by 5:00pm
 
 ## Getting Setup
 
@@ -104,10 +104,11 @@ I use github as a homebase for all assignments, lectures, and resources. It's ba
 ### Class Roster
 ---
 
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1bYgPP1VHlXR1vsjmkMO9vhk_x7y-GIcCIr0gdyWYdWQ/edit?usp=sharing)
+![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1n1uf3ECitwr9EZwOSsWEhkWfyLMJYezI99-lfbGYo8U/edit#gid=0)
+
 #### Update the Class Roster:
 
-- Here is a link to our class roster on google docs: ![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1bYgPP1VHlXR1vsjmkMO9vhk_x7y-GIcCIr0gdyWYdWQ/edit?usp=sharing)
+- Here is a link to our class roster on google docs: ![](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1n1uf3ECitwr9EZwOSsWEhkWfyLMJYezI99-lfbGYo8U/edit#gid=0)
 
 - Update the roster by adding your information to it. 
 
@@ -122,6 +123,8 @@ Add:
 
 ### Rules for emailing me:
 ---
+
+**TL;DR** - Don't email me. Use Slack, you  will get much better customer service!
 
 1) Open your email client.
 2) Create a new email.

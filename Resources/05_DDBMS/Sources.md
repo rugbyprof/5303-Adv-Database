@@ -1,2 +1,0 @@
-- https://medium.com/@jeeyoungk/why-i-love-databases-1d4cc433685f
-- https://medium.com/@jeeyoungk/how-sharding-works-b4dec46b3f6

@@ -1,1 +1,0 @@
-lats,lons = get_meteorites()

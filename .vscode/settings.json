@@ -2,5 +2,6 @@
     "files.associations": {
         "iosfwd": "cpp",
         "iostream": "cpp"
-    }
+    },
+    "cSpell.enabled": true
 }
