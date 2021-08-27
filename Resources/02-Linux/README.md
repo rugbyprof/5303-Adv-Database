@@ -4,9 +4,9 @@ Not a whole lot of order, I just put commands in this file as I saw them in the 
 
 ### Adding Users
 
-- `useradd` is native binary compiled with the system. (only adds the user with nothing else!) 
-- `adduser` is more user friendly and interactive than its back-end useradd. 
-  - : adds a new user to your server as well as:
+- `useradd` is native binary compiled with the system (only adds the user with nothing else!). 
+- `adduser` is a more user friendly and interactive way to add a user. 
+  - It also: 
     -   creates a directory for them in `/home`
     -   prompts for a password
     -   copies some files into the home directory to allow:
