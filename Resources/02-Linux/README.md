@@ -2,7 +2,9 @@
 
 Not a whole lot of order, I just put commands in this file as I saw them in the `history` or as I thought of them.
 
-### Adding Users
+### Users
+
+#### Adding
 
 - `useradd` is native binary compiled with the system (only adds the user with nothing else!). 
 - `adduser` is a more user friendly and interactive way to add a user. 
@@ -12,7 +14,7 @@ Not a whole lot of order, I just put commands in this file as I saw them in the 
     -   copies some files into the home directory to allow:
         -   a history to be kept (`.bash_history`)
         -   and a file to place aliases in so they are remembered the next time you log in (`.bashrc`).
-
+#### Removing
 - `userdel -r username` removes a user along with thier home directory.
 
 ### Package Management
