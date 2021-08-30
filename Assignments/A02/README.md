@@ -126,9 +126,9 @@ http://111.222.333.444
 When your all done, you should have a directory structure like:
 
 -----
-- <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/icons8-folder-24.png" width="24">/var/www/html
-    - <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/icons8-folder-24.png" width="24">DataBase
-         - <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/icons8-markdown-24.png" width="24">README.md 
+- <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/icons8-folder-24.png" width="24"> /var/www/html
+    - <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/icons8-folder-24.png" width="24"> DataBase
+         - <img src="https://cs.msutexas.edu/~griffin/zcloud/zcloud-files/icons8-markdown-24.png" width="24"> README.md 
 
 -----
 
