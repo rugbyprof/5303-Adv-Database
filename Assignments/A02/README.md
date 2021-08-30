@@ -1,5 +1,7 @@
 ### Assignment 2 - Create your own server.
-#### Due: August 30<sup>th</sup> by 5:00 p.m.
+#### Due: 08-30-2021 (Monday @ 5:00 p.m.)
+
+
 
 -----
 
