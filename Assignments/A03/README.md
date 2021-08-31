@@ -49,7 +49,7 @@
 
 - There are security issues exposing a `.git` folder in the "web-root" of your server.
 - Don't put anything with passwords or sensitive info right now. I will show you how to secure it on Wednesday.
-- If your interested here are a couple of methods securing your ./git repos
+- If your interested in getting started here are a couple of methods securing your .git repos
 
 **1)**  Directory Match
  
