@@ -54,6 +54,7 @@
 **1)**  Directory Match
  
 - Tells server to not let anyone access any .git folder
+- This tutorial uses `vi` to edit files. Replace `vi` with `nano` OR use Vscode (if your logged in as root) to do your editing. 
 - https://www.serverlab.ca/tutorials/linux/web-servers-linux/protect-git-folders-in-apache/
 
 **2)**  Alter web Root
