@@ -62,6 +62,3 @@
 - This changes the servers web root to be a sub folder in your repo thereby placing the .git folder one level back not giving the web access.
 - https://stackoverflow.com/questions/7818537/using-a-git-repository-as-a-website-root-folder
 
-
-
-
