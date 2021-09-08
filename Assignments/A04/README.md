@@ -1,5 +1,7 @@
 ### Assignment 4 - SqlZoo.
-#### Due: 09-08-2021 (Monday @ 5:00 p.m.)
+#### Due: 09-10-2021 (Friday @ 5:00 p.m.)
+<sup>I know Friday is not a class day.</sup>
+
 
 ### Overview
 
@@ -16,8 +18,7 @@ https://cs.msutexas.edu/~griffin/data/SqlZoo/
 
 ### Discussion 
 
-- Class decision on language(s)
-- Class decision on format (I will explain)
+- We decided to start with python, so thats what you will write this mini project in.
 
 ### Deliverables
 
