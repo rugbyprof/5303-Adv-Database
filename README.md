@@ -3,6 +3,9 @@
 ### Roster
 ![Excel Icon](https://d3vv6lp55qjaqc.cloudfront.net/items/220B0V0H3c041K2p251Z/google-sheets-16.png?X-CloudApp-Visitor-Id=1094421) [Class Roster](https://docs.google.com/spreadsheets/d/1n1uf3ECitwr9EZwOSsWEhkWfyLMJYezI99-lfbGYo8U/edit#gid=0)
 
+### ZOOM Link              
+https://msutexas-edu.zoom.us/j/9403974439 
+
 ### General Course Info
 
 - __Days:__ MW 5:00 p.m. - 6:20 p.m.
@@ -81,7 +84,11 @@ This course will be a survey of databases comparing and contrasting each DB's st
 | Projects <sup>**2**</sup>                    |  30%  |   B   |  79-88   |
 | Final Exam <sup>**3**,</sup><sup>**4**</sup> |  30%  |   C   |  69-78   |
 | Github Portfolio <sup>**5**</sup>            |  10%  |   D   |  59-68   |
-|                                              |       |   F   | below 59 |
+| Participation                                |  5%   |   F   | below 59 |
+|                                              |       |       |          |
+
+>**Participation**: Obviously this has to do with going to class, asking questions, and generally being a physical part of class. But even more importantly it has to do with interacting with our class on Slack. Responding to queries on Slack either with text response or an emoticon reaction to a post. Asking me questions with direct message is a huge help, as I can turn that into (what the military calls) an "overhead correction". Most questions help bring to my attention things that need clarification for everyone. I will be gauging everyone's participation and the best guarantee is on slack as that creates a digital record.
+
 
 
 >**1**. Each student will give 2 presentations over topics of the professors choosing.
