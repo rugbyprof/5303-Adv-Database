@@ -8,6 +8,6 @@
 | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A03">A03</a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A03"> Assignment 3 </a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A03"> Create your own server.</a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A03"> 09-03-2021 (Friday @ 5:00 p.m.)</a>~ | ---- |
 | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A04">A04</a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A04"> Assignment 4 </a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A04"> SqlZoo.</a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A04"> 09-10-2021 (Friday @ 5:00 p.m.)</a>~ | ---- |
 
-<sup>Last Updated: 2021-09-11 (Sat @ 17:18)</sup> 
+<sup>Last Updated: 2021-09-13 (Mon @ 00:25)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
