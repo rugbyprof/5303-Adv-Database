@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "6c739faf-7348-4a5b-a842-060f5dbf2051",
+		"name": "Tuts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://killzombieswith.us:8000/tuts/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"id\": 7,\n     \"title\": \"Learn Tact\",\n     \"author\": \"Byron\",\n     \"submission_date\": \"2021-11-22\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://killzombieswith.us:8000/tuts/",
+					"protocol": "http",
+					"host": [
+						"killzombieswith",
+						"us"
+					],
+					"port": "8000",
+					"path": [
+						"tuts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://killzombieswith.us:8000/tuts/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"id\": 7,\n     \"author\": \"Lord Shrek\",\n     \"title\":\"Compensating for Pofessionals\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://killzombieswith.us:8000/tuts/",
+					"protocol": "http",
+					"host": [
+						"killzombieswith",
+						"us"
+					],
+					"port": "8000",
+					"path": [
+						"tuts",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
