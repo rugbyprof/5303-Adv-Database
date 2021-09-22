@@ -261,10 +261,13 @@ Process files here....
 
 * Using https://realpython.com/fastapi-python-web-apis/ create a folder on your server `/var/www/html/Apis/movie` and implement an API for the movies DB.
 
-- BRAINSTORMING SESSION ON POSSIBLE QUERIES.
+- 
 
 
 ### Deliverables
+
+- schema due monday
+- with loaded tables
 
 * Create a page that shows all routes so they can be clicked on to run when I go here: http://Your.IP.Address:8002/
 * I should see all of your routes or if you can add to the docs some how, that would be sufficient when  going here: http://Your.IP.Address:8002/docs 
