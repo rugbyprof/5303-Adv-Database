@@ -215,4 +215,4 @@ Example:
 
 * Create a page that shows all routes so they can be clicked on to run when I go here: http://Your.IP.Address:8001/
 * I should see all of your routes or if you can add to the docs some how, that would be sufficient when  going here: http://Your.IP.Address:8001/docs 
-
+* The corresponding code for sqlzoo should be in a folder called `A04` inside an assignments folder which ends up on your Github repo.
