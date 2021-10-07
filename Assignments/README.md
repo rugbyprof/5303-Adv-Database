@@ -9,6 +9,6 @@
 | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A04">A04</a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A04"> Assignment 4 </a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A04"> SqlZoo.</a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A04"> 09-20-2021 (Monday @ 5:00 p.m.)</a>~ | ---- |
 | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A05">A05</a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A05"> Assignment 5 </a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A05"> Movies DB.</a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A05"> 10-04-2021 (Monday @ 5:00 p.m.)</a>~ | ---- |
 
-<sup>Last Updated: 2021-10-07 (Thu @ 00:46)</sup> 
+<sup>Last Updated: 2021-10-07 (Thu @ 00:48)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 

@@ -169,7 +169,7 @@ class FileProcessor:
         """ Csv or Tsv whatever. Just convert it to json and either save it to a file,
             load it into mongo, or return an array of values (don't to the last one for
             huge files)
-            
+
             Returns:
                 list of json objects if `returnList` keyword argument is True
         """
@@ -245,6 +245,7 @@ class FileProcessor:
                     # function call
                     jobj = {self.colHeaders[i]: row[i] for i in range(headLen)}
 
+                    
                     if self.loadMongo:
                         if chunkSize:
                             chunkList.append(jobj)
