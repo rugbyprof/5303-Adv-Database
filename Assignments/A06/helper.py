@@ -14,6 +14,13 @@ class PyMongoHelper:
         https://pymongo.readthedocs.io/en/stable/api/index.html
     """
     def __init__(self,**kwargs):
+        """Params:
+                dbName          (string) - database name in mongo
+                collectionName  (string) - :) you know
+           Usage:
+                dbcnx = PyMongoHelper(dbName='tempDB',collectionName='collectionTest')
+                dbcnx.insert({some json object})
+        """
         self.dbName = kwargs.get('dbName',None)
         self.collectionName = kwargs.get('collectionName',None)
 
@@ -24,25 +31,52 @@ class PyMongoHelper:
         self.cnx = pymongo.MongoClient("mongodb://localhost:27017/")
         self.db = self.cnx[self.dbName]
 
+        # if collectionName passed in, set it
         if self.collectionName:
             self.collection = self.db[self.collectionName]
 
     def setDb(self,name):
+        """Set database name
+
+        Args:
+            name (string): string name of database
+        """
         self.db = self.cnx[name]
     
     def setCollection(self,name):
+        """Set collection name
+
+        Args:
+            name (string): name of collection
+        """
         self.collectionName = name
         self.collection = self.db[self.collectionName]
 
     def emptyCurrentCollection(self):
+        """Delete all documents from current collection
+        """
         if self.collectionName:
             self.db[self.collectionName].delete_many({})
         #self.collection = self.db[self.collectionName]
 
     def getCollections(self):
-        self.collections = self.db.list_collection_names()
+        """Returns a list of collection names from the current db
 
-    def insert(self,document,one=False):
+        Returns:
+            (list): of collection names
+        """
+        self.collections = self.db.list_collection_names()
+        return self.collections
+
+    def insert(self,document):
+        """Insert object into db
+
+        Args:
+            document (json / dict): [description]
+
+        Returns:
+            (dict): dictionary of results with success or errors
+        """
         if self.dbName == None:
             print("No DB name set in PyMongoHelper!")
             sys.exit()
@@ -108,15 +142,20 @@ class FileProcessor:
             self._processFiles()
 
     def _processFiles(self):
+        """ Private(ish) method to process a list of files stored in self.files
+        """
         for fullName in self.files:
             print(f"Processing: {fullName}")
             self.csvToJson(csvFile=fullName,delimiter='\t',cleanCollection=True,chunkSize={'percent':1})
 
 
     def readDir(self,**kwargs):
-        """ Read a directory of files that have the correct extension into a list.
-            Extensions like csv or tsv
+        """ Reads a directory for files matching specific glob wildcard
+
+        Returns:
+            (list): List of files globbed from a directory
         """
+    
         # use values passed in OR use the ones already set in the class
         filePath = kwargs.get('filePath',self.filePath)
         ext = kwargs.get('ext',self.globExt)
@@ -130,6 +169,9 @@ class FileProcessor:
         """ Csv or Tsv whatever. Just convert it to json and either save it to a file,
             load it into mongo, or return an array of values (don't to the last one for
             huge files)
+            
+            Returns:
+                list of json objects if `returnList` keyword argument is True
         """
         csvFile = kwargs.get('csvFile',None)                 # Name of csv file with path to open  
         delimiter = kwargs.get('delimiter',',')              # tabs,commas,spaces,etc.
