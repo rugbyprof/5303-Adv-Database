@@ -93,9 +93,17 @@ class PyMongoHelper:
 class FileProcessor:
     def __init__(self,**kwargs):
         """
-        path = path to directory of files to process
-        loadMongo = true or false
+        Kwargs:
+            dbName      = Mongo Database name 
+            filePath    = path to directory of files to process
+            globExt     = File extension for glob to match (like csv or json etc)
+            loadMongo   = true or false (you get it)
+            processFiles= process directory of files? Or return the list only.
+            saveToFile  = save json to actual file. Will be named same as
+                          original file, but with extension replaced with json
+            savePath    = folder to save files if not same as `filePath`
         """
+
         # Need a path to read files from
         self.filePath = kwargs.get('filePath',None)
 
@@ -151,7 +159,9 @@ class FileProcessor:
 
     def readDir(self,**kwargs):
         """ Reads a directory for files matching specific glob wildcard
-
+        Kwargs:
+            filePath = directory of files to be globbed
+            ext      = extension to match by glob
         Returns:
             (list): List of files globbed from a directory
         """
@@ -169,9 +179,17 @@ class FileProcessor:
         """ Csv or Tsv whatever. Just convert it to json and either save it to a file,
             load it into mongo, or return an array of values (don't to the last one for
             huge files)
+        Kwargs:
+            csvFile = kwargs.get('csvFile',None)                 # Name of csv file with path to open  
+            delimiter = kwargs.get('delimiter',',')              # tabs,commas,spaces,etc.
+            colHeaders = kwargs.get('colHeaders',True)           # Are there column Headers?
+            newLine = kwargs.get('newLine','\n')                 # The newline character (could be \r\n)
+            returnList = kwargs.get('returnList',False)          # Return a list from this function?
+            cleanCollection = kwargs.get('cleanCollection',False)# delete documents from collection
+            chunkSize = kwargs.get('chunkSize',None)             # load data in chunks vs one at a time
 
-            Returns:
-                list of json objects if `returnList` keyword argument is True
+        Returns:
+            list of json objects if `returnList` keyword argument is True
         """
         csvFile = kwargs.get('csvFile',None)                 # Name of csv file with path to open  
         delimiter = kwargs.get('delimiter',',')              # tabs,commas,spaces,etc.
