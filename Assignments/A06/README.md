@@ -31,7 +31,6 @@ mongoimport --db=YourDbName --collection=YourCollectionName --type=json --file=f
 ### Example PyMongo Queries
 
 ```python
- # used to turn string id to Mongo _id
 import pymongo
 import pprint
 import random
