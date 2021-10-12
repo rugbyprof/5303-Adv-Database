@@ -157,7 +157,8 @@ if __name__=='__main__':
   - Find unique restaurant categories
   - Find all restaurants in a category
   - Find all restaurants in a list of 1 or more zip codes
-  - 
+  - Find all restaurants near Point(x,y)
+  - Find all restaurants with a min rating of X
 
 
 
