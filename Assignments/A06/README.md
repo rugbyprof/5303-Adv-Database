@@ -1,5 +1,5 @@
 ## Assignment 6 - Restaurants DB (with Mongo)
-#### Due: 10-10-2021 (Monday @ 5:00 p.m.)
+#### Due: 10-18-2021 (Monday @ 5:00 p.m.)
 
 ### References For You  
 
