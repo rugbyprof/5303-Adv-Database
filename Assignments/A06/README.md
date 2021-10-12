@@ -1,11 +1,11 @@
-## Assignment 6 - Movies DB (but with Mongo)
+## Assignment 6 - Restaurants DB (with Mongo)
 #### Due: 10-10-2021 (Monday @ 5:00 p.m.)
 
 ### References For You  
 
 1. [Installing MongoDB](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-20-04)
    
-2. [Secure MongoDB](https://www.digitalocean.com/community/tutorials/how-to-secure-mongodb-on-ubuntu-20-04)
+2. ~~[Secure MongoDB](https://www.digitalocean.com/community/tutorials/how-to-secure-mongodb-on-ubuntu-20-04)~~
 
 ```mongo
 db.createUser({user: "adminguru",pwd: passwordPrompt(),roles: [ { role: "userAdminAnyDatabase", db: "admin" }, "readWriteAnyDatabase" ]})
@@ -22,42 +22,144 @@ mongodb://your.ip.address:27017
 
 ### Loading Database
 
-Using your code that loaded the data for [A05](../A05/README.md), store all information that is associated with movies that have a release year of **1950** and later. Ignore the same items as before.
+The [restaurants.json](restaurant.json) from this folder can be loaded using a command similar to the following:
+
+```
+mongoimport --db=YourDbName --collection=YourCollectionName --type=json --file=fileName.json
+```
+
+### Example PyMongo Queries
+
+```python
+ # used to turn string id to Mongo _id
+import pymongo
+import pprint
+import random
+
+# connect to mongodb
+cnx = pymongo.MongoClient("mongodb://localhost:27017/")
+# use businessData
+db = cnx["businessData"]
+# choose collection
+coll = db['restaurants']
+
+
+def listAllCollections(dbName=None):
+    """
+    Description:
+        lists all collections in a db (just as an example)
+    Params:
+        dbName (string) : name of database to view collections (optional)
+    Returns:
+        list
+    """
+    if dbName:
+        collections = cnx[dbName].list_collection_names()
+    else:
+        collections = db.list_collection_names()
+
+    return collections
+
+def findAllRestaurants():
+    """
+    Description: 
+        Find all restaurants in collection
+    Params:
+        None
+    Returns: 
+        dict : {"result":list,"size":int}
+    """
+    
+    res = list(coll.find())
+    
+    return {"result":res,"count":len(res)}
+
+def findCuisineCounts():
+    """
+    Description: 
+        Count all restaurants that serve a specific cuisine
+    Params:
+        None
+    Returns: 
+        list of cuisine counts
+    """
+
+    results = db['restaurants'].aggregate([
+
+        # Group the documents and "count" via $sum on the values
+        { "$group": 
+            {
+                "_id": '$cuisine',
+                "count": { "$sum": 1 }
+            }
+        }
+    ])
+
+    return list(results)
+
+def findRestaurantsByCuisine(cuisine=None):
+    """
+    Description: 
+        Find all restaurants that serve a specific cuisine
+    Params:
+        cuisine (string) : type of restaurant to find
+    Returns: 
+        list
+    """
+
+    if cuisine == None:
+        res = findCuisineCounts()
+        cuisine = random.choice(res)['_id']
+
+    res = coll.find({ 'cuisine': cuisine})
+
+    return list(res)
+
+if __name__=='__main__':
+    print("\n","="*80,"\n","="*80)
+    print("\nList all collections in 'moviesDb':\n")
+    res = listAllCollections(dbName='moviesDb')
+    print(res)
+
+    print("\n","="*80,"\n","="*80)
+    print("\nList counts of all restaurants:\n")
+    res = findAllRestaurants()
+    print(res["count"])
+
+    print("\n","="*80,"\n","="*80)
+    print("\nList counts of all unique cuisines:\n")
+    res = findCuisineCounts()
+    pprint.pprint(res)
+
+    print("\n","="*80,"\n","="*80)
+    print("\nList restaurants by cuisine (no param = random cuisine) and only print 5:\n")
+    res = findRestaurantsByCuisine()
+    pprint.pprint(res[:5])
+
+
+
+
+```
 
 ### API
 
 - This Api will run on `port 8003` on your server.
 - Any data returned by a route will be paginated with a preset page size (typically about 1000).
 - Therefore you need a way to provide a starting row for subsequent queries.
-- Using an api library of your choice, create a folder on your server `/var/www/html/Apis/mongoMovie` and implement an API for the movies DB. 
-- In fact, you can rename the api folder for A05 to `/var/www/html/Apis/sqlMovie` if you want.
+- Using an api library of your choice, create a folder on your server `/var/www/html/Apis/mongoRestaurants` and implement an API for the restaurants DB. 
+- In fact, you can could rename the api folder for A05 to `/var/www/html/Apis/sqlMovie` if you want. (still OK)
 - Below are a list of the minimum routes that need to be available.
 
 #### Routes
 
-- Movies 
-  - Find all
-  - Filter on (any field in table)[year,runtime(min/max)]
-    - e.g. return all movies in 1961
-    - e.g. return all movies with runtime > 90
-    - e.g. return all movies with runtime between 80 and 100
-  - Filter on actor or actress (id)
-    - e.g. return all movies associated with a specific actress
-    - e.g. return all movies associated with a set of actors and actresses
-  - Filter on genre(s)
-    - e.g return all movies in a specified genre
-- People
-  - Find all
-  - Filter on name (first or last)
-  - Filter on movie (id)
-  - Filter on genre(s)
-  - Filter on "worked with `id` or `ids`" 
-    - e.g. find all actors and actresses that worked with `id`
-  - Filter on profession
-- Genre
-  - Find all
-- Profession
-  - Find all
+- Restaurants 
+  - Find all restaurants (paginated result)
+  - Find unique restaurant categories
+  - Find all restaurants in a category
+  - Find all restaurants in a list of 1 or more zip codes
+  - 
+
+
 
 ### Deliverables
 
