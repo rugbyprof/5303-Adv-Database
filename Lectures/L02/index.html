@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container" id="content">
+        <h1>My First Bootstrap Page</h1>
+        <p>This is some text.</p>
+    </div>
+
+    <script>
+        function showDropDown() {
+            $.get("https://dev.thefinalscores.com/api/?route=schedule", function (data) {
+                console.log(data);
+                var html = "<label for=\"games\">Choose a game:</label>";
+                html += '<select name="games" id="game">';
+
+                for (var i = 0; i < data.data.length; i++) {
+                    html += "<option value=\"" + data.data[i].game_id + "\">" + data.data[i].home + " vs " + data.data[i].visitor + "</option>"
+                }
+                html += "</select>";
+                $("#content").html(html)
+
+                $("#game").change(function(e) {
+                    console.log(e);
+                    alert( this.value );
+                    //$( this ).text()
+                });
+
+                console.log("Load was performed.");
+            });
+        }
+        $(function () {
+            showDropDown();
+        });
+    </script>
+
+</body>
+
+</html>
