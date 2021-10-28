@@ -1,0 +1,17 @@
+#:kivy 2.0.0
+
+<Button>:
+    text: 'Press me Hard!!'
+    size_hint: (.5, .5)
+    background_normal: './images/enter-button.png'
+    pos_hint: {'center_x': .5, 'center_y': .5}
+    on_press: app.on_press_button()
+
+# <Base>:
+#     Button:
+#         text: 'Hit me !!'
+#         background_normal: 'normal.png'
+#         background_down: 'down.png'
+#         size_hint: .3, .3
+#         pos_hint: {"x":0.35, "y":0.3}
+#         on_press: root.say_hello()
