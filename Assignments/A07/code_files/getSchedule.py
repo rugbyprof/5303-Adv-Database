@@ -28,21 +28,21 @@ class GetSchedule:
     def __init__(self,**kwargs):
 
         self.semester = kwargs.get('semester','FALL')
+        self.year = kwargs.get('year',__year__) # Current year
         self.redownload = kwargs.get('redownload',False)
 
         self.pdfFileName = None     # Name of and location of downloaded pdf schedule
-        self.year = __year__        # Current year
               
         self.savePath = os.path.join(__location__,'schedules')
         self.pdfRef = None          # A pypdf type that holds the downloaded pdf schedule
         self.addHeaders = True     # Add column headers to json when saving or not
         self.pdfText = []           # List of processed text pulled from pdf doc
 
-        self.headers = ['Col', 'Crn', 'Subj', 'Crse', 'Sect', 'Title', 'PrimaryInstructor', 'Max', 'Curr', 'Aval', 'Days', 'Begin', 'End', 'Bldg', 'Room']
+        self.headers = ['Col', 'Crn', 'Subj', 'Crse', 'Sect', 'Title', 'PrimaryInstructor', 'Max', 'Curr', 'Aval', 'Days', 'Begin', 'End', 'Bldg', 'Room','Year','Semester']
         self.validSemesters = ['FALL','SPRING','SUMMER_1','SUMMER_2']
 
 
-        self.keepers = ['Col', 'Crn', 'Subj', 'Crse', 'Sect', 'Title', 'PrimaryInstructor', 'Max', 'Curr', 'Aval', 'Days', 'Begin', 'End', 'Bldg', 'Room']
+        self.keepers = ['Col', 'Crn', 'Subj', 'Crse', 'Sect', 'Title', 'PrimaryInstructor', 'Max', 'Curr', 'Aval', 'Days', 'Begin', 'End', 'Bldg', 'Room','Year','Semester']
 
         if not os.path.isdir(self.savePath):
             os.mkdir(self.savePath,mode=755)
@@ -157,10 +157,55 @@ class GetSchedule:
 
         self.jsonFileName = os.path.join(self.savePath,f'{self.year}_{self.semester.lower()}_schedule.json')
 
+    # "Col": "BA",
+    # "Crn": "10101",
+    # "Subj": "ACCT",
+    # "Crse": "2143",
+    # "Sect": "101",
+    # "Title": "Financial Accounting",
+    # "PrimaryInstructor": "Lin Wang",
+    # "Max": "37",
+    # "Curr": "28",
+    # "Aval": " ",
+    # "Days": "MW",
+    # "Begin": "0200pm",
+    # "End": "0320pm",
+    # "Bldg": "DB",
+    # "Room": "178",
+    # "Year": 2021,
+    # "Semester": "FALL"
+
         if self.addHeaders:
             newDict = []
             for line in self.pdfText:
                 newDict.append(self._zipJson(line))
+
+            # waste but want quick fix
+            for d in newDict:
+                if 'Max' in d:
+                    if IsAType.isInt(d['Max']):
+                        d['Max'] = int(d['Max'])
+                if 'Aval' in d:
+                    if IsAType.isInt(d['Aval']):
+                        d['Aval'] = int(d['Aval'])
+                if 'Curr' in d:
+                    if IsAType.isInt(d['Curr']):
+                        d['Curr'] = int(d['Curr'])
+                d['Year'] = self.year
+                d['Semester'] = self.semester.capitalize()
+        else:
+            for d in self.pdfText:
+                if 'Max' in d:
+                    if IsAType.isInt(d['Max']):
+                        d['Max'] = int(d['Max'])
+                if 'Aval' in d:
+                    if IsAType.isInt(d['Aval']):
+                        d['Aval'] = int(d['Aval'])
+                if 'Curr' in d:
+                    if IsAType.isInt(d['Curr']):
+                        d['Curr'] = int(d['Curr'])
+                d['Year'] = self.year
+                d['Semester'] = self.semester.capitalize()
 
         with open(self.jsonFileName,"w") as f:
             if self.addHeaders:
@@ -228,7 +273,7 @@ class GetSchedule:
                     # b = cleanLines[i][9:]
                     # c = [' ']
                     # a.extend(c).extend(b)
-                    cleanLines[i] = cleanLines[i][:9] + [' '] + cleanLines[i][9:]
+                    cleanLines[i] = cleanLines[i][:9] + [' '] + cleanLines[i][9:] 
                     
         return cleanLines
 
@@ -285,7 +330,7 @@ class GetSchedule:
         self.pdfFileName = os.path.join(self.savePath,f'{self.year}_{self.semester.lower()}_schedule.pdf')
 
         if self.redownload:
-            print("doing redownload...")
+            print(f"redownloading {self.semester} {self.year}...")
             self._getSchedule(self.semester)
             self._loadSavedPdf()
             self._extractText()
@@ -311,10 +356,14 @@ if __name__=='__main__':
     # pdf = loadLocalSchedule("2021_FALL_schedule.pdf")
 
     # getSchedule('SPRING')
-    # pdf = loadLocalSchedule("2021_spring_schedule.pdf")
+    # pdf = loadLocalSchedule("2022_spring_schedule.pdf")
 
-    #getSchedule('SUMMER_1')
-    #pdf = loadLocalSchedule("2021_summer_1_schedule.pdf")
+    # getSchedule('SUMMER_1')
+    # pdf = loadLocalSchedule("2021_summer_1_schedule.pdf")
+
+    # getSchedule('SUMMER_2')
+    # pdf = loadLocalSchedule("2021_summer2_schedule.pdf")
+
 
     rs = GetSchedule(redownload=True)
     
