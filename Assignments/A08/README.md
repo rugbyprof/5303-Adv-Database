@@ -1,4 +1,4 @@
-## Assignment 8 - Redis Api
+## Assignment 8 - Redis ~~Api~~ Something
 #### Due: 12-06-2021 (MONDAY @ 5:45 p.m.)
 
 ## Overview
