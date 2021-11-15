@@ -49,6 +49,18 @@ Redis offers what we typically think of as "data structures" as storage containe
 
 We don't have time for a full fledged comparison of a bunch of databases, do I thought we would compare how each of these three: Mysql (or MariaDB)<sup>[1]</sup>, MongoDB, and Redis. The comparison will be by running scripts locally and via Api calls from an external source. The tests to be run will be determined by the class, with myself as the final judge on the make up of the data and tests.
 
+- Database size
+- Digital Ocean
+- Responsiveness
+- Type of data (large vs small objects)
+- Insertion Heavy vs Search Heavy with Updates
+
+- Insert 1 million objects
+- Do 5 million searches for:
+    strings,
+    ints,
+    floats
+- Do .5 million deletes
 
 
 

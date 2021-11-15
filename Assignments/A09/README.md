@@ -113,3 +113,20 @@
 
 - TBD
 
+------------
+
+### Forever by Daniel
+
+```
+Daniel Bowen
+How to get API up and running using npm’s FOREVER
+1. Install NPM on your droplet - “sudo apt-get install npm”
+2. Install Forever - “sudo npm install forever -g”
+3. Import uvicorn to the top of your main.py “Import uvicorn”
+4. And your main function should include the following 
+if __name__ == "__main__":
+  uvicorn.run(app, host="0.0.0.0", port=8001, log_level="info")
+5. Navigate to your API directory folder, and run Forever using this
+	“sudo forever start -c python3 main.py”
+A few notes: Any code updates you make won’t be reflected until you kill and restart the forever script. It will keep running unless you explicitly kill the command with the following command “sudo forever stopall”
+```
