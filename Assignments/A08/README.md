@@ -47,29 +47,78 @@ Redis offers what we typically think of as "data structures" as storage containe
 
 ## Assignment
 
-We don't have time for a full fledged comparison of a bunch of databases, do I thought we would compare how each of these three: Mysql (or MariaDB)<sup>[1]</sup>, MongoDB, and Redis. The comparison will be by running scripts locally and via Api calls from an external source. The tests to be run will be determined by the class, with myself as the final judge on the make up of the data and tests.
+We don't have time for a full fledged comparison of a bunch of databases, do I thought we would compare how each of these three: Mysql (or MariaDB)<sup>[1]</sup>, MongoDB, and Redis. The comparison will be by running scripts locally ~~and via Api calls from an external source~~. 
 
+### Variables
+Variables that impact performance:
 - Database size
-- Digital Ocean
-- Responsiveness
-- Type of data (large vs small objects)
-- Insertion Heavy vs Search Heavy with Updates
+- Server Specs
+- Responsiveness (if network is used)
+- Load (if multiple clients are employed)
+- Type of data
+  - integers, strings, etc.
+  - large vs small objects
+- Transaction types:
+  - Insertions 
+  - Searches
+  - Updates
+  - Deletes
+- Combinations of Transactions:
+  - Heavy Insertions with low searches , updates, and deletes
+  - Search heavy low insertion (after initial db load) and low updates / deletes
+  - etc. 
 
-- Insert 1 million objects
-- Do 5 million searches for:
-    strings,
-    ints,
-    floats
-- Do .5 million deletes
+### Experiment
+
+The experiment should time each transaction and calculate averages. But each aggregation should be applied to a database that is configured with slight differences using the above variables. 
+
+- Insert `N` objects
+- Do `n` searches for single values (comprised of strings, int's, etc.)
+- Do `n` searches for multiple values 
+- Do `n` updates to existing documents (or tuples, or data structures)
+- Do `n` deletes
+
+You should vary `N` and `n` to determine whether each database performs differently not only under differing load types, but under different sizes as well. One possible approach could be:
+
+- Set `N`, where `N` is number of items being inserted, to:
+  - 50000
+  - 100000
+  - 500000
+  - 1 Million
+  - Possibly more depending on server specs
+- Then using a percentage of `N` to determine how many transactions of different types to run, you  can tailor the load on the database (document store, key value store). For example you can increase or decrease specific transaction types for each experiment before moving onto the next transaction type:
+  - Run 1
+    - Searches = .5 * `N`
+    - Updates = 1.5 * `N`
+    - Deletes = .25 * `N`
+  - Run 2
+    - Searches = .75 * `N`
+    - Updates = 1.5 * `N`
+    - Deletes = .25 * `N`
+  - Run 3
+    - Searches = 1 * `N`
+    - Updates = 1.5 * `N`
+    - Deletes = .25 * `N`
+  - Run `N`
+    - etc.
+
+By organizing the amounts for each transaction type before hand, you can structure your experiments and save results much easier.
+
+However, this approach is feasible: 
+
+  - Run `X`
+    - Searches = random(0.25 , 3.0) * `N`
+    - Updates = random(0.25 , 3.0) * `N`
+    - Deletes = random(0.25 , 0.75) * `N`
 
 
-
-
+I'm sure your groups will come with good experiments. Just get creative.
 
 
 ## Deliverables
 
-- Presentation of a summary of your findings. 
+- Presentation of a summary of your findings with charts during final exam time.
+- Of course all rules about putting code and results on github apply.
 
 
 ### Resources
