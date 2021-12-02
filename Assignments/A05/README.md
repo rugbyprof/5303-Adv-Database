@@ -102,7 +102,7 @@ There is obviously an issue with the size of the IMDB files which has caused iss
   - Filter on name (first or last)
   - Filter on movie (id)
   - Filter on genre(s)
-  - Filter on "worked with `id` or `ids`" 
+  - Filter on "worked with `id` or `ids`"
     - e.g. find all actors and actresses that worked with `id`
   - Filter on profession
 - Genre
