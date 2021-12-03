@@ -12,6 +12,6 @@
 | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A06">A06</a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A06"> Assignment 6 </a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A06"> Restaurants DB (with Mongo)</a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A06"> 10-18-2021 (Monday @ 5:00 p.m.)</a>~ | ---- |
 | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A07">A07</a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A07"> Assignment 7 </a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A07"> Advising (with Mongo OR SQLite)</a>~ | ~<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Assignments/A07"> 11-03-2021 (Wednesday @ 5:00 p.m.)</a>~ | ---- |
 
-<sup>Last Updated: 2021-12-02 (Thu @ 19:25)</sup> 
+<sup>Last Updated: 2021-12-02 (Thu @ 22:11)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 

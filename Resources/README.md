@@ -8,6 +8,6 @@
 | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Resources/04-Readmees">04-Readmees</a>*** | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Resources/04-Readmees"> README </a>*** | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Resources/04-Readmees"> How You Should Format Them</a>*** | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Resources/04-Readmees"> None</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Resources/05-Gui">05-Gui</a>*** | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Resources/05-Gui"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Resources/05-Gui"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Resources/05-Gui">N/A</a>*** |  |
 
-<sup>Last Updated: 2021-12-02 (Thu @ 19:25)</sup> 
+<sup>Last Updated: 2021-12-02 (Thu @ 22:11)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
