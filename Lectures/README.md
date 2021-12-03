@@ -6,6 +6,6 @@
 | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Lectures/L02">L02</a>*** | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Lectures/L02"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Lectures/L02"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Lectures/L02">N/A</a>*** |  |
 | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Lectures/L03">L03</a>*** | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Lectures/L03"> Placeholder Readme </a>*** | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Lectures/L03"> No Description</a>*** | ***<a href="https://github.com/rugbyprof/5303-Adv-Database/tree/master/Lectures/L03">N/A</a>*** |  |
 
-<sup>Last Updated: 2021-12-01 (Wed @ 19:31)</sup> 
+<sup>Last Updated: 2021-12-02 (Thu @ 19:24)</sup> 
 
 <sup>***Days Left is only accurate if the `Last Updated` date is the same as todays date. Otherwise, use the due date!***</sup> 
