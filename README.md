@@ -98,4 +98,5 @@ This course will be a survey of databases comparing and contrasting each DB's st
 >**3**. A final exam over general database topics will be given. As the semester progresses we will accumulate the necessary study materials from your projects and presentations, as well as my lessons.
 >
 >**4**. Plane ticket prices, events like weddings, or trips out of the country are not valid excuses for missing the final exam at its scheduled time. I will not make accommodations for anything other than an issue vetted by the dean of students. 
-
+> 
+>**5**. Late work will be accepted on a case by case basis. Late penalty is 15 points (out of 100) for initial lateness and 1 half a letter grade (5 points) for every class period until the total reduced is 50 (half credit). Extremely late work is totally at the instructors discretion on whether it will be accepted or not.
