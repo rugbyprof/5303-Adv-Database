@@ -1,613 +1,262 @@
-# 5303 Advanced Database
+<img src="https://ik.imagekit.io/1922msu/msulogo.png" width="300">
 
-## General Course Information
+# **Advanced - Fall 2026**
 
+# 1. Course Information
+
+## Contact Information
+
+- **Instructor:** Dr. Terry Griffin
+- **Office:** Bolin Hall 124-F
+- **Office Hours:** MW: 2:30 p.m. – 4:00 p.m.; TTh: 11:00 a.m. – 12:00 p.m.
+- **Office Phone:** (940) 397-4439
+- **Email:** terry.griffin@msutexas.edu
+
+## Important Dates, Times, and Location
+
+- **Course Number / Section:** CMPS 5303, Section 101
 - **Days:** Monday / Wednesday
 - **Time:** 4:00 p.m. – 5:20 p.m.
 - **Location:** Bolin 248
-- **Semester:** Monday August 23<sup>rd</sup> – Friday December 4<sup>th</sup>
-- **Labor Day:** Monday September 7<sup>th</sup>
-- **Thanksgiving Holiday:** Wednesday November 25<sup>th</sup> – Sunday November 29<sup>th</sup>
-- **Last Day for “W”:** Monday November 23<sup>rd</sup>
-- **Last Day of Class:** Friday December 4<sup>th</sup>
-- **Final Exam:** Monday December 7<sup>th</sup>, 3:30 p.m. – 5:30 p.m.
+- **Semester Start:** Monday, August 23
+- **Semester End:** Friday, December 4
+- **Labor Day:** Monday, September 7
+- **Thanksgiving Holiday:** Wednesday, November 25 – Sunday, November 29
+- **Last Day for "W":** Monday, November 23
+- **Final Exam:** Monday, December 7, 3:30 p.m. – 5:30 p.m.
 
-### Course Zoom
+## Course Communication
 
-https://msutexas-edu.zoom.us/j/9403974439
+- **Zoom:** https://msutexas-edu.zoom.us/j/9403974439
+- **GitHub:** Course repository information will be provided in class.
 
----
+Course announcements, assignment information, questions, and course discussion may be distributed through the course communication platform and GitHub.
 
-# Course Description
+## Textbook and Course Materials
 
-Modern applications rarely have the luxury of asking simply, _“Which SQL database should we use?”_ Instead, developers must choose among relational databases, document stores, key-value systems, graph databases, search engines, distributed databases, and increasingly systems that combine features from several of these categories.
+**Required Textbook:** None
 
-This course is a survey of modern database systems with an emphasis on:
+No textbook is required. Course materials will be provided by the instructor or made available through course resources.
 
-> **Understanding why different database models exist, how they differ, and how to choose an appropriate system for a particular problem**.
+Students will need access to a computer capable of running the database systems and development tools introduced during the semester, including Git and GitHub.
 
-Rather than attempting shallow coverage of a large number of products, we will study representative systems from several major database families in enough depth to build applications, conduct experiments, and compare their behavior.
+## Prerequisites and Expected Background
 
-Our primary systems will include:
+This is a graduate-level course. Students should enter with prior programming experience and a working familiarity with data structures, software development tools, and basic database concepts.
 
-- **PostgreSQL** as our primary relational database management system;
-- **SQLite** as an embedded relational database;
-- **MongoDB** as our primary document-oriented database; and
-- **Redis** as our primary key-value / in-memory data store.
+Students should be prepared to:
 
-Additional databases may be selected for comparison, student presentations, or individual projects.
-
-The goal is not to determine which database is universally "best." There isn't one.
-
-Instead, we will ask:
-
-> **Which database model and implementation best fits a particular workload, application, and set of requirements?**
+- write and debug programs in at least one modern programming language;
+- use a command line, Git, and GitHub;
+- design and work with structured data; and
+- read technical documentation and conduct independent technical investigation.
 
 ---
 
-# Course Philosophy
+# 2. Course Overview
 
-Traditional database courses often devote substantial time to relational algebra, relational calculus, normalization theory, and formal relational database design.
+## Course Description
 
-These topics are important foundations of database systems, and this course will cover the relational concepts necessary to understand modern relational databases. Students should understand relations, keys, functional dependencies, normalization, joins, constraints, and the principles underlying relational query processing.
+Modern applications rarely have the luxury of asking simply, “Which SQL database should we use?” Developers choose among relational databases, document stores, key-value systems, graph databases, search engines, distributed databases, and systems that combine features from several of these categories.
 
-However, this course is **not primarily a course in formal relational database theory**.
+This course is a survey of modern database systems. Its emphasis is on understanding why different database models exist, how they differ, and how to select an appropriate system for a particular application, workload, and set of requirements.
 
-Our emphasis will instead be on the design, implementation, use, and evaluation of modern database systems.
+Rather than attempting shallow coverage of a large number of products, the course studies representative systems from several major database families in enough depth to build applications, conduct experiments, and compare their behavior.
 
-This distinction allows us to study questions that become increasingly important when moving beyond a single database model:
+The primary systems are:
 
-- What does "schema" mean in a relational database versus a document database?
-- When is normalization desirable, and when might deliberate denormalization make sense?
-- How do joins compare with embedded documents or application-side relationships?
-- How do indexes affect read and write performance?
-- What guarantees does a database provide when several operations occur concurrently?
-- What does ACID actually guarantee?
-- Which guarantees are weakened, modified, or implemented differently by distributed systems?
-- When does eventual consistency make sense?
-- When is an in-memory key-value store a better solution than a relational table?
-- How should databases be benchmarked fairly?
-- What are the operational costs of running one database architecture instead of another?
+- **PostgreSQL** — primary relational database management system;
+- **SQLite** — embedded relational database;
+- **MongoDB** — primary document-oriented database; and
+- **Redis** — primary key-value and in-memory data store.
 
-The intent is to connect database theory to the engineering decisions developers actually make.
+Additional systems may be used for comparison, presentations, or projects.
+
+## Course Approach
+
+Traditional database courses often devote substantial time to relational algebra, relational calculus, normalization theory, and formal relational database design. Those foundations matter, and this course covers the relational concepts needed to understand modern relational systems: relations, keys, normalization, joins, constraints, transactions, and query processing.
+
+This course is not primarily a course in formal relational database theory. Its emphasis is on the design, implementation, use, evaluation, and comparison of modern database systems.
+
+The central question of the course is:
+
+> Given an application and workload, what database architecture should we use, and why?
+
+There is no universally best database. Students will connect theory to engineering decisions by evaluating tradeoffs among correctness, consistency, performance, scalability, operational complexity, and developer convenience.
 
 ---
 
-# Learning Objectives
+# 3. Learning Objectives
 
 By the end of the course, students should be able to:
 
 1. Explain the major characteristics of relational, document-oriented, and key-value database models.
 2. Design and implement databases using multiple data models.
 3. Write effective queries using SQL and non-SQL query interfaces.
-4. Explain relational concepts including keys, relationships, normalization, joins, and referential integrity.
-5. Explain transactions and the ACID properties of database systems.
-6. Compare consistency, isolation, durability, and concurrency guarantees across database systems.
-7. Design and evaluate indexes for different workloads.
-8. Explain common approaches to replication, partitioning, caching, and distributed storage.
-9. Measure database performance using reproducible experiments rather than anecdotal claims.
-10. Identify tradeoffs among consistency, performance, scalability, complexity, and developer convenience.
-11. Select an appropriate database technology for a given application and justify that decision.
-12. Communicate technical findings through presentations, written documentation, and reproducible software projects.
+4. Explain keys, relationships, normalization, joins, referential integrity, and schema design.
+5. Design and evaluate indexes for different workloads.
+6. Explain transactions, ACID properties, concurrency, isolation, and consistency guarantees across database systems.
+7. Compare approaches to replication, partitioning, caching, and distributed storage.
+8. Measure database behavior using reproducible performance experiments.
+9. Evaluate tradeoffs among consistency, performance, scalability, complexity, and developer convenience.
+10. Select an appropriate database technology for a given application and justify the decision with technical evidence.
+11. Communicate technical findings through presentations, documentation, and reproducible software projects.
 
 ---
 
-# Core Database Systems
+# 4. Course Content
 
-The course will concentrate on a small set of representative systems.
+## Major Course Themes
 
-## 1. Relational Databases
+### Database Models and Data Modeling
 
-### PostgreSQL — Primary RDBMS
+Students will compare relational, document, key-value, and selected specialized models. Topics include:
 
-PostgreSQL will serve as the primary relational database for the course.
+- relations, tables, documents, collections, keys, and values;
+- keys, relationships, constraints, and referential integrity;
+- normalization and deliberate denormalization;
+- embedded documents versus references;
+- schema enforcement and schema flexibility; and
+- data duplication and consistency.
 
-Topics may include:
+### Querying and Data Access
 
-- database and schema design;
-- SQL;
-- tables and relationships;
-- primary and foreign keys;
-- joins;
-- constraints;
-- transactions;
-- indexes;
-- query planning and optimization;
-- views and materialized views;
-- stored functions and procedures;
-- concurrency and isolation;
-- JSON/JSONB;
-- full-text search;
-- extensions; and
-- selected advanced PostgreSQL capabilities.
+Students will use and compare query models appropriate to each system.
 
-### SQLite — Embedded Relational Database
+- SQL, joins, aggregation, views, and query plans;
+- document queries and MongoDB aggregation pipelines;
+- key-based access and data-structure operations;
+- query APIs; and
+- selected search and specialized query models.
 
-SQLite provides an important contrast to PostgreSQL because it demonstrates that a relational database does not necessarily require a traditional database server.
+### Indexing, Performance, and Benchmarking
 
-We will examine:
+Topics include B-tree and other indexing approaches, selectivity, query planning, execution plans, read/write tradeoffs, and memory versus disk access.
 
-- embedded databases;
-- zero-configuration deployment;
-- file-based storage;
-- transaction behavior;
-- concurrency limitations and strengths;
-- appropriate SQLite workloads; and
-- situations in which SQLite may be preferable to a client/server RDBMS.
+Students will conduct reproducible experiments involving such measures as latency, throughput, updates, bulk operations, concurrent operations, storage, cache behavior, and scaling. Experimental work must document the environment, dataset, configuration, workload, indexes, trials, measurements, methodology, and limits of the conclusions.
 
----
+### Transactions, Concurrency, and Consistency
 
-## 2. Document Databases
+Topics include transactions; atomicity, consistency, isolation, and durability; locking; multi-version concurrency control; isolation levels; distributed consistency; and eventual consistency.
 
-### MongoDB — Primary Document Store
+ACID will be treated as a set of guarantees to investigate, not as a binary label. Different systems provide different transaction capabilities, scopes, costs, and consistency guarantees.
 
-MongoDB will serve as our primary example of a document-oriented database.
+### Distributed and Specialized Systems
 
-Topics may include:
+Selected topics may include replication, partitioning, distributed storage, wide-column databases, graph databases, search systems, cloud and serverless databases, and vector search.
 
-- BSON documents;
-- collections;
-- flexible schemas;
-- embedded documents;
-- references;
-- indexing;
-- aggregation pipelines;
-- replication;
-- transactions;
-- data modeling; and
-- relational versus document-oriented design.
+### Database Selection
 
-A recurring comparison will be:
+The course repeatedly returns to database selection: identifying the workload, requirements, tradeoffs, operational costs, and competing solutions that inform a defensible architecture decision.
 
-> **MongoDB documents vs. PostgreSQL JSON/JSONB**
+## Core Database Systems
 
-Rather than assuming that either approach is superior, we will examine workloads in which each model provides advantages.
+### PostgreSQL
 
-### Comparative Document Database
+PostgreSQL is the primary relational system. Topics may include schema design, SQL, constraints, transactions, indexing, query planning, views, concurrency, JSON/JSONB, full-text search, extensions, and selected advanced capabilities.
 
-A second document-oriented system may be selected for comparison.
+### SQLite
 
-Possible systems include:
+SQLite provides a contrast to client/server relational systems. Topics may include embedded and file-based databases, zero-configuration deployment, transaction behavior, concurrency characteristics, and appropriate workloads.
 
-- Cloud Firestore;
-- Couchbase; or
-- another system selected because of current industry relevance.
+### MongoDB
 
----
+MongoDB is the primary document store. Topics may include BSON documents, collections, flexible schemas, embedding versus references, indexing, aggregation pipelines, replication, transactions, and comparative data modeling. A recurring comparison is MongoDB documents versus PostgreSQL JSON/JSONB.
 
-## 3. Key-Value and In-Memory Databases
+### Redis
 
-### Redis — Primary Key-Value System
+Redis is the primary key-value and in-memory system. Topics may include keys, expiration, caching, strings, lists, sets, sorted sets, hashes, persistence, transactions, pub/sub, streams, and distributed caching.
 
-Redis will serve as our primary key-value and in-memory data system.
+## Supporting / Specialized Topics
 
-Topics may include:
+Representative systems may be examined through lectures, presentations, or projects.
 
-- keys and values;
-- expiration and TTL;
-- caching;
-- strings;
-- lists;
-- sets;
-- sorted sets;
-- hashes;
-- persistence;
-- transactions;
-- pub/sub;
-- streams;
-- distributed caching; and
-- performance characteristics of memory-oriented systems.
+- Wide-column databases: Cassandra, ScyllaDB, or HBase.
+- Graph databases: Neo4j and graph-oriented workloads.
+- Search systems: Elasticsearch or OpenSearch.
+- Vector search: PostgreSQL with `pgvector`, Redis vector search, and selected vector databases.
+- Comparative systems: Valkey, DynamoDB, Firestore, Couchbase, or other systems appropriate to current course work.
 
-Redis also provides an opportunity to study the relationship between open-source software, commercial database products, licensing, and community forks.
+## Tentative Course Progression
 
-### Comparative Key-Value Database
-
-A second system may be selected for comparison.
-
-Candidates include:
-
-- Valkey;
-- DynamoDB;
-- Dragonfly; or
-- another current system appropriate to the course.
-
----
-
-# Additional Database Models
-
-The primary goal of the course is depth with PostgreSQL/SQLite, MongoDB, and Redis rather than superficial exposure to every database product available.
-
-However, several additional database models are important enough to examine conceptually or through student presentations.
-
-## Wide-Column Databases
-
-Possible systems:
-
-- Cassandra
-- ScyllaDB
-- HBase
-
-Important concepts include partitioning, distributed writes, replication, high availability, and workloads involving very large datasets.
-
-## Graph Databases
-
-Possible systems:
-
-- Neo4j
-
-Graph databases provide an opportunity to examine problems in which relationships themselves are first-class data.
-
-Examples include:
-
-- social networks;
-- recommendation systems;
-- dependency graphs;
-- transportation networks; and
-- knowledge graphs.
-
-## Search and Indexing Systems
-
-Possible systems:
-
-- Elasticsearch
-- OpenSearch
-
-These systems allow us to examine:
-
-- inverted indexes;
-- full-text search;
-- ranking;
-- distributed indexing; and
-- the distinction between a primary database and a specialized search system.
-
-## Vector Search
-
-Vector search has become increasingly important in machine learning and AI applications.
-
-Possible systems or technologies include:
-
-- PostgreSQL with `pgvector`;
-- Redis vector search;
-- Chroma;
-- Weaviate;
-- Pinecone; or
-- other current vector-search technologies.
-
-Vector databases also raise an important question for this course:
-
-> When does a specialized database justify adding another database system to an application, and when is an extension to an existing database sufficient?
-
----
-
-# Major Course Topics
-
-The semester will be organized around **concepts and problems**, rather than simply moving from one database product to another.
-
-## Database Models
-
-- Relational databases
-- Document databases
-- Key-value databases
-- Wide-column databases
-- Graph databases
-- Search databases
-- Vector search
-
-## Data Modeling
-
-- Relations and tables
-- Documents and nested data
-- Keys and relationships
-- Normalization
-- Denormalization
-- Referential integrity
-- Schema design
-- Schema flexibility
-- Data duplication and consistency
-
-## Querying
-
-- SQL
-- Joins
-- Aggregation
-- Document queries
-- MongoDB aggregation pipelines
-- Key-based access
-- Search queries
-- Query APIs
-
-## Indexing and Query Performance
-
-- B-tree indexes
-- Hash-based access
-- Compound indexes
-- Query planners
-- Query execution plans
-- Index selectivity
-- Read/write tradeoffs
-- Memory versus disk access
-
-## Transactions and Consistency
-
-- Transactions
-- Atomicity
-- Consistency
-- Isolation
-- Durability
-- Concurrency
-- Isolation levels
-- Locking
-- Multi-version concurrency control
-- Distributed consistency
-- Eventual consistency
-
-ACID will be treated as a **set of properties and guarantees to investigate**, rather than as a binary label dividing databases into "good" and "bad" systems.
-
-Modern relational and non-relational databases provide different transaction capabilities, scopes, performance costs, and consistency guarantees. Understanding those tradeoffs is more useful than simply asking whether a product claims to support ACID transactions.
-
-## Performance and Benchmarking
-
-Students will investigate database performance experimentally.
-
-Potential measurements include:
-
-- insert throughput;
-- query latency;
-- update performance;
-- indexed versus non-indexed queries;
-- bulk operations;
-- concurrent operations;
-- memory consumption;
-- storage requirements;
-- cache performance; and
-- scaling behavior.
-
-A benchmark without a clearly defined workload is mostly just a number wearing a lab coat.
-
-Therefore, students will be expected to document:
-
-- hardware and software environment;
-- dataset;
-- database configuration;
-- workload;
-- indexes;
-- number of trials;
-- measurements;
-- methodology; and
-- limitations of their conclusions.
-
----
-
-# Comparative Database Study
-
-Throughout the semester, we will return to a common set of questions.
-
-| Question                           | PostgreSQL            | SQLite                   | MongoDB                | Redis                             |
-| ---------------------------------- | --------------------- | ------------------------ | ---------------------- | --------------------------------- |
-| What is the primary data model?    | Relational            | Relational               | Document               | Key-value / data structures       |
-| How is data organized?             | Tables                | Tables                   | Collections/documents  | Keys and values                   |
-| How is data queried?               | SQL                   | SQL                      | MongoDB query language | Commands/API                      |
-| How are relationships represented? | Keys/joins            | Keys/joins               | Embedding/references   | Application-defined               |
-| What indexing mechanisms exist?    | Multiple              | Primarily B-tree         | Multiple               | Structure-dependent               |
-| What transaction guarantees exist? | Strong                | Strong                   | Supported              | Operation/transaction dependent   |
-| How is concurrency handled?        | MVCC                  | File/database mechanisms | Database mechanisms    | Primarily command execution model |
-| How does persistence work?         | Disk/WAL              | Database file/WAL        | Disk/journal           | Memory + persistence options      |
-| What workloads fit naturally?      | General-purpose       | Embedded/local           | Document-oriented      | Cache/realtime/fast lookup        |
-| What are the major tradeoffs?      | Complexity/operations | Concurrency/scale        | Duplication/modeling   | Memory/model limitations          |
-
-The purpose of comparisons such as this is **not to produce a universal ranking**.
-
-Database selection depends on workload.
-
----
-
-# Tentative Course Progression
-
-The exact pace may change based on class progress, projects, and current database technologies.
+The exact sequence and pace may change based on class progress, projects, student questions, and developments in database technology.
 
 ### Part I — Database Foundations
 
-- Database models
-- Relational model
-- Keys and relationships
-- SQL review
-- Normalization and denormalization
-- Indexes
-- Transactions
-- ACID
-- Concurrency
-- Query planning
+- database models and data modeling;
+- relational concepts, SQL, keys, and relationships;
+- normalization, denormalization, and constraints;
+- indexing, query planning, transactions, and ACID.
 
 ### Part II — Relational Systems
 
-Primary systems:
-
-- PostgreSQL
-- SQLite
-
-Students will build relational databases and investigate performance, transactions, indexing, and query execution.
+- PostgreSQL and SQLite;
+- schema design, query execution, indexing, and performance;
+- concurrency and transaction behavior.
 
 ### Part III — Document Systems
 
-Primary system:
-
-- MongoDB
-
-Comparisons may include:
-
-- MongoDB vs. PostgreSQL;
-- documents vs. normalized relations;
-- MongoDB vs. PostgreSQL JSONB; and
-- schema flexibility vs. schema enforcement.
+- MongoDB;
+- documents versus normalized relations;
+- MongoDB versus PostgreSQL JSON/JSONB;
+- schema flexibility versus schema enforcement.
 
 ### Part IV — Key-Value and In-Memory Systems
 
-Primary system:
+- Redis;
+- caching and fast access patterns;
+- Redis as cache versus primary data store;
+- persistent versus memory-oriented storage.
 
-- Redis
+### Part V — Distributed and Specialized Systems
 
-Possible comparisons:
-
-- Redis vs. PostgreSQL;
-- Redis vs. Valkey;
-- Redis as cache vs. Redis as primary data store; and
-- persistent storage vs. memory-oriented storage.
-
-### Part V — Distributed and Specialized Databases
-
-Selected topics may include:
-
-- replication;
-- partitioning;
-- distributed consistency;
-- wide-column databases;
-- graph databases;
-- search systems;
-- cloud databases;
-- serverless databases; and
-- vector search.
+- replication, partitioning, and distributed consistency;
+- wide-column, graph, search, cloud, serverless, and vector systems.
 
 ### Part VI — Database Selection and Evaluation
 
-Students will use the systems and concepts studied throughout the semester to answer the central question of the course:
-
-> **Given an application and workload, what database architecture should we use, and why?**
-
----
-
-# Presentations
-
-Each student will give **two technical presentations** during the semester.
-
-Presentation topics will be assigned or approved by the professor and will generally involve a database technology, architecture, feature, or current development related to database systems.
-
-Possible presentation topics include:
-
-- PostgreSQL extensions;
-- PostgreSQL vs. MySQL;
-- PostgreSQL JSONB vs. MongoDB;
-- SQLite and embedded databases;
-- distributed SQLite;
-- MongoDB;
-- Firestore;
-- Redis;
-- Redis vs. Valkey;
-- DynamoDB;
-- Cassandra;
-- ScyllaDB;
-- Neo4j;
-- Elasticsearch/OpenSearch;
-- `pgvector`;
-- vector databases;
-- database licensing and open-source forks;
-- cloud-managed databases;
-- serverless databases; and
-- emerging database technologies.
-
-Presentations should do more than describe a product's feature list.
-
-Students should attempt to answer questions such as:
-
-- What problem does this technology solve?
-- How does its data model differ from alternatives?
-- What workloads favor it?
-- What workloads do not?
-- What guarantees does it provide?
-- What are its performance characteristics?
-- What are its operational costs?
-- What competing technology could solve the same problem?
-- Why would a developer choose one over the other?
+- comparative experiments;
+- technical presentations;
+- database architecture selection and justification.
 
 ---
 
-# Programming Projects
+# 5. Coursework and Assessment
 
-Programming projects will require students to build, query, measure, or compare database systems.
+## Presentations
 
-Projects may involve:
+Each student will give **two technical presentations** during the semester. Topics will be assigned or approved by the instructor and will generally involve a database technology, architecture, feature, or current development.
 
-- constructing datasets;
-- implementing equivalent schemas in different database models;
-- generating workloads;
-- benchmarking;
-- indexing experiments;
-- transaction experiments;
-- concurrency experiments;
-- caching;
-- API development; and
-- comparative analysis.
+Presentations should move beyond a feature list. They should address the problem a technology solves, its data model, favorable and unfavorable workloads, guarantees, performance characteristics, operational costs, competing technologies, and the reasons a developer might choose it.
 
-Projects must include sufficient documentation for another person to reproduce the work.
+## Programming Projects
 
-At minimum, submissions should contain:
+Programming projects require students to build, query, measure, or compare database systems. Work may include constructing datasets, implementing equivalent schemas across models, generating workloads, benchmarking, indexing experiments, transaction or concurrency experiments, caching, API development, and comparative analysis.
 
-- a README;
-- setup instructions;
-- dependency information;
-- file descriptions;
-- meaningful comments where appropriate;
-- instructions for running the project;
-- instructions for reproducing experiments; and
-- a discussion of results.
+Projects must be reproducible. At a minimum, each submission should include a README, setup and execution instructions, dependency information, database setup or schema definitions, meaningful documentation, and a discussion of results.
 
-**A project that cannot be run cannot provide much evidence that it works.**
+## Final Examination
+
+The final examination assesses students’ ability to apply the course’s comparative framework to database systems, workloads, guarantees, tradeoffs, and technology-selection decisions. It may include conceptual analysis and interpretation of technical scenarios.
+
+## GitHub Portfolio
+
+Students will maintain a GitHub repository containing their course work. The portfolio should be organized, readable, and reproducible, and may include source code, setup scripts, schema definitions, sample data or generators, queries, experiment scripts, results, documentation, and presentation materials.
+
+Credentials, passwords, private keys, and other sensitive information must never be committed to GitHub.
 
 ---
 
-# GitHub Portfolio
+# 6. Grading
 
-Students will maintain a GitHub repository containing their work from the course.
-
-The portfolio should demonstrate not only completed code but also professional technical documentation.
-
-Repositories should be organized, readable, and reproducible.
-
-Where appropriate, repositories should include:
-
-- source code;
-- database setup scripts;
-- schema definitions;
-- sample data or data-generation scripts;
-- queries;
-- experiment scripts;
-- results;
-- documentation; and
-- presentation materials.
-
-Credentials, passwords, private keys, connection strings containing secrets, and other sensitive information **must not be committed to GitHub**.
-
----
-
-# Participation
-
-This course depends heavily on discussion, experimentation, troubleshooting, and comparison of results.
-
-Participation therefore includes more than simply being physically present in class.
-
-Examples of meaningful participation include:
-
-- attending and participating in class;
-- asking technical questions;
-- contributing to class discussions;
-- helping identify unclear instructions or unexpected behavior;
-- discussing experimental results;
-- helping classmates troubleshoot conceptual problems;
-- participating in the class communication platform; and
-- sharing useful discoveries with the class.
-
-Questions are particularly valuable. A question asked by one student frequently identifies something that needs clarification for everyone.
-
----
-
-# Grading
+## Grade Distribution
 
 | Category             |   Weight |
 | -------------------- | -------: |
-| Presentations        |      30% |
-| Programming Projects |      30% |
-| Final Exam           |      25% |
-| GitHub Portfolio     |      10% |
-| Participation        |       5% |
+| Presentations        |      20% |
+| Programming Projects |      40% |
+| Final Examination    |      20% |
+| GitHub Portfolio     |      20% |
 | **Total**            | **100%** |
 
 ## Grade Scale
@@ -620,94 +269,132 @@ Questions are particularly valuable. A question asked by one student frequently 
 |   D   |      60–69 |
 |   F   |   Below 60 |
 
----
+## Grading Notes
 
-# Final Exam
-
-A comprehensive final examination will cover the major database concepts studied throughout the semester.
-
-The examination will emphasize **understanding and comparison** rather than memorizing product-specific commands.
-
-Students should be prepared to:
-
-- explain database models;
-- compare technologies;
-- reason about transactions and consistency;
-- evaluate indexing strategies;
-- interpret performance results;
-- discuss database design decisions; and
-- recommend appropriate database architectures for particular workloads.
-
-Course projects, presentations, discussions, and lectures will collectively provide the material necessary to prepare for the final examination.
-
-The final examination will be administered at the officially scheduled university time.
-
-Conflicts involving travel, airline reservations, weddings, vacations, or other personal scheduling should be resolved around the university examination schedule. Exceptions will be considered only when supported through the appropriate university process.
+Grades reflect the quality, completeness, technical soundness, reproducibility, and documentation of submitted work, as applicable to each assessment.
 
 ---
 
-# Late Work
+# 7. Common Course Policies
 
-Late work may be accepted on a case-by-case basis.
+## Participation
 
-Unless otherwise specified:
+This course depends on discussion, experimentation, troubleshooting, and comparison of results. Meaningful participation includes engaging with course work, asking and answering technical questions, discussing experimental results, and contributing professionally to the learning environment.
 
-- an initial late submission receives a **15-point penalty**;
-- an additional **5-point penalty** is applied for each subsequent class period the assignment remains late;
-- penalties may accumulate to a maximum reduction of **50 points**; and
-- acceptance of extremely late work is at the instructor's discretion.
+## Course Delivery
 
-Students should communicate with the instructor as early as possible when circumstances may prevent timely completion of an assignment.
+Course materials, announcements, assignments, and supplemental resources may be provided through the course communication platform, GitHub, or other instructor-designated resources. Students are responsible for checking these resources regularly.
+
+## Assignment and Submission Requirements
+
+Unless an assignment states otherwise, submitted work must be complete, readable, and submitted through the method and by the deadline specified by the instructor. Work submitted in an incorrect location or format may be treated as not submitted.
+
+## Program Execution and Documentation Requirements
+
+Programs and technical projects must include the instructions, dependencies, configuration information, and documentation needed for the instructor to evaluate the work. A submission that cannot be run or understood cannot provide reliable evidence that it works.
+
+## GitHub and Repository Requirements
+
+Students are responsible for maintaining repositories in the form required for the course. Repositories should be organized and include appropriate documentation. Do not commit secrets, credentials, private keys, or other sensitive information.
+
+## Understanding and Oral Defense of Submitted Work
+
+Students must be able to explain submitted work, including design decisions, code, results, and documentation. The instructor may ask students to demonstrate or discuss their work. Inability to explain a submission may affect the grade and may require further review.
+
+## Use of Large Language Models and AI-Assisted Tools
+
+AI-assisted tools may be used only as permitted for a specific assignment. Students remain responsible for understanding, testing, documenting, and being able to explain all submitted work. Submitting work that a student cannot explain as their own is not acceptable.
+
+## Attendance
+
+Students are expected to attend class and participate in course activities. Attendance does not replace responsibility for completing all course work and keeping up with announcements and deadlines.
+
+## Classroom Conduct
+
+Professional, respectful conduct is expected. Conduct that disrupts instruction or prevents others from participating productively is not acceptable.
+
+## Computer and Internet Requirements
+
+Students must maintain reliable access to a computer and internet connection suitable for the course. They are responsible for backing up work and planning for ordinary technical problems.
+
+## Late Work
+
+Late-work rules, including any assignment-specific exceptions, will be stated with the assignment or by the instructor. Students should communicate promptly when circumstances may affect a deadline.
+
+## Missed Exams and Quizzes
+
+Students who miss an examination or quiz must contact the instructor as soon as possible. Make-up work, when permitted, is at the instructor’s discretion and may differ in format or scope.
+
+## Final Examination Scheduling
+
+The final examination is administered at the university-scheduled time listed in this syllabus. Requests involving final-exam conflicts must follow applicable university procedures and be communicated promptly.
+
+## Testing Procedures
+
+Students must follow all instructions for examinations and assessments. Unauthorized materials, assistance, communication, or devices are prohibited.
+
+## Academic Collaboration
+
+Collaboration is permitted only to the extent stated for a particular assignment. Students may discuss ideas and course concepts, but submitted work must accurately represent each student’s own effort unless group work is expressly assigned.
+
+## Recording of Classes
+
+Students may not record class activities without the instructor’s permission and any required consent. Approved recordings may be used only for authorized educational purposes.
 
 ---
 
-# Technology Selection
+# 8. Department Resources and Policies
 
-Database technology changes quickly.
+## Computer Science Tutoring
 
-For that reason, some systems studied in this course may change from semester to semester.
+Students are encouraged to use available Computer Science tutoring and instructional-support resources. Availability, locations, and schedules will be communicated by the department or instructor.
 
-Selection will favor technologies that are:
+## Department Testing Policy
 
-1. widely used or technically influential;
-2. representative of an important database model;
-3. accessible to students;
-4. suitable for experimentation;
-5. supported by useful documentation and development tools; and
-6. interesting enough to teach us something about database design.
+Department and university testing procedures apply to course examinations. Students should follow instructor directions and any required testing-center procedures.
 
-Popularity alone does not make a database good, and lack of popularity does not make one irrelevant.
+## Department Programming Assignment Policy
 
-The objective is to understand the **ideas represented by the systems**, not merely their current market position.
+Programming assignments must reflect the student’s own work except where collaboration or reuse is expressly authorized. Students must be prepared to explain their work and cite any permitted external resources.
+
+## Department Academic Misconduct Procedures
+
+Suspected academic misconduct may be handled under department and university procedures in addition to any academic consequences for the assignment or course.
 
 ---
 
-# The Question Behind the Course
+# 9. University Policies and Resources
 
-By the end of the semester, students should be able to look at a proposed application and resist immediately saying:
+## Academic Misconduct
 
-> "Let's use MongoDB."
+Academic dishonesty—including plagiarism, unauthorized collaboration, fabrication, and use of unauthorized assistance—is prohibited. Allegations will be addressed under current university policy.
 
-Or:
+## Students Requiring Accommodations
 
-> "Let's put everything in PostgreSQL."
+Students who require academic accommodations should contact the university office responsible for disability support and provide the instructor with the appropriate documentation as early as possible. Reasonable accommodations are provided in accordance with university policy.
 
-Or, God help us:
+## Midterm Progress Reports
 
-> "I saw a YouTube video where they used Redis."
+Midterm progress reports will be submitted when required by university policy. Students should monitor their standing throughout the semester and contact the instructor promptly with questions.
 
-Instead, students should be able to ask:
+## Campus Carry
 
-- What does our data look like?
-- How is it related?
-- How will it be queried?
-- How frequently will it change?
-- What consistency guarantees do we require?
-- What failures must we tolerate?
-- How much data do we expect?
-- What latency do we require?
-- What operational complexity can we tolerate?
-- What does this choice cost?
-- What happens when the system grows?
+Campus-carry policies and applicable university regulations apply to this course. Students should consult current university guidance for details.
 
-Then—and only then—should we choose the database.
+## Tobacco Policy
+
+University tobacco and smoke-free-campus policies apply to all course activities and facilities.
+
+## Moffett Library
+
+Moffett Library provides research assistance, databases, technology resources, and other academic support services. Students are encouraged to use these resources for course research and technical investigation.
+
+## Student Technical Support
+
+Students needing assistance with university technology services should use current university technical-support resources.
+
+## Tutoring and Academic Support
+
+The university provides tutoring, academic-support, and student-success resources. Students are encouraged to seek assistance early when they need it.
+
+University policies and services may change. Current official university policy takes precedence over this summary.
