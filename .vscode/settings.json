@@ -3,5 +3,14 @@
         "iosfwd": "cpp",
         "iostream": "cpp"
     },
-    "cSpell.enabled": false
+    "cSpell.enabled": false,
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "class_lecture",
+            "database": "${workspaceFolder:5303-Adv-Database}/Lectures/course.db"
+        }
+    ]
 }
