@@ -94,7 +94,7 @@ sqlite3 < some.sql              # same thing (no file arg = a temp db)
 | :--- | :--- | :--- |
 | `.read FILE` | Execute `FILE` as a script (SQL **and** dot commands). Path is relative to the directory you launched `sqlite3` from. | [rebuild.sql](rebuild.sql) chains `sql/01_schema.sql` then `sql/02_load.sql` |
 | `.mode MODE` | Output format for query results: `list` (default, `|`-separated), `box`, `table`, `column`, `csv`, `json`, `markdown`, `insert`, … | `.mode csv` before importing; `.mode box` in [sql/03_queries.sql](sql/03_queries.sql) for readable output |
-| `.import [OPTS] FILE TABLE` | Read `FILE` into `TABLE`. `--csv` = CSV quoting rules; `--skip 1` = drop the header row. Path is relative to your working directory. | [sql/02_load.sql](sql/02_load.sql): `.import --skip 1 ../example_data.csv staging_raw` |
+| `.import [OPTS] FILE TABLE` | Read `FILE` into `TABLE`. `--csv` = CSV quoting rules; `--skip 1` = drop the header row. Path is relative to your working directory. | [sql/02_load.sql](sql/02_load.sql): `.import --skip 1 data/example_data.csv staging_raw` |
 | `.headers on` / `off` | Show or hide column-name headers above results. | [sql/03_queries.sql](sql/03_queries.sql) |
 | `.bail on` / `off` | `on` = stop at the first error instead of continuing. Essential for build scripts so a failure does not cascade. | [rebuild.sql](rebuild.sql) |
 | `.echo on` / `off` | `on` = print each statement before running it. | [rebuild.sql](rebuild.sql) sets it `off` for quiet output |
@@ -146,7 +146,7 @@ Useful `PRAGMA`s (these are SQL):
   Put the comment on its own line.
 - **Dot-command paths are relative to your shell's working directory**, not to
   the script doing the `.read`. That is why the tutorial says to `cd
-  Lectures/02_sqlite` first — so `../example_data.csv` in `.import` resolves.
+  Lectures/02_sqlite` first — so `data/example_data.csv` in `.import` resolves.
 - **`.read` runs dot commands too**, so a script can `.mode`, `.import`, and
   `.read` other scripts. That is how [rebuild.sql](rebuild.sql) is just a
   sequence of `.read`s.

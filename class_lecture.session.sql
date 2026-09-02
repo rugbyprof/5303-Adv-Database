@@ -1,1 +1,0 @@
-create DATABASE test IF NOT EXISTS;

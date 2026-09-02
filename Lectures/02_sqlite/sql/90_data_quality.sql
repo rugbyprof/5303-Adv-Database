@@ -11,7 +11,7 @@
 --     sqlite3 explore.db
 --     sqlite> CREATE TABLE staging_raw ( ... );      -- from 02_load.sql step A
 --     sqlite> .mode csv
---     sqlite> .import --skip 1 ../example_data.csv staging_raw
+--     sqlite> .import --skip 1 data/example_data.csv staging_raw
 --     sqlite> .read sql/90_data_quality.sql
 -- =============================================================================
 

@@ -1,7 +1,7 @@
 # 02 — SQLite: From a Flat CSV to a Normalized Database
 
 A hands-on walkthrough. We start with one messy spreadsheet-shaped file
-(`../example_data.csv`), decide how the data *should* be organized, build a
+(`data/example_data.csv`), decide how the data *should* be organized, build a
 schema for it in SQLite, load the file into that schema, and then query it.
 
 By the end you will have run:
@@ -17,7 +17,7 @@ By the end you will have run:
 - the data-quality checks that justify the schema —
   [sql/90_data_quality.sql](sql/90_data_quality.sql)
 
-This lecture builds on the [Data Modeling Glossary](../01_overview/README.md);
+This lecture builds on the [Data Modeling Glossary](../01_terms_concepts_intro/glossary.md);
 terms like *functional dependency*, *3NF*, *referential integrity*, and
 *point-in-time snapshot* are used here as defined there.
 
@@ -26,7 +26,9 @@ terms like *functional dependency*, *3NF*, *referential integrity*, and
 ## 0. Prerequisites
 
 You need the `sqlite3` command-line tool (version 3.37+ for the `.import` options
-used here; 3.51 is what these files were tested on).
+used here; 3.51 is what these files were tested on). Nothing else — see
+[requirements.md](requirements.md) for optional add-ons and what is already
+built in.
 
 ```bash
 sqlite3 --version
@@ -38,7 +40,7 @@ All commands below assume you are **in this directory**:
 cd Lectures/02_sqlite
 ```
 
-The load script refers to the CSV as `../example_data.csv`, so the working
+The load script refers to the CSV as `data/example_data.csv`, so the working
 directory has to be `02_sqlite/` for the relative path to resolve.
 
 New to running SQL from the command line? Read
@@ -51,7 +53,7 @@ script.sql` redirection works.
 ## 1. Look at the raw data
 
 ```bash
-head -3 ../example_data.csv
+head -3 data/example_data.csv
 ```
 
 ```
@@ -107,7 +109,7 @@ CREATE TABLE staging_raw (
     zipcode TEXT, state TEXT, prod_name TEXT, purchase_data TEXT
 );
 .mode csv
-.import --skip 1 ../example_data.csv staging_raw
+.import --skip 1 data/example_data.csv staging_raw
 .read sql/90_data_quality.sql
 .quit
 ```
@@ -251,7 +253,7 @@ in order, then runs verification:
 2. **[sql/02_load.sql](sql/02_load.sql)** — the load, in stages:
    - **A. Staging.** `CREATE TABLE staging_raw` with *every column `TEXT` and no
      constraints* — it must accept the file no matter how dirty it is.
-   - **B. Import.** `.mode csv` then `.import --skip 1 ../example_data.csv
+   - **B. Import.** `.mode csv` then `.import --skip 1 data/example_data.csv
      staging_raw` (the `--skip 1` drops the header row).
    - **C. Parents first.** `INSERT … SELECT DISTINCT` populates `states`,
      `card_types`, `departments`, `zipcodes` so the children have something to
@@ -367,10 +369,13 @@ walkthrough refers to:
 02_sqlite/
 ├── sqlite_walkthrough.md         ← you are here
 ├── README.md                     ← folder overview + file index
+├── requirements.md               ← required vs. optional tooling; what's built in
 ├── running_sqlite.md             ← the sqlite3 shell, dot commands, redirection
 ├── rebuild.sql                   ← one command: schema + load + verify
 ├── encryption_and_passwords.md   ← SQLite has no built-in crypto; how to hash
 │                                   passwords and encrypt column values in Python
+├── data/
+│   └── example_data.csv          ← the raw input the walkthrough starts from
 └── sql/
     ├── 01_schema.sql             ← CREATE TABLE / INDEX / VIEW, all constraints
     ├── 02_load.sql               ← staging import + INSERT…SELECT transforms

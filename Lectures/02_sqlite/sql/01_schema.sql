@@ -3,7 +3,7 @@
 -- =============================================================================
 -- Run order: this file is step 1. It only CREATEs structure; it loads no data.
 --
--- Source data (Lectures/example_data.csv) is one flat table with these columns:
+-- Source data (Lectures/02_sqlite/data/example_data.csv) is one flat table with these columns:
 --
 --   id, first_name, last_name, email, cc_type, cc_number, purchase_dept,
 --   purchase_amount, address, zipcode, state, prod_name, purchase_data

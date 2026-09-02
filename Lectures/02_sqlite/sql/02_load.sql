@@ -6,7 +6,7 @@
 --
 -- Working directory matters: the .import path below is resolved relative to the
 -- directory you launched sqlite3 from. Run everything from Lectures/02_sqlite/
--- so that ../example_data.csv resolves. rebuild.sql does exactly that.
+-- so that data/example_data.csv resolves. rebuild.sql does exactly that.
 --
 -- Strategy: never INSERT straight from a CSV into a constrained schema. Land the
 -- raw text in a staging table with no rules, inspect/clean it, THEN transform.
@@ -42,7 +42,7 @@ CREATE TABLE staging_raw (
 -- Step B: import. --csv sets the delimiter/quoting rules; --skip 1 drops the
 -- header row (our staging table already has the column names).
 .mode csv
-.import --skip 1 ../example_data.csv staging_raw
+.import --skip 1 data/example_data.csv staging_raw
 
 -- Quick sanity check echoed to the console during a rebuild.
 SELECT 'staging_raw rows loaded: ' || count(*) FROM staging_raw;

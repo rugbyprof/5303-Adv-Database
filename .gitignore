@@ -1,8 +1,18 @@
 .*
 !.gitignore
+!.env.example
 
-# SQLite build artifacts (regenerate with rebuild.sql)
+# SQLite build artifacts (regenerate with rebuild.sql / scale_data.py)
 *.db
+*.db-wal
+*.db-shm
 *.sqlite
 *.sqlite3
+
+# Editor / DB-tool scratch files (e.g. SQLTools per-connection sessions)
+*.session.sql
+
+# Python
+__pycache__/
+*.egg-info/
 

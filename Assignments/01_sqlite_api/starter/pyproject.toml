@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqlite-api-assignment"
+version = "0.1.0"
+description = "Assignment 01 -- SQLite behind a FastAPI service"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.7",
+    # "aiosqlite>=0.20",   # uncomment if you go the async route
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "httpx>=0.27",        # FastAPI TestClient needs this
+]
+
+# Install:  pip install -e ".[dev]"     (from the starter/ directory)
+
+[tool.setuptools]
+packages = ["app"]
+py-modules = ["scale_data", "loadtest"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]      # so `import app` / `import scale_data` work
+testpaths = ["tests"]
+filterwarnings = ["ignore::UserWarning"]   # auth.py warns in dev mode

@@ -5,6 +5,9 @@ by topic. Each entry gives a short definition followed by a concrete example.
 Where a relational term has a document-model counterpart (or vice versa), the
 entry says so.
 
+For runnable SQL against these ideas, see [sql_basics.md](sql_basics.md) (this
+lecture) and the [02_sqlite walkthrough](../02_sqlite/sqlite_walkthrough.md).
+
 ---
 
 ## 1. Relations, Tables, Documents, Collections, Keys, and Values

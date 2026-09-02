@@ -2,7 +2,7 @@
 -- rebuild.sql  --  One command to recreate the whole database from the CSV
 -- =============================================================================
 -- Usage (must be run from the Lectures/02_sqlite/ directory so the relative
--- path to ../example_data.csv inside 02_load.sql resolves):
+-- path to data/example_data.csv inside 02_load.sql resolves):
 --
 --     cd Lectures/02_sqlite
 --     rm -f store.db

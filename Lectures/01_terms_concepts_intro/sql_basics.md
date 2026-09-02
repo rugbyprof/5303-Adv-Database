@@ -1,4 +1,9 @@
-# RDBMS Intro Week 01
+# SQL Basics — Week 01
+
+A lecture walkthrough of relational SQL. Term definitions live in
+[glossary.md](glossary.md); this file is the teaching flow and the runnable
+examples. Sample data to run them against is
+[data/students.sql](data/students.sql).
 
 ## 1. Relational database concepts
 
@@ -28,6 +33,8 @@
 
 ## 2. Keys and constraints
 
+Each of these is defined with an example in [glossary.md §2](glossary.md#2-keys-relationships-constraints-and-referential-integrity); cover them here as talking points.
+
 - Candidate key
 - Natural key versus surrogate key
 - Primary key
@@ -41,7 +48,8 @@
 - What happens when a referenced row is updated or deleted
 - Generated identity/auto-increment values
 
-A small university example works well:
+A small university example works well ([data/students.sql](data/students.sql)
+provides the `students` table and 1,000 rows to query):
 
 ```sql
 CREATE TABLE Students (
@@ -415,7 +423,8 @@ ON Students(major);
 
 ## 11. Useful SQL distinctions
 
-These prevent common beginner confusion:
+These prevent common beginner confusion (see [glossary.md](glossary.md) for the
+full definitions):
 
 - SQL is a language; MySQL, PostgreSQL, SQLite, Oracle, and SQL Server are database systems
 - SQL implementations use different dialects

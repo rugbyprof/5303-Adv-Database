@@ -9,8 +9,8 @@
         {
             "previewLimit": 50,
             "driver": "SQLite",
-            "name": "class_lecture",
-            "database": "${workspaceFolder:5303-Adv-Database}/Lectures/course.db"
+            "name": "02_sqlite walkthrough",
+            "database": "${workspaceFolder:5303-Adv-Database}/Lectures/02_sqlite/store.db"
         }
     ]
 }

@@ -1,7 +1,7 @@
 # SQLite Security: Encryption, Hashing, and Passwords (with Python)
 
 Supplement to the [SQLite walkthrough](sqlite_walkthrough.md). Where the
-walkthrough's [example_data.csv](../example_data.csv) stores raw `cc_number`
+walkthrough's [example_data.csv](data/example_data.csv) stores raw `cc_number`
 values — fine for synthetic teaching data, never in production — this file shows
 what you would actually do instead.
 
