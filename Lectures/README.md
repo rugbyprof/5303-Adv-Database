@@ -1,4 +1,6 @@
 ## Lectures
 
-| Folder | Title | Description | Due |
-| :----- | :---- | :---------- | :-- |
+| Folder                  | Title                                            | Description                                                                                                                                                                                     | Due |
+| :---------------------- | :----------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-- |
+| [01_overview](01_overview/) | Data Modeling Glossary | Reference for the Database Models and Data Modeling theme: relations/tables/documents/collections, keys and referential integrity, normalization vs. denormalization, embedding vs. referencing, schema enforcement vs. flexibility, and data duplication vs. consistency — with examples across relational, document, and key-value models. | —   |
+| [02_sqlite](02_sqlite/) | SQLite: From a Flat CSV to a Normalized Database | Walkthrough: inspect `example_data.csv`, find its functional dependencies, design an 8-table schema, build it with a rebuild script, and query it (joins, subqueries, aggregates, date ranges). | —   |

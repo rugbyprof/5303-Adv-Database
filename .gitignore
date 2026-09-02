@@ -1,3 +1,8 @@
 .*
 !.gitignore
 
+# SQLite build artifacts (regenerate with rebuild.sql)
+*.db
+*.sqlite
+*.sqlite3
+
