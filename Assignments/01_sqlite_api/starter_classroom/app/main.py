@@ -5,7 +5,7 @@ Run it from the  starter/  directory, either way:
     python -m app.main                   # uses the __main__ block below
     uvicorn app.main:app --reload        # equivalent
 
-Then open http://127.0.0.1:8001/docs
+Then open http://127.0.0.1:8000/docs
 
 (Do NOT run `python app/main.py` -- the package-relative imports need the
 `app.` package context, which only `-m app.main` / uvicorn provide.)
@@ -59,8 +59,7 @@ def health() -> dict:
     return {"ok": True}
 
 
-@app.get("/customers/{customer_id}", response_model=Customer,
-         dependencies=[Depends(require_api_key)])
+@app.get("/customers/{customer_id}", response_model=Customer,dependencies=[Depends(require_api_key)])
 def get_customer(customer_id: int, db: sqlite3.Connection = Depends(get_db)):
     row = db.execute(
         """
@@ -85,10 +84,7 @@ def list_departments(db: sqlite3.Connection = Depends(get_db)) -> list[str]:
 @app.get("/products", response_model=list[Product],
          dependencies=[Depends(require_api_key)])
 def list_products(
-    db: sqlite3.Connection = Depends(get_db),
-    limit: int = Query(50, ge=1, le=500),
-    offset: int = Query(0, ge=0),
-):
+limit: int,offset: int,db: sqlite3.Connection = Depends(get_db)):
     # NOTE: OFFSET pagination. Fine here; Phase 3 shows why it stops being fine.
     rows = db.execute(
         "SELECT product_id, product_name, unit_price FROM products "
@@ -114,9 +110,33 @@ def list_purchases(
         ORDER BY purchase_date
         LIMIT ?
         """,
-        (start, end, limit),
+        (start, end, limit,),
     ).fetchall()
-    return [dict(r) for r in rows]
+    resp =  [dict(r) for r in rows]
+    print(f"number: {len(resp)}")
+    return resp
+
+
+@app.get("purchases2")
+def list_purchases2(
+    db: sqlite3.Connection = Depends(get_db),
+    start: str = Query(..., description="inclusive ISO date, e.g. 2025-01-01"),
+    end: str = Query(..., description="exclusive ISO date"),
+    limit: int = Query(100, ge=1, le=1000),
+):
+    rows = db.execute(
+        """
+        SELECT purchase_id, customer_id, product_id, department, amount, purchase_date
+        FROM purchases
+        WHERE purchase_date >= ? AND purchase_date < ?
+        ORDER BY purchase_date
+        LIMIT ?
+        """,
+        (start, end, limit,),
+    ).fetchall()
+    resp =  [dict(r) for r in rows]
+    print(f"number: {len(resp)}")
+    return resp
 
 
 # --------------------------------------------------------------------------- #
@@ -145,8 +165,7 @@ def revenue_by_month(db: sqlite3.Connection = Depends(get_db)):
     raise HTTPException(501, _TODO + " (Phase 2)")
 
 
-@app.get("/products/top", response_model=list[RevenueRow],
-         dependencies=[Depends(require_api_key)])
+@app.get("/products/top", response_model=list[RevenueRow],dependencies=[Depends(require_api_key)])
 def top_products(
     db: sqlite3.Connection = Depends(get_db),
     by: str = Query("revenue", pattern="^(revenue|count)$"),
