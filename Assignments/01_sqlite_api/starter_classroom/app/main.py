@@ -58,6 +58,16 @@ def root() -> RedirectResponse:
 def health() -> dict:
     return {"ok": True}
 
+@app.get("/unique_names/")
+def unique_names(db: sqlite3.Connection = Depends(get_db)):
+    rows = db.execute(
+        """
+        SELECT DISTINCT first_name FROM customers ORDER BY 1;
+        """,
+    ).fetchall()
+    if rows is None:
+        raise HTTPException(404,"oops")
+    return [r['first_name'] for r in rows]
 
 @app.get("/customers/{customer_id}", response_model=Customer,dependencies=[Depends(require_api_key)])
 def get_customer(customer_id: int, db: sqlite3.Connection = Depends(get_db)):

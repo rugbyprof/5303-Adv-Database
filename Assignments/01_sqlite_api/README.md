@@ -2,6 +2,18 @@
 
 **Weight:** _TBD_ · **Assigned:** _TBD_ · **Due:** _TBD_
 
+## TLDR;
+- create your virtual environment:
+  - python3 -m venv .venv
+  - source ./venv/bin/activate # starts up the virtual environment
+- install everything
+  - pip install -e .
+- create the db
+  - python scale_data.py --db store.db --customers 5000 --products 500 --purchases 100000 --skew
+- install some extensions to view sqlite tables
+- run fast api
+  - from starter folder (or starter_classroom folder): `python -m app.main`
+
 ## Goal
 
 Wrap the normalized database from [Lecture 02 — SQLite](../../Lectures/02_sqlite/)
