@@ -1,9 +1,14 @@
 """
 Assignment 01 -- SQLite behind a FastAPI service.
 
-Run:
-    uvicorn app.main:app --reload        # from the starter/ directory
-    open http://127.0.0.1:8000/docs
+Run it from the  starter/  directory, either way:
+    python -m app.main                   # uses the __main__ block below
+    uvicorn app.main:app --reload        # equivalent
+
+Then open http://127.0.0.1:8000/docs
+
+(Do NOT run `python app/main.py` -- the package-relative imports need the
+`app.` package context, which only `-m app.main` / uvicorn provide.)
 
 Phase 1 endpoints below are worked examples. Phases 2-4 are stubs that return
 501 -- implement them and remove the `raise`. See ../README.md for the spec.
@@ -15,10 +20,18 @@ import sqlite3
 from typing import Iterator
 
 from fastapi import Depends, FastAPI, HTTPException, Query
+from fastapi.responses import RedirectResponse
 
-from . import models
 from .auth import require_api_key
 from .db import connect
+from .models import (
+    Customer,
+    NewPurchase,
+    Product,
+    Purchase,
+    PurchaseDetail,
+    RevenueRow,
+)
 
 app = FastAPI(title="SQLite API -- Assignment 01")
 
@@ -35,12 +48,18 @@ def get_db() -> Iterator[sqlite3.Connection]:
 # Phase 1 -- simple reads (worked examples)
 # --------------------------------------------------------------------------- #
 
+@app.get("/", include_in_schema=False)
+def root() -> RedirectResponse:
+    """Bare host -> the Swagger UI."""
+    return RedirectResponse(url="/docs")
+
+
 @app.get("/health")
 def health() -> dict:
     return {"ok": True}
 
 
-@app.get("/customers/{customer_id}", response_model=models.Customer,
+@app.get("/customers/{customer_id}", response_model=Customer,
          dependencies=[Depends(require_api_key)])
 def get_customer(customer_id: int, db: sqlite3.Connection = Depends(get_db)):
     row = db.execute(
@@ -63,7 +82,7 @@ def list_departments(db: sqlite3.Connection = Depends(get_db)) -> list[str]:
     return [r["department"] for r in db.execute("SELECT department FROM departments ORDER BY 1")]
 
 
-@app.get("/products", response_model=list[models.Product],
+@app.get("/products", response_model=list[Product],
          dependencies=[Depends(require_api_key)])
 def list_products(
     db: sqlite3.Connection = Depends(get_db),
@@ -79,7 +98,7 @@ def list_products(
     return [dict(r) for r in rows]
 
 
-@app.get("/purchases", response_model=list[models.Purchase],
+@app.get("/purchases", response_model=list[Purchase],
          dependencies=[Depends(require_api_key)])
 def list_purchases(
     db: sqlite3.Connection = Depends(get_db),
@@ -108,25 +127,25 @@ _TODO = "not implemented -- see Assignments/01_sqlite_api/README.md"
 
 
 @app.get("/customers/{customer_id}/purchases",
-         response_model=list[models.PurchaseDetail],
+         response_model=list[PurchaseDetail],
          dependencies=[Depends(require_api_key)])
 def customer_purchases(customer_id: int, db: sqlite3.Connection = Depends(get_db)):
     raise HTTPException(501, _TODO + " (Phase 2)")
 
 
-@app.get("/stats/revenue-by-state", response_model=list[models.RevenueRow],
+@app.get("/stats/revenue-by-state", response_model=list[RevenueRow],
          dependencies=[Depends(require_api_key)])
 def revenue_by_state(db: sqlite3.Connection = Depends(get_db)):
     raise HTTPException(501, _TODO + " (Phase 2)")
 
 
-@app.get("/stats/revenue-by-month", response_model=list[models.RevenueRow],
+@app.get("/stats/revenue-by-month", response_model=list[RevenueRow],
          dependencies=[Depends(require_api_key)])
 def revenue_by_month(db: sqlite3.Connection = Depends(get_db)):
     raise HTTPException(501, _TODO + " (Phase 2)")
 
 
-@app.get("/products/top", response_model=list[models.RevenueRow],
+@app.get("/products/top", response_model=list[RevenueRow],
          dependencies=[Depends(require_api_key)])
 def top_products(
     db: sqlite3.Connection = Depends(get_db),
@@ -175,5 +194,22 @@ def dead_products(state: str, db: sqlite3.Connection = Depends(get_db)):
 # --------------------------------------------------------------------------- #
 
 @app.post("/purchases", status_code=201, dependencies=[Depends(require_api_key)])
-def create_purchase(body: models.NewPurchase, db: sqlite3.Connection = Depends(get_db)):
+def create_purchase(body: NewPurchase, db: sqlite3.Connection = Depends(get_db)):
     raise HTTPException(501, _TODO + " (Phase 4: INSERT in a transaction, return 201)")
+
+
+# --------------------------------------------------------------------------- #
+# Dev entrypoint:  python -m app.main   (run from the starter/ directory)
+# --------------------------------------------------------------------------- #
+
+if __name__ == "__main__":
+    import os
+
+    import uvicorn
+
+    uvicorn.run(
+        "app.main:app",   # import string, so --reload can re-import on change
+        host=os.environ.get("HOST", "127.0.0.1"),
+        port=int(os.environ.get("PORT", "8001")),
+        reload=os.environ.get("RELOAD", "1") == "1",
+    )

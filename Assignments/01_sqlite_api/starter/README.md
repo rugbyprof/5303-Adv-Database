@@ -30,17 +30,47 @@ pip install -e ".[dev]"
 # build a database (lecture-sized to start)
 python scale_data.py --db store.db --purchases 1000
 
-# run it
+# run it -- from the starter/ directory, either command works:
 export API_KEYS=dev-key-123
-uvicorn app.main:app --reload
+python -m app.main                 # uses the __main__ block in app/main.py
+#   or:  uvicorn app.main:app --reload
 open http://127.0.0.1:8000/docs
 ```
+
+**Always run from `starter/`.** That is where `pyproject.toml`, `app/`,
+`scale_data.py`, and `sql/` live, and where `store.db` is created. `python -m
+app.main` and `uvicorn app.main:app` both need `app` importable, which happens
+from here (or anywhere, once `pip install -e` has run). `python app/main.py`
+will **not** work — the `app.` package-relative imports need the package
+context.
+
+`HOST`, `PORT`, and `RELOAD` (`0` to disable auto-reload) are read from the
+environment by the `__main__` block.
 
 Call an endpoint:
 
 ```bash
 curl -s -H "X-API-Key: dev-key-123" http://127.0.0.1:8000/customers/1 | python -m json.tool
 ```
+
+## Editor setup (VS Code / Pyright)
+
+`app/` is a package. Its modules import each other **relatively** —
+`from .models import Customer`, `from .db import connect` — which is what
+`uvicorn app.main:app` and `pytest` expect. Do **not** let an "organize
+imports" / auto-import action rewrite these to `from models import ...`; that
+resolves in the editor but crashes at runtime with
+`ModuleNotFoundError: No module named 'models'`.
+
+For the editor to resolve the imports and the FastAPI/Pydantic types:
+
+1. **Open `Assignments/01_sqlite_api/starter/` as its own workspace folder**
+   (File → Add Folder to Workspace), not just the repo root.
+2. Select the `.venv` interpreter (Command Palette → *Python: Select
+   Interpreter* → `./.venv`).
+
+`pyrightconfig.json` in this folder sets the venv and marks `.` as the import
+root, so `from .models import …` resolves once the folder is open as root.
 
 ## Scaling up
 
