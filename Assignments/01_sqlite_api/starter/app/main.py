@@ -53,7 +53,7 @@ def custom_response(**kwargs):
 
     :param query: The query that was run
     :param result: The results of the query, if any
-    :param skip: Integer specifying the number of rows to skip.
+    :param offset: Integer specifying the number of rows to skip.
     :param limit: Integer specifying the maximum number of rows to return.
     :param error: Error if any
     :return: List of dictionary's with all the info listed above
@@ -98,7 +98,7 @@ def health() -> dict:
     return custom_response(result=[{"ok": True}])
 
 
-@app.get("/customers/")
+@app.get("/customers")
 def get_customer(customer_id: int):
     success = True
     error = None
@@ -118,23 +118,24 @@ def get_customer(customer_id: int):
 
 @app.get("/departments")
 def list_departments() -> dict:
-    rows = [r["department"] for r in conn.execute("SELECT department FROM departments ORDER BY 1")]
-    return custom_response(result=rows)
+    success = True
+    error = None
+    query = "SELECT department FROM departments ORDER BY 1"
+    result = conn.execute(query).fetchall()
+    rows = [r["department"] for r in result]
+    return custom_response(result=rows,success=success,query=query,error=error)
 
 
 @app.get("/products")
-def list_products(
-    limit: int = Query(50, ge=1, le=500),
-    offset: int = Query(0, ge=0),
+def list_products(limit: int = Query(50, ge=1, le=500),offset: int = Query(0, ge=0),
 ):
     # NOTE: OFFSET pagination. Fine here; Phase 3 shows why it stops being fine.
-    rows = conn.execute(
-        f"""
+    query = f"""
         SELECT product_id, product_name, unit_price FROM products
         ORDER BY product_id LIMIT {limit} OFFSET {offset}
         """
-    ).fetchall()
-    return custom_response(result=[dict(r) for r in rows],limit=limit,offset=offset)
+    rows = conn.execute(query).fetchall()
+    return custom_response(result=[dict(r) for r in rows],limit=limit,offset=offset,query=query)
 
 
 @app.get("/purchases")
