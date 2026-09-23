@@ -1,0 +1,37 @@
+# PostgreSQL 17 + PostGIS 3.5 for CMPS 5303.
+#
+#   docker compose up -d      # start (first run downloads the image)
+#   docker compose ps         # is it running / healthy?
+#   docker compose down       # stop  (data is kept in the named volume)
+#   docker compose down -v    # stop AND delete all data (fresh start)
+#
+# Connect:  postgresql://student:student@localhost:5432/course
+# Run from this folder (Lectures/03_postgres).
+# Then load the data: Assignments/02_postgres_api/Armageddon_Data/load_postgis.py
+
+services:
+  db:
+    image: postgis/postgis:17-3.5
+    # Apple Silicon: this image is published for amd64; Docker Desktop runs it
+    # under emulation. The line below silences the platform warning.
+    platform: linux/amd64
+    container_name: pg5303
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: student
+      POSTGRES_PASSWORD: student      # local-only dev password; never reuse it
+      POSTGRES_DB: course
+    ports:
+      # host:container — change the LEFT number (e.g. "5433:5432") if you
+      # already have a native PostgreSQL using 5432.
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U student -d course"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  pgdata:

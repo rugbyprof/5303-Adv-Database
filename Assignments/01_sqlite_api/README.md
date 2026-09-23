@@ -164,8 +164,7 @@ diagnosis. For the two with a fix (offset, search), show the before/after.
    what breaks if that file were on a network share (NFS/SMB) instead of local
    disk.
 
-**Answer with data:** at what write concurrency / rate does SQLite stop being
-appropriate *for this workload*?
+**Answer with data:** at what write concurrency / rate does SQLite stop being appropriate *for this workload*?
 
 ---
 

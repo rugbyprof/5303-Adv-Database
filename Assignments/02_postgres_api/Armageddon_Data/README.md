@@ -1,5 +1,22 @@
 ## Armageddon Data
 
+### load_postgis.py
+
+Loads every `.zip` here straight into PostgreSQL/PostGIS. You don't need to
+unzip first. You get one table per file (`world-earthquakes.zip` → `world_earthquakes`),
+each with a `geom` column in SRID 4326 and a spatial index. Setup instructions
+for the server are in [Lectures/03_postgres](../../../Lectures/03_postgres/postgres_setup.md).
+
+```sh
+pip install "psycopg[binary]"
+python load_postgis.py                      # all files
+python load_postgis.py world-ufos           # just one
+python load_postgis.py --dsn postgresql://student:student@localhost:5433/course
+```
+
+Values are loaded as-is (dates as text, `'NA'` strings, and so on). Treat the
+tables as staging data and clean them into your own schema.
+
 ### zip_manager.py
 
 This manager is for Griffin because the size of the repo is growing really fast and I needed a way to shrink files by zipping them. However, if I add all the files to the same archive, that filesize is still huge. So I run `python zip_manager.py zip` to zip every file, add a .(dot) in front of the geojson, json, and csv files so they won't get pushed to github.
