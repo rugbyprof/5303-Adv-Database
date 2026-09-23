@@ -308,9 +308,7 @@ CROSS JOIN = 4 × 4 = 16 rows
 
 In general:
 
-\[
-|A \times B| = |A| \times |B|
-\]
+$|A \times B| = |A| \times |B|$
 
 This a nice place to connect SQL back to the **Cartesian product in relational algebra** without making our entire database course a semester-long mathematical hostage situation.
 
