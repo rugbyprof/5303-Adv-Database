@@ -9,8 +9,8 @@ title: Sqlite api project
 description: Fast api + Sqlite projects
 category: Assignments
 date_due:
-  month: '09'
-  day: '30'
+  month: "09"
+  day: "30"
   year: 2026
   hour: 13
 ```
@@ -156,9 +156,9 @@ Each route exposes one failure mode. Implement all eight, then **add two of your
 own** and document what they demonstrate.
 
 | Route                          | The nasty part                                                      | What it teaches                                                                                                         |
-| :----------------------------- | :------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------- | --- | --- | ---- | ---------------------------------------------------------------------------------------------- |
+| :----------------------------- | :------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------- |
 | `GET /purchases?offset=900000` | deep `OFFSET` pagination                                            | `OFFSET` re-scans every skipped row → fix with **keyset / seek** pagination (`WHERE purchase_id > :cursor`) and compare |
-| `GET /products/search?q=`      | `WHERE product_name LIKE '%'                                        |                                                                                                                         | :q  |     | '%'` | leading wildcard can't use an index → full scan → add an **FTS5** table, compare plan + timing |
+| `GET /products/search?q=`      | `WHERE product_name LIKE '%'`                                       | leading wildcard can't use an index → full scan → add an **FTS5** table, compare plan + timing                          |
 | `GET /purchases?…&total=true`  | `COUNT(*)` of the filtered set for a page total                     | full scan on every request → discuss cached / approximate counts                                                        |
 | `GET /customers/leaderboard`   | window function ranking by 90-day trailing spend                    | large sort + scan; no index helps much                                                                                  |
 | `GET /customers/{id}/streaks`  | gaps-and-islands: consecutive purchase-day runs                     | self-join / window pattern that scales badly                                                                            |
