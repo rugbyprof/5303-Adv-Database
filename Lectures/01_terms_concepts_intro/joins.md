@@ -43,7 +43,7 @@ STUDENT                         MAJOR
 
 Alice   ─── 10 ───────────────► 10 ─── Computer Science
 Bob     ─── 20 ───────────────► 20 ─── Mathematics
-Charlie ─── NULL                 30 ─── Biology
+Charlie ─── NULL                30 ─── Biology
 Diana   ─── 10 ───────────────► 40 ─── History
 ```
 
