@@ -5,7 +5,7 @@ concepts:
   ["INNER JOIN", "LEFT JOIN", "RIGHT JOIN", "FULL OUTER JOIN", "CROSS JOIN"]
 ---
 
-Absolutely, Terry. For teaching joins, I prefer **row/table diagrams over the usual Venn diagrams**. Venn diagrams are decent mnemonics, but joins operate on rows according to a predicate—not on mystical overlapping circles.
+Here are some **row/table diagrams over the usual Venn diagrams**. Venn diagrams are decent mnemonics, but joins operate on rows according to a predicate—not on mystical overlapping circles.
 
 Suppose we have these two tables:
 
