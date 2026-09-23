@@ -196,8 +196,6 @@ Result:
 
 # The Four-JOIN Cheat Sheet
 
-Here's the diagram I'd actually put on a lecture slide:
-
 ```text
                  INNER JOIN
               matching rows only
@@ -255,7 +253,7 @@ RIGHT       = MATCH + RIGHT
 FULL OUTER  = LEFT  + MATCH + RIGHT
 ```
 
-That's the mental model I'd want them leaving class with.
+That's the simplest mental model
 
 ---
 
@@ -314,7 +312,7 @@ In general:
 |A \times B| = |A| \times |B|
 \]
 
-That's a nice place to connect SQL back to the **Cartesian product in relational algebra** without making the entire database course turn into a semester-long mathematical hostage situation.
+This a nice place to connect SQL back to the **Cartesian product in relational algebra** without making our entire database course a semester-long mathematical hostage situation.
 
 ---
 
@@ -344,10 +342,4 @@ ON s.major_id = m.major_id
     └── How do we determine whether rows DO match?
 ```
 
-That distinction becomes really useful once you introduce multi-column joins and conditions more complicated than `PK = FK`.
-
-For your database course, I'd probably teach them in this order:
-
-**INNER → LEFT → FULL OUTER → CROSS → RIGHT**
-
-because `RIGHT JOIN` adds almost no conceptual value once they understand `LEFT JOIN`, while `CROSS JOIN` gives you a beautiful bridge into Cartesian products and relational algebra.
+This distinction becomes really useful once I introduce multi-column joins and conditions more complicated than `PK = FK`, which won't be today!
