@@ -1,3 +1,22 @@
+<details>
+<summary>⚙️ Metadata (auto-managed by <code>readmees</code> — edit values, not structure)</summary>
+
+```yaml
+is_due: false
+id: L01-01_terms_concepts_intro
+name: L01-01_terms_concepts_intro
+title: NO TITLE
+description: NO DESCRIPTION
+category: Lectures
+date_due:
+  month: '09'
+  day: '23'
+  year: 2026
+  hour: 13
+```
+
+</details>
+
 # 01 — Terms, Concepts & SQL Basics
 
 The vocabulary and the first hands-on SQL for the *Database Models and Data

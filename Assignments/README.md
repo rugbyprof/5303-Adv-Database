@@ -1,9 +1,8 @@
 ## Assignments
 
-Each assignment is a self-contained folder: a `README.md` spec, a `starter/`
-scaffold where relevant, and any `data/` it needs. Generated databases and
-`.venv/` stay local (git-ignored).
+| Is Due | Folder | Title | Description | Date Due | Days Left |
+| :----- | :----- | :---- | :---------- | -------: | :-------: |
+| — | [A01-01_sqlite_api](./01_sqlite_api/) | NO TITLE | NO DESCRIPTION | N/A | N/A |
+| — | [A02-02_postgres_api](./02_postgres_api/) | NO TITLE | NO DESCRIPTION | N/A | N/A |
 
-| Folder | Title | Description | Due |
-| :----- | :---- | :---------- | :-- |
-| [01_sqlite_api](01_sqlite_api/) | SQLite Behind an API: Where It Shines and Where It Breaks | Wrap the [Lecture 02](../Lectures/02_sqlite/) database in a **FastAPI** service, scale the data up, add progressively harder endpoints (simple reads → joins/aggregates → deep pagination, `LIKE` search, windows, anti-joins → write concurrency), and write a memo on **when to choose SQLite and when not to**. Includes a starter scaffold and a data generator. Foreshadows the token-auth lecture with a thin `X-API-Key` stub. | _TBD_ |
+<sup>Last Updated: 2026-09-23 (Wed @ 13:03)</sup>

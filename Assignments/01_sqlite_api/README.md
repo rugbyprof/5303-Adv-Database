@@ -1,3 +1,22 @@
+<details>
+<summary>⚙️ Metadata (auto-managed by <code>readmees</code> — edit values, not structure)</summary>
+
+```yaml
+is_due: false
+id: A01-01_sqlite_api
+name: A01-01_sqlite_api
+title: NO TITLE
+description: NO DESCRIPTION
+category: Assignments
+date_due:
+  month: '09'
+  day: '23'
+  year: 2026
+  hour: 13
+```
+
+</details>
+
 # Assignment 01 — SQLite Behind an API: Where It Shines and Where It Breaks
 
 **Weight:** _TBD_ · **Assigned:** _TBD_ · **Due:** _TBD_

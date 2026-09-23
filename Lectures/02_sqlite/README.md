@@ -1,3 +1,22 @@
+<details>
+<summary>⚙️ Metadata (auto-managed by <code>readmees</code> — edit values, not structure)</summary>
+
+```yaml
+is_due: false
+id: L02-02_sqlite
+name: L02-02_sqlite
+title: NO TITLE
+description: NO DESCRIPTION
+category: Lectures
+date_due:
+  month: '09'
+  day: '23'
+  year: 2026
+  hour: 13
+```
+
+</details>
+
 # 02 — SQLite
 
 Taking one flat, spreadsheet-shaped CSV ([`data/example_data.csv`](data/example_data.csv),

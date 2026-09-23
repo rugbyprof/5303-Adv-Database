@@ -1,11 +1,9 @@
 ## Lectures
 
-Each lecture is a self-contained folder: a `README.md` index, the lecture
-material as Markdown, a `sql/` folder for scripts, and a `data/` folder for its
-input files. Generated `*.db` files stay local and are git-ignored.
+| Is Due | Folder | Title | Description | Date Due | Days Left |
+| :----- | :----- | :---- | :---------- | -------: | :-------: |
+| — | [L01-01_terms_concepts_intro](./01_terms_concepts_intro/) | NO TITLE | NO DESCRIPTION | N/A | N/A |
+| — | [L02-02_sqlite](./02_sqlite/) | NO TITLE | NO DESCRIPTION | N/A | N/A |
+| — | [L03-03_postgres](./03_postgres/) | NO TITLE | NO DESCRIPTION | N/A | N/A |
 
-| Folder | Title | Description | Due |
-| :----- | :---- | :---------- | :-- |
-| [01_terms_concepts_intro](01_terms_concepts_intro/) | Terms, Concepts & SQL Basics | The vocabulary ([glossary.md](01_terms_concepts_intro/glossary.md) — relations/tables/documents/collections, keys & referential integrity, normalization vs. denormalization, embedding vs. referencing, schema enforcement vs. flexibility, duplication vs. consistency) plus a first SQL walkthrough ([sql_basics.md](01_terms_concepts_intro/sql_basics.md) — `SELECT`, `WHERE`, joins, aggregates, DML) against a `Students`/`Courses`/`Enrollments` schema. | — |
-| [02_sqlite](02_sqlite/) | SQLite: From a Flat CSV to a Normalized Database | Walkthrough: inspect `data/example_data.csv`, find its functional dependencies, design an 8-table schema, build it with a rebuild script, and query it (joins, subqueries, aggregates, date ranges). Also covers the `sqlite3` shell, requirements/optional add-ons, and encryption/password hashing in Python. | — |
-| [03_postgres](03_postgres/) | PostgreSQL + PostGIS: Setup & the Armageddon Data | Getting PostgreSQL 17 + PostGIS running on Windows or macOS (Docker by default, or Postgres.app / the EDB installer). Loading the Armageddon geodata into 20 staging tables with `load_postgis.py`, then first spatial queries: `geometry` vs. `geography`, nearest-neighbour `<->`, point-in-polygon and distance joins, GeoJSON output, map viewers ([postgres_setup.md](03_postgres/postgres_setup.md)). | — |
+<sup>Last Updated: 2026-09-23 (Wed @ 13:03)</sup>

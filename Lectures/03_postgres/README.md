@@ -1,3 +1,22 @@
+<details>
+<summary>⚙️ Metadata (auto-managed by <code>readmees</code> — edit values, not structure)</summary>
+
+```yaml
+is_due: false
+id: L03-03_postgres
+name: L03-03_postgres
+title: NO TITLE
+description: NO DESCRIPTION
+category: Lectures
+date_due:
+  month: '09'
+  day: '23'
+  year: 2026
+  hour: 13
+```
+
+</details>
+
 # 03 — PostgreSQL + PostGIS
 
 We move from SQLite to PostgreSQL for one main reason: **PostGIS**, its
