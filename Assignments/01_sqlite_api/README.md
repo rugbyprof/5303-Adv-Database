@@ -2,7 +2,7 @@
 <summary>⚙️ Metadata (auto-managed by <code>readmees</code> — edit values, not structure)</summary>
 
 ```yaml
-is_due: false
+is_due: true
 id: A01-01_sqlite_api
 name: A01-01_sqlite_api
 title: Sqlite api project
@@ -98,6 +98,7 @@ states ─< zipcodes ─< customers ─< cards ─< purchases >─ products
 2. Connection pragmas (already in `starter/app/db.py`): `journal_mode=WAL`,
    `foreign_keys=ON`, `busy_timeout=5000`.
 3. Scale the data with `starter/scale_data.py`:
+
    ```bash
    python scale_data.py --db store.db --customers 50000 --products 5000 --purchases 1000000 --skew
    ```
@@ -106,6 +107,7 @@ states ─< zipcodes ─< customers ─< cards ─< purchases >─ products
    - `--skew` gives a few customers thousands of purchases and leaves some
      products with zero sales — so aggregates and pagination have something to
      choke on.
+
 4. Run at four sizes and keep the numbers: **1k** (lecture baseline), **100k**,
    **1M**, **5M** purchases.
 5. Record the index inventory. Some foreign keys are intentionally left

@@ -2,7 +2,7 @@
 <summary>⚙️ Metadata (auto-managed by <code>readmees</code> — edit values, not structure)</summary>
 
 ```yaml
-is_due: false
+is_due: true
 id: A02-02_postgres_api
 name: A02-02_postgres_api
 title: Postgres / Postgis Api
