@@ -5,12 +5,12 @@
 is_due: false
 id: A02-02_postgres_api
 name: A02-02_postgres_api
-title: NO TITLE
-description: NO DESCRIPTION
+title: Postgres / Postgis Api
+description: Fast Api using postgres's gis libs.
 category: Assignments
 date_due:
-  month: '09'
-  day: '23'
+  month: '10'
+  day: '14'
   year: 2026
   hour: 13
 ```
