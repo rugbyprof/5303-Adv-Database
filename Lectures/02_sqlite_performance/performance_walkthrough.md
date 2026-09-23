@@ -96,7 +96,35 @@ And one more:
   into it_.
 
 A **covering index** contains every column the query needs, so the lookup step
-disappears entirely.
+disappears entirely. SQLite answers the query from the index B-tree alone and
+never opens the table. Index entries are also much narrower than full rows,
+so more of them fit on each page and even a full walk reads fewer pages.
+
+For example, this query needs `customer_id` and `amount`:
+
+```sql
+SELECT customer_id, max(amount) FROM purchases GROUP BY customer_id;
+```
+
+- With only `idx_purchases_customer(customer_id)`, SQLite gets rows in the
+  right order from the index, but it has to jump into the table **once per
+  row** to read `amount`. At 1M rows that's 1M random lookups (786 ms, §6).
+- With an index on `(customer_id, amount)`, the value is already sitting in
+  the index entry. The plan changes to `SCAN purchases USING COVERING INDEX`
+  (36 ms).
+
+Three things to know when you design one:
+
+- **The rowid comes free.** Every index entry already ends with the rowid, so
+  `SELECT purchase_id … WHERE purchase_date = ?` is covered by
+  `idx_purchases_date` without adding `purchase_id`.
+- **Column order matters.** Put columns tested with `=` first, then the column
+  you range over or sort by, then any columns you only *read*. An index on
+  `(amount, customer_id)` holds the same data as `(customer_id, amount)`, but
+  it can't find or group rows by customer.
+- **It isn't free.** Every extra column makes the index bigger, and every
+  `INSERT`, `UPDATE` and `DELETE` has to maintain one more B-tree. Build
+  covering indexes for the queries that matter, not for every query.
 
 ---
 
