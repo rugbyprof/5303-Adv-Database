@@ -15,7 +15,7 @@ date_due:
   hour: 13
 ```
 
-</details>
+
 
 # Assignment 01 — SQLite Behind an API: Where It Shines and Where It Breaks
 
@@ -155,16 +155,16 @@ index and capture it a third time. Explain each plan.
 Each route exposes one failure mode. Implement all eight, then **add two of your
 own** and document what they demonstrate.
 
-| Route                          | The nasty part                                                      | What it teaches                                                                                                         |
-| :----------------------------- | :------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------- |
-| `GET /purchases?offset=900000` | deep `OFFSET` pagination                                            | `OFFSET` re-scans every skipped row → fix with **keyset / seek** pagination (`WHERE purchase_id > :cursor`) and compare |
-| `GET /products/search?q=`      | `WHERE product_name LIKE '%'`                                       | leading wildcard can't use an index → full scan → add an **FTS5** table, compare plan + timing                          |
-| `GET /purchases?…&total=true`  | `COUNT(*)` of the filtered set for a page total                     | full scan on every request → discuss cached / approximate counts                                                        |
-| `GET /customers/leaderboard`   | window function ranking by 90-day trailing spend                    | large sort + scan; no index helps much                                                                                  |
-| `GET /customers/{id}/streaks`  | gaps-and-islands: consecutive purchase-day runs                     | self-join / window pattern that scales badly                                                                            |
-| `GET /reports/cube`            | multi-CTE: revenue by `(state, department, month)` + `HAVING`       | several full aggregations in one request                                                                                |
-| `GET /purchases/sample`        | `ORDER BY random() LIMIT 10`                                        | naive random sampling = full scan + sort every call                                                                     |
-| `GET /products/dead?state=`    | anti-join: products never purchased in a given state (`NOT EXISTS`) | correlated scan over the large child table                                                                              |
+| Route                          | The nasty part                                                      | What it teaches                                                                                                         | Link                                                                           |
+| :----------------------------- | :------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+| `GET /purchases?offset=900000` | deep `OFFSET` pagination                                            | `OFFSET` re-scans every skipped row → fix with **keyset / seek** pagination (`WHERE purchase_id > :cursor`) and compare | [Offset Vs Keyset](../../Resources/offset-vs-keyset-pagination-handout.md)     |
+| `GET /products/search?q=`      | `WHERE product_name LIKE '%'`                                       | leading wildcard can't use an index → full scan → add an **FTS5** table, compare plan + timing                          | [Lead Wildcards Vs FTS5](../../Resources/lead_wildcard-vs-fts5.md)             |
+| `GET /purchases?…&total=true`  | `COUNT(*)` of the filtered set for a page total                     | full scan on every request → discuss cached / approximate counts                                                        | [Cached Vs Approximate Count](../../Resources/cached-vs-approximate_counts.md) |
+| `GET /customers/leaderboard`   | window function ranking by 90-day trailing spend                    | large sort + scan; no index helps much                                                                                  | [Window Function Rankings](../../Resources/ranking-by-90-day-window.md)        |
+| `GET /customers/{id}/streaks`  | gaps-and-islands: consecutive purchase-day runs                     | self-join / window pattern that scales badly                                                                            | [Streaks Gaps and Islands](../../Resources/streaks_gaps_islands.md)            |
+| `GET /reports/cube`            | multi-CTE: revenue by `(state, department, month)` + `HAVING`       | several full aggregations in one request                                                                                | [Multi-CTE](../../Resources/multi-cte.md)                                      |
+| `GET /purchases/sample`        | `ORDER BY random() LIMIT 10`                                        | naive random sampling = full scan + sort every call                                                                     | [Random Sampling](../../Resources/random-sampling.md)                          |
+| `GET /products/dead?state=`    | anti-join: products never purchased in a given state (`NOT EXISTS`) | correlated scan over the large child table                                                                              |                                                                                |
 
 For each: `EXPLAIN QUERY PLAN`, wall time at 100k / 1M / 5M, and a one-paragraph
 diagnosis. For the two with a fix (offset, search), show the before/after.
@@ -227,26 +227,26 @@ The rubric weights **reasoning and evidence**, not raw numbers.
 
 ## Deliverables
 
-| #   | Item                                                                                                                                                             |
-| :-- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1   | Repo: FastAPI app, `scale_data.py`, `pyproject.toml` / `requirements.txt`, tests that pass                                                                       |
-| 2   | All Phase 1–4 endpoints working; two original Phase 3 endpoints                                                                                                  |
-| 3   | [FINDINGS.md](FINDINGS_TEMPLATE.md) — query plans, before/after index, before/after FTS5, offset-vs-keyset, concurrency observations (paste the real error text) |
-| 4   | The Phase 5 decision memo (`MEMO.md` or PDF)                                                                                                                     |
-| 5   | A `curl` / HTTPie transcript **or** a 3–5 min screencast showing the failure modes live                                                                          |
+| #    | Item                                                                                                                                                             |
+| :--- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | Repo: FastAPI app, `scale_data.py`, `pyproject.toml` / `requirements.txt`, tests that pass                                                                       |
+| 2    | All Phase 1–4 endpoints working; two original Phase 3 endpoints                                                                                                  |
+| 3    | [FINDINGS.md](FINDINGS_TEMPLATE.md) — query plans, before/after index, before/after FTS5, offset-vs-keyset, concurrency observations (paste the real error text) |
+| 4    | The Phase 5 decision memo (`MEMO.md` or PDF)                                                                                                                     |
+| 5    | A `curl` / HTTPie transcript **or** a 3–5 min screencast showing the failure modes live                                                                          |
 
 ## Grading (100 pts)
 
-| Area                                                                  | Pts |
-| :-------------------------------------------------------------------- | :-- |
-| Endpoints correct & properly typed (Pydantic, status codes, 404/401)  | 20  |
-| Data generator: scales, skews, reproducible                           | 10  |
-| Phase 2 index exercise: three plans, correct explanation              | 10  |
-| Phase 3: eight endpoints + two original, each with plan + diagnosis   | 20  |
-| Phase 4: concurrency failures reproduced, mitigations tested honestly | 15  |
-| Auth moved to hashed `api_keys` table                                 | 5   |
-| FINDINGS.md quality (evidence, not vibes)                             | 10  |
-| Decision memo: scenario reasoning tied to observations                | 10  |
+| Area                                                                  | Pts  |
+| :-------------------------------------------------------------------- | :--- |
+| Endpoints correct & properly typed (Pydantic, status codes, 404/401)  | 20   |
+| Data generator: scales, skews, reproducible                           | 10   |
+| Phase 2 index exercise: three plans, correct explanation              | 10   |
+| Phase 3: eight endpoints + two original, each with plan + diagnosis   | 20   |
+| Phase 4: concurrency failures reproduced, mitigations tested honestly | 15   |
+| Auth moved to hashed `api_keys` table                                 | 5    |
+| FINDINGS.md quality (evidence, not vibes)                             | 10   |
+| Decision memo: scenario reasoning tied to observations                | 10   |
 
 ## Stretch (bonus, max +10)
 
@@ -261,3 +261,5 @@ The rubric weights **reasoning and evidence**, not raw numbers.
 Generative tools may help you write boilerplate and explain query plans. The
 diagnoses, the concurrency analysis, and the decision memo must be your own
 reasoning about _your_ measurements. Cite any external source you lean on.
+
+

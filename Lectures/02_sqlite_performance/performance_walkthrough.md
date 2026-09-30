@@ -156,14 +156,14 @@ endpoint means the endpoint slows down as the data grows.
 
 ### The examples (1M purchases)
 
-| #   | Query                                          | Plan                                         |   Time |
-| :-- | :--------------------------------------------- | :------------------------------------------- | -----: |
-| 1   | `WHERE purchase_id = 500000`                   | `SEARCH … INTEGER PRIMARY KEY`               |  <1 ms |
-| 2   | `count(*) WHERE purchase_date >= '2026-08-01'` | `SEARCH … COVERING INDEX idx_purchases_date` |  <1 ms |
-| 3   | `purchase_id, amount WHERE purchase_date = …`  | `SEARCH … USING INDEX` (lookups)             |  <1 ms |
-| 4   | `count(*) WHERE amount > 395`                  | `SCAN purchases`                             |  25 ms |
-| 5   | `ORDER BY amount DESC LIMIT 5`                 | `SCAN` + `TEMP B-TREE FOR ORDER BY`          |  31 ms |
-| 6   | `GROUP BY strftime('%Y', …)`                   | `SCAN` + `TEMP B-TREE FOR GROUP BY`          | 236 ms |
+| #    | Query                                          | Plan                                         |   Time |
+| :--- | :--------------------------------------------- | :------------------------------------------- | -----: |
+| 1    | `WHERE purchase_id = 500000`                   | `SEARCH … INTEGER PRIMARY KEY`               |  <1 ms |
+| 2    | `count(*) WHERE purchase_date >= '2026-08-01'` | `SEARCH … COVERING INDEX idx_purchases_date` |  <1 ms |
+| 3    | `purchase_id, amount WHERE purchase_date = …`  | `SEARCH … USING INDEX` (lookups)             |  <1 ms |
+| 4    | `count(*) WHERE amount > 395`                  | `SCAN purchases`                             |  25 ms |
+| 5    | `ORDER BY amount DESC LIMIT 5`                 | `SCAN` + `TEMP B-TREE FOR ORDER BY`          |  31 ms |
+| 6    | `GROUP BY strftime('%Y', …)`                   | `SCAN` + `TEMP B-TREE FOR GROUP BY`          | 236 ms |
 
 Note #5: **`LIMIT` doesn't save you from the scan.** The top 5 aren't known
 until every row has been seen.
@@ -281,8 +281,8 @@ Script: [sql/03_search_fts5.sql](sql/03_search_fts5.sql). The examples search
 A B-tree is sorted by the **start** of the string, so it can only help if the
 pattern pins down the start:
 
-| Pattern                                                | Can seek?                                   | Why                                                                                                                                 |
-| :----------------------------------------------------- | :------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------- |
+| Pattern                                                | Can seek?                                  | Why                                                                                                                                 |
+| :----------------------------------------------------- | :----------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
 | `LIKE '%hopper%'`                                      | ❌                                          | Leading wildcard: a match could be anywhere in the sort order                                                                       |
 | `email LIKE 'grace%'` on a normal index                | ❌                                          | SQLite's `LIKE` is case-**in**sensitive, but the index is sorted case-sensitively (`BINARY`), so a range seek could miss `'Grace…'` |
 | `last_name LIKE 'Hop%'` with an index `COLLATE NOCASE` | ✅ `SEARCH … (last_name>? AND last_name<?)` | Collation matches, so the prefix becomes a range                                                                                    |
@@ -378,12 +378,12 @@ function(...) OVER ( PARTITION BY <restart for each group>
 
 ### Ranking
 
-|   v | `row_number()` | `rank()` | `dense_rank()` |
-| --: | -------------: | -------: | -------------: |
-|  50 |              1 |        1 |              1 |
-|  40 |              2 |        2 |              2 |
-|  40 |              3 |        2 |              2 |
-|  10 |              4 |        4 |              3 |
+|    v | `row_number()` | `rank()` | `dense_rank()` |
+| ---: | -------------: | -------: | -------------: |
+|   50 |              1 |        1 |              1 |
+|   40 |              2 |        2 |              2 |
+|   40 |              3 |        2 |              2 |
+|   10 |              4 |        4 |              3 |
 
 Pick based on what a tie should mean in your result. Two more rules:
 

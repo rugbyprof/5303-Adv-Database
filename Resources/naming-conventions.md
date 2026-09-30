@@ -1,3 +1,21 @@
+<details>
+<summary>⚙️ Metadata (auto-managed by <code>readmees</code> — edit values, not structure)</summary>
+
+```yaml
+is_due: false
+id: Resource01_conventions
+name: Resource01_conventions
+title: "Naming Conventions"
+description: "Naming conventions in SQL / Mongo / Redis"
+category: Resource
+date_due:
+  month: "09"
+  day: "30"
+  year: 2026
+  hour: 13
+```
+</details>
+
 # Naming Conventions: SQL, MongoDB, and Redis
 
 A reference on identifier naming — for use alongside `dbscope`, or on its own. None of what follows is enforced by any database engine; a table, column, or key name is just a string as far as SQLite, PostgreSQL, MongoDB, or Redis is concerned. Consistent naming is a habit you build for the humans reading the schema later, not a rule the database checks for you. (`dbscope` will reformat your SQL syntax on request — uppercase keywords, one clause per line — but it won't rename your tables. That part's on you.)
@@ -20,11 +38,11 @@ Common convention, not a standard:
 
 This is the one most likely to bite when the same query is run against two different backends — which is the whole point of `dbscope`:
 
-| Engine | Unquoted identifier behavior |
-|---|---|
-| PostgreSQL | Folded to lowercase. `CREATE TABLE Users (...)` silently creates `users`. |
-| MySQL | Depends on the OS/filesystem the server runs on — case-sensitive on Linux, case-insensitive by default on macOS/Windows. |
-| SQLite | Stored exactly as typed. Comparisons are effectively case-insensitive for ASCII in practice, but don't rely on that holding everywhere. |
+| Engine     | Unquoted identifier behavior                                                                                                            |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| PostgreSQL | Folded to lowercase. `CREATE TABLE Users (...)` silently creates `users`.                                                               |
+| MySQL      | Depends on the OS/filesystem the server runs on — case-sensitive on Linux, case-insensitive by default on macOS/Windows.                |
+| SQLite     | Stored exactly as typed. Comparisons are effectively case-insensitive for ASCII in practice, but don't rely on that holding everywhere. |
 
 Create the same table with mixed-case naming on SQLite and PostgreSQL, then run the same `SELECT` against both — the divergence (or lack of one) is a good five-minute lesson on its own.
 
@@ -44,12 +62,12 @@ Create the same table with mixed-case naming on SQLite and PostgreSQL, then run 
 
 ## Quick reference
 
-| | Case sensitivity | Reserved-word escaping |
-|---|---|---|
-| SQLite | Effectively insensitive (don't rely on it) | Double quotes: `"name"` |
-| PostgreSQL | Unquoted identifiers folded to lowercase | Double quotes: `"name"` |
-| MongoDB | Case-sensitive | Not applicable — field names are JSON keys |
-| Redis | Case-sensitive | Not applicable — key names are data, not identifiers |
+|            | Case sensitivity                           | Reserved-word escaping                               |
+| ---------- | ------------------------------------------ | ---------------------------------------------------- |
+| SQLite     | Effectively insensitive (don't rely on it) | Double quotes: `"name"`                              |
+| PostgreSQL | Unquoted identifiers folded to lowercase   | Double quotes: `"name"`                              |
+| MongoDB    | Case-sensitive                             | Not applicable — field names are JSON keys           |
+| Redis      | Case-sensitive                             | Not applicable — key names are data, not identifiers |
 
 ---
 

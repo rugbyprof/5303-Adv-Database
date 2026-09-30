@@ -424,6 +424,260 @@ query that answers instantly from one that takes seconds.
 
 ---
 
+## 10. SQL Query Progression
+
+The following examples solve essentially the same problem:
+
+> **Find the top 5 customers by total purchases since August 1, 2026.**
+
+We will solve the problem four different ways:
+
+>```text
+>1. JOIN + GROUP BY
+>        ↓
+>2. Derived-Table Subquery
+>        ↓
+>3. Common Table Expression (CTE)
+>        ↓
+>4. Correlated Subquery
+>```
+
+---
+
+### A. JOIN + GROUP BY
+
+The most direct approach is to join the tables and perform the aggregation in the main query.
+
+```sql
+SELECT
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    COUNT(*) AS n,
+    ROUND(SUM(p.amount), 2) AS spent
+FROM customers c
+JOIN purchases p USING (customer_id)
+WHERE p.purchase_date >= '2026-08-01'
+GROUP BY
+    c.customer_id,
+    c.first_name,
+    c.last_name
+ORDER BY SUM(p.amount) DESC
+LIMIT 5;
+```
+
+> Idea
+
+>```text
+>customers + purchases
+ >       ↓
+ >      JOIN
+ >       ↓
+ >     filter
+ >       ↓
+ >    GROUP BY
+ >       ↓
+ >   aggregate
+>```
+
+This is often the simplest solution when the aggregation can be performed directly on the joined data.
+
+---
+
+### B. Derived-Table Subquery
+
+We can perform the aggregation **first** inside a subquery.
+
+```sql
+SELECT
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    ct.n,
+    ROUND(ct.spent, 2) AS spent
+FROM customers c
+JOIN (
+    SELECT
+        customer_id,
+        COUNT(*) AS n,
+        SUM(amount) AS spent
+    FROM purchases
+    WHERE purchase_date >= '2026-08-01'
+    GROUP BY customer_id
+) AS ct
+USING (customer_id)
+ORDER BY ct.spent DESC
+LIMIT 5;
+```
+
+#### Idea
+
+The inner query creates a temporary result:
+
+```text
+customer_id | n | spent
+------------+---+--------
+101         | 8 | 425.50
+102         | 3 | 217.25
+103         | 9 | 812.75
+```
+
+The outer query then joins that result with `customers`.
+
+>```text
+>purchases
+>    ↓
+> subquery
+>    ↓
+>cust_totals
+>    ↓
+>JOIN customers
+>```
+
+---
+
+### C. Common Table Expression (CTE)
+
+A CTE pulls the subquery out of the `FROM` clause and gives it a name.
+
+```sql
+WITH cust_totals AS (
+    SELECT
+        customer_id,
+        COUNT(*) AS n,
+        SUM(amount) AS spent
+    FROM purchases
+    WHERE purchase_date >= '2026-08-01'
+    GROUP BY customer_id
+)
+SELECT
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+    ct.n,
+    ROUND(ct.spent, 2) AS spent
+FROM cust_totals ct
+JOIN customers c USING (customer_id)
+ORDER BY ct.spent DESC
+LIMIT 5;
+```
+
+> #### Idea
+>```text
+>WITH cust_totals AS (...)
+>           ↓
+>     named result
+>           ↓
+>    main SELECT
+>```
+
+Conceptually, this is very similar to the derived-table solution:
+
+```sql
+FROM (
+    SELECT ...
+) AS cust_totals
+```
+
+becomes:
+
+```sql
+WITH cust_totals AS (
+    SELECT ...
+)
+```
+
+CTEs can make larger queries easier to read because intermediate results have meaningful names.
+
+---
+
+### D. Correlated Subquery
+
+A correlated subquery references the row currently being processed by the outer query.
+
+```sql
+SELECT
+    c.customer_id,
+    c.first_name,
+    c.last_name,
+
+    (
+        SELECT COUNT(*)
+        FROM purchases p
+        WHERE p.customer_id = c.customer_id
+          AND p.purchase_date >= '2026-08-01'
+    ) AS n,
+
+    (
+        SELECT ROUND(SUM(p.amount), 2)
+        FROM purchases p
+        WHERE p.customer_id = c.customer_id
+          AND p.purchase_date >= '2026-08-01'
+    ) AS spent
+
+FROM customers c
+WHERE EXISTS (
+    SELECT 1
+    FROM purchases p
+    WHERE p.customer_id = c.customer_id
+      AND p.purchase_date >= '2026-08-01'
+)
+ORDER BY spent DESC
+LIMIT 5;
+```
+
+The important relationship is:
+
+```sql
+p.customer_id = c.customer_id
+```
+
+The inner query depends on the **current customer** from the outer query.
+
+Conceptually:
+
+```text
+FOR EACH customer
+        ↓
+run a related subquery
+        ↓
+find that customer's purchases
+        ↓
+calculate results
+```
+
+---
+
+# Comparison
+
+| Approach | Main Idea |
+|---|---|
+| `JOIN + GROUP BY` | Join the data and aggregate directly |
+| Derived Table | Build an intermediate result inside `FROM` |
+| CTE | Build a **named** intermediate result |
+| Correlated Subquery | Run a related query using values from the current outer row |
+
+A useful progression is:
+
+```text
+JOIN + GROUP BY
+      │
+      │ "Let's separate the aggregation."
+      ▼
+Derived Table
+      │
+      │ "Let's give that result a name."
+      ▼
+     CTE
+      │
+      │ "What if the inner query depends on each outer row?"
+      ▼
+Correlated Subquery
+```
+
+The goal is not to memorize four ways to write the same query. The goal is to recognize that SQL gives us several ways to **decompose a larger question into smaller questions**.
+
+
 ## Where each topic shows up in `queries.sql`
 
 | Review topic | Used in |
