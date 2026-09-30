@@ -142,9 +142,9 @@ Implement these:
 | Method | Route                             | Query shape                                     |
 | :----- | :-------------------------------- | :---------------------------------------------- |
 | GET    | `/customers/{id}/purchases`       | 3-table join, include product name + department |
-| GET    | `/stats/revenue-by-state`         | join + `GROUP BY`                               |
+| ~GET~    | ~`/stats/revenue-by-state`~         | ~join + `GROUP BY`~                               |
 | GET    | `/stats/revenue-by-month`         | `strftime('%Y-%m', …)` grouping                 |
-| GET    | `/products/top?by=revenue&limit=` | join + `GROUP BY` + `ORDER BY` + `LIMIT`        |
+| ~GET~    | ~`/products/top?by=revenue&limit=`~ | ~join + `GROUP BY` + `ORDER BY` + `LIMIT`~        |
 
 **Exercise:** drop `idx_purchases_customer`, capture `EXPLAIN QUERY PLAN` for
 `/customers/{id}/purchases` before and after, at 1M rows. Then add a _covering_
