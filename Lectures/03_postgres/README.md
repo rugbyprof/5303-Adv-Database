@@ -3,8 +3,8 @@
 
 ```yaml
 is_due: false
-id: L03-03_postgres
-name: L03-03_postgres
+id: L04-03_postgres
+name: L04-03_postgres
 title: NO TITLE
 description: NO DESCRIPTION
 category: Lectures

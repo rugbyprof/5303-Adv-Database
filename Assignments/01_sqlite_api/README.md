@@ -9,8 +9,8 @@ title: Sqlite api project
 description: Fast api + Sqlite projects
 category: Assignments
 date_due:
-  month: "09"
-  day: "30"
+  month: '09'
+  day: '30'
   year: 2026
   hour: 13
 ```
@@ -50,8 +50,10 @@ is deliberately thin; the token-based auth lecture will build on it.
 
 ## Prerequisites
 
-- The [02_sqlite](../../Lectures/02_sqlite/) schema and walkthrough
 - Python 3.11+
+- Sqlite3
+- The [Sqlite Lecture](../../Lectures/02_sqlite/) that contains most of the getting started with sqlite.
+- The [02 Sqlite Performance Lecture](../../Lectures/02_sqlite_performance/README.md) overview.
 - `EXPLAIN QUERY PLAN` (covered in [sqlite_walkthrough.md §4](../../Lectures/02_sqlite/sqlite_walkthrough.md))
 - FTS5 available in your SQLite build (check `pragma_compile_options`; see
   [requirements.md](../../Lectures/02_sqlite/requirements.md))
@@ -155,16 +157,16 @@ index and capture it a third time. Explain each plan.
 Each route exposes one failure mode. Implement all eight, then **add two of your
 own** and document what they demonstrate.
 
-| Route                          | The nasty part                                                      | What it teaches                                                                                                         | Link                                                                           |
-| :----------------------------- | :------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
-| `GET /purchases?offset=900000` | deep `OFFSET` pagination                                            | `OFFSET` re-scans every skipped row → fix with **keyset / seek** pagination (`WHERE purchase_id > :cursor`) and compare | [Offset Vs Keyset](../../Resources/offset-vs-keyset-pagination-handout.md)     |
-| `GET /products/search?q=`      | `WHERE product_name LIKE '%'`                                       | leading wildcard can't use an index → full scan → add an **FTS5** table, compare plan + timing                          | [Lead Wildcards Vs FTS5](../../Resources/lead_wildcard-vs-fts5.md)             |
-| `GET /purchases?…&total=true`  | `COUNT(*)` of the filtered set for a page total                     | full scan on every request → discuss cached / approximate counts                                                        | [Cached Vs Approximate Count](../../Resources/cached-vs-approximate_counts.md) |
-| `GET /customers/leaderboard`   | window function ranking by 90-day trailing spend                    | large sort + scan; no index helps much                                                                                  | [Window Function Rankings](../../Resources/ranking-by-90-day-window.md)        |
-| `GET /customers/{id}/streaks`  | gaps-and-islands: consecutive purchase-day runs                     | self-join / window pattern that scales badly                                                                            | [Streaks Gaps and Islands](../../Resources/streaks_gaps_islands.md)            |
-| `GET /reports/cube`            | multi-CTE: revenue by `(state, department, month)` + `HAVING`       | several full aggregations in one request                                                                                | [Multi-CTE](../../Resources/multi-cte.md)                                      |
-| `GET /purchases/sample`        | `ORDER BY random() LIMIT 10`                                        | naive random sampling = full scan + sort every call                                                                     | [Random Sampling](../../Resources/random-sampling.md)                          |
-| `GET /products/dead?state=`    | anti-join: products never purchased in a given state (`NOT EXISTS`) | correlated scan over the large child table                                                                              |                                                                                |
+| Route                          | The nasty part                                                      | What it teaches                                                                                                         | Link                             |
+| :----------------------------- | :------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------- | :------------------------------- |
+| `GET /purchases?offset=900000` | deep `OFFSET` pagination                                            | `OFFSET` re-scans every skipped row → fix with **keyset / seek** pagination (`WHERE purchase_id > :cursor`) and compare | [Offset Vs Keyset][5]            |
+| `GET /products/search?q=`      | `WHERE product_name LIKE '%'`                                       | leading wildcard can't use an index → full scan → add an **FTS5** table, compare plan + timing                          | [Lead Wildcards Vs FTS5][3]      |
+| `GET /purchases?…&total=true`  | `COUNT(*)` of the filtered set for a page total                     | full scan on every request → discuss cached / approximate counts                                                        | [Cached Vs Approximate Count][2] |
+| `GET /customers/leaderboard`   | window function ranking by 90-day trailing spend                    | large sort + scan; no index helps much                                                                                  | [Window Function Rankings][7]    |
+| `GET /customers/{id}/streaks`  | gaps-and-islands: consecutive purchase-day runs                     | self-join / window pattern that scales badly                                                                            | [Streaks Gaps and Islands][8]    |
+| `GET /reports/cube`            | multi-CTE: revenue by `(state, department, month)` + `HAVING`       | several full aggregations in one request                                                                                | [Multi-CTE][4]                   |
+| `GET /purchases/sample`        | `ORDER BY random() LIMIT 10`                                        | naive random sampling = full scan + sort every call                                                                     | [Random Sampling][6]             |
+| `GET /products/dead?state=`    | anti-join: products never purchased in a given state (`NOT EXISTS`) | correlated scan over the large child table                                                                              | [Anti Joins][1]                  |
 
 For each: `EXPLAIN QUERY PLAN`, wall time at 100k / 1M / 5M, and a one-paragraph
 diagnosis. For the two with a fix (offset, search), show the before/after.
@@ -263,3 +265,11 @@ diagnoses, the concurrency analysis, and the decision memo must be your own
 reasoning about _your_ measurements. Cite any external source you lean on.
 
 
+[1]: ./handouts/anti-join-products-not-exists.md
+[2]: ./handouts/cached-vs-approximate_counts.md
+[3]: ./handouts/lead_wildcard-vs-fts5.md
+[4]: ./handouts/multi-cte.md
+[5]: ./handouts/offset-vs-keyset-pagination.md
+[6]: ./handouts/random-sampling.md
+[7]: ./handouts/ranking-by-90-day-window.md
+[8]: ./handouts/streaks_gaps_islands.md

@@ -3,10 +3,11 @@
 
 ```yaml
 is_due: false
-id: L04-04_sqlite_performance
-name: L04-04_sqlite_performance
+id: L03-02_sqlite_performance
+name: L03-02_sqlite_performance
 title: SQLite Query Performance
-description: Reading query plans and fixing slow queries at 1M rows -- the concepts behind Assignment 01 Phase 3
+description: Reading query plans and fixing slow queries at 1M rows -- the concepts
+  behind Assignment 01 Phase 3
 category: Lectures
 date_due:
   month: '09'

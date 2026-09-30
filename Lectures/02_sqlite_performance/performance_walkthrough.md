@@ -645,18 +645,28 @@ row is ready. Time `execute(...)` **plus** `fetchall()` with
 
 ## 12. Where each Phase 3 route fits
 
-| Phase 3 route                 | Read                                                                                       |
-| :---------------------------- | :----------------------------------------------------------------------------------------- |
-| `GET /purchases?offset=`      | §3 Pagination (and §2 for reading the plan)                                                |
-| `GET /products/search?q=`     | §4 Search: `LIKE` rules, FTS5, tokens vs substrings, sync triggers                         |
-| `GET /purchases?…&total=true` | §5 Counting                                                                                |
-| `GET /customers/leaderboard`  | §6 Window functions: frames (`RANGE` + `julianday`), aggregate first, whole-table cost     |
-| `GET /customers/{id}/streaks` | §7 Gaps and islands (days instead of months; one customer vs. all)                         |
-| `GET /reports/cube`           | §8 CTEs: counting passes, no `CUBE` in SQLite, the department-index trap, covering indexes |
-| `GET /purchases/sample`       | §9 Random sampling                                                                         |
-| `GET /products/dead?state=`   | §10 Anti-joins: probe cost, composite indexes, multi-join probes                           |
+| Phase 3 route                 | Read                                                                                       | Help                 |
+| :---------------------------- | :----------------------------------------------------------------------------------------- | :------------------- |
+| `GET /purchases?offset=`      | §3 Pagination (and §2 for reading the plan)                                                | [Offset V Keyset][5] |
+| `GET /products/search?q=`     | §4 Search: `LIKE` rules, FTS5, tokens vs substrings, sync triggers                         | [Lead Wildcard][3]   |
+| `GET /purchases?…&total=true` | §5 Counting                                                                                | [Cached V Approx][2] |
+| `GET /customers/leaderboard`  | §6 Window functions: frames (`RANGE` + `julianday`), aggregate first, whole-table cost     | [Window Func][7]     |
+| `GET /customers/{id}/streaks` | §7 Gaps and islands (days instead of months; one customer vs. all)                         | [Gaps Islands][8]    |
+| `GET /reports/cube`           | §8 CTEs: counting passes, no `CUBE` in SQLite, the department-index trap, covering indexes | [Multi Cte's][4]     |
+| `GET /purchases/sample`       | §9 Random sampling                                                                         | [Random Sampling][6] |
+| `GET /products/dead?state=`   | §10 Anti-joins: probe cost, composite indexes, multi-join probes                           | [Anti Joins][1]      |
 
 For your two original endpoints, pick a shape from this lecture that none of
 the eight exercises. Some candidates: a correlated subquery under a big outer
 loop, `SELECT DISTINCT` over a big join, `GROUP BY` on an expression, or a `LIKE`
 on a `COLLATE NOCASE` index versus a `BINARY` one.
+
+
+[1]: ../../Assignments/01_sqlite_api/handouts/anti-join-products-not-exists.md
+[2]: ../../Assignments/01_sqlite_api/handouts/cached-vs-approximate_counts.md
+[3]:../../Assignments/01_sqlite_api/handouts/lead_wildcard-vs-fts5.md
+[4]:../../Assignments/01_sqlite_api/handouts/multi-cte.md
+[5]:../../Assignments/01_sqlite_api/handouts/offset-vs-keyset-pagination.md
+[6]:../../Assignments/01_sqlite_api/handouts/random-sampling.md
+[7]:../../Assignments/01_sqlite_api/handouts/ranking-by-90-day-window.md
+[8]:../../Assignments/01_sqlite_api/handouts/streaks_gaps_islands.md
