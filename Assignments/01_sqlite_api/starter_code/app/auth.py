@@ -5,7 +5,7 @@ environment variable. If ``API_KEYS`` is unset the API is open (dev mode) and
 logs a warning.
 
 Your task (see the assignment README): move keys into a hashed ``api_keys``
-table (starter/sql/auth.sql), look the header up by hash, and compare with
+table (starter_code/sql/auth.sql), look the header up by hash, and compare with
 ``hmac.compare_digest``. Keep the public surface -- ``require_api_key`` -- the
 same so the token-auth lecture can swap the body for JWT verification without
 touching the routes.

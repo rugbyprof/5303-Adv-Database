@@ -34,7 +34,7 @@ rows match the ones shown here. The build takes about 10 seconds.
 
 ```bash
 cd Lectures/02_sqlite_performance
-python ../../Assignments/01_sqlite_api/starter/scale_data.py \
+python ../../Assignments/01_sqlite_api/starter_code/scale_data.py \
     --db perf.db --customers 50000 --products 5000 --purchases 1000000 --skew
 ```
 

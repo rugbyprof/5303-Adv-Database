@@ -1,5 +1,7 @@
 """Database connection helper.
 
+NOT USED ANYWHERE BUT I KEPT IT HERE AS AN EXAMPLE
+
 One connection per request (see ``get_db`` in main.py). SQLite is happy with
 that as long as every connection sets the same pragmas.
 """
@@ -11,7 +13,9 @@ import sqlite3
 from pathlib import Path
 
 # Override with  DB_PATH=/some/where/store.db  in the environment.
-DB_PATH = Path(os.environ.get("DB_PATH", Path(__file__).resolve().parent.parent / "store.db"))
+DB_PATH = Path(
+    os.environ.get("DB_PATH", Path(__file__).resolve().parent.parent / "store.db")
+)
 
 
 def connect() -> sqlite3.Connection:
@@ -25,10 +29,10 @@ def connect() -> sqlite3.Connection:
         timeout=5.0,
     )
     con.row_factory = sqlite3.Row
-    con.execute("PRAGMA journal_mode = WAL")     # readers don't block the writer
-    con.execute("PRAGMA foreign_keys = ON")      # not the default; per connection
+    con.execute("PRAGMA journal_mode = WAL")  # readers don't block the writer
+    con.execute("PRAGMA foreign_keys = ON")  # not the default; per connection
     con.execute("PRAGMA busy_timeout = 5000")
-    con.execute("PRAGMA synchronous = NORMAL")   # safe with WAL, faster than FULL
+    con.execute("PRAGMA synchronous = NORMAL")  # safe with WAL, faster than FULL
     return con
 
 

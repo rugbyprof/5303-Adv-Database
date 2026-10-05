@@ -1,4 +1,10 @@
-"""Pydantic v2 response models. Add more as you build out the phases."""
+"""
+
+NOT USED ANYWHERE BUT I KEPT IT HERE AS AN EXAMPLE of PYDANTIC MODELS
+
+Pydantic v2 response models. Add more as you build out the phases.
+
+"""
 
 from __future__ import annotations
 
@@ -41,7 +47,7 @@ class PurchaseDetail(BaseModel):
 
 
 class RevenueRow(BaseModel):
-    key: str          # state_code, month, department, ...
+    key: str  # state_code, month, department, ...
     num_purchases: int
     revenue: float
 
@@ -57,6 +63,7 @@ class NewPurchase(BaseModel):
 
 class Page(BaseModel):
     """Envelope for keyset-paginated results (Phase 3)."""
+
     items: list
     next_cursor: int | None = None
     total: int | None = None

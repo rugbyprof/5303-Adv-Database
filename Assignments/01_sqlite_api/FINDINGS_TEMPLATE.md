@@ -1,6 +1,6 @@
 # FINDINGS — Assignment 01
 
-> Copy this to `starter_classroom/FINDINGS.md` and fill it in. Keep answers
+> Copy this to `starter_code/FINDINGS.md` and fill it in. Keep answers
 > short: one to three sentences each, and every answer should point at a
 > **number** from `results.md` or a **plan line** from `results.csv`.
 

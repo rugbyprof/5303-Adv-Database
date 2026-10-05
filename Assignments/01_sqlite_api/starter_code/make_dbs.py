@@ -27,23 +27,24 @@ HERE = Path(__file__).resolve().parent
 SQL = HERE / "sql"
 DATA = HERE / "data"
 
-SIZES = {"10k": 10_000, "100k": 100_000, "1m": 1_000_000}
+SIZES = {"10k": 10_000, "100k": 100_000, "1m": 1_000_000, "practice": 100_000}
 
 
 def run_sql(db: Path, *files: str, vacuum: bool = False) -> None:
     con = sqlite3.connect(db)
     for f in files:
         con.executescript((SQL / f).read_text())
-    con.execute("ANALYZE")      # refresh planner statistics after index changes
+    con.execute("ANALYZE")  # refresh planner statistics after index changes
     con.commit()
     if vacuum:
-        con.execute("VACUUM")   # reclaim the space the dropped indexes used
+        con.execute("VACUUM")  # reclaim the space the dropped indexes used
     con.close()
 
 
 def main(argv=None):
-    p = argparse.ArgumentParser(description=__doc__,
-                                formatter_class=argparse.RawDescriptionHelpFormatter)
+    p = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     p.add_argument("--sizes", nargs="+", default=list(SIZES), choices=list(SIZES))
     a = p.parse_args(argv)
 
@@ -54,8 +55,14 @@ def main(argv=None):
         noidx = DATA / f"noidx_{label}.db"
         print(f"== {label}: {n:,} purchases")
 
-        build(str(idx), customers=max(n // 20, 500), products=max(n // 200, 100),
-              purchases=n, skew=True, seed=1234)
+        build(
+            str(idx),
+            customers=max(n // 20, 500),
+            products=max(n // 200, 100),
+            purchases=n,
+            skew=True,
+            seed=1234,
+        )
         run_sql(idx, "summary_tables.sql")
 
         shutil.copy(idx, noidx)

@@ -39,7 +39,7 @@ queries")** of [Assignment 01](../../Assignments/01_sqlite_api/):
 
 ```bash
 cd Lectures/04_sqlite_performance
-python ../../Assignments/01_sqlite_api/starter/scale_data.py \
+python ../../Assignments/01_sqlite_api/starter_code/scale_data.py \
     --db perf.db --customers 50000 --products 5000 --purchases 1000000 --skew   # ~10 s
 sqlite3 perf.db ".read sql/01_reading_plans.sql"
 ```

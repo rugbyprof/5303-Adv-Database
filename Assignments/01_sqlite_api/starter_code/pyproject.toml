@@ -20,7 +20,7 @@ dev = [
     "httpx>=0.27",        # FastAPI TestClient needs this
 ]
 
-# Install:  pip install -e ".[dev]"     (from the starter/ directory)
+# Install:  pip install -e ".[dev]"     (from the starter_code/ directory)
 
 [tool.setuptools]
 packages = ["app"]

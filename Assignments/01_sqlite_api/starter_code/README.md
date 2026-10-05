@@ -5,7 +5,7 @@ Scaffold for the [SQLite-behind-an-API assignment](../README.md). Q01 is impleme
 ## Layout
 
 ```
-starter_classroom/
+starter_code/
 ├── pyproject.toml         deps (fastapi, uvicorn, pydantic; dev: pytest, httpx)
 ├── .env.example           DATA_DIR, BUSY_TIMEOUT_MS, API_KEYS
 ├── scale_data.py          generates one database at any size (stdlib only)
@@ -29,7 +29,7 @@ starter_classroom/
 ## Setup
 
 ```bash
-cd Assignments/01_sqlite_api/starter_classroom
+cd Assignments/01_sqlite_api/starter_code
 python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
 pytest -q
@@ -53,7 +53,7 @@ python driver.py                   # full run
 
 `app/` is a package. Its modules import each other **relatively**, e.g. `from .experiment import run_query`. Don't let an "organize imports" action rewrite these to `from experiment import ...`. That form resolves in the editor but crashes at runtime with `ModuleNotFoundError`.
 
-1. Open `Assignments/01_sqlite_api/starter_classroom/` as its own workspace folder.
+1. Open `Assignments/01_sqlite_api/starter_code/` as its own workspace folder.
 2. Select the `.venv` interpreter (Command Palette → *Python: Select Interpreter* → `./.venv`).
 
 ## Notes

@@ -51,7 +51,7 @@ You are **not** writing SQL, designing indexes, or building a benchmark harness;
 | `loadtest.py`: fires concurrent `POST`s | Run it 4 times (Phase 4) |
 | — | Write [FINDINGS.md](FINDINGS_TEMPLATE.md): short answers backed by your numbers |
 
-Everything lives in [starter_classroom/](starter_classroom/). Run every command below **from that folder**.
+Everything lives in [starter_code/](starter_code/). Run every command below **from that folder**.
 
 ---
 
@@ -60,7 +60,7 @@ Everything lives in [starter_classroom/](starter_classroom/). Run every command 
 You need Python 3.11+ and the `sqlite3` command-line tool. For background, read the [SQLite lecture](../../Lectures/02_sqlite/) and the [SQLite performance lecture](../../Lectures/02_sqlite_performance/README.md); `EXPLAIN QUERY PLAN` is covered in [sqlite_walkthrough.md §4](../../Lectures/02_sqlite/sqlite_walkthrough.md).
 
 ```bash
-cd Assignments/01_sqlite_api/starter_classroom
+cd Assignments/01_sqlite_api/starter_code
 python3 -m venv .venv
 source .venv/bin/activate            # Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
@@ -83,14 +83,14 @@ That creates six files:
 Each pair holds **identical rows**. The only difference is indexes:
 
 - **`noidx_*`** has only what SQLite creates automatically: `PRIMARY KEY` and `UNIQUE` lookups.
-- **`idx_*`** adds the foreign-key indexes from the [lecture schema](../../Lectures/02_sqlite/sql/01_schema.sql) plus three covering indexes from [`sql/covering_indexes.sql`](starter_classroom/sql/covering_indexes.sql).
-- **Both** get a small `monthly_sales` summary table from [`sql/summary_tables.sql`](starter_classroom/sql/summary_tables.sql), used in Phase 3.
+- **`idx_*`** adds the foreign-key indexes from the [lecture schema](../../Lectures/02_sqlite/sql/01_schema.sql) plus three covering indexes from [`sql/covering_indexes.sql`](starter_code/sql/covering_indexes.sql).
+- **Both** get a small `monthly_sales` summary table from [`sql/summary_tables.sql`](starter_code/sql/summary_tables.sql), used in Phase 3.
 
 Customers and products scale with purchases (1 customer per 20 purchases, 1 product per 200), so 1M purchases means 50,000 customers and 5,000 products. `make_dbs.py` prints the exact counts; copy them into FINDINGS.
 
 ## Step 1 — Implement the routes
 
-Open [QUERIES.md](QUERIES.md) and [`app/main.py`](starter_classroom/app/main.py). Q01 is already done as an example; every other route follows the same pattern:
+Open [QUERIES.md](QUERIES.md) and [`app/main.py`](starter_code/app/main.py). Q01 is already done as an example; every other route follows the same pattern:
 
 ```python
 Q03_SQL = """ ...copied from QUERIES.md... """
@@ -268,7 +268,7 @@ Half a page in FINDINGS. For each scenario, say **SQLite: yes or no**, in 1–2 
 
 | # | Item |
 | :--- | :--- |
-| 1 | Your `starter_classroom/` folder with all 19 routes in `app/main.py`; `pytest` passes |
+| 1 | Your `starter_code/` folder with all 19 routes in `app/main.py`; `pytest` passes |
 | 2 | `results.md` and `results.csv` from a full `driver.py` run |
 | 3 | `FINDINGS.md`, filled in from [FINDINGS_TEMPLATE.md](FINDINGS_TEMPLATE.md) |
 
@@ -311,7 +311,7 @@ Yes: the median `elapsed_ms` that the driver measured. You don't time anything y
 No. It asks *how SQLite runs it*: the one or two `SCAN` / `SEARCH` lines that matter. See [How to read your results](#how-to-read-your-results).
 
 **Do I need to create indexes myself?**
-No. `make_dbs.py` builds both versions. Read [`sql/covering_indexes.sql`](starter_classroom/sql/covering_indexes.sql) so you know what's in `idx_*`. There are only six lines.
+No. `make_dbs.py` builds both versions. Read [`sql/covering_indexes.sql`](starter_code/sql/covering_indexes.sql) so you know what's in `idx_*`. There are only six lines.
 
 **Do I need a plan and time for every query at every size?**
 The driver collects all of them. In your written answers, quote the plan lines that support your point, usually at 1M.
