@@ -1,100 +1,62 @@
 # Starter scaffold — Assignment 01
 
-Skeleton for the [SQLite-behind-an-API assignment](../README.md). Phase 1
-endpoints work; Phases 2–4 are `501` stubs.
+Scaffold for the [SQLite-behind-an-API assignment](../README.md). Q01 is implemented as a worked example. Copy the SQL for the rest from [QUERIES.md](../QUERIES.md).
 
 ## Layout
 
 ```
-starter/
+starter_classroom/
 ├── pyproject.toml         deps (fastapi, uvicorn, pydantic; dev: pytest, httpx)
-├── .env.example           DB_PATH, API_KEYS
-├── scale_data.py          build store.db at any size  (stdlib only)
-├── loadtest.py            fire N concurrent requests (Phase 4)
-├── sql/auth.sql           api_keys table for the auth task
+├── .env.example           DATA_DIR, BUSY_TIMEOUT_MS, API_KEYS
+├── scale_data.py          generates one database at any size (stdlib only)
+├── make_dbs.py            builds all six experiment databases into data/
+├── driver.py              calls every route on every database -> results.md / results.csv
+├── loadtest.py            fires N concurrent requests (Phase 4)
+├── sql/
+│   ├── drop_indexes.sql       turns a copy into the noidx_* variant
+│   ├── covering_indexes.sql   extra indexes in the idx_* variant
+│   ├── summary_tables.sql     monthly_sales rollup (Phase 3 /fast routes)
+│   └── auth.sql               api_keys table (stretch task)
 ├── app/
-│   ├── db.py              connect() + pragmas + explain() helper
-│   ├── models.py          Pydantic response models
-│   ├── auth.py            X-API-Key dependency (env-var now; DB-backed = your task)
-│   └── main.py            the FastAPI app
-└── tests/test_smoke.py    session fixture builds a tiny DB, hits Phase 1
+│   ├── experiment.py      get_exp_db (?db= selection) + run_query (timing + plan)
+│   ├── models.py          Pydantic models (NewPurchase for Q15)
+│   ├── auth.py            X-API-Key dependency
+│   ├── db.py              older single-database helper (not used by the routes)
+│   └── main.py            the FastAPI app -- your routes go here
+└── tests/test_smoke.py    builds a tiny DB in a temp dir, checks Q01 + ?db= handling
 ```
 
 ## Setup
 
 ```bash
-cd Assignments/01_sqlite_api/starter
-python -m venv .venv && source .venv/bin/activate
+cd Assignments/01_sqlite_api/starter_classroom
+python3 -m venv .venv && source .venv/bin/activate
 pip install -e ".[dev]"
+pytest -q
 
-# build a database (lecture-sized to start)
-python scale_data.py --db store.db --purchases 1000
-
-# run it -- from the starter/ directory, either command works:
-export API_KEYS=dev-key-123
-python -m app.main                 # uses the __main__ block in app/main.py
-#   or:  uvicorn app.main:app --reload
-open http://127.0.0.1:8000/docs
+python make_dbs.py                 # ~20 s; writes data/{idx,noidx}_{10k,100k,1m}.db
+python -m app.main                 # http://127.0.0.1:8001/docs
 ```
 
-**Always run from `starter/`.** That is where `pyproject.toml`, `app/`,
-`scale_data.py`, and `sql/` live, and where `store.db` is created. `python -m
-app.main` and `uvicorn app.main:app` both need `app` importable, which happens
-from here (or anywhere, once `pip install -e` has run). `python app/main.py`
-will **not** work — the `app.` package-relative imports need the package
-context.
-
-`HOST`, `PORT`, and `RELOAD` (`0` to disable auto-reload) are read from the
-environment by the `__main__` block.
-
-Call an endpoint:
+In a second terminal, once your routes are in:
 
 ```bash
-curl -s -H "X-API-Key: dev-key-123" http://127.0.0.1:8000/customers/1 | python -m json.tool
+python driver.py --sizes 10k       # quick check
+python driver.py                   # full run
 ```
+
+**Always run from this folder.** That's where `pyproject.toml`, `app/` and `data/` live. `python -m app.main` and `uvicorn app.main:app --port 8001` both work. `python app/main.py` does **not**, because the `app.` package-relative imports need the package context.
+
+`HOST`, `PORT` (default 8001) and `RELOAD` (`0` disables auto-reload) are read from the environment by the `__main__` block. `BUSY_TIMEOUT_MS` (default 5000) is read by `app/experiment.py`.
 
 ## Editor setup (VS Code / Pyright)
 
-`app/` is a package. Its modules import each other **relatively** —
-`from .models import Customer`, `from .db import connect` — which is what
-`uvicorn app.main:app` and `pytest` expect. Do **not** let an "organize
-imports" / auto-import action rewrite these to `from models import ...`; that
-resolves in the editor but crashes at runtime with
-`ModuleNotFoundError: No module named 'models'`.
+`app/` is a package. Its modules import each other **relatively**, e.g. `from .experiment import run_query`. Don't let an "organize imports" action rewrite these to `from experiment import ...`. That form resolves in the editor but crashes at runtime with `ModuleNotFoundError`.
 
-For the editor to resolve the imports and the FastAPI/Pydantic types:
-
-1. **Open `Assignments/01_sqlite_api/starter/` as its own workspace folder**
-   (File → Add Folder to Workspace), not just the repo root.
-2. Select the `.venv` interpreter (Command Palette → *Python: Select
-   Interpreter* → `./.venv`).
-
-`pyrightconfig.json` in this folder sets the venv and marks `.` as the import
-root, so `from .models import …` resolves once the folder is open as root.
-
-## Scaling up
-
-```bash
-python scale_data.py --db store.db --customers 50000 --products 5000 --purchases 1000000 --skew
-```
-
-`--skew` concentrates purchases on ~10% of customers and ~70% of products, so
-the LEFT JOIN / anti-join / leaderboard endpoints have real gaps and hot spots
-to find. Re-run at 100k / 1M / 5M `--purchases` and keep the query plans.
-
-## Tests
-
-```bash
-pytest -q
-```
-
-The fixture builds a 3k-row DB in a temp dir and points `DB_PATH` at it, so
-tests don't touch your `store.db`.
+1. Open `Assignments/01_sqlite_api/starter_classroom/` as its own workspace folder.
+2. Select the `.venv` interpreter (Command Palette → *Python: Select Interpreter* → `./.venv`).
 
 ## Notes
 
-- `store.db`, `*.db-wal`, `*.db-shm`, `.env`, `.venv/` are git-ignored.
-- `scale_data.py` reads the schema from `Lectures/02_sqlite/sql/01_schema.sql`
-  by default; `--schema PATH` overrides it.
-- `app/db.py:explain(con, sql, params)` returns the `EXPLAIN QUERY PLAN` lines —
-  use it when writing `FINDINGS.md`.
+- `data/`, `*.db`, `*.db-wal`, `*.db-shm`, `.env` and `.venv/` are git-ignored.
+- `scale_data.py` reads the schema from `Lectures/02_sqlite/sql/01_schema.sql`. Pass `--schema PATH` to override it.

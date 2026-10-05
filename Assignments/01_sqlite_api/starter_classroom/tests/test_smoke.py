@@ -1,35 +1,33 @@
 """
-Smoke tests -- prove the wiring works. Extend these as you implement phases.
+Smoke tests -- prove the wiring works. Extend these as you implement routes.
 
-A tiny database is generated once per test session into a temp file, and
-app.db.DB_PATH is pointed at it before the app is imported.
+A tiny database is generated once per test session into a temp data/ folder
+(as idx_10k.db), and app.experiment.DATA_DIR is pointed at it before the app
+is imported, so tests never touch your real data/ folder.
 """
 
 from __future__ import annotations
 
 import importlib
 import os
-from pathlib import Path
 
 import pytest
-
-STARTER = Path(__file__).resolve().parents[1]
 
 
 @pytest.fixture(scope="session")
 def client(tmp_path_factory):
-    db = tmp_path_factory.mktemp("data") / "test.db"
+    data = tmp_path_factory.mktemp("data")
 
     import scale_data
-    scale_data.build(str(db), customers=200, products=150, zipcodes=60,
-                     purchases=3_000, skew=True, seed=7)
+    scale_data.build(str(data / "idx_10k.db"), customers=200, products=150,
+                     zipcodes=60, purchases=3_000, skew=True, seed=7)
 
-    os.environ["DB_PATH"] = str(db)
+    os.environ["DATA_DIR"] = str(data)
     os.environ.pop("API_KEYS", None)          # dev mode -> no key needed
 
     from fastapi.testclient import TestClient
-    import app.db
-    importlib.reload(app.db)                  # pick up DB_PATH
+    import app.experiment
+    importlib.reload(app.experiment)          # pick up DATA_DIR
     import app.main
     importlib.reload(app.main)
 
@@ -38,40 +36,29 @@ def client(tmp_path_factory):
 
 
 def test_health(client):
-    print("Running test_health")
     assert client.get("/health").json() == {"ok": True}
 
 
-def test_get_customer_ok(client):
-    print("Running test_get_customer_ok")
-    r = client.get("/customers/1")
+def test_q01_envelope(client):
+    r = client.get("/customers/1", params={"db": "idx_10k"})
     assert r.status_code == 200
     body = r.json()
-    assert body["customer_id"] == 1
-    assert "@" in body["email"]
-    assert len(body["state_code"]) == 2
+    assert set(body) == {"elapsed_ms", "row_count", "plan", "rows"}
+    assert body["row_count"] == 1
+    assert body["rows"][0]["customer_id"] == 1
+    assert any("PRIMARY KEY" in line for line in body["plan"])
 
 
-def test_get_customer_404(client):
-    print("Running test_get_customer_404")
-    assert client.get("/customers/999999").status_code == 404
-
-
-def test_products_pagination(client):
-    print("Running test_products_pagination")
-    r = client.get("/products", params={"limit": 10, "offset": 5})
+def test_q01_missing_customer_is_empty(client):
+    r = client.get("/customers/999999", params={"db": "idx_10k"})
     assert r.status_code == 200
-    assert len(r.json()) == 10
+    assert r.json()["row_count"] == 0
 
 
-def test_purchases_date_range(client):
-    print("Running test_purchases_date_range")
-    r = client.get("/purchases", params={"start": "2024-01-01", "end": "2027-01-01", "limit": 5})
-    assert r.status_code == 200
-    assert 1 <= len(r.json()) <= 5
+def test_unknown_db_name_rejected(client):
+    assert client.get("/customers/1", params={"db": "store"}).status_code == 422
 
 
-def test_phase2_still_stubbed(client):
-    print("Running test_phase2_still_stubbed")
-    # delete this test once you implement Phase 2
-    assert client.get("/stats/revenue-by-state").status_code == 501
+def test_db_file_not_built(client):
+    # valid name, but make_dbs.py hasn't built it in the temp data/ folder
+    assert client.get("/customers/1", params={"db": "noidx_1m"}).status_code == 404

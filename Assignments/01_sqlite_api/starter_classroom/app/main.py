@@ -1,52 +1,33 @@
 """
 Assignment 01 -- SQLite behind a FastAPI service.
 
-Run it from the  starter/  directory, either way:
-    python -m app.main                   # uses the __main__ block below
-    uvicorn app.main:app --reload        # equivalent
+Run it from the starter folder, either way:
+    python -m app.main                   # uses the __main__ block below (port 8001)
+    uvicorn app.main:app --port 8001     # equivalent
 
-Then open http://127.0.0.1:8000/docs
+Then open http://127.0.0.1:8001/docs
 
 (Do NOT run `python app/main.py` -- the package-relative imports need the
 `app.` package context, which only `-m app.main` / uvicorn provide.)
 
-Phase 1 endpoints below are worked examples. Phases 2-4 are stubs that return
-501 -- implement them and remove the `raise`. See ../README.md for the spec.
+Q01 below is a worked example. Add Q02-Q15 the same way, copying the SQL from
+../QUERIES.md. Every experiment route takes ?db=<name> (e.g. ?db=noidx_1m).
 """
 
 from __future__ import annotations
 
+import random  # noqa: F401  -- you need this for Q12 /fast
 import sqlite3
-from typing import Iterator
 
-from fastapi import Depends, FastAPI, HTTPException, Query
+from fastapi import Depends, FastAPI, HTTPException  # noqa: F401
 from fastapi.responses import RedirectResponse
 
 from .auth import require_api_key
-from .db import connect
-from .models import (
-    Customer,
-    NewPurchase,
-    Product,
-    Purchase,
-    PurchaseDetail,
-    RevenueRow,
-)
+from .experiment import get_exp_db, run_query
+from .models import NewPurchase  # noqa: F401  -- you need this for Q15
 
 app = FastAPI(title="SQLite API -- Assignment 01")
 
-
-def get_db() -> Iterator[sqlite3.Connection]:
-    con = connect()
-    try:
-        yield con
-    finally:
-        con.close()
-
-
-# --------------------------------------------------------------------------- #
-# Phase 1 -- simple reads (worked examples)
-# --------------------------------------------------------------------------- #
 
 @app.get("/", include_in_schema=False)
 def root() -> RedirectResponse:
@@ -58,177 +39,63 @@ def root() -> RedirectResponse:
 def health() -> dict:
     return {"ok": True}
 
-@app.get("/unique_names/")
-def unique_names(db: sqlite3.Connection = Depends(get_db)):
-    rows = db.execute(
-        """
-        SELECT DISTINCT first_name FROM customers ORDER BY 1;
-        """,
-    ).fetchall()
-    if rows is None:
-        raise HTTPException(404,"oops")
-    return [r['first_name'] for r in rows]
 
-@app.get("/customers/{customer_id}", response_model=Customer,dependencies=[Depends(require_api_key)])
-def get_customer(customer_id: int, db: sqlite3.Connection = Depends(get_db)):
-    row = db.execute(
-        """
-        SELECT c.customer_id, c.first_name, c.last_name, c.email,
-               c.address, c.zipcode, z.state_code
-        FROM customers c
-        JOIN zipcodes z ON z.zipcode = c.zipcode
-        WHERE c.customer_id = ?
-        """,
-        (customer_id,),
-    ).fetchone()
-    if row is None:
-        raise HTTPException(404, f"no customer {customer_id}")
-    return dict(row)
+# --------------------------------------------------------------------------- #
+# SQL -- copied from ../QUERIES.md
+# --------------------------------------------------------------------------- #
 
+Q01_SQL = """
+SELECT c.customer_id, c.first_name, c.last_name, c.email, c.zipcode, z.state_code
+FROM customers c
+JOIN zipcodes z ON z.zipcode = c.zipcode
+WHERE c.customer_id = :customer_id
+"""
 
-@app.get("/departments", dependencies=[Depends(require_api_key)])
-def list_departments(db: sqlite3.Connection = Depends(get_db)) -> list[str]:
-    return [r["department"] for r in db.execute("SELECT department FROM departments ORDER BY 1")]
-
-
-@app.get("/products", response_model=list[Product],
-         dependencies=[Depends(require_api_key)])
-def list_products(
-limit: int,offset: int,db: sqlite3.Connection = Depends(get_db)):
-    # NOTE: OFFSET pagination. Fine here; Phase 3 shows why it stops being fine.
-    rows = db.execute(
-        "SELECT product_id, product_name, unit_price FROM products "
-        "ORDER BY product_id LIMIT ? OFFSET ?",
-        (limit, offset),
-    ).fetchall()
-    return [dict(r) for r in rows]
-
-
-@app.get("/purchases", response_model=list[Purchase],
-         dependencies=[Depends(require_api_key)])
-def list_purchases(
-    db: sqlite3.Connection = Depends(get_db),
-    start: str = Query(..., description="inclusive ISO date, e.g. 2025-01-01"),
-    end: str = Query(..., description="exclusive ISO date"),
-    limit: int = Query(100, ge=1, le=1000),
-):
-    rows = db.execute(
-        """
-        SELECT purchase_id, customer_id, product_id, department, amount, purchase_date
-        FROM purchases
-        WHERE purchase_date >= ? AND purchase_date < ?
-        ORDER BY purchase_date
-        LIMIT ?
-        """,
-        (start, end, limit,),
-    ).fetchall()
-    resp =  [dict(r) for r in rows]
-    print(f"number: {len(resp)}")
-    return resp
-
-
-@app.get("purchases2")
-def list_purchases2(
-    db: sqlite3.Connection = Depends(get_db),
-    start: str = Query(..., description="inclusive ISO date, e.g. 2025-01-01"),
-    end: str = Query(..., description="exclusive ISO date"),
-    limit: int = Query(100, ge=1, le=1000),
-):
-    rows = db.execute(
-        """
-        SELECT purchase_id, customer_id, product_id, department, amount, purchase_date
-        FROM purchases
-        WHERE purchase_date >= ? AND purchase_date < ?
-        ORDER BY purchase_date
-        LIMIT ?
-        """,
-        (start, end, limit,),
-    ).fetchall()
-    resp =  [dict(r) for r in rows]
-    print(f"number: {len(resp)}")
-    return resp
+# TODO: Q02_SQL ... Q14_FAST_SQL
 
 
 # --------------------------------------------------------------------------- #
-# Phase 2 -- joins & aggregates            (implement these)
+# Routes
+#
+# FastAPI matches top to bottom, so keep the fixed paths (/purchases/page,
+# /purchases/sample, .../fast) above anything shaped like /purchases/{x}.
 # --------------------------------------------------------------------------- #
 
-_TODO = "not implemented -- see Assignments/01_sqlite_api/README.md"
+# Phase 1 ------------------------------------------------------------------- #
+
+@app.get("/customers/{customer_id}", dependencies=[Depends(require_api_key)])
+def q01_customer(customer_id: int, db: sqlite3.Connection = Depends(get_exp_db)):
+    return run_query(db, Q01_SQL, {"customer_id": customer_id})
 
 
-@app.get("/customers/{customer_id}/purchases",
-         response_model=list[PurchaseDetail],
-         dependencies=[Depends(require_api_key)])
-def customer_purchases(customer_id: int, db: sqlite3.Connection = Depends(get_db)):
-    raise HTTPException(501, _TODO + " (Phase 2)")
+# TODO Q02  GET /products?limit=&offset=
+# TODO Q03  GET /purchases?start=&end=
 
+# Phase 2 ------------------------------------------------------------------- #
 
-@app.get("/stats/revenue-by-state", response_model=list[RevenueRow],
-         dependencies=[Depends(require_api_key)])
-def revenue_by_state(db: sqlite3.Connection = Depends(get_db)):
-    raise HTTPException(501, _TODO + " (Phase 2)")
+# TODO Q04  GET /customers/{customer_id}/purchases
+# TODO Q05  GET /stats/department-count?department=
+# TODO Q06  GET /customers/{customer_id}/streaks
+# TODO Q07  GET /stats/leaderboard?start=&end=
+# TODO Q08  GET /products/dead?state=
+# TODO Q09  GET /stats/revenue-by-state
+# TODO Q10  GET /products/top
 
+# Phase 3 -- each has a slow route and a /fast route ------------------------ #
 
-@app.get("/stats/revenue-by-month", response_model=list[RevenueRow],
-         dependencies=[Depends(require_api_key)])
-def revenue_by_month(db: sqlite3.Connection = Depends(get_db)):
-    raise HTTPException(501, _TODO + " (Phase 2)")
+# TODO Q11  GET /purchases/page?offset=        GET /purchases/page/fast?after_id=
+# TODO Q12  GET /purchases/sample              GET /purchases/sample/fast
+# TODO Q13  GET /stats/revenue-by-month        GET /stats/revenue-by-month/fast
+# TODO Q14  GET /reports/cube?start=&end=&min_purchases=
+#                                              GET /reports/cube/fast?(same)
 
+# Phase 4 ------------------------------------------------------------------- #
 
-@app.get("/products/top", response_model=list[RevenueRow],dependencies=[Depends(require_api_key)])
-def top_products(
-    db: sqlite3.Connection = Depends(get_db),
-    by: str = Query("revenue", pattern="^(revenue|count)$"),
-    limit: int = Query(10, ge=1, le=100),
-):
-    raise HTTPException(501, _TODO + " (Phase 2)")
-
-
-# --------------------------------------------------------------------------- #
-# Phase 3 -- gnarly queries                (implement all 8 + 2 of your own)
-# --------------------------------------------------------------------------- #
-
-@app.get("/products/search", dependencies=[Depends(require_api_key)])
-def search_products(q: str, db: sqlite3.Connection = Depends(get_db)):
-    raise HTTPException(501, _TODO + " (Phase 3: LIKE '%q%' -> then FTS5)")
-
-
-@app.get("/customers/leaderboard", dependencies=[Depends(require_api_key)])
-def leaderboard(db: sqlite3.Connection = Depends(get_db)):
-    raise HTTPException(501, _TODO + " (Phase 3: 90-day trailing spend window)")
-
-
-@app.get("/customers/{customer_id}/streaks", dependencies=[Depends(require_api_key)])
-def streaks(customer_id: int, db: sqlite3.Connection = Depends(get_db)):
-    raise HTTPException(501, _TODO + " (Phase 3: gaps-and-islands)")
-
-
-@app.get("/reports/cube", dependencies=[Depends(require_api_key)])
-def cube(db: sqlite3.Connection = Depends(get_db)):
-    raise HTTPException(501, _TODO + " (Phase 3: state x department x month)")
-
-
-@app.get("/purchases/sample", dependencies=[Depends(require_api_key)])
-def sample(db: sqlite3.Connection = Depends(get_db)):
-    raise HTTPException(501, _TODO + " (Phase 3: ORDER BY random() LIMIT 10)")
-
-
-@app.get("/products/dead", dependencies=[Depends(require_api_key)])
-def dead_products(state: str, db: sqlite3.Connection = Depends(get_db)):
-    raise HTTPException(501, _TODO + " (Phase 3: anti-join / NOT EXISTS)")
+# TODO Q15  POST /purchases   (the full code is in QUERIES.md)
 
 
 # --------------------------------------------------------------------------- #
-# Phase 4 -- writes & concurrency          (implement, then hammer it)
-# --------------------------------------------------------------------------- #
-
-@app.post("/purchases", status_code=201, dependencies=[Depends(require_api_key)])
-def create_purchase(body: NewPurchase, db: sqlite3.Connection = Depends(get_db)):
-    raise HTTPException(501, _TODO + " (Phase 4: INSERT in a transaction, return 201)")
-
-
-# --------------------------------------------------------------------------- #
-# Dev entrypoint:  python -m app.main   (run from the starter/ directory)
+# Dev entrypoint:  python -m app.main   (run from the starter folder)
 # --------------------------------------------------------------------------- #
 
 if __name__ == "__main__":

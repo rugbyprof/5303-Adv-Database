@@ -24,7 +24,7 @@ dev = [
 
 [tool.setuptools]
 packages = ["app"]
-py-modules = ["scale_data", "loadtest"]
+py-modules = ["scale_data", "make_dbs", "driver", "loadtest"]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]      # so `import app` / `import scale_data` work
